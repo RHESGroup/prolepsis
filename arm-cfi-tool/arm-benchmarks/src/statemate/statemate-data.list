@@ -1,0 +1,648 @@
+
+./arm-benchmarks/src/statemate/statemate:     file format elf32-littlearm
+
+
+Disassembly of section .rodata:
+
+00009c54 <_global_impure_ptr-0x40>:
+    9c54:	00000000 	andeq	r0, r0, r0
+    9c58:	00000100 	andeq	r0, r0, r0, lsl #2
+    9c5c:	00000000 	andeq	r0, r0, r0
+    9c60:	00000000 	andeq	r0, r0, r0
+    9c64:	00000000 	andeq	r0, r0, r0
+    9c68:	00000000 	andeq	r0, r0, r0
+    9c6c:	00000000 	andeq	r0, r0, r0
+    9c70:	00000000 	andeq	r0, r0, r0
+    9c74:	00000000 	andeq	r0, r0, r0
+    9c78:	00000000 	andeq	r0, r0, r0
+    9c7c:	00000000 	andeq	r0, r0, r0
+    9c80:	00000000 	andeq	r0, r0, r0
+    9c84:	00000000 	andeq	r0, r0, r0
+    9c88:	00000000 	andeq	r0, r0, r0
+    9c8c:	00000000 	andeq	r0, r0, r0
+    9c90:	00000000 	andeq	r0, r0, r0
+
+00009c94 <_global_impure_ptr>:
+    9c94:	00019cb0 			; <UNDEFINED> instruction: 0x00019cb0
+
+Disassembly of section .data:
+
+00019cb0 <impure_data>:
+   19cb0:	00000000 	andeq	r0, r0, r0
+   19cb4:	00019f9c 	muleq	r1, ip, pc	; <UNPREDICTABLE>
+   19cb8:	0001a004 	andeq	sl, r1, r4
+   19cbc:	0001a06c 	andeq	sl, r1, ip, rrx
+   19cc0:	00000000 	andeq	r0, r0, r0
+   19cc4:	00000000 	andeq	r0, r0, r0
+   19cc8:	00000000 	andeq	r0, r0, r0
+   19ccc:	00000000 	andeq	r0, r0, r0
+   19cd0:	00000000 	andeq	r0, r0, r0
+   19cd4:	00000000 	andeq	r0, r0, r0
+   19cd8:	00000000 	andeq	r0, r0, r0
+   19cdc:	00000000 	andeq	r0, r0, r0
+   19ce0:	00000000 	andeq	r0, r0, r0
+   19ce4:	00000000 	andeq	r0, r0, r0
+   19ce8:	00000000 	andeq	r0, r0, r0
+   19cec:	00000000 	andeq	r0, r0, r0
+   19cf0:	00000000 	andeq	r0, r0, r0
+   19cf4:	00000000 	andeq	r0, r0, r0
+   19cf8:	00000000 	andeq	r0, r0, r0
+   19cfc:	00000000 	andeq	r0, r0, r0
+   19d00:	00000000 	andeq	r0, r0, r0
+   19d04:	00000000 	andeq	r0, r0, r0
+   19d08:	00000000 	andeq	r0, r0, r0
+   19d0c:	00000000 	andeq	r0, r0, r0
+   19d10:	00000000 	andeq	r0, r0, r0
+   19d14:	00000000 	andeq	r0, r0, r0
+   19d18:	00000000 	andeq	r0, r0, r0
+   19d1c:	00000000 	andeq	r0, r0, r0
+   19d20:	00000000 	andeq	r0, r0, r0
+   19d24:	00000000 	andeq	r0, r0, r0
+   19d28:	00000000 	andeq	r0, r0, r0
+   19d2c:	00000000 	andeq	r0, r0, r0
+   19d30:	00000000 	andeq	r0, r0, r0
+   19d34:	00000000 	andeq	r0, r0, r0
+   19d38:	00000000 	andeq	r0, r0, r0
+   19d3c:	00000000 	andeq	r0, r0, r0
+   19d40:	00000000 	andeq	r0, r0, r0
+   19d44:	00000000 	andeq	r0, r0, r0
+   19d48:	00000000 	andeq	r0, r0, r0
+   19d4c:	00000000 	andeq	r0, r0, r0
+   19d50:	00000000 	andeq	r0, r0, r0
+   19d54:	00000000 	andeq	r0, r0, r0
+   19d58:	00000001 	andeq	r0, r0, r1
+   19d5c:	00000000 	andeq	r0, r0, r0
+   19d60:	abcd330e 	blge	ff3669a0 <_stack+0xff2e69a0>
+   19d64:	e66d1234 			; <UNDEFINED> instruction: 0xe66d1234
+   19d68:	0005deec 	andeq	sp, r5, ip, ror #29
+   19d6c:	0000000b 	andeq	r0, r0, fp
+   19d70:	00000000 	andeq	r0, r0, r0
+   19d74:	00000000 	andeq	r0, r0, r0
+   19d78:	00000000 	andeq	r0, r0, r0
+   19d7c:	00000000 	andeq	r0, r0, r0
+   19d80:	00000000 	andeq	r0, r0, r0
+   19d84:	00000000 	andeq	r0, r0, r0
+   19d88:	00000000 	andeq	r0, r0, r0
+   19d8c:	00000000 	andeq	r0, r0, r0
+   19d90:	00000000 	andeq	r0, r0, r0
+   19d94:	00000000 	andeq	r0, r0, r0
+   19d98:	00000000 	andeq	r0, r0, r0
+   19d9c:	00000000 	andeq	r0, r0, r0
+   19da0:	00000000 	andeq	r0, r0, r0
+   19da4:	00000000 	andeq	r0, r0, r0
+   19da8:	00000000 	andeq	r0, r0, r0
+   19dac:	00000000 	andeq	r0, r0, r0
+   19db0:	00000000 	andeq	r0, r0, r0
+   19db4:	00000000 	andeq	r0, r0, r0
+   19db8:	00000000 	andeq	r0, r0, r0
+   19dbc:	00000000 	andeq	r0, r0, r0
+   19dc0:	00000000 	andeq	r0, r0, r0
+   19dc4:	00000000 	andeq	r0, r0, r0
+   19dc8:	00000000 	andeq	r0, r0, r0
+   19dcc:	00000000 	andeq	r0, r0, r0
+   19dd0:	00000000 	andeq	r0, r0, r0
+   19dd4:	00000000 	andeq	r0, r0, r0
+   19dd8:	00000000 	andeq	r0, r0, r0
+   19ddc:	00000000 	andeq	r0, r0, r0
+   19de0:	00000000 	andeq	r0, r0, r0
+   19de4:	00000000 	andeq	r0, r0, r0
+   19de8:	00000000 	andeq	r0, r0, r0
+   19dec:	00000000 	andeq	r0, r0, r0
+   19df0:	00000000 	andeq	r0, r0, r0
+   19df4:	00000000 	andeq	r0, r0, r0
+   19df8:	00000000 	andeq	r0, r0, r0
+   19dfc:	00000000 	andeq	r0, r0, r0
+   19e00:	00000000 	andeq	r0, r0, r0
+   19e04:	00000000 	andeq	r0, r0, r0
+   19e08:	00000000 	andeq	r0, r0, r0
+   19e0c:	00000000 	andeq	r0, r0, r0
+   19e10:	00000000 	andeq	r0, r0, r0
+   19e14:	00000000 	andeq	r0, r0, r0
+   19e18:	00000000 	andeq	r0, r0, r0
+   19e1c:	00000000 	andeq	r0, r0, r0
+   19e20:	00000000 	andeq	r0, r0, r0
+   19e24:	00000000 	andeq	r0, r0, r0
+   19e28:	00000000 	andeq	r0, r0, r0
+   19e2c:	00000000 	andeq	r0, r0, r0
+   19e30:	00000000 	andeq	r0, r0, r0
+   19e34:	00000000 	andeq	r0, r0, r0
+   19e38:	00000000 	andeq	r0, r0, r0
+   19e3c:	00000000 	andeq	r0, r0, r0
+   19e40:	00000000 	andeq	r0, r0, r0
+   19e44:	00000000 	andeq	r0, r0, r0
+   19e48:	00000000 	andeq	r0, r0, r0
+   19e4c:	00000000 	andeq	r0, r0, r0
+   19e50:	00000000 	andeq	r0, r0, r0
+   19e54:	00000000 	andeq	r0, r0, r0
+   19e58:	00000000 	andeq	r0, r0, r0
+   19e5c:	00000000 	andeq	r0, r0, r0
+   19e60:	00000000 	andeq	r0, r0, r0
+   19e64:	00000000 	andeq	r0, r0, r0
+   19e68:	00000000 	andeq	r0, r0, r0
+   19e6c:	00000000 	andeq	r0, r0, r0
+   19e70:	00000000 	andeq	r0, r0, r0
+   19e74:	00000000 	andeq	r0, r0, r0
+   19e78:	00000000 	andeq	r0, r0, r0
+   19e7c:	00000000 	andeq	r0, r0, r0
+   19e80:	00000000 	andeq	r0, r0, r0
+   19e84:	00000000 	andeq	r0, r0, r0
+   19e88:	00000000 	andeq	r0, r0, r0
+   19e8c:	00000000 	andeq	r0, r0, r0
+   19e90:	00000000 	andeq	r0, r0, r0
+   19e94:	00000000 	andeq	r0, r0, r0
+   19e98:	00000000 	andeq	r0, r0, r0
+   19e9c:	00000000 	andeq	r0, r0, r0
+   19ea0:	00000000 	andeq	r0, r0, r0
+   19ea4:	00000000 	andeq	r0, r0, r0
+   19ea8:	00000000 	andeq	r0, r0, r0
+   19eac:	00000000 	andeq	r0, r0, r0
+   19eb0:	00000000 	andeq	r0, r0, r0
+   19eb4:	00000000 	andeq	r0, r0, r0
+   19eb8:	00000000 	andeq	r0, r0, r0
+   19ebc:	00000000 	andeq	r0, r0, r0
+   19ec0:	00000000 	andeq	r0, r0, r0
+   19ec4:	00000000 	andeq	r0, r0, r0
+   19ec8:	00000000 	andeq	r0, r0, r0
+   19ecc:	00000000 	andeq	r0, r0, r0
+   19ed0:	00000000 	andeq	r0, r0, r0
+   19ed4:	00000000 	andeq	r0, r0, r0
+   19ed8:	00000000 	andeq	r0, r0, r0
+   19edc:	00000000 	andeq	r0, r0, r0
+   19ee0:	00000000 	andeq	r0, r0, r0
+   19ee4:	00000000 	andeq	r0, r0, r0
+   19ee8:	00000000 	andeq	r0, r0, r0
+   19eec:	00000000 	andeq	r0, r0, r0
+   19ef0:	00000000 	andeq	r0, r0, r0
+   19ef4:	00000000 	andeq	r0, r0, r0
+   19ef8:	00000000 	andeq	r0, r0, r0
+   19efc:	00000000 	andeq	r0, r0, r0
+   19f00:	00000000 	andeq	r0, r0, r0
+   19f04:	00000000 	andeq	r0, r0, r0
+   19f08:	00000000 	andeq	r0, r0, r0
+   19f0c:	00000000 	andeq	r0, r0, r0
+   19f10:	00000000 	andeq	r0, r0, r0
+   19f14:	00000000 	andeq	r0, r0, r0
+   19f18:	00000000 	andeq	r0, r0, r0
+   19f1c:	00000000 	andeq	r0, r0, r0
+   19f20:	00000000 	andeq	r0, r0, r0
+   19f24:	00000000 	andeq	r0, r0, r0
+   19f28:	00000000 	andeq	r0, r0, r0
+   19f2c:	00000000 	andeq	r0, r0, r0
+   19f30:	00000000 	andeq	r0, r0, r0
+   19f34:	00000000 	andeq	r0, r0, r0
+   19f38:	00000000 	andeq	r0, r0, r0
+   19f3c:	00000000 	andeq	r0, r0, r0
+   19f40:	00000000 	andeq	r0, r0, r0
+   19f44:	00000000 	andeq	r0, r0, r0
+   19f48:	00000000 	andeq	r0, r0, r0
+   19f4c:	00000000 	andeq	r0, r0, r0
+   19f50:	00000000 	andeq	r0, r0, r0
+   19f54:	00000000 	andeq	r0, r0, r0
+   19f58:	00000000 	andeq	r0, r0, r0
+   19f5c:	00000000 	andeq	r0, r0, r0
+   19f60:	00000000 	andeq	r0, r0, r0
+   19f64:	00000000 	andeq	r0, r0, r0
+   19f68:	00000000 	andeq	r0, r0, r0
+   19f6c:	00000000 	andeq	r0, r0, r0
+   19f70:	00000000 	andeq	r0, r0, r0
+   19f74:	00000000 	andeq	r0, r0, r0
+   19f78:	00000000 	andeq	r0, r0, r0
+   19f7c:	00000000 	andeq	r0, r0, r0
+   19f80:	00000000 	andeq	r0, r0, r0
+   19f84:	00000000 	andeq	r0, r0, r0
+   19f88:	00000000 	andeq	r0, r0, r0
+   19f8c:	00000000 	andeq	r0, r0, r0
+   19f90:	00000000 	andeq	r0, r0, r0
+   19f94:	00000000 	andeq	r0, r0, r0
+   19f98:	00000000 	andeq	r0, r0, r0
+   19f9c:	00000000 	andeq	r0, r0, r0
+   19fa0:	00000000 	andeq	r0, r0, r0
+   19fa4:	00000000 	andeq	r0, r0, r0
+   19fa8:	00000000 	andeq	r0, r0, r0
+   19fac:	00000000 	andeq	r0, r0, r0
+   19fb0:	00000000 	andeq	r0, r0, r0
+   19fb4:	00000000 	andeq	r0, r0, r0
+   19fb8:	00000000 	andeq	r0, r0, r0
+   19fbc:	00000000 	andeq	r0, r0, r0
+   19fc0:	00000000 	andeq	r0, r0, r0
+   19fc4:	00000000 	andeq	r0, r0, r0
+   19fc8:	00000000 	andeq	r0, r0, r0
+   19fcc:	00000000 	andeq	r0, r0, r0
+   19fd0:	00000000 	andeq	r0, r0, r0
+   19fd4:	00000000 	andeq	r0, r0, r0
+   19fd8:	00000000 	andeq	r0, r0, r0
+   19fdc:	00000000 	andeq	r0, r0, r0
+   19fe0:	00000000 	andeq	r0, r0, r0
+   19fe4:	00000000 	andeq	r0, r0, r0
+   19fe8:	00000000 	andeq	r0, r0, r0
+   19fec:	00000000 	andeq	r0, r0, r0
+   19ff0:	00000000 	andeq	r0, r0, r0
+   19ff4:	00000000 	andeq	r0, r0, r0
+   19ff8:	00000000 	andeq	r0, r0, r0
+   19ffc:	00000000 	andeq	r0, r0, r0
+   1a000:	00000000 	andeq	r0, r0, r0
+   1a004:	00000000 	andeq	r0, r0, r0
+   1a008:	00000000 	andeq	r0, r0, r0
+   1a00c:	00000000 	andeq	r0, r0, r0
+   1a010:	00000000 	andeq	r0, r0, r0
+   1a014:	00000000 	andeq	r0, r0, r0
+   1a018:	00000000 	andeq	r0, r0, r0
+   1a01c:	00000000 	andeq	r0, r0, r0
+   1a020:	00000000 	andeq	r0, r0, r0
+   1a024:	00000000 	andeq	r0, r0, r0
+   1a028:	00000000 	andeq	r0, r0, r0
+   1a02c:	00000000 	andeq	r0, r0, r0
+   1a030:	00000000 	andeq	r0, r0, r0
+   1a034:	00000000 	andeq	r0, r0, r0
+   1a038:	00000000 	andeq	r0, r0, r0
+   1a03c:	00000000 	andeq	r0, r0, r0
+   1a040:	00000000 	andeq	r0, r0, r0
+   1a044:	00000000 	andeq	r0, r0, r0
+   1a048:	00000000 	andeq	r0, r0, r0
+   1a04c:	00000000 	andeq	r0, r0, r0
+   1a050:	00000000 	andeq	r0, r0, r0
+   1a054:	00000000 	andeq	r0, r0, r0
+   1a058:	00000000 	andeq	r0, r0, r0
+   1a05c:	00000000 	andeq	r0, r0, r0
+   1a060:	00000000 	andeq	r0, r0, r0
+   1a064:	00000000 	andeq	r0, r0, r0
+   1a068:	00000000 	andeq	r0, r0, r0
+   1a06c:	00000000 	andeq	r0, r0, r0
+   1a070:	00000000 	andeq	r0, r0, r0
+   1a074:	00000000 	andeq	r0, r0, r0
+   1a078:	00000000 	andeq	r0, r0, r0
+   1a07c:	00000000 	andeq	r0, r0, r0
+   1a080:	00000000 	andeq	r0, r0, r0
+   1a084:	00000000 	andeq	r0, r0, r0
+   1a088:	00000000 	andeq	r0, r0, r0
+   1a08c:	00000000 	andeq	r0, r0, r0
+   1a090:	00000000 	andeq	r0, r0, r0
+   1a094:	00000000 	andeq	r0, r0, r0
+   1a098:	00000000 	andeq	r0, r0, r0
+   1a09c:	00000000 	andeq	r0, r0, r0
+   1a0a0:	00000000 	andeq	r0, r0, r0
+   1a0a4:	00000000 	andeq	r0, r0, r0
+   1a0a8:	00000000 	andeq	r0, r0, r0
+   1a0ac:	00000000 	andeq	r0, r0, r0
+   1a0b0:	00000000 	andeq	r0, r0, r0
+   1a0b4:	00000000 	andeq	r0, r0, r0
+   1a0b8:	00000000 	andeq	r0, r0, r0
+   1a0bc:	00000000 	andeq	r0, r0, r0
+   1a0c0:	00000000 	andeq	r0, r0, r0
+   1a0c4:	00000000 	andeq	r0, r0, r0
+   1a0c8:	00000000 	andeq	r0, r0, r0
+   1a0cc:	00000000 	andeq	r0, r0, r0
+   1a0d0:	00000000 	andeq	r0, r0, r0
+   1a0d4:	00000000 	andeq	r0, r0, r0
+
+0001a0d8 <__atexit_recursive_mutex>:
+   1a0d8:	0001a1f0 	strdeq	sl, [r1], -r0
+
+Disassembly of section .bss:
+
+0001a0dc <__bss_start>:
+   1a0dc:	00000000 	andeq	r0, r0, r0
+
+0001a0e0 <object.0>:
+   1a0e0:	00000000 	andeq	r0, r0, r0
+   1a0e4:	00000000 	andeq	r0, r0, r0
+   1a0e8:	00000000 	andeq	r0, r0, r0
+   1a0ec:	00000000 	andeq	r0, r0, r0
+   1a0f0:	00000000 	andeq	r0, r0, r0
+   1a0f4:	00000000 	andeq	r0, r0, r0
+
+0001a0f8 <Bitlist>:
+   1a0f8:	00000000 	andeq	r0, r0, r0
+   1a0fc:	00000000 	andeq	r0, r0, r0
+   1a100:	00000000 	andeq	r0, r0, r0
+   1a104:	00000000 	andeq	r0, r0, r0
+   1a108:	00000000 	andeq	r0, r0, r0
+   1a10c:	00000000 	andeq	r0, r0, r0
+   1a110:	00000000 	andeq	r0, r0, r0
+   1a114:	00000000 	andeq	r0, r0, r0
+   1a118:	00000000 	andeq	r0, r0, r0
+   1a11c:	00000000 	andeq	r0, r0, r0
+   1a120:	00000000 	andeq	r0, r0, r0
+   1a124:	00000000 	andeq	r0, r0, r0
+   1a128:	00000000 	andeq	r0, r0, r0
+   1a12c:	00000000 	andeq	r0, r0, r0
+   1a130:	00000000 	andeq	r0, r0, r0
+   1a134:	00000000 	andeq	r0, r0, r0
+
+0001a138 <tm_entered_EINSCHALTSTROM_MESSEN_BLOCK_ERKENNUNG_CTRLch_BLOCK_ERKENNUNG_CTRL__N_copy>:
+   1a138:	00000000 	andeq	r0, r0, r0
+
+0001a13c <tm_entered_WIEDERHOLSPERRE_FH_TUERMODUL_CTRLexited_BEREIT_FH_TUERMODUL_CTRL>:
+   1a13c:	00000000 	andeq	r0, r0, r0
+
+0001a140 <tm_entered_WIEDERHOLSPERRE_FH_TUERMODUL_CTRL>:
+   1a140:	00000000 	andeq	r0, r0, r0
+
+0001a144 <sc_FH_TUERMODUL_CTRL_2375_2>:
+   1a144:	00000000 	andeq	r0, r0, r0
+
+0001a148 <sc_FH_TUERMODUL_CTRL_2352_1>:
+   1a148:	00000000 	andeq	r0, r0, r0
+
+0001a14c <sc_FH_TUERMODUL_CTRL_2329_1>:
+   1a14c:	00000000 	andeq	r0, r0, r0
+
+0001a150 <FH_TUERMODUL_CTRL__N>:
+   1a150:	00000000 	andeq	r0, r0, r0
+
+0001a154 <FH_TUERMODUL_CTRL__N_copy>:
+   1a154:	00000000 	andeq	r0, r0, r0
+
+0001a158 <FH_TUERMODUL_CTRL__N_old>:
+   1a158:	00000000 	andeq	r0, r0, r0
+
+0001a15c <sc_FH_TUERMODUL_CTRL_1781_10>:
+   1a15c:	00000000 	andeq	r0, r0, r0
+
+0001a160 <sc_FH_TUERMODUL_CTRL_1739_10>:
+   1a160:	00000000 	andeq	r0, r0, r0
+
+0001a164 <FH_TUERMODUL__POSITION>:
+   1a164:	00000000 	andeq	r0, r0, r0
+
+0001a168 <FH_TUERMODUL__I_EIN>:
+   1a168:	00000000 	andeq	r0, r0, r0
+
+0001a16c <FH_TUERMODUL__I_EIN_old>:
+   1a16c:	00000000 	andeq	r0, r0, r0
+
+0001a170 <FH_DU__MFH>:
+   1a170:	00000000 	andeq	r0, r0, r0
+
+0001a174 <FH_DU__MFH_copy>:
+   1a174:	00000000 	andeq	r0, r0, r0
+
+0001a178 <FH_DU__POSITION>:
+   1a178:	00000000 	andeq	r0, r0, r0
+
+0001a17c <FH_DU__I_EIN>:
+   1a17c:	00000000 	andeq	r0, r0, r0
+
+0001a180 <FH_DU__I_EIN_old>:
+   1a180:	00000000 	andeq	r0, r0, r0
+
+0001a184 <BLOCK_ERKENNUNG_CTRL__I_EIN_MAX>:
+   1a184:	00000000 	andeq	r0, r0, r0
+
+0001a188 <BLOCK_ERKENNUNG_CTRL__I_EIN_MAX_copy>:
+   1a188:	00000000 	andeq	r0, r0, r0
+
+0001a18c <BLOCK_ERKENNUNG_CTRL__N>:
+   1a18c:	00000000 	andeq	r0, r0, r0
+
+0001a190 <BLOCK_ERKENNUNG_CTRL__N_copy>:
+   1a190:	00000000 	andeq	r0, r0, r0
+
+0001a194 <BLOCK_ERKENNUNG_CTRL__N_old>:
+   1a194:	00000000 	andeq	r0, r0, r0
+
+0001a198 <FH_TUERMODUL_CTRL__INREVERS2>:
+   1a198:	 	andeq	r0, r0, r0
+
+0001a199 <FH_TUERMODUL_CTRL__INREVERS2_copy>:
+   1a199:	 	andeq	r0, r0, r0
+
+0001a19a <FH_TUERMODUL_CTRL__INREVERS1>:
+   1a19a:	 	andeq	r0, r0, r0
+
+0001a19b <FH_TUERMODUL_CTRL__INREVERS1_copy>:
+   1a19b:	 	andeq	r0, r0, r0
+
+0001a19c <FH_TUERMODUL_CTRL__FT>:
+   1a19c:	 	andeq	r0, r0, r0
+
+0001a19d <FH_TUERMODUL__SFHZ_ZENTRAL>:
+   1a19d:	 	andeq	r0, r0, r0
+
+0001a19e <FH_TUERMODUL__SFHZ_ZENTRAL_old>:
+   1a19e:	 	andeq	r0, r0, r0
+
+0001a19f <FH_TUERMODUL__SFHZ_MEC>:
+   1a19f:	 	andeq	r0, r0, r0
+
+0001a1a0 <FH_TUERMODUL__SFHZ_MEC_old>:
+   1a1a0:	 	andeq	r0, r0, r0
+
+0001a1a1 <FH_TUERMODUL__SFHA_ZENTRAL>:
+   1a1a1:	 	andeq	r0, r0, r0
+
+0001a1a2 <FH_TUERMODUL__SFHA_ZENTRAL_old>:
+   1a1a2:	 	andeq	r0, r0, r0
+
+0001a1a3 <FH_TUERMODUL__SFHA_MEC>:
+   1a1a3:	 	andeq	r0, r0, r0
+
+0001a1a4 <FH_TUERMODUL__SFHA_MEC_old>:
+   1a1a4:	 	andeq	r0, r0, r0
+
+0001a1a5 <FH_TUERMODUL__KL_50>:
+   1a1a5:	 	andeq	r0, r0, r0
+
+0001a1a6 <FH_TUERMODUL__BLOCK>:
+   1a1a6:	 	andeq	r0, r0, r0
+
+0001a1a7 <FH_TUERMODUL__BLOCK_copy>:
+   1a1a7:	 	andeq	r0, r0, r0
+
+0001a1a8 <FH_TUERMODUL__BLOCK_old>:
+   1a1a8:	 	andeq	r0, r0, r0
+
+0001a1a9 <FH_TUERMODUL__FT>:
+   1a1a9:	 	andeq	r0, r0, r0
+
+0001a1aa <FH_TUERMODUL__SFHZ>:
+   1a1aa:	 	andeq	r0, r0, r0
+
+0001a1ab <FH_TUERMODUL__SFHZ_copy>:
+   1a1ab:	 	andeq	r0, r0, r0
+
+0001a1ac <FH_TUERMODUL__SFHZ_old>:
+   1a1ac:	 	andeq	r0, r0, r0
+
+0001a1ad <FH_TUERMODUL__SFHA>:
+   1a1ad:	 	andeq	r0, r0, r0
+
+0001a1ae <FH_TUERMODUL__SFHA_copy>:
+   1a1ae:	 	andeq	r0, r0, r0
+
+0001a1af <FH_TUERMODUL__SFHA_old>:
+   1a1af:	 	andeq	r0, r0, r0
+
+0001a1b0 <FH_TUERMODUL__MFHZ>:
+   1a1b0:	 	andeq	r0, r0, r0
+
+0001a1b1 <FH_TUERMODUL__MFHZ_copy>:
+   1a1b1:	 	andeq	r0, r0, r0
+
+0001a1b2 <FH_TUERMODUL__MFHZ_old>:
+   1a1b2:	 	andeq	r0, r0, r0
+
+0001a1b3 <FH_TUERMODUL__MFHA>:
+   1a1b3:	 	andeq	r0, r0, r0
+
+0001a1b4 <FH_TUERMODUL__MFHA_copy>:
+   1a1b4:	 	andeq	r0, r0, r0
+
+0001a1b5 <FH_TUERMODUL__MFHA_old>:
+   1a1b5:	 	andeq	r0, r0, r0
+
+0001a1b6 <FH_TUERMODUL__EKS_LEISTE_AKTIV>:
+   1a1b6:	 	andeq	r0, r0, r0
+
+0001a1b7 <FH_TUERMODUL__EKS_LEISTE_AKTIV_old>:
+   1a1b7:	 	andeq	r0, r0, r0
+
+0001a1b8 <FH_TUERMODUL__COM_OPEN>:
+   1a1b8:	 	andeq	r0, r0, r0
+
+0001a1b9 <FH_TUERMODUL__COM_CLOSE>:
+   1a1b9:	 	andeq	r0, r0, r0
+
+0001a1ba <FH_DU__KL_50>:
+   1a1ba:	 	andeq	r0, r0, r0
+
+0001a1bb <FH_DU__S_FH_FTZU>:
+   1a1bb:	 	andeq	r0, r0, r0
+
+0001a1bc <FH_DU__S_FH_FTAUF>:
+   1a1bc:	 	andeq	r0, r0, r0
+
+0001a1bd <FH_DU__FT>:
+   1a1bd:	 	andeq	r0, r0, r0
+
+0001a1be <FH_DU__EKS_LEISTE_AKTIV>:
+   1a1be:	 	andeq	r0, r0, r0
+
+0001a1bf <FH_DU__EKS_LEISTE_AKTIV_old>:
+   1a1bf:	 	andeq	r0, r0, r0
+
+0001a1c0 <FH_DU__S_FH_TMBFAUFCAN>:
+   1a1c0:	 	andeq	r0, r0, r0
+
+0001a1c1 <FH_DU__S_FH_TMBFAUFCAN_copy>:
+   1a1c1:	 	andeq	r0, r0, r0
+
+0001a1c2 <FH_DU__S_FH_TMBFAUFCAN_old>:
+   1a1c2:	 	andeq	r0, r0, r0
+
+0001a1c3 <FH_DU__S_FH_TMBFZUCAN>:
+   1a1c3:	 	andeq	r0, r0, r0
+
+0001a1c4 <FH_DU__S_FH_TMBFZUCAN_copy>:
+   1a1c4:	 	andeq	r0, r0, r0
+
+0001a1c5 <FH_DU__S_FH_TMBFZUCAN_old>:
+   1a1c5:	 	andeq	r0, r0, r0
+
+0001a1c6 <FH_DU__S_FH_TMBFZUDISC>:
+   1a1c6:	 	andeq	r0, r0, r0
+
+0001a1c7 <FH_DU__S_FH_TMBFZUDISC_old>:
+   1a1c7:	 	andeq	r0, r0, r0
+
+0001a1c8 <FH_DU__S_FH_TMBFAUFDISC>:
+   1a1c8:	 	andeq	r0, r0, r0
+
+0001a1c9 <FH_DU__S_FH_TMBFAUFDISC_old>:
+   1a1c9:	 	andeq	r0, r0, r0
+
+0001a1ca <FH_DU__S_FH_ZUDISC>:
+   1a1ca:	 	andeq	r0, r0, r0
+
+0001a1cb <FH_DU__S_FH_AUFDISC>:
+   1a1cb:	 	andeq	r0, r0, r0
+
+0001a1cc <FH_DU__DOOR_ID>:
+   1a1cc:	 	andeq	r0, r0, r0
+
+0001a1cd <FH_DU__BLOCK>:
+   1a1cd:	 	andeq	r0, r0, r0
+
+0001a1ce <FH_DU__BLOCK_copy>:
+   1a1ce:	 	andeq	r0, r0, r0
+
+0001a1cf <FH_DU__BLOCK_old>:
+   1a1cf:	 	andeq	r0, r0, r0
+
+0001a1d0 <FH_DU__MFHZ>:
+   1a1d0:	 	andeq	r0, r0, r0
+
+0001a1d1 <FH_DU__MFHZ_copy>:
+   1a1d1:	 	andeq	r0, r0, r0
+
+0001a1d2 <FH_DU__MFHZ_old>:
+   1a1d2:	 	andeq	r0, r0, r0
+
+0001a1d3 <FH_DU__MFHA>:
+   1a1d3:	 	andeq	r0, r0, r0
+
+0001a1d4 <FH_DU__MFHA_copy>:
+   1a1d4:	 	andeq	r0, r0, r0
+
+0001a1d5 <FH_DU__MFHA_old>:
+   1a1d5:	 	andeq	r0, r0, r0
+
+0001a1d8 <time>:
+   1a1d8:	00000000 	andeq	r0, r0, r0
+
+0001a1dc <stable>:
+   1a1dc:	 	andeq	r0, r0, r0
+
+0001a1dd <step>:
+   1a1dd:	 	andeq	r0, r0, r0
+
+0001a1de <NICHT_INITIALISIERT_NICHT_INITIALISIERT_next_state>:
+   1a1de:	 	andeq	r0, r0, r0
+
+0001a1df <ZENTRAL_KINDERSICHERUNG_CTRL_next_state>:
+   1a1df:	 	andeq	r0, r0, r0
+
+0001a1e0 <MEC_KINDERSICHERUNG_CTRL_next_state>:
+   1a1e0:	 	andeq	r0, r0, r0
+
+0001a1e1 <KINDERSICHERUNG_CTRL_KINDERSICHERUNG_CTRL_next_state>:
+   1a1e1:	 	andeq	r0, r0, r0
+
+0001a1e2 <B_FH_TUERMODUL_CTRL_next_state>:
+   1a1e2:	 	andeq	r0, r0, r0
+
+0001a1e3 <A_FH_TUERMODUL_CTRL_next_state>:
+   1a1e3:	 	andeq	r0, r0, r0
+
+0001a1e4 <WIEDERHOLSPERRE_FH_TUERMODUL_CTRL_next_state>:
+   1a1e4:	 	andeq	r0, r0, r0
+
+0001a1e5 <INITIALISIERT_FH_TUERMODUL_CTRL_next_state>:
+   1a1e5:	 	andeq	r0, r0, r0
+
+0001a1e6 <TIPP_SCHLIESSEN_FH_TUERMODUL_CTRL_next_state>:
+   1a1e6:	 	andeq	r0, r0, r0
+
+0001a1e7 <MANUELL_SCHLIESSEN_FH_TUERMODUL_CTRL_next_state>:
+   1a1e7:	 	andeq	r0, r0, r0
+
+0001a1e8 <OEFFNEN_FH_TUERMODUL_CTRL_next_state>:
+   1a1e8:	 	andeq	r0, r0, r0
+
+0001a1e9 <SCHLIESSEN_FH_TUERMODUL_CTRL_next_state>:
+   1a1e9:	 	andeq	r0, r0, r0
+
+0001a1ea <FH_STEUERUNG_DUMMY_FH_STEUERUNG_DUMMY_next_state>:
+   1a1ea:	 	andeq	r0, r0, r0
+
+0001a1eb <EINKLEMMSCHUTZ_CTRL_EINKLEMMSCHUTZ_CTRL_next_state>:
+   1a1eb:	 	andeq	r0, r0, r0
+
+0001a1ec <BEWEGUNG_BLOCK_ERKENNUNG_CTRL_next_state>:
+   1a1ec:	 	andeq	r0, r0, r0
+
+0001a1ed <BLOCK_ERKENNUNG_CTRL_BLOCK_ERKENNUNG_CTRL_next_state>:
+   1a1ed:	 	andeq	r0, r0, r0
+
+0001a1f0 <__lock___atexit_recursive_mutex>:
+   1a1f0:	00000000 	andeq	r0, r0, r0

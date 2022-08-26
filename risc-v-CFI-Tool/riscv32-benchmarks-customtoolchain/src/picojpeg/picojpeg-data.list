@@ -1,0 +1,2377 @@
+
+./riscv32-benchmarks-customtoolchain/src/picojpeg/picojpeg:     file format elf32-littleriscv
+
+
+Disassembly of section .rodata:
+
+000160a8 <ZAG>:
+   160a8:	0100                	.2byte	0x100
+   160aa:	1008                	.2byte	0x1008
+   160ac:	0209                	.2byte	0x209
+   160ae:	18110a03          	lb	s4,385(sp)
+   160b2:	1920                	.2byte	0x1920
+   160b4:	0b12                	.2byte	0xb12
+   160b6:	0504                	.2byte	0x504
+   160b8:	130c                	.2byte	0x130c
+   160ba:	211a                	.2byte	0x211a
+   160bc:	3028                	.2byte	0x3028
+   160be:	2229                	.2byte	0x2229
+   160c0:	060d141b          	.4byte	0x60d141b
+   160c4:	1c150e07          	.4byte	0x1c150e07
+   160c8:	38312a23          	sw	gp,916(sp)
+   160cc:	3239                	.2byte	0x3239
+   160ce:	161d242b          	cflc8	353(s10)
+   160d2:	251e170f          	.4byte	0x251e170f
+   160d6:	332c                	.2byte	0x332c
+   160d8:	3b3a                	.2byte	0x3b3a
+   160da:	2d34                	.2byte	0x2d34
+   160dc:	1f26                	.2byte	0x1f26
+   160de:	3c352e27          	.4byte	0x3c352e27
+   160e2:	363d                	.2byte	0x363d
+   160e4:	3f3e372f          	.4byte	0x3f3e372f
+   160e8:	06b8                	.2byte	0x6b8
+   160ea:	0001                	.2byte	0x1
+   160ec:	06c0                	.2byte	0x6c0
+   160ee:	0001                	.2byte	0x1
+   160f0:	06c8                	.2byte	0x6c8
+   160f2:	0001                	.2byte	0x1
+   160f4:	06d0                	.2byte	0x6d0
+   160f6:	0001                	.2byte	0x1
+   160f8:	06d8                	.2byte	0x6d8
+   160fa:	0001                	.2byte	0x1
+   160fc:	06e0                	.2byte	0x6e0
+   160fe:	0001                	.2byte	0x1
+   16100:	06e8                	.2byte	0x6e8
+   16102:	0001                	.2byte	0x1
+   16104:	06f0                	.2byte	0x6f0
+   16106:	0001                	.2byte	0x1
+   16108:	06f8                	.2byte	0x6f8
+   1610a:	0001                	.2byte	0x1
+   1610c:	0700                	.2byte	0x700
+   1610e:	0001                	.2byte	0x1
+   16110:	0708                	.2byte	0x708
+   16112:	0001                	.2byte	0x1
+   16114:	0710                	.2byte	0x710
+   16116:	0001                	.2byte	0x1
+   16118:	0718                	.2byte	0x718
+   1611a:	0001                	.2byte	0x1
+   1611c:	0724                	.2byte	0x724
+   1611e:	0001                	.2byte	0x1
+   16120:	072c                	.2byte	0x72c
+   16122:	0001                	.2byte	0x1
+   16124:	0734                	.2byte	0x734
+   16126:	0001                	.2byte	0x1
+   16128:	0788                	.2byte	0x788
+   1612a:	0001                	.2byte	0x1
+   1612c:	0790                	.2byte	0x790
+   1612e:	0001                	.2byte	0x1
+   16130:	0798                	.2byte	0x798
+   16132:	0001                	.2byte	0x1
+   16134:	07a0                	.2byte	0x7a0
+   16136:	0001                	.2byte	0x1
+   16138:	07a8                	.2byte	0x7a8
+   1613a:	0001                	.2byte	0x1
+   1613c:	07b0                	.2byte	0x7b0
+   1613e:	0001                	.2byte	0x1
+   16140:	07b8                	.2byte	0x7b8
+   16142:	0001                	.2byte	0x1
+   16144:	07c0                	.2byte	0x7c0
+   16146:	0001                	.2byte	0x1
+   16148:	07c8                	.2byte	0x7c8
+   1614a:	0001                	.2byte	0x1
+   1614c:	07d0                	.2byte	0x7d0
+   1614e:	0001                	.2byte	0x1
+   16150:	07d8                	.2byte	0x7d8
+   16152:	0001                	.2byte	0x1
+   16154:	07e0                	.2byte	0x7e0
+   16156:	0001                	.2byte	0x1
+   16158:	07e8                	.2byte	0x7e8
+   1615a:	0001                	.2byte	0x1
+   1615c:	07f4                	.2byte	0x7f4
+   1615e:	0001                	.2byte	0x1
+   16160:	0800                	.2byte	0x800
+   16162:	0001                	.2byte	0x1
+   16164:	080c                	.2byte	0x80c
+   16166:	0001                	.2byte	0x1
+
+00016168 <gWinogradQuant>:
+   16168:	b280                	.2byte	0xb280
+   1616a:	a7b2                	.2byte	0xa7b2
+   1616c:	a7f6                	.2byte	0xa7f6
+   1616e:	97e8e897          	auipc	a7,0x97e8e
+   16172:	d180                	.2byte	0xd180
+   16174:	6580d1db          	.4byte	0x6580d1db
+   16178:	c5b2                	.2byte	0xc5b2
+   1617a:	b2c5                	.2byte	0xb2c5
+   1617c:	4565                	.2byte	0x4565
+   1617e:	a7b1a78b          	.4byte	0xa7b1a78b
+   16182:	6023458b          	.4byte	0x6023458b
+   16186:	83979783          	lh	a5,-1991(a5)
+   1618a:	2360                	.2byte	0x2360
+   1618c:	5b31                	.2byte	0x5b31
+   1618e:	8076                	.2byte	0x8076
+   16190:	5b76                	.2byte	0x5b76
+   16192:	2e31                	.2byte	0x2e31
+   16194:	6551                	.2byte	0x6551
+   16196:	5165                	.2byte	0x5165
+   16198:	2a2e                	.2byte	0x2a2e
+   1619a:	4f45                	.2byte	0x4f45
+   1619c:	2a45                	.2byte	0x2a45
+   1619e:	23363623          	.4byte	0x23363623
+   161a2:	251c                	.2byte	0x251c
+   161a4:	131c                	.2byte	0x131c
+   161a6:	41b00a13          	li	s4,1051
+   161aa:	0001                	.2byte	0x1
+   161ac:	41bc                	.2byte	0x41bc
+   161ae:	0001                	.2byte	0x1
+   161b0:	4290                	.2byte	0x4290
+   161b2:	0001                	.2byte	0x1
+   161b4:	4208                	.2byte	0x4208
+   161b6:	0001                	.2byte	0x1
+   161b8:	4318                	.2byte	0x4318
+   161ba:	0001                	.2byte	0x1
+   161bc:	433c                	.2byte	0x433c
+   161be:	0001                	.2byte	0x1
+   161c0:	4348                	.2byte	0x4348
+   161c2:	0001                	.2byte	0x1
+   161c4:	4354                	.2byte	0x4354
+   161c6:	0001                	.2byte	0x1
+   161c8:	4360                	.2byte	0x4360
+   161ca:	0001                	.2byte	0x1
+   161cc:	436c                	.2byte	0x436c
+   161ce:	0001                	.2byte	0x1
+   161d0:	43a0                	.2byte	0x43a0
+   161d2:	0001                	.2byte	0x1
+   161d4:	4480                	.2byte	0x4480
+   161d6:	0001                	.2byte	0x1
+   161d8:	4490                	.2byte	0x4490
+   161da:	0001                	.2byte	0x1
+   161dc:	48f8                	.2byte	0x48f8
+   161de:	0001                	.2byte	0x1
+   161e0:	4658                	.2byte	0x4658
+   161e2:	0001                	.2byte	0x1
+   161e4:	4b98                	.2byte	0x4b98
+   161e6:	0001                	.2byte	0x1
+   161e8:	4bbc                	.2byte	0x4bbc
+   161ea:	0001                	.2byte	0x1
+   161ec:	4be4                	.2byte	0x4be4
+   161ee:	0001                	.2byte	0x1
+   161f0:	4c0c                	.2byte	0x4c0c
+   161f2:	0001                	.2byte	0x1
+   161f4:	4c34                	.2byte	0x4c34
+   161f6:	0001                	.2byte	0x1
+   161f8:	4c5c                	.2byte	0x4c5c
+   161fa:	0001                	.2byte	0x1
+   161fc:	4e08                	.2byte	0x4e08
+   161fe:	0001                	.2byte	0x1
+
+00016200 <jpeg_data>:
+   16200:	d8ff                	.2byte	0xd8ff
+   16202:	e0ff                	.2byte	0xe0ff
+   16204:	1000                	.2byte	0x1000
+   16206:	464a                	.2byte	0x464a
+   16208:	4649                	.2byte	0x4649
+   1620a:	0100                	.2byte	0x100
+   1620c:	0101                	.2byte	0x101
+   1620e:	4800                	.2byte	0x4800
+   16210:	4800                	.2byte	0x4800
+   16212:	0000                	unimp
+   16214:	dbff                	.2byte	0xdbff
+   16216:	4300                	.2byte	0x4300
+   16218:	5000                	.2byte	0x5000
+   1621a:	3c463c37          	lui	s8,0x3c463
+   1621e:	5032                	.2byte	0x5032
+   16220:	4146                	.2byte	0x4146
+   16222:	5a46                	.2byte	0x5a46
+   16224:	5055                	.2byte	0x5055
+   16226:	785f 82c8 6e78      	.byte	0x5f, 0x78, 0xc8, 0x82, 0x78, 0x6e
+   1622c:	786e                	.2byte	0x786e
+   1622e:	aff5                	.2byte	0xaff5
+   16230:	91b9                	.2byte	0x91b9
+   16232:	ffc8                	.2byte	0xffc8
+   16234:	ffff                	.2byte	0xffff
+   16236:	ffff                	.2byte	0xffff
+   16238:	ffff                	.2byte	0xffff
+   1623a:	ffff                	.2byte	0xffff
+   1623c:	ffff                	.2byte	0xffff
+   1623e:	ffff                	.2byte	0xffff
+   16240:	ffff                	.2byte	0xffff
+   16242:	ffff                	.2byte	0xffff
+   16244:	ffff                	.2byte	0xffff
+   16246:	ffff                	.2byte	0xffff
+   16248:	ffff                	.2byte	0xffff
+   1624a:	ffff                	.2byte	0xffff
+   1624c:	ffff                	.2byte	0xffff
+   1624e:	ffff                	.2byte	0xffff
+   16250:	ffff                	.2byte	0xffff
+   16252:	ffff                	.2byte	0xffff
+   16254:	ffff                	.2byte	0xffff
+   16256:	ffff                	.2byte	0xffff
+   16258:	ffff                	.2byte	0xffff
+   1625a:	014300db          	.4byte	0x14300db
+   1625e:	5a55                	.2byte	0x5a55
+   16260:	785a                	.2byte	0x785a
+   16262:	7869                	.2byte	0x7869
+   16264:	eb8282eb          	.4byte	0xeb8282eb
+   16268:	ffff                	.2byte	0xffff
+   1626a:	ffff                	.2byte	0xffff
+   1626c:	ffff                	.2byte	0xffff
+   1626e:	ffff                	.2byte	0xffff
+   16270:	ffff                	.2byte	0xffff
+   16272:	ffff                	.2byte	0xffff
+   16274:	ffff                	.2byte	0xffff
+   16276:	ffff                	.2byte	0xffff
+   16278:	ffff                	.2byte	0xffff
+   1627a:	ffff                	.2byte	0xffff
+   1627c:	ffff                	.2byte	0xffff
+   1627e:	ffff                	.2byte	0xffff
+   16280:	ffff                	.2byte	0xffff
+   16282:	ffff                	.2byte	0xffff
+   16284:	ffff                	.2byte	0xffff
+   16286:	ffff                	.2byte	0xffff
+   16288:	ffff                	.2byte	0xffff
+   1628a:	ffff                	.2byte	0xffff
+   1628c:	ffff                	.2byte	0xffff
+   1628e:	ffff                	.2byte	0xffff
+   16290:	ffff                	.2byte	0xffff
+   16292:	ffff                	.2byte	0xffff
+   16294:	ffff                	.2byte	0xffff
+   16296:	ffff                	.2byte	0xffff
+   16298:	ffff                	.2byte	0xffff
+   1629a:	ffff                	.2byte	0xffff
+   1629c:	ffff                	.2byte	0xffff
+   1629e:	c0ff                	.2byte	0xc0ff
+   162a0:	1100                	.2byte	0x1100
+   162a2:	0008                	.2byte	0x8
+   162a4:	0040                	.2byte	0x40
+   162a6:	11010333          	.4byte	0x11010333
+   162aa:	0200                	.2byte	0x200
+   162ac:	0111                	.2byte	0x111
+   162ae:	ff011103          	lh	sp,-16(sp)
+   162b2:	00c4                	.2byte	0xc4
+   162b4:	0018                	.2byte	0x18
+   162b6:	0300                	.2byte	0x300
+   162b8:	0101                	.2byte	0x101
+   162ba:	0000                	unimp
+   162bc:	0000                	unimp
+   162be:	0000                	unimp
+   162c0:	0000                	unimp
+   162c2:	0000                	unimp
+   162c4:	0000                	unimp
+   162c6:	0201                	.2byte	0x201
+   162c8:	ff040003          	lb	zero,-16(s0)
+   162cc:	00c4                	.2byte	0xc4
+   162ce:	1026                	.2byte	0x1026
+   162d0:	0200                	.2byte	0x200
+   162d2:	0102                	.2byte	0x102
+   162d4:	03040303          	lb	t1,48(s0)
+   162d8:	0001                	.2byte	0x1
+   162da:	0000                	unimp
+   162dc:	0000                	unimp
+   162de:	0000                	unimp
+   162e0:	0201                	.2byte	0x201
+   162e2:	1100                	.2byte	0x1100
+   162e4:	31211203          	lh	tp,786(sp)
+   162e8:	6141                	.2byte	0x6141
+   162ea:	0471                	.2byte	0x471
+   162ec:	5322                	.2byte	0x5322
+   162ee:	1391                	.2byte	0x1391
+   162f0:	ff625123          	.4byte	0xff625123
+   162f4:	00c4                	.2byte	0xc4
+   162f6:	0115                	.2byte	0x115
+   162f8:	0101                	.2byte	0x101
+   162fa:	0000                	unimp
+   162fc:	0000                	unimp
+   162fe:	0000                	unimp
+   16300:	0000                	unimp
+   16302:	0000                	unimp
+   16304:	0000                	unimp
+   16306:	0000                	unimp
+   16308:	0100                	.2byte	0x100
+   1630a:	c4ff                	.2byte	0xc4ff
+   1630c:	1400                	.2byte	0x1400
+   1630e:	0111                	.2byte	0x111
+   16310:	0000                	unimp
+   16312:	0000                	unimp
+   16314:	0000                	unimp
+   16316:	0000                	unimp
+   16318:	0000                	unimp
+   1631a:	0000                	unimp
+   1631c:	0000                	unimp
+   1631e:	0000                	unimp
+   16320:	daff                	.2byte	0xdaff
+   16322:	0c00                	.2byte	0xc00
+   16324:	02000103          	lb	sp,32(zero) # 20 <exit-0x10074>
+   16328:	0311                	.2byte	0x311
+   1632a:	0011                	.2byte	0x11
+   1632c:	88c7003f 664d280b 	.8byte	0x664d280b88c7003f
+   16334:	02e1                	.2byte	0x2e1
+   16336:	450558cf          	.4byte	0x450558cf
+   1633a:	0088                	.2byte	0x88
+   1633c:	10a9                	.2byte	0x10a9
+   1633e:	0e34                	.2byte	0xe34
+   16340:	54686faf          	.4byte	0x54686faf
+   16344:	61036433          	.4byte	0x61036433
+   16348:	6a02                	.2byte	0x6a02
+   1634a:	db49                	.2byte	0xdb49
+   1634c:	8449                	.2byte	0x8449
+   1634e:	5059                	.2byte	0x5059
+   16350:	5091                	.2byte	0x5091
+   16352:	3da0                	.2byte	0x3da0
+   16354:	80a4                	.2byte	0x80a4
+   16356:	887c                	.2byte	0x887c
+   16358:	d518                	.2byte	0xd518
+   1635a:	0548                	.2byte	0x548
+   1635c:	4309                	.2byte	0x4309
+   1635e:	2b00ffeb          	.4byte	0x2b00ffeb
+   16362:	02f5                	.2byte	0x2f5
+   16364:	d478                	.2byte	0xd478
+   16366:	ac1c                	.2byte	0xac1c
+   16368:	1048                	.2byte	0x1048
+   1636a:	b58e                	.2byte	0xb58e
+   1636c:	a855                	.2byte	0xa855
+   1636e:	a50c                	.2byte	0xa50c
+   16370:	2a52db2f          	.4byte	0x2a52db2f
+   16374:	5319                	.2byte	0x5319
+   16376:	82f6                	.2byte	0x82f6
+   16378:	a104                	.2byte	0xa104
+   1637a:	450e                	.2byte	0x450e
+   1637c:	84f8                	.2byte	0x84f8
+   1637e:	ad0d                	.2byte	0xad0d
+   16380:	217e                	.2byte	0x217e
+   16382:	d020                	.2byte	0xd020
+   16384:	0430                	.2byte	0x430
+   16386:	43995c93          	srai	s9,s2,0x39
+   1638a:	c6e2                	.2byte	0xc6e2
+   1638c:	d7d42057          	.4byte	0xd7d42057
+   16390:	207d                	.2byte	0x207d
+   16392:	e13a                	.2byte	0xe13a
+   16394:	f640                	.2byte	0xf640
+   16396:	f149                	.2byte	0xf149
+   16398:	a320                	.2byte	0xa320
+   1639a:	09c5178b          	.4byte	0x9c5178b
+   1639e:	05352647          	.4byte	0x5352647
+   163a2:	1eb5                	.2byte	0x1eb5
+   163a4:	7520                	.2byte	0x7520
+   163a6:	9502                	.2byte	0x9502
+   163a8:	fac0                	.2byte	0xfac0
+   163aa:	cf81                	.2byte	0xcf81
+   163ac:	0c52                	.2byte	0xc52
+   163ae:	0d6c                	.2byte	0xd6c
+   163b0:	25a0                	.2byte	0x25a0
+   163b2:	ddbd                	.2byte	0xddbd
+   163b4:	f3d1                	.2byte	0xf3d1
+   163b6:	282a                	.2byte	0x282a
+   163b8:	0e04b043          	.4byte	0xe04b043
+   163bc:	dc3a                	.2byte	0xdc3a
+   163be:	b229                	.2byte	0xb229
+   163c0:	116af813          	andi	a6,s5,278
+   163c4:	5325                	.2byte	0x5325
+   163c6:	a922                	.2byte	0xa922
+   163c8:	e07d                	.2byte	0xe07d
+   163ca:	a82e                	.2byte	0xa82e
+   163cc:	c106                	.2byte	0xc106
+   163ce:	a0da                	.2byte	0xa0da
+   163d0:	2129                	.2byte	0x2129
+   163d2:	304d                	.2byte	0x304d
+   163d4:	2a35                	.2byte	0x2a35
+   163d6:	b928                	.2byte	0xb928
+   163d8:	15068517          	auipc	a0,0x15068
+   163dc:	9750                	.2byte	0x9750
+   163de:	d88c                	.2byte	0xd88c
+   163e0:	01e520ef          	jal	ra,683fe <__BSS_END__+0x5062e>
+   163e4:	d3f9                	.2byte	0xd3f9
+   163e6:	a152                	.2byte	0xa152
+   163e8:	0eb5                	.2byte	0xeb5
+   163ea:	14b0                	.2byte	0x14b0
+   163ec:	3990                	.2byte	0x3990
+   163ee:	2832                	.2byte	0x2832
+   163f0:	60e2                	.2byte	0x60e2
+   163f2:	17d9                	.2byte	0x17d9
+   163f4:	a2cc                	.2byte	0xa2cc
+   163f6:	b1d9                	.2byte	0xb1d9
+   163f8:	3502                	.2byte	0x3502
+   163fa:	1e58                	.2byte	0x1e58
+   163fc:	0c60                	.2byte	0xc60
+   163fe:	9558                	.2byte	0x9558
+   16400:	a606                	.2byte	0xa606
+   16402:	f820                	.2byte	0xf820
+   16404:	3b90                	.2byte	0x3b90
+   16406:	b3b04167          	.4byte	0xb3b04167
+   1640a:	4f02                	.2byte	0x4f02
+   1640c:	559c                	.2byte	0x559c
+   1640e:	8e40                	.2byte	0x8e40
+   16410:	feb5                	.2byte	0xfeb5
+   16412:	5109                	.2byte	0x5109
+   16414:	d712                	.2byte	0xd712
+   16416:	fd01                	.2byte	0xfd01
+   16418:	7b99113b          	.4byte	0x7b99113b
+   1641c:	5598                	.2byte	0x5598
+   1641e:	4b7d                	.2byte	0x4b7d
+   16420:	ec0064bb          	.4byte	0xec0064bb
+   16424:	04bd                	.2byte	0x4bd
+   16426:	4505                	.2byte	0x4505
+   16428:	3662                	.2byte	0x3662
+   1642a:	3bb2                	.2byte	0x3bb2
+   1642c:	1b42                	.2byte	0x1b42
+   1642e:	1c2a                	.2byte	0x1c2a
+   16430:	7440                	.2byte	0x7440
+   16432:	11b8                	.2byte	0x11b8
+   16434:	0006                	.2byte	0x6
+   16436:	1fb8                	.2byte	0x1fb8
+   16438:	d9ff                	.2byte	0xd9ff
+   1643a:	0000                	unimp
+
+0001643c <r_ref.2>:
+   1643c:	2121                	.2byte	0x2121
+   1643e:	2121                	.2byte	0x2121
+   16440:	2121                	.2byte	0x2121
+   16442:	2121                	.2byte	0x2121
+   16444:	2020                	.2byte	0x2020
+   16446:	2020                	.2byte	0x2020
+   16448:	2020                	.2byte	0x2020
+   1644a:	2020                	.2byte	0x2020
+   1644c:	1d1d                	.2byte	0x1d1d
+   1644e:	1d1d                	.2byte	0x1d1d
+   16450:	1d1d                	.2byte	0x1d1d
+   16452:	1d1d                	.2byte	0x1d1d
+   16454:	1919                	.2byte	0x1919
+   16456:	1919                	.2byte	0x1919
+   16458:	1919                	.2byte	0x1919
+   1645a:	1919                	.2byte	0x1919
+   1645c:	1515                	.2byte	0x1515
+   1645e:	1515                	.2byte	0x1515
+   16460:	1515                	.2byte	0x1515
+   16462:	1515                	.2byte	0x1515
+   16464:	1111                	.2byte	0x1111
+   16466:	1111                	.2byte	0x1111
+   16468:	1111                	.2byte	0x1111
+   1646a:	1111                	.2byte	0x1111
+   1646c:	0e0e                	.2byte	0xe0e
+   1646e:	0e0e                	.2byte	0xe0e
+   16470:	0e0e                	.2byte	0xe0e
+   16472:	0e0e                	.2byte	0xe0e
+   16474:	0d0d                	.2byte	0xd0d
+   16476:	0d0d                	.2byte	0xd0d
+   16478:	0d0d                	.2byte	0xd0d
+   1647a:	0d0d                	.2byte	0xd0d
+
+0001647c <g_ref.1>:
+   1647c:	3535                	.2byte	0x3535
+   1647e:	3535                	.2byte	0x3535
+   16480:	3535                	.2byte	0x3535
+   16482:	3535                	.2byte	0x3535
+   16484:	3434                	.2byte	0x3434
+   16486:	3434                	.2byte	0x3434
+   16488:	3434                	.2byte	0x3434
+   1648a:	3434                	.2byte	0x3434
+   1648c:	3131                	.2byte	0x3131
+   1648e:	3131                	.2byte	0x3131
+   16490:	3131                	.2byte	0x3131
+   16492:	3131                	.2byte	0x3131
+   16494:	2d2d                	.2byte	0x2d2d
+   16496:	2d2d                	.2byte	0x2d2d
+   16498:	2d2d                	.2byte	0x2d2d
+   1649a:	2d2d                	.2byte	0x2d2d
+   1649c:	2929                	.2byte	0x2929
+   1649e:	2929                	.2byte	0x2929
+   164a0:	2929                	.2byte	0x2929
+   164a2:	2929                	.2byte	0x2929
+   164a4:	2525                	.2byte	0x2525
+   164a6:	2525                	.2byte	0x2525
+   164a8:	2525                	.2byte	0x2525
+   164aa:	2525                	.2byte	0x2525
+   164ac:	2222                	.2byte	0x2222
+   164ae:	2222                	.2byte	0x2222
+   164b0:	2222                	.2byte	0x2222
+   164b2:	2222                	.2byte	0x2222
+   164b4:	2121                	.2byte	0x2121
+   164b6:	2121                	.2byte	0x2121
+   164b8:	2121                	.2byte	0x2121
+   164ba:	2121                	.2byte	0x2121
+
+000164bc <b_ref.0>:
+   164bc:	43434343          	.4byte	0x43434343
+   164c0:	43434343          	.4byte	0x43434343
+   164c4:	4242                	.2byte	0x4242
+   164c6:	4242                	.2byte	0x4242
+   164c8:	4242                	.2byte	0x4242
+   164ca:	4242                	.2byte	0x4242
+   164cc:	3f3f3f3f 3f3f3f3f 	.8byte	0x3f3f3f3f3f3f3f3f
+   164d4:	3b3b3b3b          	.4byte	0x3b3b3b3b
+   164d8:	3b3b3b3b          	.4byte	0x3b3b3b3b
+   164dc:	37373737          	lui	a4,0x37373
+   164e0:	37373737          	lui	a4,0x37373
+   164e4:	33333333          	.4byte	0x33333333
+   164e8:	33333333          	.4byte	0x33333333
+   164ec:	3030                	.2byte	0x3030
+   164ee:	3030                	.2byte	0x3030
+   164f0:	3030                	.2byte	0x3030
+   164f2:	3030                	.2byte	0x3030
+   164f4:	2f2f2f2f          	.4byte	0x2f2f2f2f
+   164f8:	2f2f2f2f          	.4byte	0x2f2f2f2f
+
+Disassembly of section .data:
+
+00017010 <impure_data>:
+   17010:	0000                	unimp
+   17012:	0000                	unimp
+   17014:	72fc                	.2byte	0x72fc
+   17016:	0001                	.2byte	0x1
+   17018:	7364                	.2byte	0x7364
+   1701a:	0001                	.2byte	0x1
+   1701c:	73cc                	.2byte	0x73cc
+   1701e:	0001                	.2byte	0x1
+   17020:	0000                	unimp
+   17022:	0000                	unimp
+   17024:	0000                	unimp
+   17026:	0000                	unimp
+   17028:	0000                	unimp
+   1702a:	0000                	unimp
+   1702c:	0000                	unimp
+   1702e:	0000                	unimp
+   17030:	0000                	unimp
+   17032:	0000                	unimp
+   17034:	0000                	unimp
+   17036:	0000                	unimp
+   17038:	0000                	unimp
+   1703a:	0000                	unimp
+   1703c:	0000                	unimp
+   1703e:	0000                	unimp
+   17040:	0000                	unimp
+   17042:	0000                	unimp
+   17044:	0000                	unimp
+   17046:	0000                	unimp
+   17048:	0000                	unimp
+   1704a:	0000                	unimp
+   1704c:	0000                	unimp
+   1704e:	0000                	unimp
+   17050:	0000                	unimp
+   17052:	0000                	unimp
+   17054:	0000                	unimp
+   17056:	0000                	unimp
+   17058:	0000                	unimp
+   1705a:	0000                	unimp
+   1705c:	0000                	unimp
+   1705e:	0000                	unimp
+   17060:	0000                	unimp
+   17062:	0000                	unimp
+   17064:	0000                	unimp
+   17066:	0000                	unimp
+   17068:	0000                	unimp
+   1706a:	0000                	unimp
+   1706c:	0000                	unimp
+   1706e:	0000                	unimp
+   17070:	0000                	unimp
+   17072:	0000                	unimp
+   17074:	0000                	unimp
+   17076:	0000                	unimp
+   17078:	0000                	unimp
+   1707a:	0000                	unimp
+   1707c:	0000                	unimp
+   1707e:	0000                	unimp
+   17080:	0000                	unimp
+   17082:	0000                	unimp
+   17084:	0000                	unimp
+   17086:	0000                	unimp
+   17088:	0000                	unimp
+   1708a:	0000                	unimp
+   1708c:	0000                	unimp
+   1708e:	0000                	unimp
+   17090:	0000                	unimp
+   17092:	0000                	unimp
+   17094:	0000                	unimp
+   17096:	0000                	unimp
+   17098:	0000                	unimp
+   1709a:	0000                	unimp
+   1709c:	0000                	unimp
+   1709e:	0000                	unimp
+   170a0:	0000                	unimp
+   170a2:	0000                	unimp
+   170a4:	0000                	unimp
+   170a6:	0000                	unimp
+   170a8:	0000                	unimp
+   170aa:	0000                	unimp
+   170ac:	0000                	unimp
+   170ae:	0000                	unimp
+   170b0:	0000                	unimp
+   170b2:	0000                	unimp
+   170b4:	0000                	unimp
+   170b6:	0000                	unimp
+   170b8:	0001                	.2byte	0x1
+   170ba:	0000                	unimp
+   170bc:	0000                	unimp
+   170be:	0000                	unimp
+   170c0:	330e                	.2byte	0x330e
+   170c2:	abcd                	.2byte	0xabcd
+   170c4:	1234                	.2byte	0x1234
+   170c6:	e66d                	.2byte	0xe66d
+   170c8:	deec                	.2byte	0xdeec
+   170ca:	0005                	.2byte	0x5
+   170cc:	0000000b          	.4byte	0xb
+   170d0:	0000                	unimp
+   170d2:	0000                	unimp
+   170d4:	0000                	unimp
+   170d6:	0000                	unimp
+   170d8:	0000                	unimp
+   170da:	0000                	unimp
+   170dc:	0000                	unimp
+   170de:	0000                	unimp
+   170e0:	0000                	unimp
+   170e2:	0000                	unimp
+   170e4:	0000                	unimp
+   170e6:	0000                	unimp
+   170e8:	0000                	unimp
+   170ea:	0000                	unimp
+   170ec:	0000                	unimp
+   170ee:	0000                	unimp
+   170f0:	0000                	unimp
+   170f2:	0000                	unimp
+   170f4:	0000                	unimp
+   170f6:	0000                	unimp
+   170f8:	0000                	unimp
+   170fa:	0000                	unimp
+   170fc:	0000                	unimp
+   170fe:	0000                	unimp
+   17100:	0000                	unimp
+   17102:	0000                	unimp
+   17104:	0000                	unimp
+   17106:	0000                	unimp
+   17108:	0000                	unimp
+   1710a:	0000                	unimp
+   1710c:	0000                	unimp
+   1710e:	0000                	unimp
+   17110:	0000                	unimp
+   17112:	0000                	unimp
+   17114:	0000                	unimp
+   17116:	0000                	unimp
+   17118:	0000                	unimp
+   1711a:	0000                	unimp
+   1711c:	0000                	unimp
+   1711e:	0000                	unimp
+   17120:	0000                	unimp
+   17122:	0000                	unimp
+   17124:	0000                	unimp
+   17126:	0000                	unimp
+   17128:	0000                	unimp
+   1712a:	0000                	unimp
+   1712c:	0000                	unimp
+   1712e:	0000                	unimp
+   17130:	0000                	unimp
+   17132:	0000                	unimp
+   17134:	0000                	unimp
+   17136:	0000                	unimp
+   17138:	0000                	unimp
+   1713a:	0000                	unimp
+   1713c:	0000                	unimp
+   1713e:	0000                	unimp
+   17140:	0000                	unimp
+   17142:	0000                	unimp
+   17144:	0000                	unimp
+   17146:	0000                	unimp
+   17148:	0000                	unimp
+   1714a:	0000                	unimp
+   1714c:	0000                	unimp
+   1714e:	0000                	unimp
+   17150:	0000                	unimp
+   17152:	0000                	unimp
+   17154:	0000                	unimp
+   17156:	0000                	unimp
+   17158:	0000                	unimp
+   1715a:	0000                	unimp
+   1715c:	0000                	unimp
+   1715e:	0000                	unimp
+   17160:	0000                	unimp
+   17162:	0000                	unimp
+   17164:	0000                	unimp
+   17166:	0000                	unimp
+   17168:	0000                	unimp
+   1716a:	0000                	unimp
+   1716c:	0000                	unimp
+   1716e:	0000                	unimp
+   17170:	0000                	unimp
+   17172:	0000                	unimp
+   17174:	0000                	unimp
+   17176:	0000                	unimp
+   17178:	0000                	unimp
+   1717a:	0000                	unimp
+   1717c:	0000                	unimp
+   1717e:	0000                	unimp
+   17180:	0000                	unimp
+   17182:	0000                	unimp
+   17184:	0000                	unimp
+   17186:	0000                	unimp
+   17188:	0000                	unimp
+   1718a:	0000                	unimp
+   1718c:	0000                	unimp
+   1718e:	0000                	unimp
+   17190:	0000                	unimp
+   17192:	0000                	unimp
+   17194:	0000                	unimp
+   17196:	0000                	unimp
+   17198:	0000                	unimp
+   1719a:	0000                	unimp
+   1719c:	0000                	unimp
+   1719e:	0000                	unimp
+   171a0:	0000                	unimp
+   171a2:	0000                	unimp
+   171a4:	0000                	unimp
+   171a6:	0000                	unimp
+   171a8:	0000                	unimp
+   171aa:	0000                	unimp
+   171ac:	0000                	unimp
+   171ae:	0000                	unimp
+   171b0:	0000                	unimp
+   171b2:	0000                	unimp
+   171b4:	0000                	unimp
+   171b6:	0000                	unimp
+   171b8:	0000                	unimp
+   171ba:	0000                	unimp
+   171bc:	0000                	unimp
+   171be:	0000                	unimp
+   171c0:	0000                	unimp
+   171c2:	0000                	unimp
+   171c4:	0000                	unimp
+   171c6:	0000                	unimp
+   171c8:	0000                	unimp
+   171ca:	0000                	unimp
+   171cc:	0000                	unimp
+   171ce:	0000                	unimp
+   171d0:	0000                	unimp
+   171d2:	0000                	unimp
+   171d4:	0000                	unimp
+   171d6:	0000                	unimp
+   171d8:	0000                	unimp
+   171da:	0000                	unimp
+   171dc:	0000                	unimp
+   171de:	0000                	unimp
+   171e0:	0000                	unimp
+   171e2:	0000                	unimp
+   171e4:	0000                	unimp
+   171e6:	0000                	unimp
+   171e8:	0000                	unimp
+   171ea:	0000                	unimp
+   171ec:	0000                	unimp
+   171ee:	0000                	unimp
+   171f0:	0000                	unimp
+   171f2:	0000                	unimp
+   171f4:	0000                	unimp
+   171f6:	0000                	unimp
+   171f8:	0000                	unimp
+   171fa:	0000                	unimp
+   171fc:	0000                	unimp
+   171fe:	0000                	unimp
+   17200:	0000                	unimp
+   17202:	0000                	unimp
+   17204:	0000                	unimp
+   17206:	0000                	unimp
+   17208:	0000                	unimp
+   1720a:	0000                	unimp
+   1720c:	0000                	unimp
+   1720e:	0000                	unimp
+   17210:	0000                	unimp
+   17212:	0000                	unimp
+   17214:	0000                	unimp
+   17216:	0000                	unimp
+   17218:	0000                	unimp
+   1721a:	0000                	unimp
+   1721c:	0000                	unimp
+   1721e:	0000                	unimp
+   17220:	0000                	unimp
+   17222:	0000                	unimp
+   17224:	0000                	unimp
+   17226:	0000                	unimp
+   17228:	0000                	unimp
+   1722a:	0000                	unimp
+   1722c:	0000                	unimp
+   1722e:	0000                	unimp
+   17230:	0000                	unimp
+   17232:	0000                	unimp
+   17234:	0000                	unimp
+   17236:	0000                	unimp
+   17238:	0000                	unimp
+   1723a:	0000                	unimp
+   1723c:	0000                	unimp
+   1723e:	0000                	unimp
+   17240:	0000                	unimp
+   17242:	0000                	unimp
+   17244:	0000                	unimp
+   17246:	0000                	unimp
+   17248:	0000                	unimp
+   1724a:	0000                	unimp
+   1724c:	0000                	unimp
+   1724e:	0000                	unimp
+   17250:	0000                	unimp
+   17252:	0000                	unimp
+   17254:	0000                	unimp
+   17256:	0000                	unimp
+   17258:	0000                	unimp
+   1725a:	0000                	unimp
+   1725c:	0000                	unimp
+   1725e:	0000                	unimp
+   17260:	0000                	unimp
+   17262:	0000                	unimp
+   17264:	0000                	unimp
+   17266:	0000                	unimp
+   17268:	0000                	unimp
+   1726a:	0000                	unimp
+   1726c:	0000                	unimp
+   1726e:	0000                	unimp
+   17270:	0000                	unimp
+   17272:	0000                	unimp
+   17274:	0000                	unimp
+   17276:	0000                	unimp
+   17278:	0000                	unimp
+   1727a:	0000                	unimp
+   1727c:	0000                	unimp
+   1727e:	0000                	unimp
+   17280:	0000                	unimp
+   17282:	0000                	unimp
+   17284:	0000                	unimp
+   17286:	0000                	unimp
+   17288:	0000                	unimp
+   1728a:	0000                	unimp
+   1728c:	0000                	unimp
+   1728e:	0000                	unimp
+   17290:	0000                	unimp
+   17292:	0000                	unimp
+   17294:	0000                	unimp
+   17296:	0000                	unimp
+   17298:	0000                	unimp
+   1729a:	0000                	unimp
+   1729c:	0000                	unimp
+   1729e:	0000                	unimp
+   172a0:	0000                	unimp
+   172a2:	0000                	unimp
+   172a4:	0000                	unimp
+   172a6:	0000                	unimp
+   172a8:	0000                	unimp
+   172aa:	0000                	unimp
+   172ac:	0000                	unimp
+   172ae:	0000                	unimp
+   172b0:	0000                	unimp
+   172b2:	0000                	unimp
+   172b4:	0000                	unimp
+   172b6:	0000                	unimp
+   172b8:	0000                	unimp
+   172ba:	0000                	unimp
+   172bc:	0000                	unimp
+   172be:	0000                	unimp
+   172c0:	0000                	unimp
+   172c2:	0000                	unimp
+   172c4:	0000                	unimp
+   172c6:	0000                	unimp
+   172c8:	0000                	unimp
+   172ca:	0000                	unimp
+   172cc:	0000                	unimp
+   172ce:	0000                	unimp
+   172d0:	0000                	unimp
+   172d2:	0000                	unimp
+   172d4:	0000                	unimp
+   172d6:	0000                	unimp
+   172d8:	0000                	unimp
+   172da:	0000                	unimp
+   172dc:	0000                	unimp
+   172de:	0000                	unimp
+   172e0:	0000                	unimp
+   172e2:	0000                	unimp
+   172e4:	0000                	unimp
+   172e6:	0000                	unimp
+   172e8:	0000                	unimp
+   172ea:	0000                	unimp
+   172ec:	0000                	unimp
+   172ee:	0000                	unimp
+   172f0:	0000                	unimp
+   172f2:	0000                	unimp
+   172f4:	0000                	unimp
+   172f6:	0000                	unimp
+   172f8:	0000                	unimp
+   172fa:	0000                	unimp
+   172fc:	0000                	unimp
+   172fe:	0000                	unimp
+   17300:	0000                	unimp
+   17302:	0000                	unimp
+   17304:	0000                	unimp
+   17306:	0000                	unimp
+   17308:	0000                	unimp
+   1730a:	0000                	unimp
+   1730c:	0000                	unimp
+   1730e:	0000                	unimp
+   17310:	0000                	unimp
+   17312:	0000                	unimp
+   17314:	0000                	unimp
+   17316:	0000                	unimp
+   17318:	0000                	unimp
+   1731a:	0000                	unimp
+   1731c:	0000                	unimp
+   1731e:	0000                	unimp
+   17320:	0000                	unimp
+   17322:	0000                	unimp
+   17324:	0000                	unimp
+   17326:	0000                	unimp
+   17328:	0000                	unimp
+   1732a:	0000                	unimp
+   1732c:	0000                	unimp
+   1732e:	0000                	unimp
+   17330:	0000                	unimp
+   17332:	0000                	unimp
+   17334:	0000                	unimp
+   17336:	0000                	unimp
+   17338:	0000                	unimp
+   1733a:	0000                	unimp
+   1733c:	0000                	unimp
+   1733e:	0000                	unimp
+   17340:	0000                	unimp
+   17342:	0000                	unimp
+   17344:	0000                	unimp
+   17346:	0000                	unimp
+   17348:	0000                	unimp
+   1734a:	0000                	unimp
+   1734c:	0000                	unimp
+   1734e:	0000                	unimp
+   17350:	0000                	unimp
+   17352:	0000                	unimp
+   17354:	0000                	unimp
+   17356:	0000                	unimp
+   17358:	0000                	unimp
+   1735a:	0000                	unimp
+   1735c:	0000                	unimp
+   1735e:	0000                	unimp
+   17360:	0000                	unimp
+   17362:	0000                	unimp
+   17364:	0000                	unimp
+   17366:	0000                	unimp
+   17368:	0000                	unimp
+   1736a:	0000                	unimp
+   1736c:	0000                	unimp
+   1736e:	0000                	unimp
+   17370:	0000                	unimp
+   17372:	0000                	unimp
+   17374:	0000                	unimp
+   17376:	0000                	unimp
+   17378:	0000                	unimp
+   1737a:	0000                	unimp
+   1737c:	0000                	unimp
+   1737e:	0000                	unimp
+   17380:	0000                	unimp
+   17382:	0000                	unimp
+   17384:	0000                	unimp
+   17386:	0000                	unimp
+   17388:	0000                	unimp
+   1738a:	0000                	unimp
+   1738c:	0000                	unimp
+   1738e:	0000                	unimp
+   17390:	0000                	unimp
+   17392:	0000                	unimp
+   17394:	0000                	unimp
+   17396:	0000                	unimp
+   17398:	0000                	unimp
+   1739a:	0000                	unimp
+   1739c:	0000                	unimp
+   1739e:	0000                	unimp
+   173a0:	0000                	unimp
+   173a2:	0000                	unimp
+   173a4:	0000                	unimp
+   173a6:	0000                	unimp
+   173a8:	0000                	unimp
+   173aa:	0000                	unimp
+   173ac:	0000                	unimp
+   173ae:	0000                	unimp
+   173b0:	0000                	unimp
+   173b2:	0000                	unimp
+   173b4:	0000                	unimp
+   173b6:	0000                	unimp
+   173b8:	0000                	unimp
+   173ba:	0000                	unimp
+   173bc:	0000                	unimp
+   173be:	0000                	unimp
+   173c0:	0000                	unimp
+   173c2:	0000                	unimp
+   173c4:	0000                	unimp
+   173c6:	0000                	unimp
+   173c8:	0000                	unimp
+   173ca:	0000                	unimp
+   173cc:	0000                	unimp
+   173ce:	0000                	unimp
+   173d0:	0000                	unimp
+   173d2:	0000                	unimp
+   173d4:	0000                	unimp
+   173d6:	0000                	unimp
+   173d8:	0000                	unimp
+   173da:	0000                	unimp
+   173dc:	0000                	unimp
+   173de:	0000                	unimp
+   173e0:	0000                	unimp
+   173e2:	0000                	unimp
+   173e4:	0000                	unimp
+   173e6:	0000                	unimp
+   173e8:	0000                	unimp
+   173ea:	0000                	unimp
+   173ec:	0000                	unimp
+   173ee:	0000                	unimp
+   173f0:	0000                	unimp
+   173f2:	0000                	unimp
+   173f4:	0000                	unimp
+   173f6:	0000                	unimp
+   173f8:	0000                	unimp
+   173fa:	0000                	unimp
+   173fc:	0000                	unimp
+   173fe:	0000                	unimp
+   17400:	0000                	unimp
+   17402:	0000                	unimp
+   17404:	0000                	unimp
+   17406:	0000                	unimp
+   17408:	0000                	unimp
+   1740a:	0000                	unimp
+   1740c:	0000                	unimp
+   1740e:	0000                	unimp
+   17410:	0000                	unimp
+   17412:	0000                	unimp
+   17414:	0000                	unimp
+   17416:	0000                	unimp
+   17418:	0000                	unimp
+   1741a:	0000                	unimp
+   1741c:	0000                	unimp
+   1741e:	0000                	unimp
+   17420:	0000                	unimp
+   17422:	0000                	unimp
+   17424:	0000                	unimp
+   17426:	0000                	unimp
+   17428:	0000                	unimp
+   1742a:	0000                	unimp
+   1742c:	0000                	unimp
+   1742e:	0000                	unimp
+   17430:	0000                	unimp
+   17432:	0000                	unimp
+   17434:	0000                	unimp
+   17436:	0000                	unimp
+
+Disassembly of section .bss:
+
+00017448 <completed.1>:
+   17448:	0000                	unimp
+   1744a:	0000                	unimp
+
+0001744c <object.0>:
+   1744c:	0000                	unimp
+   1744e:	0000                	unimp
+   17450:	0000                	unimp
+   17452:	0000                	unimp
+   17454:	0000                	unimp
+   17456:	0000                	unimp
+   17458:	0000                	unimp
+   1745a:	0000                	unimp
+   1745c:	0000                	unimp
+   1745e:	0000                	unimp
+   17460:	0000                	unimp
+   17462:	0000                	unimp
+
+00017464 <gCoeffBuf>:
+   17464:	0000                	unimp
+   17466:	0000                	unimp
+   17468:	0000                	unimp
+   1746a:	0000                	unimp
+   1746c:	0000                	unimp
+   1746e:	0000                	unimp
+   17470:	0000                	unimp
+   17472:	0000                	unimp
+   17474:	0000                	unimp
+   17476:	0000                	unimp
+   17478:	0000                	unimp
+   1747a:	0000                	unimp
+   1747c:	0000                	unimp
+   1747e:	0000                	unimp
+   17480:	0000                	unimp
+   17482:	0000                	unimp
+   17484:	0000                	unimp
+   17486:	0000                	unimp
+   17488:	0000                	unimp
+   1748a:	0000                	unimp
+   1748c:	0000                	unimp
+   1748e:	0000                	unimp
+   17490:	0000                	unimp
+   17492:	0000                	unimp
+   17494:	0000                	unimp
+   17496:	0000                	unimp
+   17498:	0000                	unimp
+   1749a:	0000                	unimp
+   1749c:	0000                	unimp
+   1749e:	0000                	unimp
+   174a0:	0000                	unimp
+   174a2:	0000                	unimp
+   174a4:	0000                	unimp
+   174a6:	0000                	unimp
+   174a8:	0000                	unimp
+   174aa:	0000                	unimp
+   174ac:	0000                	unimp
+   174ae:	0000                	unimp
+   174b0:	0000                	unimp
+   174b2:	0000                	unimp
+   174b4:	0000                	unimp
+   174b6:	0000                	unimp
+   174b8:	0000                	unimp
+   174ba:	0000                	unimp
+   174bc:	0000                	unimp
+   174be:	0000                	unimp
+   174c0:	0000                	unimp
+   174c2:	0000                	unimp
+   174c4:	0000                	unimp
+   174c6:	0000                	unimp
+   174c8:	0000                	unimp
+   174ca:	0000                	unimp
+   174cc:	0000                	unimp
+   174ce:	0000                	unimp
+   174d0:	0000                	unimp
+   174d2:	0000                	unimp
+   174d4:	0000                	unimp
+   174d6:	0000                	unimp
+   174d8:	0000                	unimp
+   174da:	0000                	unimp
+   174dc:	0000                	unimp
+   174de:	0000                	unimp
+   174e0:	0000                	unimp
+   174e2:	0000                	unimp
+
+000174e4 <gMCUBufR>:
+   174e4:	0000                	unimp
+   174e6:	0000                	unimp
+   174e8:	0000                	unimp
+   174ea:	0000                	unimp
+   174ec:	0000                	unimp
+   174ee:	0000                	unimp
+   174f0:	0000                	unimp
+   174f2:	0000                	unimp
+   174f4:	0000                	unimp
+   174f6:	0000                	unimp
+   174f8:	0000                	unimp
+   174fa:	0000                	unimp
+   174fc:	0000                	unimp
+   174fe:	0000                	unimp
+   17500:	0000                	unimp
+   17502:	0000                	unimp
+   17504:	0000                	unimp
+   17506:	0000                	unimp
+   17508:	0000                	unimp
+   1750a:	0000                	unimp
+   1750c:	0000                	unimp
+   1750e:	0000                	unimp
+   17510:	0000                	unimp
+   17512:	0000                	unimp
+   17514:	0000                	unimp
+   17516:	0000                	unimp
+   17518:	0000                	unimp
+   1751a:	0000                	unimp
+   1751c:	0000                	unimp
+   1751e:	0000                	unimp
+   17520:	0000                	unimp
+   17522:	0000                	unimp
+   17524:	0000                	unimp
+   17526:	0000                	unimp
+   17528:	0000                	unimp
+   1752a:	0000                	unimp
+   1752c:	0000                	unimp
+   1752e:	0000                	unimp
+   17530:	0000                	unimp
+   17532:	0000                	unimp
+   17534:	0000                	unimp
+   17536:	0000                	unimp
+   17538:	0000                	unimp
+   1753a:	0000                	unimp
+   1753c:	0000                	unimp
+   1753e:	0000                	unimp
+   17540:	0000                	unimp
+   17542:	0000                	unimp
+   17544:	0000                	unimp
+   17546:	0000                	unimp
+   17548:	0000                	unimp
+   1754a:	0000                	unimp
+   1754c:	0000                	unimp
+   1754e:	0000                	unimp
+   17550:	0000                	unimp
+   17552:	0000                	unimp
+   17554:	0000                	unimp
+   17556:	0000                	unimp
+   17558:	0000                	unimp
+   1755a:	0000                	unimp
+   1755c:	0000                	unimp
+   1755e:	0000                	unimp
+   17560:	0000                	unimp
+   17562:	0000                	unimp
+   17564:	0000                	unimp
+   17566:	0000                	unimp
+   17568:	0000                	unimp
+   1756a:	0000                	unimp
+   1756c:	0000                	unimp
+   1756e:	0000                	unimp
+   17570:	0000                	unimp
+   17572:	0000                	unimp
+   17574:	0000                	unimp
+   17576:	0000                	unimp
+   17578:	0000                	unimp
+   1757a:	0000                	unimp
+   1757c:	0000                	unimp
+   1757e:	0000                	unimp
+   17580:	0000                	unimp
+   17582:	0000                	unimp
+   17584:	0000                	unimp
+   17586:	0000                	unimp
+   17588:	0000                	unimp
+   1758a:	0000                	unimp
+   1758c:	0000                	unimp
+   1758e:	0000                	unimp
+   17590:	0000                	unimp
+   17592:	0000                	unimp
+   17594:	0000                	unimp
+   17596:	0000                	unimp
+   17598:	0000                	unimp
+   1759a:	0000                	unimp
+   1759c:	0000                	unimp
+   1759e:	0000                	unimp
+   175a0:	0000                	unimp
+   175a2:	0000                	unimp
+   175a4:	0000                	unimp
+   175a6:	0000                	unimp
+   175a8:	0000                	unimp
+   175aa:	0000                	unimp
+   175ac:	0000                	unimp
+   175ae:	0000                	unimp
+   175b0:	0000                	unimp
+   175b2:	0000                	unimp
+   175b4:	0000                	unimp
+   175b6:	0000                	unimp
+   175b8:	0000                	unimp
+   175ba:	0000                	unimp
+   175bc:	0000                	unimp
+   175be:	0000                	unimp
+   175c0:	0000                	unimp
+   175c2:	0000                	unimp
+   175c4:	0000                	unimp
+   175c6:	0000                	unimp
+   175c8:	0000                	unimp
+   175ca:	0000                	unimp
+   175cc:	0000                	unimp
+   175ce:	0000                	unimp
+   175d0:	0000                	unimp
+   175d2:	0000                	unimp
+   175d4:	0000                	unimp
+   175d6:	0000                	unimp
+   175d8:	0000                	unimp
+   175da:	0000                	unimp
+   175dc:	0000                	unimp
+   175de:	0000                	unimp
+   175e0:	0000                	unimp
+   175e2:	0000                	unimp
+
+000175e4 <gMCUBufG>:
+   175e4:	0000                	unimp
+   175e6:	0000                	unimp
+   175e8:	0000                	unimp
+   175ea:	0000                	unimp
+   175ec:	0000                	unimp
+   175ee:	0000                	unimp
+   175f0:	0000                	unimp
+   175f2:	0000                	unimp
+   175f4:	0000                	unimp
+   175f6:	0000                	unimp
+   175f8:	0000                	unimp
+   175fa:	0000                	unimp
+   175fc:	0000                	unimp
+   175fe:	0000                	unimp
+   17600:	0000                	unimp
+   17602:	0000                	unimp
+   17604:	0000                	unimp
+   17606:	0000                	unimp
+   17608:	0000                	unimp
+   1760a:	0000                	unimp
+   1760c:	0000                	unimp
+   1760e:	0000                	unimp
+   17610:	0000                	unimp
+   17612:	0000                	unimp
+   17614:	0000                	unimp
+   17616:	0000                	unimp
+   17618:	0000                	unimp
+   1761a:	0000                	unimp
+   1761c:	0000                	unimp
+   1761e:	0000                	unimp
+   17620:	0000                	unimp
+   17622:	0000                	unimp
+   17624:	0000                	unimp
+   17626:	0000                	unimp
+   17628:	0000                	unimp
+   1762a:	0000                	unimp
+   1762c:	0000                	unimp
+   1762e:	0000                	unimp
+   17630:	0000                	unimp
+   17632:	0000                	unimp
+   17634:	0000                	unimp
+   17636:	0000                	unimp
+   17638:	0000                	unimp
+   1763a:	0000                	unimp
+   1763c:	0000                	unimp
+   1763e:	0000                	unimp
+   17640:	0000                	unimp
+   17642:	0000                	unimp
+   17644:	0000                	unimp
+   17646:	0000                	unimp
+   17648:	0000                	unimp
+   1764a:	0000                	unimp
+   1764c:	0000                	unimp
+   1764e:	0000                	unimp
+   17650:	0000                	unimp
+   17652:	0000                	unimp
+   17654:	0000                	unimp
+   17656:	0000                	unimp
+   17658:	0000                	unimp
+   1765a:	0000                	unimp
+   1765c:	0000                	unimp
+   1765e:	0000                	unimp
+   17660:	0000                	unimp
+   17662:	0000                	unimp
+   17664:	0000                	unimp
+   17666:	0000                	unimp
+   17668:	0000                	unimp
+   1766a:	0000                	unimp
+   1766c:	0000                	unimp
+   1766e:	0000                	unimp
+   17670:	0000                	unimp
+   17672:	0000                	unimp
+   17674:	0000                	unimp
+   17676:	0000                	unimp
+   17678:	0000                	unimp
+   1767a:	0000                	unimp
+   1767c:	0000                	unimp
+   1767e:	0000                	unimp
+   17680:	0000                	unimp
+   17682:	0000                	unimp
+   17684:	0000                	unimp
+   17686:	0000                	unimp
+   17688:	0000                	unimp
+   1768a:	0000                	unimp
+   1768c:	0000                	unimp
+   1768e:	0000                	unimp
+   17690:	0000                	unimp
+   17692:	0000                	unimp
+   17694:	0000                	unimp
+   17696:	0000                	unimp
+   17698:	0000                	unimp
+   1769a:	0000                	unimp
+   1769c:	0000                	unimp
+   1769e:	0000                	unimp
+   176a0:	0000                	unimp
+   176a2:	0000                	unimp
+   176a4:	0000                	unimp
+   176a6:	0000                	unimp
+   176a8:	0000                	unimp
+   176aa:	0000                	unimp
+   176ac:	0000                	unimp
+   176ae:	0000                	unimp
+   176b0:	0000                	unimp
+   176b2:	0000                	unimp
+   176b4:	0000                	unimp
+   176b6:	0000                	unimp
+   176b8:	0000                	unimp
+   176ba:	0000                	unimp
+   176bc:	0000                	unimp
+   176be:	0000                	unimp
+   176c0:	0000                	unimp
+   176c2:	0000                	unimp
+   176c4:	0000                	unimp
+   176c6:	0000                	unimp
+   176c8:	0000                	unimp
+   176ca:	0000                	unimp
+   176cc:	0000                	unimp
+   176ce:	0000                	unimp
+   176d0:	0000                	unimp
+   176d2:	0000                	unimp
+   176d4:	0000                	unimp
+   176d6:	0000                	unimp
+   176d8:	0000                	unimp
+   176da:	0000                	unimp
+   176dc:	0000                	unimp
+   176de:	0000                	unimp
+   176e0:	0000                	unimp
+   176e2:	0000                	unimp
+
+000176e4 <gMCUBufB>:
+   176e4:	0000                	unimp
+   176e6:	0000                	unimp
+   176e8:	0000                	unimp
+   176ea:	0000                	unimp
+   176ec:	0000                	unimp
+   176ee:	0000                	unimp
+   176f0:	0000                	unimp
+   176f2:	0000                	unimp
+   176f4:	0000                	unimp
+   176f6:	0000                	unimp
+   176f8:	0000                	unimp
+   176fa:	0000                	unimp
+   176fc:	0000                	unimp
+   176fe:	0000                	unimp
+   17700:	0000                	unimp
+   17702:	0000                	unimp
+   17704:	0000                	unimp
+   17706:	0000                	unimp
+   17708:	0000                	unimp
+   1770a:	0000                	unimp
+   1770c:	0000                	unimp
+   1770e:	0000                	unimp
+   17710:	0000                	unimp
+   17712:	0000                	unimp
+   17714:	0000                	unimp
+   17716:	0000                	unimp
+   17718:	0000                	unimp
+   1771a:	0000                	unimp
+   1771c:	0000                	unimp
+   1771e:	0000                	unimp
+   17720:	0000                	unimp
+   17722:	0000                	unimp
+   17724:	0000                	unimp
+   17726:	0000                	unimp
+   17728:	0000                	unimp
+   1772a:	0000                	unimp
+   1772c:	0000                	unimp
+   1772e:	0000                	unimp
+   17730:	0000                	unimp
+   17732:	0000                	unimp
+   17734:	0000                	unimp
+   17736:	0000                	unimp
+   17738:	0000                	unimp
+   1773a:	0000                	unimp
+   1773c:	0000                	unimp
+   1773e:	0000                	unimp
+   17740:	0000                	unimp
+   17742:	0000                	unimp
+   17744:	0000                	unimp
+   17746:	0000                	unimp
+   17748:	0000                	unimp
+   1774a:	0000                	unimp
+   1774c:	0000                	unimp
+   1774e:	0000                	unimp
+   17750:	0000                	unimp
+   17752:	0000                	unimp
+   17754:	0000                	unimp
+   17756:	0000                	unimp
+   17758:	0000                	unimp
+   1775a:	0000                	unimp
+   1775c:	0000                	unimp
+   1775e:	0000                	unimp
+   17760:	0000                	unimp
+   17762:	0000                	unimp
+   17764:	0000                	unimp
+   17766:	0000                	unimp
+   17768:	0000                	unimp
+   1776a:	0000                	unimp
+   1776c:	0000                	unimp
+   1776e:	0000                	unimp
+   17770:	0000                	unimp
+   17772:	0000                	unimp
+   17774:	0000                	unimp
+   17776:	0000                	unimp
+   17778:	0000                	unimp
+   1777a:	0000                	unimp
+   1777c:	0000                	unimp
+   1777e:	0000                	unimp
+   17780:	0000                	unimp
+   17782:	0000                	unimp
+   17784:	0000                	unimp
+   17786:	0000                	unimp
+   17788:	0000                	unimp
+   1778a:	0000                	unimp
+   1778c:	0000                	unimp
+   1778e:	0000                	unimp
+   17790:	0000                	unimp
+   17792:	0000                	unimp
+   17794:	0000                	unimp
+   17796:	0000                	unimp
+   17798:	0000                	unimp
+   1779a:	0000                	unimp
+   1779c:	0000                	unimp
+   1779e:	0000                	unimp
+   177a0:	0000                	unimp
+   177a2:	0000                	unimp
+   177a4:	0000                	unimp
+   177a6:	0000                	unimp
+   177a8:	0000                	unimp
+   177aa:	0000                	unimp
+   177ac:	0000                	unimp
+   177ae:	0000                	unimp
+   177b0:	0000                	unimp
+   177b2:	0000                	unimp
+   177b4:	0000                	unimp
+   177b6:	0000                	unimp
+   177b8:	0000                	unimp
+   177ba:	0000                	unimp
+   177bc:	0000                	unimp
+   177be:	0000                	unimp
+   177c0:	0000                	unimp
+   177c2:	0000                	unimp
+   177c4:	0000                	unimp
+   177c6:	0000                	unimp
+   177c8:	0000                	unimp
+   177ca:	0000                	unimp
+   177cc:	0000                	unimp
+   177ce:	0000                	unimp
+   177d0:	0000                	unimp
+   177d2:	0000                	unimp
+   177d4:	0000                	unimp
+   177d6:	0000                	unimp
+   177d8:	0000                	unimp
+   177da:	0000                	unimp
+   177dc:	0000                	unimp
+   177de:	0000                	unimp
+   177e0:	0000                	unimp
+   177e2:	0000                	unimp
+
+000177e4 <gQuant0>:
+   177e4:	0000                	unimp
+   177e6:	0000                	unimp
+   177e8:	0000                	unimp
+   177ea:	0000                	unimp
+   177ec:	0000                	unimp
+   177ee:	0000                	unimp
+   177f0:	0000                	unimp
+   177f2:	0000                	unimp
+   177f4:	0000                	unimp
+   177f6:	0000                	unimp
+   177f8:	0000                	unimp
+   177fa:	0000                	unimp
+   177fc:	0000                	unimp
+   177fe:	0000                	unimp
+   17800:	0000                	unimp
+   17802:	0000                	unimp
+   17804:	0000                	unimp
+   17806:	0000                	unimp
+   17808:	0000                	unimp
+   1780a:	0000                	unimp
+   1780c:	0000                	unimp
+   1780e:	0000                	unimp
+   17810:	0000                	unimp
+   17812:	0000                	unimp
+   17814:	0000                	unimp
+   17816:	0000                	unimp
+   17818:	0000                	unimp
+   1781a:	0000                	unimp
+   1781c:	0000                	unimp
+   1781e:	0000                	unimp
+   17820:	0000                	unimp
+   17822:	0000                	unimp
+   17824:	0000                	unimp
+   17826:	0000                	unimp
+   17828:	0000                	unimp
+   1782a:	0000                	unimp
+   1782c:	0000                	unimp
+   1782e:	0000                	unimp
+   17830:	0000                	unimp
+   17832:	0000                	unimp
+   17834:	0000                	unimp
+   17836:	0000                	unimp
+   17838:	0000                	unimp
+   1783a:	0000                	unimp
+   1783c:	0000                	unimp
+   1783e:	0000                	unimp
+   17840:	0000                	unimp
+   17842:	0000                	unimp
+   17844:	0000                	unimp
+   17846:	0000                	unimp
+   17848:	0000                	unimp
+   1784a:	0000                	unimp
+   1784c:	0000                	unimp
+   1784e:	0000                	unimp
+   17850:	0000                	unimp
+   17852:	0000                	unimp
+   17854:	0000                	unimp
+   17856:	0000                	unimp
+   17858:	0000                	unimp
+   1785a:	0000                	unimp
+   1785c:	0000                	unimp
+   1785e:	0000                	unimp
+   17860:	0000                	unimp
+   17862:	0000                	unimp
+
+00017864 <gQuant1>:
+   17864:	0000                	unimp
+   17866:	0000                	unimp
+   17868:	0000                	unimp
+   1786a:	0000                	unimp
+   1786c:	0000                	unimp
+   1786e:	0000                	unimp
+   17870:	0000                	unimp
+   17872:	0000                	unimp
+   17874:	0000                	unimp
+   17876:	0000                	unimp
+   17878:	0000                	unimp
+   1787a:	0000                	unimp
+   1787c:	0000                	unimp
+   1787e:	0000                	unimp
+   17880:	0000                	unimp
+   17882:	0000                	unimp
+   17884:	0000                	unimp
+   17886:	0000                	unimp
+   17888:	0000                	unimp
+   1788a:	0000                	unimp
+   1788c:	0000                	unimp
+   1788e:	0000                	unimp
+   17890:	0000                	unimp
+   17892:	0000                	unimp
+   17894:	0000                	unimp
+   17896:	0000                	unimp
+   17898:	0000                	unimp
+   1789a:	0000                	unimp
+   1789c:	0000                	unimp
+   1789e:	0000                	unimp
+   178a0:	0000                	unimp
+   178a2:	0000                	unimp
+   178a4:	0000                	unimp
+   178a6:	0000                	unimp
+   178a8:	0000                	unimp
+   178aa:	0000                	unimp
+   178ac:	0000                	unimp
+   178ae:	0000                	unimp
+   178b0:	0000                	unimp
+   178b2:	0000                	unimp
+   178b4:	0000                	unimp
+   178b6:	0000                	unimp
+   178b8:	0000                	unimp
+   178ba:	0000                	unimp
+   178bc:	0000                	unimp
+   178be:	0000                	unimp
+   178c0:	0000                	unimp
+   178c2:	0000                	unimp
+   178c4:	0000                	unimp
+   178c6:	0000                	unimp
+   178c8:	0000                	unimp
+   178ca:	0000                	unimp
+   178cc:	0000                	unimp
+   178ce:	0000                	unimp
+   178d0:	0000                	unimp
+   178d2:	0000                	unimp
+   178d4:	0000                	unimp
+   178d6:	0000                	unimp
+   178d8:	0000                	unimp
+   178da:	0000                	unimp
+   178dc:	0000                	unimp
+   178de:	0000                	unimp
+   178e0:	0000                	unimp
+   178e2:	0000                	unimp
+
+000178e4 <gLastDC>:
+   178e4:	0000                	unimp
+   178e6:	0000                	unimp
+   178e8:	0000                	unimp
+   178ea:	0000                	unimp
+
+000178ec <gHuffTab0>:
+   178ec:	0000                	unimp
+   178ee:	0000                	unimp
+   178f0:	0000                	unimp
+   178f2:	0000                	unimp
+   178f4:	0000                	unimp
+   178f6:	0000                	unimp
+   178f8:	0000                	unimp
+   178fa:	0000                	unimp
+   178fc:	0000                	unimp
+   178fe:	0000                	unimp
+   17900:	0000                	unimp
+   17902:	0000                	unimp
+   17904:	0000                	unimp
+   17906:	0000                	unimp
+   17908:	0000                	unimp
+   1790a:	0000                	unimp
+   1790c:	0000                	unimp
+   1790e:	0000                	unimp
+   17910:	0000                	unimp
+   17912:	0000                	unimp
+   17914:	0000                	unimp
+   17916:	0000                	unimp
+   17918:	0000                	unimp
+   1791a:	0000                	unimp
+   1791c:	0000                	unimp
+   1791e:	0000                	unimp
+   17920:	0000                	unimp
+   17922:	0000                	unimp
+   17924:	0000                	unimp
+   17926:	0000                	unimp
+   17928:	0000                	unimp
+   1792a:	0000                	unimp
+   1792c:	0000                	unimp
+   1792e:	0000                	unimp
+   17930:	0000                	unimp
+   17932:	0000                	unimp
+   17934:	0000                	unimp
+   17936:	0000                	unimp
+   17938:	0000                	unimp
+   1793a:	0000                	unimp
+
+0001793c <gHuffVal0>:
+   1793c:	0000                	unimp
+   1793e:	0000                	unimp
+   17940:	0000                	unimp
+   17942:	0000                	unimp
+   17944:	0000                	unimp
+   17946:	0000                	unimp
+   17948:	0000                	unimp
+   1794a:	0000                	unimp
+
+0001794c <gHuffTab1>:
+   1794c:	0000                	unimp
+   1794e:	0000                	unimp
+   17950:	0000                	unimp
+   17952:	0000                	unimp
+   17954:	0000                	unimp
+   17956:	0000                	unimp
+   17958:	0000                	unimp
+   1795a:	0000                	unimp
+   1795c:	0000                	unimp
+   1795e:	0000                	unimp
+   17960:	0000                	unimp
+   17962:	0000                	unimp
+   17964:	0000                	unimp
+   17966:	0000                	unimp
+   17968:	0000                	unimp
+   1796a:	0000                	unimp
+   1796c:	0000                	unimp
+   1796e:	0000                	unimp
+   17970:	0000                	unimp
+   17972:	0000                	unimp
+   17974:	0000                	unimp
+   17976:	0000                	unimp
+   17978:	0000                	unimp
+   1797a:	0000                	unimp
+   1797c:	0000                	unimp
+   1797e:	0000                	unimp
+   17980:	0000                	unimp
+   17982:	0000                	unimp
+   17984:	0000                	unimp
+   17986:	0000                	unimp
+   17988:	0000                	unimp
+   1798a:	0000                	unimp
+   1798c:	0000                	unimp
+   1798e:	0000                	unimp
+   17990:	0000                	unimp
+   17992:	0000                	unimp
+   17994:	0000                	unimp
+   17996:	0000                	unimp
+   17998:	0000                	unimp
+   1799a:	0000                	unimp
+
+0001799c <gHuffVal1>:
+   1799c:	0000                	unimp
+   1799e:	0000                	unimp
+   179a0:	0000                	unimp
+   179a2:	0000                	unimp
+   179a4:	0000                	unimp
+   179a6:	0000                	unimp
+   179a8:	0000                	unimp
+   179aa:	0000                	unimp
+
+000179ac <gHuffTab2>:
+   179ac:	0000                	unimp
+   179ae:	0000                	unimp
+   179b0:	0000                	unimp
+   179b2:	0000                	unimp
+   179b4:	0000                	unimp
+   179b6:	0000                	unimp
+   179b8:	0000                	unimp
+   179ba:	0000                	unimp
+   179bc:	0000                	unimp
+   179be:	0000                	unimp
+   179c0:	0000                	unimp
+   179c2:	0000                	unimp
+   179c4:	0000                	unimp
+   179c6:	0000                	unimp
+   179c8:	0000                	unimp
+   179ca:	0000                	unimp
+   179cc:	0000                	unimp
+   179ce:	0000                	unimp
+   179d0:	0000                	unimp
+   179d2:	0000                	unimp
+   179d4:	0000                	unimp
+   179d6:	0000                	unimp
+   179d8:	0000                	unimp
+   179da:	0000                	unimp
+   179dc:	0000                	unimp
+   179de:	0000                	unimp
+   179e0:	0000                	unimp
+   179e2:	0000                	unimp
+   179e4:	0000                	unimp
+   179e6:	0000                	unimp
+   179e8:	0000                	unimp
+   179ea:	0000                	unimp
+   179ec:	0000                	unimp
+   179ee:	0000                	unimp
+   179f0:	0000                	unimp
+   179f2:	0000                	unimp
+   179f4:	0000                	unimp
+   179f6:	0000                	unimp
+   179f8:	0000                	unimp
+   179fa:	0000                	unimp
+
+000179fc <gHuffVal2>:
+   179fc:	0000                	unimp
+   179fe:	0000                	unimp
+   17a00:	0000                	unimp
+   17a02:	0000                	unimp
+   17a04:	0000                	unimp
+   17a06:	0000                	unimp
+   17a08:	0000                	unimp
+   17a0a:	0000                	unimp
+   17a0c:	0000                	unimp
+   17a0e:	0000                	unimp
+   17a10:	0000                	unimp
+   17a12:	0000                	unimp
+   17a14:	0000                	unimp
+   17a16:	0000                	unimp
+   17a18:	0000                	unimp
+   17a1a:	0000                	unimp
+   17a1c:	0000                	unimp
+   17a1e:	0000                	unimp
+   17a20:	0000                	unimp
+   17a22:	0000                	unimp
+   17a24:	0000                	unimp
+   17a26:	0000                	unimp
+   17a28:	0000                	unimp
+   17a2a:	0000                	unimp
+   17a2c:	0000                	unimp
+   17a2e:	0000                	unimp
+   17a30:	0000                	unimp
+   17a32:	0000                	unimp
+   17a34:	0000                	unimp
+   17a36:	0000                	unimp
+   17a38:	0000                	unimp
+   17a3a:	0000                	unimp
+   17a3c:	0000                	unimp
+   17a3e:	0000                	unimp
+   17a40:	0000                	unimp
+   17a42:	0000                	unimp
+   17a44:	0000                	unimp
+   17a46:	0000                	unimp
+   17a48:	0000                	unimp
+   17a4a:	0000                	unimp
+   17a4c:	0000                	unimp
+   17a4e:	0000                	unimp
+   17a50:	0000                	unimp
+   17a52:	0000                	unimp
+   17a54:	0000                	unimp
+   17a56:	0000                	unimp
+   17a58:	0000                	unimp
+   17a5a:	0000                	unimp
+   17a5c:	0000                	unimp
+   17a5e:	0000                	unimp
+   17a60:	0000                	unimp
+   17a62:	0000                	unimp
+   17a64:	0000                	unimp
+   17a66:	0000                	unimp
+   17a68:	0000                	unimp
+   17a6a:	0000                	unimp
+   17a6c:	0000                	unimp
+   17a6e:	0000                	unimp
+   17a70:	0000                	unimp
+   17a72:	0000                	unimp
+   17a74:	0000                	unimp
+   17a76:	0000                	unimp
+   17a78:	0000                	unimp
+   17a7a:	0000                	unimp
+   17a7c:	0000                	unimp
+   17a7e:	0000                	unimp
+   17a80:	0000                	unimp
+   17a82:	0000                	unimp
+   17a84:	0000                	unimp
+   17a86:	0000                	unimp
+   17a88:	0000                	unimp
+   17a8a:	0000                	unimp
+   17a8c:	0000                	unimp
+   17a8e:	0000                	unimp
+   17a90:	0000                	unimp
+   17a92:	0000                	unimp
+   17a94:	0000                	unimp
+   17a96:	0000                	unimp
+   17a98:	0000                	unimp
+   17a9a:	0000                	unimp
+   17a9c:	0000                	unimp
+   17a9e:	0000                	unimp
+   17aa0:	0000                	unimp
+   17aa2:	0000                	unimp
+   17aa4:	0000                	unimp
+   17aa6:	0000                	unimp
+   17aa8:	0000                	unimp
+   17aaa:	0000                	unimp
+   17aac:	0000                	unimp
+   17aae:	0000                	unimp
+   17ab0:	0000                	unimp
+   17ab2:	0000                	unimp
+   17ab4:	0000                	unimp
+   17ab6:	0000                	unimp
+   17ab8:	0000                	unimp
+   17aba:	0000                	unimp
+   17abc:	0000                	unimp
+   17abe:	0000                	unimp
+   17ac0:	0000                	unimp
+   17ac2:	0000                	unimp
+   17ac4:	0000                	unimp
+   17ac6:	0000                	unimp
+   17ac8:	0000                	unimp
+   17aca:	0000                	unimp
+   17acc:	0000                	unimp
+   17ace:	0000                	unimp
+   17ad0:	0000                	unimp
+   17ad2:	0000                	unimp
+   17ad4:	0000                	unimp
+   17ad6:	0000                	unimp
+   17ad8:	0000                	unimp
+   17ada:	0000                	unimp
+   17adc:	0000                	unimp
+   17ade:	0000                	unimp
+   17ae0:	0000                	unimp
+   17ae2:	0000                	unimp
+   17ae4:	0000                	unimp
+   17ae6:	0000                	unimp
+   17ae8:	0000                	unimp
+   17aea:	0000                	unimp
+   17aec:	0000                	unimp
+   17aee:	0000                	unimp
+   17af0:	0000                	unimp
+   17af2:	0000                	unimp
+   17af4:	0000                	unimp
+   17af6:	0000                	unimp
+   17af8:	0000                	unimp
+   17afa:	0000                	unimp
+
+00017afc <gHuffTab3>:
+   17afc:	0000                	unimp
+   17afe:	0000                	unimp
+   17b00:	0000                	unimp
+   17b02:	0000                	unimp
+   17b04:	0000                	unimp
+   17b06:	0000                	unimp
+   17b08:	0000                	unimp
+   17b0a:	0000                	unimp
+   17b0c:	0000                	unimp
+   17b0e:	0000                	unimp
+   17b10:	0000                	unimp
+   17b12:	0000                	unimp
+   17b14:	0000                	unimp
+   17b16:	0000                	unimp
+   17b18:	0000                	unimp
+   17b1a:	0000                	unimp
+   17b1c:	0000                	unimp
+   17b1e:	0000                	unimp
+   17b20:	0000                	unimp
+   17b22:	0000                	unimp
+   17b24:	0000                	unimp
+   17b26:	0000                	unimp
+   17b28:	0000                	unimp
+   17b2a:	0000                	unimp
+   17b2c:	0000                	unimp
+   17b2e:	0000                	unimp
+   17b30:	0000                	unimp
+   17b32:	0000                	unimp
+   17b34:	0000                	unimp
+   17b36:	0000                	unimp
+   17b38:	0000                	unimp
+   17b3a:	0000                	unimp
+   17b3c:	0000                	unimp
+   17b3e:	0000                	unimp
+   17b40:	0000                	unimp
+   17b42:	0000                	unimp
+   17b44:	0000                	unimp
+   17b46:	0000                	unimp
+   17b48:	0000                	unimp
+   17b4a:	0000                	unimp
+
+00017b4c <gHuffVal3>:
+   17b4c:	0000                	unimp
+   17b4e:	0000                	unimp
+   17b50:	0000                	unimp
+   17b52:	0000                	unimp
+   17b54:	0000                	unimp
+   17b56:	0000                	unimp
+   17b58:	0000                	unimp
+   17b5a:	0000                	unimp
+   17b5c:	0000                	unimp
+   17b5e:	0000                	unimp
+   17b60:	0000                	unimp
+   17b62:	0000                	unimp
+   17b64:	0000                	unimp
+   17b66:	0000                	unimp
+   17b68:	0000                	unimp
+   17b6a:	0000                	unimp
+   17b6c:	0000                	unimp
+   17b6e:	0000                	unimp
+   17b70:	0000                	unimp
+   17b72:	0000                	unimp
+   17b74:	0000                	unimp
+   17b76:	0000                	unimp
+   17b78:	0000                	unimp
+   17b7a:	0000                	unimp
+   17b7c:	0000                	unimp
+   17b7e:	0000                	unimp
+   17b80:	0000                	unimp
+   17b82:	0000                	unimp
+   17b84:	0000                	unimp
+   17b86:	0000                	unimp
+   17b88:	0000                	unimp
+   17b8a:	0000                	unimp
+   17b8c:	0000                	unimp
+   17b8e:	0000                	unimp
+   17b90:	0000                	unimp
+   17b92:	0000                	unimp
+   17b94:	0000                	unimp
+   17b96:	0000                	unimp
+   17b98:	0000                	unimp
+   17b9a:	0000                	unimp
+   17b9c:	0000                	unimp
+   17b9e:	0000                	unimp
+   17ba0:	0000                	unimp
+   17ba2:	0000                	unimp
+   17ba4:	0000                	unimp
+   17ba6:	0000                	unimp
+   17ba8:	0000                	unimp
+   17baa:	0000                	unimp
+   17bac:	0000                	unimp
+   17bae:	0000                	unimp
+   17bb0:	0000                	unimp
+   17bb2:	0000                	unimp
+   17bb4:	0000                	unimp
+   17bb6:	0000                	unimp
+   17bb8:	0000                	unimp
+   17bba:	0000                	unimp
+   17bbc:	0000                	unimp
+   17bbe:	0000                	unimp
+   17bc0:	0000                	unimp
+   17bc2:	0000                	unimp
+   17bc4:	0000                	unimp
+   17bc6:	0000                	unimp
+   17bc8:	0000                	unimp
+   17bca:	0000                	unimp
+   17bcc:	0000                	unimp
+   17bce:	0000                	unimp
+   17bd0:	0000                	unimp
+   17bd2:	0000                	unimp
+   17bd4:	0000                	unimp
+   17bd6:	0000                	unimp
+   17bd8:	0000                	unimp
+   17bda:	0000                	unimp
+   17bdc:	0000                	unimp
+   17bde:	0000                	unimp
+   17be0:	0000                	unimp
+   17be2:	0000                	unimp
+   17be4:	0000                	unimp
+   17be6:	0000                	unimp
+   17be8:	0000                	unimp
+   17bea:	0000                	unimp
+   17bec:	0000                	unimp
+   17bee:	0000                	unimp
+   17bf0:	0000                	unimp
+   17bf2:	0000                	unimp
+   17bf4:	0000                	unimp
+   17bf6:	0000                	unimp
+   17bf8:	0000                	unimp
+   17bfa:	0000                	unimp
+   17bfc:	0000                	unimp
+   17bfe:	0000                	unimp
+   17c00:	0000                	unimp
+   17c02:	0000                	unimp
+   17c04:	0000                	unimp
+   17c06:	0000                	unimp
+   17c08:	0000                	unimp
+   17c0a:	0000                	unimp
+   17c0c:	0000                	unimp
+   17c0e:	0000                	unimp
+   17c10:	0000                	unimp
+   17c12:	0000                	unimp
+   17c14:	0000                	unimp
+   17c16:	0000                	unimp
+   17c18:	0000                	unimp
+   17c1a:	0000                	unimp
+   17c1c:	0000                	unimp
+   17c1e:	0000                	unimp
+   17c20:	0000                	unimp
+   17c22:	0000                	unimp
+   17c24:	0000                	unimp
+   17c26:	0000                	unimp
+   17c28:	0000                	unimp
+   17c2a:	0000                	unimp
+   17c2c:	0000                	unimp
+   17c2e:	0000                	unimp
+   17c30:	0000                	unimp
+   17c32:	0000                	unimp
+   17c34:	0000                	unimp
+   17c36:	0000                	unimp
+   17c38:	0000                	unimp
+   17c3a:	0000                	unimp
+   17c3c:	0000                	unimp
+   17c3e:	0000                	unimp
+   17c40:	0000                	unimp
+   17c42:	0000                	unimp
+   17c44:	0000                	unimp
+   17c46:	0000                	unimp
+   17c48:	0000                	unimp
+   17c4a:	0000                	unimp
+
+00017c4c <gValidHuffTables>:
+   17c4c:	                	unimp
+
+00017c4d <gValidQuantTables>:
+   17c4d:	                	unimp
+
+00017c4e <gTemFlag>:
+   17c4e:	0000                	unimp
+
+00017c50 <gInBuf>:
+   17c50:	0000                	unimp
+   17c52:	0000                	unimp
+   17c54:	0000                	unimp
+   17c56:	0000                	unimp
+   17c58:	0000                	unimp
+   17c5a:	0000                	unimp
+   17c5c:	0000                	unimp
+   17c5e:	0000                	unimp
+   17c60:	0000                	unimp
+   17c62:	0000                	unimp
+   17c64:	0000                	unimp
+   17c66:	0000                	unimp
+   17c68:	0000                	unimp
+   17c6a:	0000                	unimp
+   17c6c:	0000                	unimp
+   17c6e:	0000                	unimp
+   17c70:	0000                	unimp
+   17c72:	0000                	unimp
+   17c74:	0000                	unimp
+   17c76:	0000                	unimp
+   17c78:	0000                	unimp
+   17c7a:	0000                	unimp
+   17c7c:	0000                	unimp
+   17c7e:	0000                	unimp
+   17c80:	0000                	unimp
+   17c82:	0000                	unimp
+   17c84:	0000                	unimp
+   17c86:	0000                	unimp
+   17c88:	0000                	unimp
+   17c8a:	0000                	unimp
+   17c8c:	0000                	unimp
+   17c8e:	0000                	unimp
+   17c90:	0000                	unimp
+   17c92:	0000                	unimp
+   17c94:	0000                	unimp
+   17c96:	0000                	unimp
+   17c98:	0000                	unimp
+   17c9a:	0000                	unimp
+   17c9c:	0000                	unimp
+   17c9e:	0000                	unimp
+   17ca0:	0000                	unimp
+   17ca2:	0000                	unimp
+   17ca4:	0000                	unimp
+   17ca6:	0000                	unimp
+   17ca8:	0000                	unimp
+   17caa:	0000                	unimp
+   17cac:	0000                	unimp
+   17cae:	0000                	unimp
+   17cb0:	0000                	unimp
+   17cb2:	0000                	unimp
+   17cb4:	0000                	unimp
+   17cb6:	0000                	unimp
+   17cb8:	0000                	unimp
+   17cba:	0000                	unimp
+   17cbc:	0000                	unimp
+   17cbe:	0000                	unimp
+   17cc0:	0000                	unimp
+   17cc2:	0000                	unimp
+   17cc4:	0000                	unimp
+   17cc6:	0000                	unimp
+   17cc8:	0000                	unimp
+   17cca:	0000                	unimp
+   17ccc:	0000                	unimp
+   17cce:	0000                	unimp
+   17cd0:	0000                	unimp
+   17cd2:	0000                	unimp
+   17cd4:	0000                	unimp
+   17cd6:	0000                	unimp
+   17cd8:	0000                	unimp
+   17cda:	0000                	unimp
+   17cdc:	0000                	unimp
+   17cde:	0000                	unimp
+   17ce0:	0000                	unimp
+   17ce2:	0000                	unimp
+   17ce4:	0000                	unimp
+   17ce6:	0000                	unimp
+   17ce8:	0000                	unimp
+   17cea:	0000                	unimp
+   17cec:	0000                	unimp
+   17cee:	0000                	unimp
+   17cf0:	0000                	unimp
+   17cf2:	0000                	unimp
+   17cf4:	0000                	unimp
+   17cf6:	0000                	unimp
+   17cf8:	0000                	unimp
+   17cfa:	0000                	unimp
+   17cfc:	0000                	unimp
+   17cfe:	0000                	unimp
+   17d00:	0000                	unimp
+   17d02:	0000                	unimp
+   17d04:	0000                	unimp
+   17d06:	0000                	unimp
+   17d08:	0000                	unimp
+   17d0a:	0000                	unimp
+   17d0c:	0000                	unimp
+   17d0e:	0000                	unimp
+   17d10:	0000                	unimp
+   17d12:	0000                	unimp
+   17d14:	0000                	unimp
+   17d16:	0000                	unimp
+   17d18:	0000                	unimp
+   17d1a:	0000                	unimp
+   17d1c:	0000                	unimp
+   17d1e:	0000                	unimp
+   17d20:	0000                	unimp
+   17d22:	0000                	unimp
+   17d24:	0000                	unimp
+   17d26:	0000                	unimp
+   17d28:	0000                	unimp
+   17d2a:	0000                	unimp
+   17d2c:	0000                	unimp
+   17d2e:	0000                	unimp
+   17d30:	0000                	unimp
+   17d32:	0000                	unimp
+   17d34:	0000                	unimp
+   17d36:	0000                	unimp
+   17d38:	0000                	unimp
+   17d3a:	0000                	unimp
+   17d3c:	0000                	unimp
+   17d3e:	0000                	unimp
+   17d40:	0000                	unimp
+   17d42:	0000                	unimp
+   17d44:	0000                	unimp
+   17d46:	0000                	unimp
+   17d48:	0000                	unimp
+   17d4a:	0000                	unimp
+   17d4c:	0000                	unimp
+   17d4e:	0000                	unimp
+
+00017d50 <gInBufOfs>:
+   17d50:	                	unimp
+
+00017d51 <gInBufLeft>:
+   17d51:	                	unimp
+
+00017d52 <gBitBuf>:
+   17d52:	0000                	unimp
+
+00017d54 <gBitsLeft>:
+   17d54:	0000                	unimp
+
+00017d56 <gImageXSize>:
+   17d56:	0000                	unimp
+
+00017d58 <gImageYSize>:
+   17d58:	0000                	unimp
+
+00017d5a <gCompsInFrame>:
+   17d5a:	0000                	unimp
+
+00017d5c <gCompIdent>:
+   17d5c:	0000                	unimp
+   17d5e:	0000                	unimp
+
+00017d60 <gCompHSamp>:
+   17d60:	0000                	unimp
+   17d62:	0000                	unimp
+
+00017d64 <gCompVSamp>:
+   17d64:	0000                	unimp
+   17d66:	0000                	unimp
+
+00017d68 <gCompQuant>:
+   17d68:	0000                	unimp
+   17d6a:	0000                	unimp
+
+00017d6c <gRestartInterval>:
+   17d6c:	0000                	unimp
+
+00017d6e <gNextRestartNum>:
+   17d6e:	0000                	unimp
+
+00017d70 <gRestartsLeft>:
+   17d70:	0000                	unimp
+
+00017d72 <gCompsInScan>:
+   17d72:	0000                	unimp
+
+00017d74 <gCompList>:
+   17d74:	0000                	unimp
+   17d76:	0000                	unimp
+
+00017d78 <gCompDCTab>:
+   17d78:	0000                	unimp
+   17d7a:	0000                	unimp
+
+00017d7c <gCompACTab>:
+   17d7c:	0000                	unimp
+   17d7e:	0000                	unimp
+
+00017d80 <gScanType>:
+   17d80:	0000                	unimp
+   17d82:	0000                	unimp
+
+00017d84 <gMaxBlocksPerMCU>:
+   17d84:	                	unimp
+
+00017d85 <gMaxMCUXSize>:
+   17d85:	                	unimp
+
+00017d86 <gMaxMCUYSize>:
+   17d86:	0000                	unimp
+
+00017d88 <gMaxMCUSPerRow>:
+   17d88:	0000                	unimp
+
+00017d8a <gMaxMCUSPerCol>:
+   17d8a:	0000                	unimp
+
+00017d8c <gNumMCUSRemaining>:
+   17d8c:	0000                	unimp
+   17d8e:	0000                	unimp
+
+00017d90 <gMCUOrg>:
+   17d90:	0000                	unimp
+   17d92:	0000                	unimp
+   17d94:	0000                	unimp
+   17d96:	0000                	unimp
+
+00017d98 <g_pNeedBytesCallback>:
+   17d98:	0000                	unimp
+   17d9a:	0000                	unimp
+
+00017d9c <g_pCallback_data>:
+   17d9c:	0000                	unimp
+   17d9e:	0000                	unimp
+
+00017da0 <gCallbackStatus>:
+   17da0:	                	unimp
+
+00017da1 <gReduce>:
+   17da1:	0000                	unimp
+   17da3:	                	unimp
+
+00017da4 <pInfo>:
+   17da4:	0000                	unimp
+   17da6:	0000                	unimp
+   17da8:	0000                	unimp
+   17daa:	0000                	unimp
+   17dac:	0000                	unimp
+   17dae:	0000                	unimp
+   17db0:	0000                	unimp
+   17db2:	0000                	unimp
+   17db4:	0000                	unimp
+   17db6:	0000                	unimp
+   17db8:	0000                	unimp
+   17dba:	0000                	unimp
+   17dbc:	0000                	unimp
+   17dbe:	0000                	unimp
+   17dc0:	0000                	unimp
+   17dc2:	0000                	unimp
+   17dc4:	0000                	unimp
+   17dc6:	0000                	unimp
+   17dc8:	0000                	unimp
+   17dca:	0000                	unimp
+   17dcc:	0000                	unimp
+   17dce:	0000                	unimp

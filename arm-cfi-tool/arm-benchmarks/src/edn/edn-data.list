@@ -1,0 +1,1114 @@
+
+./arm-benchmarks/src/edn/edn:     file format elf32-littlearm
+
+
+Disassembly of section .rodata:
+
+00008fd8 <_global_impure_ptr-0x640>:
+    8fd8:	07ff0000 	ldrbeq	r0, [pc, r0]!
+    8fdc:	08000c00 	stmdaeq	r0, {sl, fp}
+    8fe0:	f8000200 			; <UNDEFINED> instruction: 0xf8000200
+    8fe4:	0400f300 	streq	pc, [r0], #-768	; 0xfffffd00
+    8fe8:	07ff0000 	ldrbeq	r0, [pc, r0]!
+    8fec:	08000c00 	stmdaeq	r0, {sl, fp}
+    8ff0:	f8000200 			; <UNDEFINED> instruction: 0xf8000200
+    8ff4:	0400f300 	streq	pc, [r0], #-768	; 0xfffffd00
+    8ff8:	07ff0000 	ldrbeq	r0, [pc, r0]!
+    8ffc:	08000c00 	stmdaeq	r0, {sl, fp}
+    9000:	f8000200 			; <UNDEFINED> instruction: 0xf8000200
+    9004:	0400f300 	streq	pc, [r0], #-768	; 0xfffffd00
+    9008:	07ff0000 	ldrbeq	r0, [pc, r0]!
+    900c:	08000c00 	stmdaeq	r0, {sl, fp}
+    9010:	f8000200 			; <UNDEFINED> instruction: 0xf8000200
+    9014:	0400f300 	streq	pc, [r0], #-768	; 0xfffffd00
+    9018:	07ff0000 	ldrbeq	r0, [pc, r0]!
+    901c:	08000c00 	stmdaeq	r0, {sl, fp}
+    9020:	f8000200 			; <UNDEFINED> instruction: 0xf8000200
+    9024:	0400f300 	streq	pc, [r0], #-768	; 0xfffffd00
+    9028:	07ff0000 	ldrbeq	r0, [pc, r0]!
+    902c:	08000c00 	stmdaeq	r0, {sl, fp}
+    9030:	f8000200 			; <UNDEFINED> instruction: 0xf8000200
+    9034:	0400f300 	streq	pc, [r0], #-768	; 0xfffffd00
+    9038:	07ff0000 	ldrbeq	r0, [pc, r0]!
+    903c:	08000c00 	stmdaeq	r0, {sl, fp}
+    9040:	f8000200 			; <UNDEFINED> instruction: 0xf8000200
+    9044:	0400f300 	streq	pc, [r0], #-768	; 0xfffffd00
+    9048:	07ff0000 	ldrbeq	r0, [pc, r0]!
+    904c:	08000c00 	stmdaeq	r0, {sl, fp}
+    9050:	f8000200 			; <UNDEFINED> instruction: 0xf8000200
+    9054:	0400f300 	streq	pc, [r0], #-768	; 0xfffffd00
+    9058:	07ff0000 	ldrbeq	r0, [pc, r0]!
+    905c:	08000c00 	stmdaeq	r0, {sl, fp}
+    9060:	f8000200 			; <UNDEFINED> instruction: 0xf8000200
+    9064:	0400f300 	streq	pc, [r0], #-768	; 0xfffffd00
+    9068:	07ff0000 	ldrbeq	r0, [pc, r0]!
+    906c:	08000c00 	stmdaeq	r0, {sl, fp}
+    9070:	f8000200 			; <UNDEFINED> instruction: 0xf8000200
+    9074:	0400f300 	streq	pc, [r0], #-768	; 0xfffffd00
+    9078:	07ff0000 	ldrbeq	r0, [pc, r0]!
+    907c:	08000c00 	stmdaeq	r0, {sl, fp}
+    9080:	f8000200 			; <UNDEFINED> instruction: 0xf8000200
+    9084:	0400f300 	streq	pc, [r0], #-768	; 0xfffffd00
+    9088:	07ff0000 	ldrbeq	r0, [pc, r0]!
+    908c:	08000c00 	stmdaeq	r0, {sl, fp}
+    9090:	f8000200 			; <UNDEFINED> instruction: 0xf8000200
+    9094:	0400f300 	streq	pc, [r0], #-768	; 0xfffffd00
+    9098:	07ff0000 	ldrbeq	r0, [pc, r0]!
+    909c:	08000c00 	stmdaeq	r0, {sl, fp}
+    90a0:	f8000200 			; <UNDEFINED> instruction: 0xf8000200
+    90a4:	0400f300 	streq	pc, [r0], #-768	; 0xfffffd00
+    90a8:	07ff0000 	ldrbeq	r0, [pc, r0]!
+    90ac:	08000c00 	stmdaeq	r0, {sl, fp}
+    90b0:	f8000200 			; <UNDEFINED> instruction: 0xf8000200
+    90b4:	0400f300 	streq	pc, [r0], #-768	; 0xfffffd00
+    90b8:	07ff0000 	ldrbeq	r0, [pc, r0]!
+    90bc:	08000c00 	stmdaeq	r0, {sl, fp}
+    90c0:	f8000200 			; <UNDEFINED> instruction: 0xf8000200
+    90c4:	0400f300 	streq	pc, [r0], #-768	; 0xfffffd00
+    90c8:	07ff0000 	ldrbeq	r0, [pc, r0]!
+    90cc:	08000c00 	stmdaeq	r0, {sl, fp}
+    90d0:	f8000200 			; <UNDEFINED> instruction: 0xf8000200
+    90d4:	0400f300 	streq	pc, [r0], #-768	; 0xfffffd00
+    90d8:	07ff0000 	ldrbeq	r0, [pc, r0]!
+    90dc:	08000c00 	stmdaeq	r0, {sl, fp}
+    90e0:	f8000200 			; <UNDEFINED> instruction: 0xf8000200
+    90e4:	0400f300 	streq	pc, [r0], #-768	; 0xfffffd00
+    90e8:	07ff0000 	ldrbeq	r0, [pc, r0]!
+    90ec:	08000c00 	stmdaeq	r0, {sl, fp}
+    90f0:	f8000200 			; <UNDEFINED> instruction: 0xf8000200
+    90f4:	0400f300 	streq	pc, [r0], #-768	; 0xfffffd00
+    90f8:	07ff0000 	ldrbeq	r0, [pc, r0]!
+    90fc:	08000c00 	stmdaeq	r0, {sl, fp}
+    9100:	f8000200 			; <UNDEFINED> instruction: 0xf8000200
+    9104:	0400f300 	streq	pc, [r0], #-768	; 0xfffffd00
+    9108:	07ff0000 	ldrbeq	r0, [pc, r0]!
+    910c:	08000c00 	stmdaeq	r0, {sl, fp}
+    9110:	f8000200 			; <UNDEFINED> instruction: 0xf8000200
+    9114:	0400f300 	streq	pc, [r0], #-768	; 0xfffffd00
+    9118:	07ff0000 	ldrbeq	r0, [pc, r0]!
+    911c:	08000c00 	stmdaeq	r0, {sl, fp}
+    9120:	f8000200 			; <UNDEFINED> instruction: 0xf8000200
+    9124:	0400f300 	streq	pc, [r0], #-768	; 0xfffffd00
+    9128:	07ff0000 	ldrbeq	r0, [pc, r0]!
+    912c:	08000c00 	stmdaeq	r0, {sl, fp}
+    9130:	f8000200 			; <UNDEFINED> instruction: 0xf8000200
+    9134:	0400f300 	streq	pc, [r0], #-768	; 0xfffffd00
+    9138:	07ff0000 	ldrbeq	r0, [pc, r0]!
+    913c:	08000c00 	stmdaeq	r0, {sl, fp}
+    9140:	f8000200 			; <UNDEFINED> instruction: 0xf8000200
+    9144:	0400f300 	streq	pc, [r0], #-768	; 0xfffffd00
+    9148:	07ff0000 	ldrbeq	r0, [pc, r0]!
+    914c:	08000c00 	stmdaeq	r0, {sl, fp}
+    9150:	f8000200 			; <UNDEFINED> instruction: 0xf8000200
+    9154:	0400f300 	streq	pc, [r0], #-768	; 0xfffffd00
+    9158:	07ff0000 	ldrbeq	r0, [pc, r0]!
+    915c:	08000c00 	stmdaeq	r0, {sl, fp}
+    9160:	f8000200 			; <UNDEFINED> instruction: 0xf8000200
+    9164:	0400f300 	streq	pc, [r0], #-768	; 0xfffffd00
+    9168:	0c400c60 	mcrreq	12, 6, r0, r0, cr0
+    916c:	0c000c20 	stceq	12, cr0, [r0], {32}
+    9170:	f400f600 	vst1.8	{d15-d17}, [r0], r0
+    9174:	f000f200 			; <UNDEFINED> instruction: 0xf000f200
+    9178:	0c400c60 	mcrreq	12, 6, r0, r0, cr0
+    917c:	0c000c20 	stceq	12, cr0, [r0], {32}
+    9180:	f400f600 	vst1.8	{d15-d17}, [r0], r0
+    9184:	f000f200 			; <UNDEFINED> instruction: 0xf000f200
+    9188:	0c400c60 	mcrreq	12, 6, r0, r0, cr0
+    918c:	0c000c20 	stceq	12, cr0, [r0], {32}
+    9190:	f400f600 	vst1.8	{d15-d17}, [r0], r0
+    9194:	f000f200 			; <UNDEFINED> instruction: 0xf000f200
+    9198:	0c400c60 	mcrreq	12, 6, r0, r0, cr0
+    919c:	0c000c20 	stceq	12, cr0, [r0], {32}
+    91a0:	f400f600 	vst1.8	{d15-d17}, [r0], r0
+    91a4:	f000f200 			; <UNDEFINED> instruction: 0xf000f200
+    91a8:	0c400c60 	mcrreq	12, 6, r0, r0, cr0
+    91ac:	0c000c20 	stceq	12, cr0, [r0], {32}
+    91b0:	f400f600 	vst1.8	{d15-d17}, [r0], r0
+    91b4:	f000f200 			; <UNDEFINED> instruction: 0xf000f200
+    91b8:	0c400c60 	mcrreq	12, 6, r0, r0, cr0
+    91bc:	0c000c20 	stceq	12, cr0, [r0], {32}
+    91c0:	f400f600 	vst1.8	{d15-d17}, [r0], r0
+    91c4:	f000f200 			; <UNDEFINED> instruction: 0xf000f200
+    91c8:	0c400c60 	mcrreq	12, 6, r0, r0, cr0
+    91cc:	0c000c20 	stceq	12, cr0, [r0], {32}
+    91d0:	f400f600 	vst1.8	{d15-d17}, [r0], r0
+    91d4:	f000f200 			; <UNDEFINED> instruction: 0xf000f200
+    91d8:	0c400c60 	mcrreq	12, 6, r0, r0, cr0
+    91dc:	0c000c20 	stceq	12, cr0, [r0], {32}
+    91e0:	f400f600 	vst1.8	{d15-d17}, [r0], r0
+    91e4:	f000f200 			; <UNDEFINED> instruction: 0xf000f200
+    91e8:	0c400c60 	mcrreq	12, 6, r0, r0, cr0
+    91ec:	0c000c20 	stceq	12, cr0, [r0], {32}
+    91f0:	f400f600 	vst1.8	{d15-d17}, [r0], r0
+    91f4:	f000f200 			; <UNDEFINED> instruction: 0xf000f200
+    91f8:	0c400c60 	mcrreq	12, 6, r0, r0, cr0
+    91fc:	0c000c20 	stceq	12, cr0, [r0], {32}
+    9200:	f400f600 	vst1.8	{d15-d17}, [r0], r0
+    9204:	f000f200 			; <UNDEFINED> instruction: 0xf000f200
+    9208:	0c400c60 	mcrreq	12, 6, r0, r0, cr0
+    920c:	0c000c20 	stceq	12, cr0, [r0], {32}
+    9210:	f400f600 	vst1.8	{d15-d17}, [r0], r0
+    9214:	f000f200 			; <UNDEFINED> instruction: 0xf000f200
+    9218:	0c400c60 	mcrreq	12, 6, r0, r0, cr0
+    921c:	0c000c20 	stceq	12, cr0, [r0], {32}
+    9220:	f400f600 	vst1.8	{d15-d17}, [r0], r0
+    9224:	f000f200 			; <UNDEFINED> instruction: 0xf000f200
+    9228:	0c400c60 	mcrreq	12, 6, r0, r0, cr0
+    922c:	0c000c20 	stceq	12, cr0, [r0], {32}
+    9230:	f400f600 	vst1.8	{d15-d17}, [r0], r0
+    9234:	f000f200 			; <UNDEFINED> instruction: 0xf000f200
+    9238:	0c400c60 	mcrreq	12, 6, r0, r0, cr0
+    923c:	0c000c20 	stceq	12, cr0, [r0], {32}
+    9240:	f400f600 	vst1.8	{d15-d17}, [r0], r0
+    9244:	f000f200 			; <UNDEFINED> instruction: 0xf000f200
+    9248:	0c400c60 	mcrreq	12, 6, r0, r0, cr0
+    924c:	0c000c20 	stceq	12, cr0, [r0], {32}
+    9250:	f400f600 	vst1.8	{d15-d17}, [r0], r0
+    9254:	f000f200 			; <UNDEFINED> instruction: 0xf000f200
+    9258:	0c400c60 	mcrreq	12, 6, r0, r0, cr0
+    925c:	0c000c20 	stceq	12, cr0, [r0], {32}
+    9260:	f400f600 	vst1.8	{d15-d17}, [r0], r0
+    9264:	f000f200 			; <UNDEFINED> instruction: 0xf000f200
+    9268:	0c400c60 	mcrreq	12, 6, r0, r0, cr0
+    926c:	0c000c20 	stceq	12, cr0, [r0], {32}
+    9270:	f400f600 	vst1.8	{d15-d17}, [r0], r0
+    9274:	f000f200 			; <UNDEFINED> instruction: 0xf000f200
+    9278:	0c400c60 	mcrreq	12, 6, r0, r0, cr0
+    927c:	0c000c20 	stceq	12, cr0, [r0], {32}
+    9280:	f400f600 	vst1.8	{d15-d17}, [r0], r0
+    9284:	f000f200 			; <UNDEFINED> instruction: 0xf000f200
+    9288:	0c400c60 	mcrreq	12, 6, r0, r0, cr0
+    928c:	0c000c20 	stceq	12, cr0, [r0], {32}
+    9290:	f400f600 	vst1.8	{d15-d17}, [r0], r0
+    9294:	f000f200 			; <UNDEFINED> instruction: 0xf000f200
+    9298:	0c400c60 	mcrreq	12, 6, r0, r0, cr0
+    929c:	0c000c20 	stceq	12, cr0, [r0], {32}
+    92a0:	f400f600 	vst1.8	{d15-d17}, [r0], r0
+    92a4:	f000f200 			; <UNDEFINED> instruction: 0xf000f200
+    92a8:	0c400c60 	mcrreq	12, 6, r0, r0, cr0
+    92ac:	0c000c20 	stceq	12, cr0, [r0], {32}
+    92b0:	f400f600 	vst1.8	{d15-d17}, [r0], r0
+    92b4:	f000f200 			; <UNDEFINED> instruction: 0xf000f200
+    92b8:	0c400c60 	mcrreq	12, 6, r0, r0, cr0
+    92bc:	0c000c20 	stceq	12, cr0, [r0], {32}
+    92c0:	f400f600 	vst1.8	{d15-d17}, [r0], r0
+    92c4:	f000f200 			; <UNDEFINED> instruction: 0xf000f200
+    92c8:	0c400c60 	mcrreq	12, 6, r0, r0, cr0
+    92cc:	0c000c20 	stceq	12, cr0, [r0], {32}
+    92d0:	f400f600 	vst1.8	{d15-d17}, [r0], r0
+    92d4:	f000f200 			; <UNDEFINED> instruction: 0xf000f200
+    92d8:	0c400c60 	mcrreq	12, 6, r0, r0, cr0
+    92dc:	0c000c20 	stceq	12, cr0, [r0], {32}
+    92e0:	f400f600 	vst1.8	{d15-d17}, [r0], r0
+    92e4:	f000f200 			; <UNDEFINED> instruction: 0xf000f200
+    92e8:	0c400c60 	mcrreq	12, 6, r0, r0, cr0
+    92ec:	0c000c20 	stceq	12, cr0, [r0], {32}
+    92f0:	f400f600 	vst1.8	{d15-d17}, [r0], r0
+    92f4:	f000f200 			; <UNDEFINED> instruction: 0xf000f200
+    92f8:	00000eb0 			; <UNDEFINED> instruction: 0x00000eb0
+    92fc:	000010ad 	andeq	r1, r0, sp, lsr #1
+    9300:	00000c36 	andeq	r0, r0, r6, lsr ip
+    9304:	00000406 	andeq	r0, r0, r6, lsl #8
+    9308:	00000995 	muleq	r0, r5, r9
+    930c:	ffffee07 			; <UNDEFINED> instruction: 0xffffee07
+    9310:	000007bd 			; <UNDEFINED> instruction: 0x000007bd
+    9314:	fffffbe0 			; <UNDEFINED> instruction: 0xfffffbe0
+    9318:	00000a3d 	andeq	r0, r0, sp, lsr sl
+    931c:	000010ad 	andeq	r1, r0, sp, lsr #1
+    9320:	00000bf2 	strdeq	r0, [r0], -r2
+    9324:	00000406 	andeq	r0, r0, r6, lsl #8
+    9328:	0000094a 	andeq	r0, r0, sl, asr #18
+    932c:	ffffee07 			; <UNDEFINED> instruction: 0xffffee07
+    9330:	0000076e 	andeq	r0, r0, lr, ror #14
+    9334:	fffffbe0 			; <UNDEFINED> instruction: 0xfffffbe0
+    9338:	000009f4 	strdeq	r0, [r0], -r4
+    933c:	000010ad 	andeq	r1, r0, sp, lsr #1
+    9340:	00000bac 	andeq	r0, r0, ip, lsr #23
+    9344:	00000406 	andeq	r0, r0, r6, lsl #8
+    9348:	000008fc 	strdeq	r0, [r0], -ip
+    934c:	ffffee07 			; <UNDEFINED> instruction: 0xffffee07
+    9350:	0000071e 	andeq	r0, r0, lr, lsl r7
+    9354:	fffffbe0 			; <UNDEFINED> instruction: 0xfffffbe0
+    9358:	000009aa 	andeq	r0, r0, sl, lsr #19
+    935c:	000010ad 	andeq	r1, r0, sp, lsr #1
+    9360:	00000b65 	andeq	r0, r0, r5, ror #22
+    9364:	00000406 	andeq	r0, r0, r6, lsl #8
+    9368:	000008ac 	andeq	r0, r0, ip, lsr #17
+    936c:	ffffee07 			; <UNDEFINED> instruction: 0xffffee07
+    9370:	000006ca 	andeq	r0, r0, sl, asr #13
+    9374:	fffffbe0 			; <UNDEFINED> instruction: 0xfffffbe0
+    9378:	0000095e 	andeq	r0, r0, lr, asr r9
+    937c:	000010ad 	andeq	r1, r0, sp, lsr #1
+    9380:	00000b1c 	andeq	r0, r0, ip, lsl fp
+    9384:	00000406 	andeq	r0, r0, r6, lsl #8
+    9388:	0000085c 	andeq	r0, r0, ip, asr r8
+    938c:	ffffee07 			; <UNDEFINED> instruction: 0xffffee07
+    9390:	00000677 	andeq	r0, r0, r7, ror r6
+    9394:	fffffbe0 			; <UNDEFINED> instruction: 0xfffffbe0
+    9398:	00000911 	andeq	r0, r0, r1, lsl r9
+    939c:	000010ad 	andeq	r1, r0, sp, lsr #1
+    93a0:	00000ad2 	ldrdeq	r0, [r0], -r2
+    93a4:	00000406 	andeq	r0, r0, r6, lsl #8
+    93a8:	0000080a 	andeq	r0, r0, sl, lsl #16
+    93ac:	ffffee07 			; <UNDEFINED> instruction: 0xffffee07
+    93b0:	00000621 	andeq	r0, r0, r1, lsr #12
+    93b4:	fffffbe0 			; <UNDEFINED> instruction: 0xfffffbe0
+    93b8:	000008c2 	andeq	r0, r0, r2, asr #17
+    93bc:	000010ad 	andeq	r1, r0, sp, lsr #1
+    93c0:	00000868 	andeq	r0, r0, r8, ror #16
+    93c4:	00000406 	andeq	r0, r0, r6, lsl #8
+    93c8:	00000693 	muleq	r0, r3, r6
+    93cc:	ffffee07 			; <UNDEFINED> instruction: 0xffffee07
+    93d0:	0000065b 	andeq	r0, r0, fp, asr r6
+    93d4:	fffffbe0 			; <UNDEFINED> instruction: 0xfffffbe0
+    93d8:	000007ee 	andeq	r0, r0, lr, ror #15
+    93dc:	000010ad 	andeq	r1, r0, sp, lsr #1
+    93e0:	00000820 	andeq	r0, r0, r0, lsr #16
+    93e4:	00000406 	andeq	r0, r0, r6, lsl #8
+    93e8:	0000064b 	andeq	r0, r0, fp, asr #12
+    93ec:	ffffee07 			; <UNDEFINED> instruction: 0xffffee07
+    93f0:	00000613 	andeq	r0, r0, r3, lsl r6
+    93f4:	fffffbe0 			; <UNDEFINED> instruction: 0xfffffbe0
+    93f8:	000007a6 	andeq	r0, r0, r6, lsr #15
+    93fc:	000010ad 	andeq	r1, r0, sp, lsr #1
+    9400:	000007d8 	ldrdeq	r0, [r0], -r8
+    9404:	00000406 	andeq	r0, r0, r6, lsl #8
+    9408:	00000603 	andeq	r0, r0, r3, lsl #12
+    940c:	ffffee07 			; <UNDEFINED> instruction: 0xffffee07
+    9410:	000005cb 	andeq	r0, r0, fp, asr #11
+    9414:	fffffbe0 			; <UNDEFINED> instruction: 0xfffffbe0
+    9418:	0000075e 	andeq	r0, r0, lr, asr r7
+    941c:	000010ad 	andeq	r1, r0, sp, lsr #1
+    9420:	0000078f 	andeq	r0, r0, pc, lsl #15
+    9424:	00000406 	andeq	r0, r0, r6, lsl #8
+    9428:	000005ba 			; <UNDEFINED> instruction: 0x000005ba
+    942c:	ffffee07 			; <UNDEFINED> instruction: 0xffffee07
+    9430:	00000582 	andeq	r0, r0, r2, lsl #11
+    9434:	fffffbe0 			; <UNDEFINED> instruction: 0xfffffbe0
+    9438:	00000715 	andeq	r0, r0, r5, lsl r7
+    943c:	000010ad 	andeq	r1, r0, sp, lsr #1
+    9440:	00000746 	andeq	r0, r0, r6, asr #14
+    9444:	00000406 	andeq	r0, r0, r6, lsl #8
+    9448:	00000571 	andeq	r0, r0, r1, ror r5
+    944c:	ffffee07 			; <UNDEFINED> instruction: 0xffffee07
+    9450:	00000539 	andeq	r0, r0, r9, lsr r5
+    9454:	fffffbe0 			; <UNDEFINED> instruction: 0xfffffbe0
+    9458:	000006cc 	andeq	r0, r0, ip, asr #13
+    945c:	000010ad 	andeq	r1, r0, sp, lsr #1
+    9460:	000006fd 	strdeq	r0, [r0], -sp
+    9464:	00000406 	andeq	r0, r0, r6, lsl #8
+    9468:	00000528 	andeq	r0, r0, r8, lsr #10
+    946c:	ffffee07 			; <UNDEFINED> instruction: 0xffffee07
+    9470:	000004f0 	strdeq	r0, [r0], -r0	; <UNPREDICTABLE>
+    9474:	fffffbe0 			; <UNDEFINED> instruction: 0xfffffbe0
+    9478:	00000683 	andeq	r0, r0, r3, lsl #13
+    947c:	000010ad 	andeq	r1, r0, sp, lsr #1
+    9480:	000006b4 			; <UNDEFINED> instruction: 0x000006b4
+    9484:	00000406 	andeq	r0, r0, r6, lsl #8
+    9488:	000007b0 			; <UNDEFINED> instruction: 0x000007b0
+    948c:	00000000 	andeq	r0, r0, r0
+    9490:	00000000 	andeq	r0, r0, r0
+    9494:	00000000 	andeq	r0, r0, r0
+    9498:	00000000 	andeq	r0, r0, r0
+    949c:	00000000 	andeq	r0, r0, r0
+    94a0:	00000000 	andeq	r0, r0, r0
+    94a4:	00000000 	andeq	r0, r0, r0
+    94a8:	00000000 	andeq	r0, r0, r0
+    94ac:	00000000 	andeq	r0, r0, r0
+    94b0:	00000000 	andeq	r0, r0, r0
+    94b4:	00000000 	andeq	r0, r0, r0
+    94b8:	00000000 	andeq	r0, r0, r0
+    94bc:	00000000 	andeq	r0, r0, r0
+    94c0:	00000000 	andeq	r0, r0, r0
+    94c4:	00000000 	andeq	r0, r0, r0
+    94c8:	00000000 	andeq	r0, r0, r0
+    94cc:	00000000 	andeq	r0, r0, r0
+    94d0:	00000000 	andeq	r0, r0, r0
+    94d4:	00000000 	andeq	r0, r0, r0
+    94d8:	00000000 	andeq	r0, r0, r0
+    94dc:	00000000 	andeq	r0, r0, r0
+    94e0:	00000000 	andeq	r0, r0, r0
+    94e4:	00000000 	andeq	r0, r0, r0
+    94e8:	00000000 	andeq	r0, r0, r0
+    94ec:	00000000 	andeq	r0, r0, r0
+    94f0:	00000000 	andeq	r0, r0, r0
+    94f4:	00000000 	andeq	r0, r0, r0
+    94f8:	00000000 	andeq	r0, r0, r0
+    94fc:	00000000 	andeq	r0, r0, r0
+    9500:	00000000 	andeq	r0, r0, r0
+    9504:	00000000 	andeq	r0, r0, r0
+    9508:	00000000 	andeq	r0, r0, r0
+    950c:	00000000 	andeq	r0, r0, r0
+    9510:	00000000 	andeq	r0, r0, r0
+    9514:	00000000 	andeq	r0, r0, r0
+    9518:	00000000 	andeq	r0, r0, r0
+    951c:	00000000 	andeq	r0, r0, r0
+    9520:	00000000 	andeq	r0, r0, r0
+    9524:	00000000 	andeq	r0, r0, r0
+    9528:	00000000 	andeq	r0, r0, r0
+    952c:	00000000 	andeq	r0, r0, r0
+    9530:	00000000 	andeq	r0, r0, r0
+    9534:	00000000 	andeq	r0, r0, r0
+    9538:	00000000 	andeq	r0, r0, r0
+    953c:	00000000 	andeq	r0, r0, r0
+    9540:	00000000 	andeq	r0, r0, r0
+    9544:	00000000 	andeq	r0, r0, r0
+    9548:	00000000 	andeq	r0, r0, r0
+    954c:	00000000 	andeq	r0, r0, r0
+    9550:	00000000 	andeq	r0, r0, r0
+    9554:	00000000 	andeq	r0, r0, r0
+    9558:	00000000 	andeq	r0, r0, r0
+    955c:	00000000 	andeq	r0, r0, r0
+    9560:	00000000 	andeq	r0, r0, r0
+    9564:	00000000 	andeq	r0, r0, r0
+    9568:	00000000 	andeq	r0, r0, r0
+    956c:	00000000 	andeq	r0, r0, r0
+    9570:	00000000 	andeq	r0, r0, r0
+    9574:	00000000 	andeq	r0, r0, r0
+    9578:	00000000 	andeq	r0, r0, r0
+    957c:	00000000 	andeq	r0, r0, r0
+    9580:	00000000 	andeq	r0, r0, r0
+    9584:	00000000 	andeq	r0, r0, r0
+    9588:	00000000 	andeq	r0, r0, r0
+    958c:	00000000 	andeq	r0, r0, r0
+    9590:	00000000 	andeq	r0, r0, r0
+    9594:	00000000 	andeq	r0, r0, r0
+    9598:	00000000 	andeq	r0, r0, r0
+    959c:	00000000 	andeq	r0, r0, r0
+    95a0:	00000000 	andeq	r0, r0, r0
+    95a4:	00000000 	andeq	r0, r0, r0
+    95a8:	00000000 	andeq	r0, r0, r0
+    95ac:	00000000 	andeq	r0, r0, r0
+    95b0:	00000000 	andeq	r0, r0, r0
+    95b4:	00000000 	andeq	r0, r0, r0
+    95b8:	00000000 	andeq	r0, r0, r0
+    95bc:	00000000 	andeq	r0, r0, r0
+    95c0:	00000000 	andeq	r0, r0, r0
+    95c4:	00000000 	andeq	r0, r0, r0
+    95c8:	00000000 	andeq	r0, r0, r0
+    95cc:	00000000 	andeq	r0, r0, r0
+    95d0:	00000000 	andeq	r0, r0, r0
+    95d4:	00000000 	andeq	r0, r0, r0
+    95d8:	00000000 	andeq	r0, r0, r0
+    95dc:	00000000 	andeq	r0, r0, r0
+    95e0:	00000000 	andeq	r0, r0, r0
+    95e4:	00000000 	andeq	r0, r0, r0
+    95e8:	00000000 	andeq	r0, r0, r0
+    95ec:	00000000 	andeq	r0, r0, r0
+    95f0:	00000000 	andeq	r0, r0, r0
+    95f4:	00000000 	andeq	r0, r0, r0
+    95f8:	00000000 	andeq	r0, r0, r0
+    95fc:	00000000 	andeq	r0, r0, r0
+    9600:	00000000 	andeq	r0, r0, r0
+    9604:	00000000 	andeq	r0, r0, r0
+    9608:	00000000 	andeq	r0, r0, r0
+    960c:	00000000 	andeq	r0, r0, r0
+    9610:	00000000 	andeq	r0, r0, r0
+    9614:	00000000 	andeq	r0, r0, r0
+
+00009618 <_global_impure_ptr>:
+    9618:	00019638 	andeq	r9, r1, r8, lsr r6
+
+Disassembly of section .data:
+
+00019638 <impure_data>:
+   19638:	00000000 	andeq	r0, r0, r0
+   1963c:	00019924 	andeq	r9, r1, r4, lsr #18
+   19640:	0001998c 	andeq	r9, r1, ip, lsl #19
+   19644:	000199f4 	strdeq	r9, [r1], -r4
+   19648:	00000000 	andeq	r0, r0, r0
+   1964c:	00000000 	andeq	r0, r0, r0
+   19650:	00000000 	andeq	r0, r0, r0
+   19654:	00000000 	andeq	r0, r0, r0
+   19658:	00000000 	andeq	r0, r0, r0
+   1965c:	00000000 	andeq	r0, r0, r0
+   19660:	00000000 	andeq	r0, r0, r0
+   19664:	00000000 	andeq	r0, r0, r0
+   19668:	00000000 	andeq	r0, r0, r0
+   1966c:	00000000 	andeq	r0, r0, r0
+   19670:	00000000 	andeq	r0, r0, r0
+   19674:	00000000 	andeq	r0, r0, r0
+   19678:	00000000 	andeq	r0, r0, r0
+   1967c:	00000000 	andeq	r0, r0, r0
+   19680:	00000000 	andeq	r0, r0, r0
+   19684:	00000000 	andeq	r0, r0, r0
+   19688:	00000000 	andeq	r0, r0, r0
+   1968c:	00000000 	andeq	r0, r0, r0
+   19690:	00000000 	andeq	r0, r0, r0
+   19694:	00000000 	andeq	r0, r0, r0
+   19698:	00000000 	andeq	r0, r0, r0
+   1969c:	00000000 	andeq	r0, r0, r0
+   196a0:	00000000 	andeq	r0, r0, r0
+   196a4:	00000000 	andeq	r0, r0, r0
+   196a8:	00000000 	andeq	r0, r0, r0
+   196ac:	00000000 	andeq	r0, r0, r0
+   196b0:	00000000 	andeq	r0, r0, r0
+   196b4:	00000000 	andeq	r0, r0, r0
+   196b8:	00000000 	andeq	r0, r0, r0
+   196bc:	00000000 	andeq	r0, r0, r0
+   196c0:	00000000 	andeq	r0, r0, r0
+   196c4:	00000000 	andeq	r0, r0, r0
+   196c8:	00000000 	andeq	r0, r0, r0
+   196cc:	00000000 	andeq	r0, r0, r0
+   196d0:	00000000 	andeq	r0, r0, r0
+   196d4:	00000000 	andeq	r0, r0, r0
+   196d8:	00000000 	andeq	r0, r0, r0
+   196dc:	00000000 	andeq	r0, r0, r0
+   196e0:	00000001 	andeq	r0, r0, r1
+   196e4:	00000000 	andeq	r0, r0, r0
+   196e8:	abcd330e 	blge	ff366328 <_stack+0xff2e6328>
+   196ec:	e66d1234 			; <UNDEFINED> instruction: 0xe66d1234
+   196f0:	0005deec 	andeq	sp, r5, ip, ror #29
+   196f4:	0000000b 	andeq	r0, r0, fp
+   196f8:	00000000 	andeq	r0, r0, r0
+   196fc:	00000000 	andeq	r0, r0, r0
+   19700:	00000000 	andeq	r0, r0, r0
+   19704:	00000000 	andeq	r0, r0, r0
+   19708:	00000000 	andeq	r0, r0, r0
+   1970c:	00000000 	andeq	r0, r0, r0
+   19710:	00000000 	andeq	r0, r0, r0
+   19714:	00000000 	andeq	r0, r0, r0
+   19718:	00000000 	andeq	r0, r0, r0
+   1971c:	00000000 	andeq	r0, r0, r0
+   19720:	00000000 	andeq	r0, r0, r0
+   19724:	00000000 	andeq	r0, r0, r0
+   19728:	00000000 	andeq	r0, r0, r0
+   1972c:	00000000 	andeq	r0, r0, r0
+   19730:	00000000 	andeq	r0, r0, r0
+   19734:	00000000 	andeq	r0, r0, r0
+   19738:	00000000 	andeq	r0, r0, r0
+   1973c:	00000000 	andeq	r0, r0, r0
+   19740:	00000000 	andeq	r0, r0, r0
+   19744:	00000000 	andeq	r0, r0, r0
+   19748:	00000000 	andeq	r0, r0, r0
+   1974c:	00000000 	andeq	r0, r0, r0
+   19750:	00000000 	andeq	r0, r0, r0
+   19754:	00000000 	andeq	r0, r0, r0
+   19758:	00000000 	andeq	r0, r0, r0
+   1975c:	00000000 	andeq	r0, r0, r0
+   19760:	00000000 	andeq	r0, r0, r0
+   19764:	00000000 	andeq	r0, r0, r0
+   19768:	00000000 	andeq	r0, r0, r0
+   1976c:	00000000 	andeq	r0, r0, r0
+   19770:	00000000 	andeq	r0, r0, r0
+   19774:	00000000 	andeq	r0, r0, r0
+   19778:	00000000 	andeq	r0, r0, r0
+   1977c:	00000000 	andeq	r0, r0, r0
+   19780:	00000000 	andeq	r0, r0, r0
+   19784:	00000000 	andeq	r0, r0, r0
+   19788:	00000000 	andeq	r0, r0, r0
+   1978c:	00000000 	andeq	r0, r0, r0
+   19790:	00000000 	andeq	r0, r0, r0
+   19794:	00000000 	andeq	r0, r0, r0
+   19798:	00000000 	andeq	r0, r0, r0
+   1979c:	00000000 	andeq	r0, r0, r0
+   197a0:	00000000 	andeq	r0, r0, r0
+   197a4:	00000000 	andeq	r0, r0, r0
+   197a8:	00000000 	andeq	r0, r0, r0
+   197ac:	00000000 	andeq	r0, r0, r0
+   197b0:	00000000 	andeq	r0, r0, r0
+   197b4:	00000000 	andeq	r0, r0, r0
+   197b8:	00000000 	andeq	r0, r0, r0
+   197bc:	00000000 	andeq	r0, r0, r0
+   197c0:	00000000 	andeq	r0, r0, r0
+   197c4:	00000000 	andeq	r0, r0, r0
+   197c8:	00000000 	andeq	r0, r0, r0
+   197cc:	00000000 	andeq	r0, r0, r0
+   197d0:	00000000 	andeq	r0, r0, r0
+   197d4:	00000000 	andeq	r0, r0, r0
+   197d8:	00000000 	andeq	r0, r0, r0
+   197dc:	00000000 	andeq	r0, r0, r0
+   197e0:	00000000 	andeq	r0, r0, r0
+   197e4:	00000000 	andeq	r0, r0, r0
+   197e8:	00000000 	andeq	r0, r0, r0
+   197ec:	00000000 	andeq	r0, r0, r0
+   197f0:	00000000 	andeq	r0, r0, r0
+   197f4:	00000000 	andeq	r0, r0, r0
+   197f8:	00000000 	andeq	r0, r0, r0
+   197fc:	00000000 	andeq	r0, r0, r0
+   19800:	00000000 	andeq	r0, r0, r0
+   19804:	00000000 	andeq	r0, r0, r0
+   19808:	00000000 	andeq	r0, r0, r0
+   1980c:	00000000 	andeq	r0, r0, r0
+   19810:	00000000 	andeq	r0, r0, r0
+   19814:	00000000 	andeq	r0, r0, r0
+   19818:	00000000 	andeq	r0, r0, r0
+   1981c:	00000000 	andeq	r0, r0, r0
+   19820:	00000000 	andeq	r0, r0, r0
+   19824:	00000000 	andeq	r0, r0, r0
+   19828:	00000000 	andeq	r0, r0, r0
+   1982c:	00000000 	andeq	r0, r0, r0
+   19830:	00000000 	andeq	r0, r0, r0
+   19834:	00000000 	andeq	r0, r0, r0
+   19838:	00000000 	andeq	r0, r0, r0
+   1983c:	00000000 	andeq	r0, r0, r0
+   19840:	00000000 	andeq	r0, r0, r0
+   19844:	00000000 	andeq	r0, r0, r0
+   19848:	00000000 	andeq	r0, r0, r0
+   1984c:	00000000 	andeq	r0, r0, r0
+   19850:	00000000 	andeq	r0, r0, r0
+   19854:	00000000 	andeq	r0, r0, r0
+   19858:	00000000 	andeq	r0, r0, r0
+   1985c:	00000000 	andeq	r0, r0, r0
+   19860:	00000000 	andeq	r0, r0, r0
+   19864:	00000000 	andeq	r0, r0, r0
+   19868:	00000000 	andeq	r0, r0, r0
+   1986c:	00000000 	andeq	r0, r0, r0
+   19870:	00000000 	andeq	r0, r0, r0
+   19874:	00000000 	andeq	r0, r0, r0
+   19878:	00000000 	andeq	r0, r0, r0
+   1987c:	00000000 	andeq	r0, r0, r0
+   19880:	00000000 	andeq	r0, r0, r0
+   19884:	00000000 	andeq	r0, r0, r0
+   19888:	00000000 	andeq	r0, r0, r0
+   1988c:	00000000 	andeq	r0, r0, r0
+   19890:	00000000 	andeq	r0, r0, r0
+   19894:	00000000 	andeq	r0, r0, r0
+   19898:	00000000 	andeq	r0, r0, r0
+   1989c:	00000000 	andeq	r0, r0, r0
+   198a0:	00000000 	andeq	r0, r0, r0
+   198a4:	00000000 	andeq	r0, r0, r0
+   198a8:	00000000 	andeq	r0, r0, r0
+   198ac:	00000000 	andeq	r0, r0, r0
+   198b0:	00000000 	andeq	r0, r0, r0
+   198b4:	00000000 	andeq	r0, r0, r0
+   198b8:	00000000 	andeq	r0, r0, r0
+   198bc:	00000000 	andeq	r0, r0, r0
+   198c0:	00000000 	andeq	r0, r0, r0
+   198c4:	00000000 	andeq	r0, r0, r0
+   198c8:	00000000 	andeq	r0, r0, r0
+   198cc:	00000000 	andeq	r0, r0, r0
+   198d0:	00000000 	andeq	r0, r0, r0
+   198d4:	00000000 	andeq	r0, r0, r0
+   198d8:	00000000 	andeq	r0, r0, r0
+   198dc:	00000000 	andeq	r0, r0, r0
+   198e0:	00000000 	andeq	r0, r0, r0
+   198e4:	00000000 	andeq	r0, r0, r0
+   198e8:	00000000 	andeq	r0, r0, r0
+   198ec:	00000000 	andeq	r0, r0, r0
+   198f0:	00000000 	andeq	r0, r0, r0
+   198f4:	00000000 	andeq	r0, r0, r0
+   198f8:	00000000 	andeq	r0, r0, r0
+   198fc:	00000000 	andeq	r0, r0, r0
+   19900:	00000000 	andeq	r0, r0, r0
+   19904:	00000000 	andeq	r0, r0, r0
+   19908:	00000000 	andeq	r0, r0, r0
+   1990c:	00000000 	andeq	r0, r0, r0
+   19910:	00000000 	andeq	r0, r0, r0
+   19914:	00000000 	andeq	r0, r0, r0
+   19918:	00000000 	andeq	r0, r0, r0
+   1991c:	00000000 	andeq	r0, r0, r0
+   19920:	00000000 	andeq	r0, r0, r0
+   19924:	00000000 	andeq	r0, r0, r0
+   19928:	00000000 	andeq	r0, r0, r0
+   1992c:	00000000 	andeq	r0, r0, r0
+   19930:	00000000 	andeq	r0, r0, r0
+   19934:	00000000 	andeq	r0, r0, r0
+   19938:	00000000 	andeq	r0, r0, r0
+   1993c:	00000000 	andeq	r0, r0, r0
+   19940:	00000000 	andeq	r0, r0, r0
+   19944:	00000000 	andeq	r0, r0, r0
+   19948:	00000000 	andeq	r0, r0, r0
+   1994c:	00000000 	andeq	r0, r0, r0
+   19950:	00000000 	andeq	r0, r0, r0
+   19954:	00000000 	andeq	r0, r0, r0
+   19958:	00000000 	andeq	r0, r0, r0
+   1995c:	00000000 	andeq	r0, r0, r0
+   19960:	00000000 	andeq	r0, r0, r0
+   19964:	00000000 	andeq	r0, r0, r0
+   19968:	00000000 	andeq	r0, r0, r0
+   1996c:	00000000 	andeq	r0, r0, r0
+   19970:	00000000 	andeq	r0, r0, r0
+   19974:	00000000 	andeq	r0, r0, r0
+   19978:	00000000 	andeq	r0, r0, r0
+   1997c:	00000000 	andeq	r0, r0, r0
+   19980:	00000000 	andeq	r0, r0, r0
+   19984:	00000000 	andeq	r0, r0, r0
+   19988:	00000000 	andeq	r0, r0, r0
+   1998c:	00000000 	andeq	r0, r0, r0
+   19990:	00000000 	andeq	r0, r0, r0
+   19994:	00000000 	andeq	r0, r0, r0
+   19998:	00000000 	andeq	r0, r0, r0
+   1999c:	00000000 	andeq	r0, r0, r0
+   199a0:	00000000 	andeq	r0, r0, r0
+   199a4:	00000000 	andeq	r0, r0, r0
+   199a8:	00000000 	andeq	r0, r0, r0
+   199ac:	00000000 	andeq	r0, r0, r0
+   199b0:	00000000 	andeq	r0, r0, r0
+   199b4:	00000000 	andeq	r0, r0, r0
+   199b8:	00000000 	andeq	r0, r0, r0
+   199bc:	00000000 	andeq	r0, r0, r0
+   199c0:	00000000 	andeq	r0, r0, r0
+   199c4:	00000000 	andeq	r0, r0, r0
+   199c8:	00000000 	andeq	r0, r0, r0
+   199cc:	00000000 	andeq	r0, r0, r0
+   199d0:	00000000 	andeq	r0, r0, r0
+   199d4:	00000000 	andeq	r0, r0, r0
+   199d8:	00000000 	andeq	r0, r0, r0
+   199dc:	00000000 	andeq	r0, r0, r0
+   199e0:	00000000 	andeq	r0, r0, r0
+   199e4:	00000000 	andeq	r0, r0, r0
+   199e8:	00000000 	andeq	r0, r0, r0
+   199ec:	00000000 	andeq	r0, r0, r0
+   199f0:	00000000 	andeq	r0, r0, r0
+   199f4:	00000000 	andeq	r0, r0, r0
+   199f8:	00000000 	andeq	r0, r0, r0
+   199fc:	00000000 	andeq	r0, r0, r0
+   19a00:	00000000 	andeq	r0, r0, r0
+   19a04:	00000000 	andeq	r0, r0, r0
+   19a08:	00000000 	andeq	r0, r0, r0
+   19a0c:	00000000 	andeq	r0, r0, r0
+   19a10:	00000000 	andeq	r0, r0, r0
+   19a14:	00000000 	andeq	r0, r0, r0
+   19a18:	00000000 	andeq	r0, r0, r0
+   19a1c:	00000000 	andeq	r0, r0, r0
+   19a20:	00000000 	andeq	r0, r0, r0
+   19a24:	00000000 	andeq	r0, r0, r0
+   19a28:	00000000 	andeq	r0, r0, r0
+   19a2c:	00000000 	andeq	r0, r0, r0
+   19a30:	00000000 	andeq	r0, r0, r0
+   19a34:	00000000 	andeq	r0, r0, r0
+   19a38:	00000000 	andeq	r0, r0, r0
+   19a3c:	00000000 	andeq	r0, r0, r0
+   19a40:	00000000 	andeq	r0, r0, r0
+   19a44:	00000000 	andeq	r0, r0, r0
+   19a48:	00000000 	andeq	r0, r0, r0
+   19a4c:	00000000 	andeq	r0, r0, r0
+   19a50:	00000000 	andeq	r0, r0, r0
+   19a54:	00000000 	andeq	r0, r0, r0
+   19a58:	00000000 	andeq	r0, r0, r0
+   19a5c:	00000000 	andeq	r0, r0, r0
+
+00019a60 <__atexit_recursive_mutex>:
+   19a60:	0001a0cc 	andeq	sl, r1, ip, asr #1
+
+Disassembly of section .bss:
+
+00019a64 <__bss_start>:
+   19a64:	00000000 	andeq	r0, r0, r0
+
+00019a68 <object.0>:
+   19a68:	00000000 	andeq	r0, r0, r0
+   19a6c:	00000000 	andeq	r0, r0, r0
+   19a70:	00000000 	andeq	r0, r0, r0
+   19a74:	00000000 	andeq	r0, r0, r0
+   19a78:	00000000 	andeq	r0, r0, r0
+   19a7c:	00000000 	andeq	r0, r0, r0
+
+00019a80 <a>:
+   19a80:	00000000 	andeq	r0, r0, r0
+   19a84:	00000000 	andeq	r0, r0, r0
+   19a88:	00000000 	andeq	r0, r0, r0
+   19a8c:	00000000 	andeq	r0, r0, r0
+   19a90:	00000000 	andeq	r0, r0, r0
+   19a94:	00000000 	andeq	r0, r0, r0
+   19a98:	00000000 	andeq	r0, r0, r0
+   19a9c:	00000000 	andeq	r0, r0, r0
+   19aa0:	00000000 	andeq	r0, r0, r0
+   19aa4:	00000000 	andeq	r0, r0, r0
+   19aa8:	00000000 	andeq	r0, r0, r0
+   19aac:	00000000 	andeq	r0, r0, r0
+   19ab0:	00000000 	andeq	r0, r0, r0
+   19ab4:	00000000 	andeq	r0, r0, r0
+   19ab8:	00000000 	andeq	r0, r0, r0
+   19abc:	00000000 	andeq	r0, r0, r0
+   19ac0:	00000000 	andeq	r0, r0, r0
+   19ac4:	00000000 	andeq	r0, r0, r0
+   19ac8:	00000000 	andeq	r0, r0, r0
+   19acc:	00000000 	andeq	r0, r0, r0
+   19ad0:	00000000 	andeq	r0, r0, r0
+   19ad4:	00000000 	andeq	r0, r0, r0
+   19ad8:	00000000 	andeq	r0, r0, r0
+   19adc:	00000000 	andeq	r0, r0, r0
+   19ae0:	00000000 	andeq	r0, r0, r0
+   19ae4:	00000000 	andeq	r0, r0, r0
+   19ae8:	00000000 	andeq	r0, r0, r0
+   19aec:	00000000 	andeq	r0, r0, r0
+   19af0:	00000000 	andeq	r0, r0, r0
+   19af4:	00000000 	andeq	r0, r0, r0
+   19af8:	00000000 	andeq	r0, r0, r0
+   19afc:	00000000 	andeq	r0, r0, r0
+   19b00:	00000000 	andeq	r0, r0, r0
+   19b04:	00000000 	andeq	r0, r0, r0
+   19b08:	00000000 	andeq	r0, r0, r0
+   19b0c:	00000000 	andeq	r0, r0, r0
+   19b10:	00000000 	andeq	r0, r0, r0
+   19b14:	00000000 	andeq	r0, r0, r0
+   19b18:	00000000 	andeq	r0, r0, r0
+   19b1c:	00000000 	andeq	r0, r0, r0
+   19b20:	00000000 	andeq	r0, r0, r0
+   19b24:	00000000 	andeq	r0, r0, r0
+   19b28:	00000000 	andeq	r0, r0, r0
+   19b2c:	00000000 	andeq	r0, r0, r0
+   19b30:	00000000 	andeq	r0, r0, r0
+   19b34:	00000000 	andeq	r0, r0, r0
+   19b38:	00000000 	andeq	r0, r0, r0
+   19b3c:	00000000 	andeq	r0, r0, r0
+   19b40:	00000000 	andeq	r0, r0, r0
+   19b44:	00000000 	andeq	r0, r0, r0
+   19b48:	00000000 	andeq	r0, r0, r0
+   19b4c:	00000000 	andeq	r0, r0, r0
+   19b50:	00000000 	andeq	r0, r0, r0
+   19b54:	00000000 	andeq	r0, r0, r0
+   19b58:	00000000 	andeq	r0, r0, r0
+   19b5c:	00000000 	andeq	r0, r0, r0
+   19b60:	00000000 	andeq	r0, r0, r0
+   19b64:	00000000 	andeq	r0, r0, r0
+   19b68:	00000000 	andeq	r0, r0, r0
+   19b6c:	00000000 	andeq	r0, r0, r0
+   19b70:	00000000 	andeq	r0, r0, r0
+   19b74:	00000000 	andeq	r0, r0, r0
+   19b78:	00000000 	andeq	r0, r0, r0
+   19b7c:	00000000 	andeq	r0, r0, r0
+   19b80:	00000000 	andeq	r0, r0, r0
+   19b84:	00000000 	andeq	r0, r0, r0
+   19b88:	00000000 	andeq	r0, r0, r0
+   19b8c:	00000000 	andeq	r0, r0, r0
+   19b90:	00000000 	andeq	r0, r0, r0
+   19b94:	00000000 	andeq	r0, r0, r0
+   19b98:	00000000 	andeq	r0, r0, r0
+   19b9c:	00000000 	andeq	r0, r0, r0
+   19ba0:	00000000 	andeq	r0, r0, r0
+   19ba4:	00000000 	andeq	r0, r0, r0
+   19ba8:	00000000 	andeq	r0, r0, r0
+   19bac:	00000000 	andeq	r0, r0, r0
+   19bb0:	00000000 	andeq	r0, r0, r0
+   19bb4:	00000000 	andeq	r0, r0, r0
+   19bb8:	00000000 	andeq	r0, r0, r0
+   19bbc:	00000000 	andeq	r0, r0, r0
+   19bc0:	00000000 	andeq	r0, r0, r0
+   19bc4:	00000000 	andeq	r0, r0, r0
+   19bc8:	00000000 	andeq	r0, r0, r0
+   19bcc:	00000000 	andeq	r0, r0, r0
+   19bd0:	00000000 	andeq	r0, r0, r0
+   19bd4:	00000000 	andeq	r0, r0, r0
+   19bd8:	00000000 	andeq	r0, r0, r0
+   19bdc:	00000000 	andeq	r0, r0, r0
+   19be0:	00000000 	andeq	r0, r0, r0
+   19be4:	00000000 	andeq	r0, r0, r0
+   19be8:	00000000 	andeq	r0, r0, r0
+   19bec:	00000000 	andeq	r0, r0, r0
+   19bf0:	00000000 	andeq	r0, r0, r0
+   19bf4:	00000000 	andeq	r0, r0, r0
+   19bf8:	00000000 	andeq	r0, r0, r0
+   19bfc:	00000000 	andeq	r0, r0, r0
+   19c00:	00000000 	andeq	r0, r0, r0
+   19c04:	00000000 	andeq	r0, r0, r0
+   19c08:	00000000 	andeq	r0, r0, r0
+   19c0c:	00000000 	andeq	r0, r0, r0
+
+00019c10 <b>:
+   19c10:	00000000 	andeq	r0, r0, r0
+   19c14:	00000000 	andeq	r0, r0, r0
+   19c18:	00000000 	andeq	r0, r0, r0
+   19c1c:	00000000 	andeq	r0, r0, r0
+   19c20:	00000000 	andeq	r0, r0, r0
+   19c24:	00000000 	andeq	r0, r0, r0
+   19c28:	00000000 	andeq	r0, r0, r0
+   19c2c:	00000000 	andeq	r0, r0, r0
+   19c30:	00000000 	andeq	r0, r0, r0
+   19c34:	00000000 	andeq	r0, r0, r0
+   19c38:	00000000 	andeq	r0, r0, r0
+   19c3c:	00000000 	andeq	r0, r0, r0
+   19c40:	00000000 	andeq	r0, r0, r0
+   19c44:	00000000 	andeq	r0, r0, r0
+   19c48:	00000000 	andeq	r0, r0, r0
+   19c4c:	00000000 	andeq	r0, r0, r0
+   19c50:	00000000 	andeq	r0, r0, r0
+   19c54:	00000000 	andeq	r0, r0, r0
+   19c58:	00000000 	andeq	r0, r0, r0
+   19c5c:	00000000 	andeq	r0, r0, r0
+   19c60:	00000000 	andeq	r0, r0, r0
+   19c64:	00000000 	andeq	r0, r0, r0
+   19c68:	00000000 	andeq	r0, r0, r0
+   19c6c:	00000000 	andeq	r0, r0, r0
+   19c70:	00000000 	andeq	r0, r0, r0
+   19c74:	00000000 	andeq	r0, r0, r0
+   19c78:	00000000 	andeq	r0, r0, r0
+   19c7c:	00000000 	andeq	r0, r0, r0
+   19c80:	00000000 	andeq	r0, r0, r0
+   19c84:	00000000 	andeq	r0, r0, r0
+   19c88:	00000000 	andeq	r0, r0, r0
+   19c8c:	00000000 	andeq	r0, r0, r0
+   19c90:	00000000 	andeq	r0, r0, r0
+   19c94:	00000000 	andeq	r0, r0, r0
+   19c98:	00000000 	andeq	r0, r0, r0
+   19c9c:	00000000 	andeq	r0, r0, r0
+   19ca0:	00000000 	andeq	r0, r0, r0
+   19ca4:	00000000 	andeq	r0, r0, r0
+   19ca8:	00000000 	andeq	r0, r0, r0
+   19cac:	00000000 	andeq	r0, r0, r0
+   19cb0:	00000000 	andeq	r0, r0, r0
+   19cb4:	00000000 	andeq	r0, r0, r0
+   19cb8:	00000000 	andeq	r0, r0, r0
+   19cbc:	00000000 	andeq	r0, r0, r0
+   19cc0:	00000000 	andeq	r0, r0, r0
+   19cc4:	00000000 	andeq	r0, r0, r0
+   19cc8:	00000000 	andeq	r0, r0, r0
+   19ccc:	00000000 	andeq	r0, r0, r0
+   19cd0:	00000000 	andeq	r0, r0, r0
+   19cd4:	00000000 	andeq	r0, r0, r0
+   19cd8:	00000000 	andeq	r0, r0, r0
+   19cdc:	00000000 	andeq	r0, r0, r0
+   19ce0:	00000000 	andeq	r0, r0, r0
+   19ce4:	00000000 	andeq	r0, r0, r0
+   19ce8:	00000000 	andeq	r0, r0, r0
+   19cec:	00000000 	andeq	r0, r0, r0
+   19cf0:	00000000 	andeq	r0, r0, r0
+   19cf4:	00000000 	andeq	r0, r0, r0
+   19cf8:	00000000 	andeq	r0, r0, r0
+   19cfc:	00000000 	andeq	r0, r0, r0
+   19d00:	00000000 	andeq	r0, r0, r0
+   19d04:	00000000 	andeq	r0, r0, r0
+   19d08:	00000000 	andeq	r0, r0, r0
+   19d0c:	00000000 	andeq	r0, r0, r0
+   19d10:	00000000 	andeq	r0, r0, r0
+   19d14:	00000000 	andeq	r0, r0, r0
+   19d18:	00000000 	andeq	r0, r0, r0
+   19d1c:	00000000 	andeq	r0, r0, r0
+   19d20:	00000000 	andeq	r0, r0, r0
+   19d24:	00000000 	andeq	r0, r0, r0
+   19d28:	00000000 	andeq	r0, r0, r0
+   19d2c:	00000000 	andeq	r0, r0, r0
+   19d30:	00000000 	andeq	r0, r0, r0
+   19d34:	00000000 	andeq	r0, r0, r0
+   19d38:	00000000 	andeq	r0, r0, r0
+   19d3c:	00000000 	andeq	r0, r0, r0
+   19d40:	00000000 	andeq	r0, r0, r0
+   19d44:	00000000 	andeq	r0, r0, r0
+   19d48:	00000000 	andeq	r0, r0, r0
+   19d4c:	00000000 	andeq	r0, r0, r0
+   19d50:	00000000 	andeq	r0, r0, r0
+   19d54:	00000000 	andeq	r0, r0, r0
+   19d58:	00000000 	andeq	r0, r0, r0
+   19d5c:	00000000 	andeq	r0, r0, r0
+   19d60:	00000000 	andeq	r0, r0, r0
+   19d64:	00000000 	andeq	r0, r0, r0
+   19d68:	00000000 	andeq	r0, r0, r0
+   19d6c:	00000000 	andeq	r0, r0, r0
+   19d70:	00000000 	andeq	r0, r0, r0
+   19d74:	00000000 	andeq	r0, r0, r0
+   19d78:	00000000 	andeq	r0, r0, r0
+   19d7c:	00000000 	andeq	r0, r0, r0
+   19d80:	00000000 	andeq	r0, r0, r0
+   19d84:	00000000 	andeq	r0, r0, r0
+   19d88:	00000000 	andeq	r0, r0, r0
+   19d8c:	00000000 	andeq	r0, r0, r0
+   19d90:	00000000 	andeq	r0, r0, r0
+   19d94:	00000000 	andeq	r0, r0, r0
+   19d98:	00000000 	andeq	r0, r0, r0
+   19d9c:	00000000 	andeq	r0, r0, r0
+
+00019da0 <c>:
+   19da0:	00000000 	andeq	r0, r0, r0
+
+00019da4 <d>:
+   19da4:	00000000 	andeq	r0, r0, r0
+
+00019da8 <e>:
+   19da8:	00000000 	andeq	r0, r0, r0
+
+00019dac <output>:
+   19dac:	00000000 	andeq	r0, r0, r0
+   19db0:	00000000 	andeq	r0, r0, r0
+   19db4:	00000000 	andeq	r0, r0, r0
+   19db8:	00000000 	andeq	r0, r0, r0
+   19dbc:	00000000 	andeq	r0, r0, r0
+   19dc0:	00000000 	andeq	r0, r0, r0
+   19dc4:	00000000 	andeq	r0, r0, r0
+   19dc8:	00000000 	andeq	r0, r0, r0
+   19dcc:	00000000 	andeq	r0, r0, r0
+   19dd0:	00000000 	andeq	r0, r0, r0
+   19dd4:	00000000 	andeq	r0, r0, r0
+   19dd8:	00000000 	andeq	r0, r0, r0
+   19ddc:	00000000 	andeq	r0, r0, r0
+   19de0:	00000000 	andeq	r0, r0, r0
+   19de4:	00000000 	andeq	r0, r0, r0
+   19de8:	00000000 	andeq	r0, r0, r0
+   19dec:	00000000 	andeq	r0, r0, r0
+   19df0:	00000000 	andeq	r0, r0, r0
+   19df4:	00000000 	andeq	r0, r0, r0
+   19df8:	00000000 	andeq	r0, r0, r0
+   19dfc:	00000000 	andeq	r0, r0, r0
+   19e00:	00000000 	andeq	r0, r0, r0
+   19e04:	00000000 	andeq	r0, r0, r0
+   19e08:	00000000 	andeq	r0, r0, r0
+   19e0c:	00000000 	andeq	r0, r0, r0
+   19e10:	00000000 	andeq	r0, r0, r0
+   19e14:	00000000 	andeq	r0, r0, r0
+   19e18:	00000000 	andeq	r0, r0, r0
+   19e1c:	00000000 	andeq	r0, r0, r0
+   19e20:	00000000 	andeq	r0, r0, r0
+   19e24:	00000000 	andeq	r0, r0, r0
+   19e28:	00000000 	andeq	r0, r0, r0
+   19e2c:	00000000 	andeq	r0, r0, r0
+   19e30:	00000000 	andeq	r0, r0, r0
+   19e34:	00000000 	andeq	r0, r0, r0
+   19e38:	00000000 	andeq	r0, r0, r0
+   19e3c:	00000000 	andeq	r0, r0, r0
+   19e40:	00000000 	andeq	r0, r0, r0
+   19e44:	00000000 	andeq	r0, r0, r0
+   19e48:	00000000 	andeq	r0, r0, r0
+   19e4c:	00000000 	andeq	r0, r0, r0
+   19e50:	00000000 	andeq	r0, r0, r0
+   19e54:	00000000 	andeq	r0, r0, r0
+   19e58:	00000000 	andeq	r0, r0, r0
+   19e5c:	00000000 	andeq	r0, r0, r0
+   19e60:	00000000 	andeq	r0, r0, r0
+   19e64:	00000000 	andeq	r0, r0, r0
+   19e68:	00000000 	andeq	r0, r0, r0
+   19e6c:	00000000 	andeq	r0, r0, r0
+   19e70:	00000000 	andeq	r0, r0, r0
+   19e74:	00000000 	andeq	r0, r0, r0
+   19e78:	00000000 	andeq	r0, r0, r0
+   19e7c:	00000000 	andeq	r0, r0, r0
+   19e80:	00000000 	andeq	r0, r0, r0
+   19e84:	00000000 	andeq	r0, r0, r0
+   19e88:	00000000 	andeq	r0, r0, r0
+   19e8c:	00000000 	andeq	r0, r0, r0
+   19e90:	00000000 	andeq	r0, r0, r0
+   19e94:	00000000 	andeq	r0, r0, r0
+   19e98:	00000000 	andeq	r0, r0, r0
+   19e9c:	00000000 	andeq	r0, r0, r0
+   19ea0:	00000000 	andeq	r0, r0, r0
+   19ea4:	00000000 	andeq	r0, r0, r0
+   19ea8:	00000000 	andeq	r0, r0, r0
+   19eac:	00000000 	andeq	r0, r0, r0
+   19eb0:	00000000 	andeq	r0, r0, r0
+   19eb4:	00000000 	andeq	r0, r0, r0
+   19eb8:	00000000 	andeq	r0, r0, r0
+   19ebc:	00000000 	andeq	r0, r0, r0
+   19ec0:	00000000 	andeq	r0, r0, r0
+   19ec4:	00000000 	andeq	r0, r0, r0
+   19ec8:	00000000 	andeq	r0, r0, r0
+   19ecc:	00000000 	andeq	r0, r0, r0
+   19ed0:	00000000 	andeq	r0, r0, r0
+   19ed4:	00000000 	andeq	r0, r0, r0
+   19ed8:	00000000 	andeq	r0, r0, r0
+   19edc:	00000000 	andeq	r0, r0, r0
+   19ee0:	00000000 	andeq	r0, r0, r0
+   19ee4:	00000000 	andeq	r0, r0, r0
+   19ee8:	00000000 	andeq	r0, r0, r0
+   19eec:	00000000 	andeq	r0, r0, r0
+   19ef0:	00000000 	andeq	r0, r0, r0
+   19ef4:	00000000 	andeq	r0, r0, r0
+   19ef8:	00000000 	andeq	r0, r0, r0
+   19efc:	00000000 	andeq	r0, r0, r0
+   19f00:	00000000 	andeq	r0, r0, r0
+   19f04:	00000000 	andeq	r0, r0, r0
+   19f08:	00000000 	andeq	r0, r0, r0
+   19f0c:	00000000 	andeq	r0, r0, r0
+   19f10:	00000000 	andeq	r0, r0, r0
+   19f14:	00000000 	andeq	r0, r0, r0
+   19f18:	00000000 	andeq	r0, r0, r0
+   19f1c:	00000000 	andeq	r0, r0, r0
+   19f20:	00000000 	andeq	r0, r0, r0
+   19f24:	00000000 	andeq	r0, r0, r0
+   19f28:	00000000 	andeq	r0, r0, r0
+   19f2c:	00000000 	andeq	r0, r0, r0
+   19f30:	00000000 	andeq	r0, r0, r0
+   19f34:	00000000 	andeq	r0, r0, r0
+   19f38:	00000000 	andeq	r0, r0, r0
+   19f3c:	00000000 	andeq	r0, r0, r0
+   19f40:	00000000 	andeq	r0, r0, r0
+   19f44:	00000000 	andeq	r0, r0, r0
+   19f48:	00000000 	andeq	r0, r0, r0
+   19f4c:	00000000 	andeq	r0, r0, r0
+   19f50:	00000000 	andeq	r0, r0, r0
+   19f54:	00000000 	andeq	r0, r0, r0
+   19f58:	00000000 	andeq	r0, r0, r0
+   19f5c:	00000000 	andeq	r0, r0, r0
+   19f60:	00000000 	andeq	r0, r0, r0
+   19f64:	00000000 	andeq	r0, r0, r0
+   19f68:	00000000 	andeq	r0, r0, r0
+   19f6c:	00000000 	andeq	r0, r0, r0
+   19f70:	00000000 	andeq	r0, r0, r0
+   19f74:	00000000 	andeq	r0, r0, r0
+   19f78:	00000000 	andeq	r0, r0, r0
+   19f7c:	00000000 	andeq	r0, r0, r0
+   19f80:	00000000 	andeq	r0, r0, r0
+   19f84:	00000000 	andeq	r0, r0, r0
+   19f88:	00000000 	andeq	r0, r0, r0
+   19f8c:	00000000 	andeq	r0, r0, r0
+   19f90:	00000000 	andeq	r0, r0, r0
+   19f94:	00000000 	andeq	r0, r0, r0
+   19f98:	00000000 	andeq	r0, r0, r0
+   19f9c:	00000000 	andeq	r0, r0, r0
+   19fa0:	00000000 	andeq	r0, r0, r0
+   19fa4:	00000000 	andeq	r0, r0, r0
+   19fa8:	00000000 	andeq	r0, r0, r0
+   19fac:	00000000 	andeq	r0, r0, r0
+   19fb0:	00000000 	andeq	r0, r0, r0
+   19fb4:	00000000 	andeq	r0, r0, r0
+   19fb8:	00000000 	andeq	r0, r0, r0
+   19fbc:	00000000 	andeq	r0, r0, r0
+   19fc0:	00000000 	andeq	r0, r0, r0
+   19fc4:	00000000 	andeq	r0, r0, r0
+   19fc8:	00000000 	andeq	r0, r0, r0
+   19fcc:	00000000 	andeq	r0, r0, r0
+   19fd0:	00000000 	andeq	r0, r0, r0
+   19fd4:	00000000 	andeq	r0, r0, r0
+   19fd8:	00000000 	andeq	r0, r0, r0
+   19fdc:	00000000 	andeq	r0, r0, r0
+   19fe0:	00000000 	andeq	r0, r0, r0
+   19fe4:	00000000 	andeq	r0, r0, r0
+   19fe8:	00000000 	andeq	r0, r0, r0
+   19fec:	00000000 	andeq	r0, r0, r0
+   19ff0:	00000000 	andeq	r0, r0, r0
+   19ff4:	00000000 	andeq	r0, r0, r0
+   19ff8:	00000000 	andeq	r0, r0, r0
+   19ffc:	00000000 	andeq	r0, r0, r0
+   1a000:	00000000 	andeq	r0, r0, r0
+   1a004:	00000000 	andeq	r0, r0, r0
+   1a008:	00000000 	andeq	r0, r0, r0
+   1a00c:	00000000 	andeq	r0, r0, r0
+   1a010:	00000000 	andeq	r0, r0, r0
+   1a014:	00000000 	andeq	r0, r0, r0
+   1a018:	00000000 	andeq	r0, r0, r0
+   1a01c:	00000000 	andeq	r0, r0, r0
+   1a020:	00000000 	andeq	r0, r0, r0
+   1a024:	00000000 	andeq	r0, r0, r0
+   1a028:	00000000 	andeq	r0, r0, r0
+   1a02c:	00000000 	andeq	r0, r0, r0
+   1a030:	00000000 	andeq	r0, r0, r0
+   1a034:	00000000 	andeq	r0, r0, r0
+   1a038:	00000000 	andeq	r0, r0, r0
+   1a03c:	00000000 	andeq	r0, r0, r0
+   1a040:	00000000 	andeq	r0, r0, r0
+   1a044:	00000000 	andeq	r0, r0, r0
+   1a048:	00000000 	andeq	r0, r0, r0
+   1a04c:	00000000 	andeq	r0, r0, r0
+   1a050:	00000000 	andeq	r0, r0, r0
+   1a054:	00000000 	andeq	r0, r0, r0
+   1a058:	00000000 	andeq	r0, r0, r0
+   1a05c:	00000000 	andeq	r0, r0, r0
+   1a060:	00000000 	andeq	r0, r0, r0
+   1a064:	00000000 	andeq	r0, r0, r0
+   1a068:	00000000 	andeq	r0, r0, r0
+   1a06c:	00000000 	andeq	r0, r0, r0
+   1a070:	00000000 	andeq	r0, r0, r0
+   1a074:	00000000 	andeq	r0, r0, r0
+   1a078:	00000000 	andeq	r0, r0, r0
+   1a07c:	00000000 	andeq	r0, r0, r0
+   1a080:	00000000 	andeq	r0, r0, r0
+   1a084:	00000000 	andeq	r0, r0, r0
+   1a088:	00000000 	andeq	r0, r0, r0
+   1a08c:	00000000 	andeq	r0, r0, r0
+   1a090:	00000000 	andeq	r0, r0, r0
+   1a094:	00000000 	andeq	r0, r0, r0
+   1a098:	00000000 	andeq	r0, r0, r0
+   1a09c:	00000000 	andeq	r0, r0, r0
+   1a0a0:	00000000 	andeq	r0, r0, r0
+   1a0a4:	00000000 	andeq	r0, r0, r0
+   1a0a8:	00000000 	andeq	r0, r0, r0
+   1a0ac:	00000000 	andeq	r0, r0, r0
+   1a0b0:	00000000 	andeq	r0, r0, r0
+   1a0b4:	00000000 	andeq	r0, r0, r0
+   1a0b8:	00000000 	andeq	r0, r0, r0
+   1a0bc:	00000000 	andeq	r0, r0, r0
+   1a0c0:	00000000 	andeq	r0, r0, r0
+   1a0c4:	00000000 	andeq	r0, r0, r0
+   1a0c8:	00000000 	andeq	r0, r0, r0
+
+0001a0cc <__lock___atexit_recursive_mutex>:
+   1a0cc:	00000000 	andeq	r0, r0, r0

@@ -1,0 +1,753 @@
+
+./riscv32-benchmarks-customtoolchain/src/slre/slre:     file format elf32-littleriscv
+
+
+Disassembly of section .rodata:
+
+00012594 <_ctype_-0x40>:
+   12594:	3f28                	.2byte	0x3f28
+   12596:	2969                	.2byte	0x2969
+   12598:	0000                	unimp
+   1259a:	0000                	unimp
+   1259c:	6128                	.2byte	0x6128
+   1259e:	2962                	.2byte	0x2962
+   125a0:	0000002b          	.4byte	0x2b
+   125a4:	6228                	.2byte	0x6228
+   125a6:	2b2e                	.2byte	0x2b2e
+   125a8:	2b29                	.2byte	0x2b29
+   125aa:	0000                	unimp
+   125ac:	5b61                	.2byte	0x5b61
+   125ae:	6261                	.2byte	0x6261
+   125b0:	2a5d                	.2byte	0x2a5d
+   125b2:	0000                	unimp
+   125b4:	5b28                	.2byte	0x5b28
+   125b6:	6261                	.2byte	0x6261
+   125b8:	635e                	.2byte	0x635e
+   125ba:	5b5d                	.2byte	0x5b5d
+   125bc:	6261                	.2byte	0x6261
+   125be:	635e                	.2byte	0x635e
+   125c0:	295d                	.2byte	0x295d
+   125c2:	245e002b          	.4byte	0x245e002b
+   125c6:	2928                	.2byte	0x2928
+   125c8:	5b2e                	.2byte	0x5b2e
+   125ca:	2a5d                	.2byte	0x2a5d
+   125cc:	5c7c3f2b          	.4byte	0x5c7c3f2b
+   125d0:	00647353          	.4byte	0x647353
+
+000125d4 <_ctype_>:
+   125d4:	2000                	.2byte	0x2000
+   125d6:	2020                	.2byte	0x2020
+   125d8:	2020                	.2byte	0x2020
+   125da:	2020                	.2byte	0x2020
+   125dc:	2020                	.2byte	0x2020
+   125de:	2828                	.2byte	0x2828
+   125e0:	2828                	.2byte	0x2828
+   125e2:	2028                	.2byte	0x2028
+   125e4:	2020                	.2byte	0x2020
+   125e6:	2020                	.2byte	0x2020
+   125e8:	2020                	.2byte	0x2020
+   125ea:	2020                	.2byte	0x2020
+   125ec:	2020                	.2byte	0x2020
+   125ee:	2020                	.2byte	0x2020
+   125f0:	2020                	.2byte	0x2020
+   125f2:	2020                	.2byte	0x2020
+   125f4:	8820                	.2byte	0x8820
+   125f6:	1010                	.2byte	0x1010
+   125f8:	1010                	.2byte	0x1010
+   125fa:	1010                	.2byte	0x1010
+   125fc:	1010                	.2byte	0x1010
+   125fe:	1010                	.2byte	0x1010
+   12600:	1010                	.2byte	0x1010
+   12602:	1010                	.2byte	0x1010
+   12604:	0410                	.2byte	0x410
+   12606:	0404                	.2byte	0x404
+   12608:	0404                	.2byte	0x404
+   1260a:	0404                	.2byte	0x404
+   1260c:	0404                	.2byte	0x404
+   1260e:	1004                	.2byte	0x1004
+   12610:	1010                	.2byte	0x1010
+   12612:	1010                	.2byte	0x1010
+   12614:	1010                	.2byte	0x1010
+   12616:	4141                	.2byte	0x4141
+   12618:	4141                	.2byte	0x4141
+   1261a:	4141                	.2byte	0x4141
+   1261c:	0101                	.2byte	0x101
+   1261e:	0101                	.2byte	0x101
+   12620:	0101                	.2byte	0x101
+   12622:	0101                	.2byte	0x101
+   12624:	0101                	.2byte	0x101
+   12626:	0101                	.2byte	0x101
+   12628:	0101                	.2byte	0x101
+   1262a:	0101                	.2byte	0x101
+   1262c:	0101                	.2byte	0x101
+   1262e:	0101                	.2byte	0x101
+   12630:	1010                	.2byte	0x1010
+   12632:	1010                	.2byte	0x1010
+   12634:	1010                	.2byte	0x1010
+   12636:	4242                	.2byte	0x4242
+   12638:	4242                	.2byte	0x4242
+   1263a:	4242                	.2byte	0x4242
+   1263c:	0202                	.2byte	0x202
+   1263e:	0202                	.2byte	0x202
+   12640:	0202                	.2byte	0x202
+   12642:	0202                	.2byte	0x202
+   12644:	0202                	.2byte	0x202
+   12646:	0202                	.2byte	0x202
+   12648:	0202                	.2byte	0x202
+   1264a:	0202                	.2byte	0x202
+   1264c:	0202                	.2byte	0x202
+   1264e:	0202                	.2byte	0x202
+   12650:	1010                	.2byte	0x1010
+   12652:	1010                	.2byte	0x1010
+   12654:	0020                	.2byte	0x20
+   12656:	0000                	unimp
+   12658:	0000                	unimp
+   1265a:	0000                	unimp
+   1265c:	0000                	unimp
+   1265e:	0000                	unimp
+   12660:	0000                	unimp
+   12662:	0000                	unimp
+   12664:	0000                	unimp
+   12666:	0000                	unimp
+   12668:	0000                	unimp
+   1266a:	0000                	unimp
+   1266c:	0000                	unimp
+   1266e:	0000                	unimp
+   12670:	0000                	unimp
+   12672:	0000                	unimp
+   12674:	0000                	unimp
+   12676:	0000                	unimp
+   12678:	0000                	unimp
+   1267a:	0000                	unimp
+   1267c:	0000                	unimp
+   1267e:	0000                	unimp
+   12680:	0000                	unimp
+   12682:	0000                	unimp
+   12684:	0000                	unimp
+   12686:	0000                	unimp
+   12688:	0000                	unimp
+   1268a:	0000                	unimp
+   1268c:	0000                	unimp
+   1268e:	0000                	unimp
+   12690:	0000                	unimp
+   12692:	0000                	unimp
+   12694:	0000                	unimp
+   12696:	0000                	unimp
+   12698:	0000                	unimp
+   1269a:	0000                	unimp
+   1269c:	0000                	unimp
+   1269e:	0000                	unimp
+   126a0:	0000                	unimp
+   126a2:	0000                	unimp
+   126a4:	0000                	unimp
+   126a6:	0000                	unimp
+   126a8:	0000                	unimp
+   126aa:	0000                	unimp
+   126ac:	0000                	unimp
+   126ae:	0000                	unimp
+   126b0:	0000                	unimp
+   126b2:	0000                	unimp
+   126b4:	0000                	unimp
+   126b6:	0000                	unimp
+   126b8:	0000                	unimp
+   126ba:	0000                	unimp
+   126bc:	0000                	unimp
+   126be:	0000                	unimp
+   126c0:	0000                	unimp
+   126c2:	0000                	unimp
+   126c4:	0000                	unimp
+   126c6:	0000                	unimp
+   126c8:	0000                	unimp
+   126ca:	0000                	unimp
+   126cc:	0000                	unimp
+   126ce:	0000                	unimp
+   126d0:	0000                	unimp
+   126d2:	0000                	unimp
+   126d4:	00              	Address 0x00000000000126d4 is out of bounds.
+
+
+Disassembly of section .data:
+
+000136e8 <text>:
+   136e8:	6261                	.2byte	0x6261
+   136ea:	6262                	.2byte	0x6262
+   136ec:	6261                	.2byte	0x6261
+   136ee:	6261                	.2byte	0x6261
+   136f0:	6161                	.2byte	0x6161
+   136f2:	6362                	.2byte	0x6362
+   136f4:	61626163          	bltu	tp,s6,13cf6 <__BSS_END__+0x17e>
+   136f8:	6362                	.2byte	0x6362
+   136fa:	6361                	.2byte	0x6361
+   136fc:	6362                	.2byte	0x6362
+   136fe:	6362                	.2byte	0x6362
+   13700:	6162                	.2byte	0x6162
+   13702:	6262                	.2byte	0x6262
+   13704:	6261                	.2byte	0x6261
+   13706:	62616263          	bltu	sp,t1,13d2a <__BSS_END__+0x1b2>
+   1370a:	63626163          	bltu	tp,s6,13d2c <__BSS_END__+0x1b4>
+   1370e:	6262                	.2byte	0x6262
+   13710:	61626263          	bltu	tp,s6,13d14 <__BSS_END__+0x19c>
+   13714:	00000063          	beqz	zero,13714 <text+0x2c>
+
+00013718 <regexes>:
+   13718:	259c                	.2byte	0x259c
+   1371a:	0001                	.2byte	0x1
+   1371c:	25a4                	.2byte	0x25a4
+   1371e:	0001                	.2byte	0x1
+   13720:	25ac                	.2byte	0x25ac
+   13722:	0001                	.2byte	0x1
+   13724:	25b4                	.2byte	0x25b4
+   13726:	0001                	.2byte	0x1
+
+00013728 <impure_data>:
+   13728:	0000                	unimp
+   1372a:	0000                	unimp
+   1372c:	3a14                	.2byte	0x3a14
+   1372e:	0001                	.2byte	0x1
+   13730:	3a7c                	.2byte	0x3a7c
+   13732:	0001                	.2byte	0x1
+   13734:	3ae4                	.2byte	0x3ae4
+   13736:	0001                	.2byte	0x1
+   13738:	0000                	unimp
+   1373a:	0000                	unimp
+   1373c:	0000                	unimp
+   1373e:	0000                	unimp
+   13740:	0000                	unimp
+   13742:	0000                	unimp
+   13744:	0000                	unimp
+   13746:	0000                	unimp
+   13748:	0000                	unimp
+   1374a:	0000                	unimp
+   1374c:	0000                	unimp
+   1374e:	0000                	unimp
+   13750:	0000                	unimp
+   13752:	0000                	unimp
+   13754:	0000                	unimp
+   13756:	0000                	unimp
+   13758:	0000                	unimp
+   1375a:	0000                	unimp
+   1375c:	0000                	unimp
+   1375e:	0000                	unimp
+   13760:	0000                	unimp
+   13762:	0000                	unimp
+   13764:	0000                	unimp
+   13766:	0000                	unimp
+   13768:	0000                	unimp
+   1376a:	0000                	unimp
+   1376c:	0000                	unimp
+   1376e:	0000                	unimp
+   13770:	0000                	unimp
+   13772:	0000                	unimp
+   13774:	0000                	unimp
+   13776:	0000                	unimp
+   13778:	0000                	unimp
+   1377a:	0000                	unimp
+   1377c:	0000                	unimp
+   1377e:	0000                	unimp
+   13780:	0000                	unimp
+   13782:	0000                	unimp
+   13784:	0000                	unimp
+   13786:	0000                	unimp
+   13788:	0000                	unimp
+   1378a:	0000                	unimp
+   1378c:	0000                	unimp
+   1378e:	0000                	unimp
+   13790:	0000                	unimp
+   13792:	0000                	unimp
+   13794:	0000                	unimp
+   13796:	0000                	unimp
+   13798:	0000                	unimp
+   1379a:	0000                	unimp
+   1379c:	0000                	unimp
+   1379e:	0000                	unimp
+   137a0:	0000                	unimp
+   137a2:	0000                	unimp
+   137a4:	0000                	unimp
+   137a6:	0000                	unimp
+   137a8:	0000                	unimp
+   137aa:	0000                	unimp
+   137ac:	0000                	unimp
+   137ae:	0000                	unimp
+   137b0:	0000                	unimp
+   137b2:	0000                	unimp
+   137b4:	0000                	unimp
+   137b6:	0000                	unimp
+   137b8:	0000                	unimp
+   137ba:	0000                	unimp
+   137bc:	0000                	unimp
+   137be:	0000                	unimp
+   137c0:	0000                	unimp
+   137c2:	0000                	unimp
+   137c4:	0000                	unimp
+   137c6:	0000                	unimp
+   137c8:	0000                	unimp
+   137ca:	0000                	unimp
+   137cc:	0000                	unimp
+   137ce:	0000                	unimp
+   137d0:	0001                	.2byte	0x1
+   137d2:	0000                	unimp
+   137d4:	0000                	unimp
+   137d6:	0000                	unimp
+   137d8:	330e                	.2byte	0x330e
+   137da:	abcd                	.2byte	0xabcd
+   137dc:	1234                	.2byte	0x1234
+   137de:	e66d                	.2byte	0xe66d
+   137e0:	deec                	.2byte	0xdeec
+   137e2:	0005                	.2byte	0x5
+   137e4:	0000000b          	.4byte	0xb
+   137e8:	0000                	unimp
+   137ea:	0000                	unimp
+   137ec:	0000                	unimp
+   137ee:	0000                	unimp
+   137f0:	0000                	unimp
+   137f2:	0000                	unimp
+   137f4:	0000                	unimp
+   137f6:	0000                	unimp
+   137f8:	0000                	unimp
+   137fa:	0000                	unimp
+   137fc:	0000                	unimp
+   137fe:	0000                	unimp
+   13800:	0000                	unimp
+   13802:	0000                	unimp
+   13804:	0000                	unimp
+   13806:	0000                	unimp
+   13808:	0000                	unimp
+   1380a:	0000                	unimp
+   1380c:	0000                	unimp
+   1380e:	0000                	unimp
+   13810:	0000                	unimp
+   13812:	0000                	unimp
+   13814:	0000                	unimp
+   13816:	0000                	unimp
+   13818:	0000                	unimp
+   1381a:	0000                	unimp
+   1381c:	0000                	unimp
+   1381e:	0000                	unimp
+   13820:	0000                	unimp
+   13822:	0000                	unimp
+   13824:	0000                	unimp
+   13826:	0000                	unimp
+   13828:	0000                	unimp
+   1382a:	0000                	unimp
+   1382c:	0000                	unimp
+   1382e:	0000                	unimp
+   13830:	0000                	unimp
+   13832:	0000                	unimp
+   13834:	0000                	unimp
+   13836:	0000                	unimp
+   13838:	0000                	unimp
+   1383a:	0000                	unimp
+   1383c:	0000                	unimp
+   1383e:	0000                	unimp
+   13840:	0000                	unimp
+   13842:	0000                	unimp
+   13844:	0000                	unimp
+   13846:	0000                	unimp
+   13848:	0000                	unimp
+   1384a:	0000                	unimp
+   1384c:	0000                	unimp
+   1384e:	0000                	unimp
+   13850:	0000                	unimp
+   13852:	0000                	unimp
+   13854:	0000                	unimp
+   13856:	0000                	unimp
+   13858:	0000                	unimp
+   1385a:	0000                	unimp
+   1385c:	0000                	unimp
+   1385e:	0000                	unimp
+   13860:	0000                	unimp
+   13862:	0000                	unimp
+   13864:	0000                	unimp
+   13866:	0000                	unimp
+   13868:	0000                	unimp
+   1386a:	0000                	unimp
+   1386c:	0000                	unimp
+   1386e:	0000                	unimp
+   13870:	0000                	unimp
+   13872:	0000                	unimp
+   13874:	0000                	unimp
+   13876:	0000                	unimp
+   13878:	0000                	unimp
+   1387a:	0000                	unimp
+   1387c:	0000                	unimp
+   1387e:	0000                	unimp
+   13880:	0000                	unimp
+   13882:	0000                	unimp
+   13884:	0000                	unimp
+   13886:	0000                	unimp
+   13888:	0000                	unimp
+   1388a:	0000                	unimp
+   1388c:	0000                	unimp
+   1388e:	0000                	unimp
+   13890:	0000                	unimp
+   13892:	0000                	unimp
+   13894:	0000                	unimp
+   13896:	0000                	unimp
+   13898:	0000                	unimp
+   1389a:	0000                	unimp
+   1389c:	0000                	unimp
+   1389e:	0000                	unimp
+   138a0:	0000                	unimp
+   138a2:	0000                	unimp
+   138a4:	0000                	unimp
+   138a6:	0000                	unimp
+   138a8:	0000                	unimp
+   138aa:	0000                	unimp
+   138ac:	0000                	unimp
+   138ae:	0000                	unimp
+   138b0:	0000                	unimp
+   138b2:	0000                	unimp
+   138b4:	0000                	unimp
+   138b6:	0000                	unimp
+   138b8:	0000                	unimp
+   138ba:	0000                	unimp
+   138bc:	0000                	unimp
+   138be:	0000                	unimp
+   138c0:	0000                	unimp
+   138c2:	0000                	unimp
+   138c4:	0000                	unimp
+   138c6:	0000                	unimp
+   138c8:	0000                	unimp
+   138ca:	0000                	unimp
+   138cc:	0000                	unimp
+   138ce:	0000                	unimp
+   138d0:	0000                	unimp
+   138d2:	0000                	unimp
+   138d4:	0000                	unimp
+   138d6:	0000                	unimp
+   138d8:	0000                	unimp
+   138da:	0000                	unimp
+   138dc:	0000                	unimp
+   138de:	0000                	unimp
+   138e0:	0000                	unimp
+   138e2:	0000                	unimp
+   138e4:	0000                	unimp
+   138e6:	0000                	unimp
+   138e8:	0000                	unimp
+   138ea:	0000                	unimp
+   138ec:	0000                	unimp
+   138ee:	0000                	unimp
+   138f0:	0000                	unimp
+   138f2:	0000                	unimp
+   138f4:	0000                	unimp
+   138f6:	0000                	unimp
+   138f8:	0000                	unimp
+   138fa:	0000                	unimp
+   138fc:	0000                	unimp
+   138fe:	0000                	unimp
+   13900:	0000                	unimp
+   13902:	0000                	unimp
+   13904:	0000                	unimp
+   13906:	0000                	unimp
+   13908:	0000                	unimp
+   1390a:	0000                	unimp
+   1390c:	0000                	unimp
+   1390e:	0000                	unimp
+   13910:	0000                	unimp
+   13912:	0000                	unimp
+   13914:	0000                	unimp
+   13916:	0000                	unimp
+   13918:	0000                	unimp
+   1391a:	0000                	unimp
+   1391c:	0000                	unimp
+   1391e:	0000                	unimp
+   13920:	0000                	unimp
+   13922:	0000                	unimp
+   13924:	0000                	unimp
+   13926:	0000                	unimp
+   13928:	0000                	unimp
+   1392a:	0000                	unimp
+   1392c:	0000                	unimp
+   1392e:	0000                	unimp
+   13930:	0000                	unimp
+   13932:	0000                	unimp
+   13934:	0000                	unimp
+   13936:	0000                	unimp
+   13938:	0000                	unimp
+   1393a:	0000                	unimp
+   1393c:	0000                	unimp
+   1393e:	0000                	unimp
+   13940:	0000                	unimp
+   13942:	0000                	unimp
+   13944:	0000                	unimp
+   13946:	0000                	unimp
+   13948:	0000                	unimp
+   1394a:	0000                	unimp
+   1394c:	0000                	unimp
+   1394e:	0000                	unimp
+   13950:	0000                	unimp
+   13952:	0000                	unimp
+   13954:	0000                	unimp
+   13956:	0000                	unimp
+   13958:	0000                	unimp
+   1395a:	0000                	unimp
+   1395c:	0000                	unimp
+   1395e:	0000                	unimp
+   13960:	0000                	unimp
+   13962:	0000                	unimp
+   13964:	0000                	unimp
+   13966:	0000                	unimp
+   13968:	0000                	unimp
+   1396a:	0000                	unimp
+   1396c:	0000                	unimp
+   1396e:	0000                	unimp
+   13970:	0000                	unimp
+   13972:	0000                	unimp
+   13974:	0000                	unimp
+   13976:	0000                	unimp
+   13978:	0000                	unimp
+   1397a:	0000                	unimp
+   1397c:	0000                	unimp
+   1397e:	0000                	unimp
+   13980:	0000                	unimp
+   13982:	0000                	unimp
+   13984:	0000                	unimp
+   13986:	0000                	unimp
+   13988:	0000                	unimp
+   1398a:	0000                	unimp
+   1398c:	0000                	unimp
+   1398e:	0000                	unimp
+   13990:	0000                	unimp
+   13992:	0000                	unimp
+   13994:	0000                	unimp
+   13996:	0000                	unimp
+   13998:	0000                	unimp
+   1399a:	0000                	unimp
+   1399c:	0000                	unimp
+   1399e:	0000                	unimp
+   139a0:	0000                	unimp
+   139a2:	0000                	unimp
+   139a4:	0000                	unimp
+   139a6:	0000                	unimp
+   139a8:	0000                	unimp
+   139aa:	0000                	unimp
+   139ac:	0000                	unimp
+   139ae:	0000                	unimp
+   139b0:	0000                	unimp
+   139b2:	0000                	unimp
+   139b4:	0000                	unimp
+   139b6:	0000                	unimp
+   139b8:	0000                	unimp
+   139ba:	0000                	unimp
+   139bc:	0000                	unimp
+   139be:	0000                	unimp
+   139c0:	0000                	unimp
+   139c2:	0000                	unimp
+   139c4:	0000                	unimp
+   139c6:	0000                	unimp
+   139c8:	0000                	unimp
+   139ca:	0000                	unimp
+   139cc:	0000                	unimp
+   139ce:	0000                	unimp
+   139d0:	0000                	unimp
+   139d2:	0000                	unimp
+   139d4:	0000                	unimp
+   139d6:	0000                	unimp
+   139d8:	0000                	unimp
+   139da:	0000                	unimp
+   139dc:	0000                	unimp
+   139de:	0000                	unimp
+   139e0:	0000                	unimp
+   139e2:	0000                	unimp
+   139e4:	0000                	unimp
+   139e6:	0000                	unimp
+   139e8:	0000                	unimp
+   139ea:	0000                	unimp
+   139ec:	0000                	unimp
+   139ee:	0000                	unimp
+   139f0:	0000                	unimp
+   139f2:	0000                	unimp
+   139f4:	0000                	unimp
+   139f6:	0000                	unimp
+   139f8:	0000                	unimp
+   139fa:	0000                	unimp
+   139fc:	0000                	unimp
+   139fe:	0000                	unimp
+   13a00:	0000                	unimp
+   13a02:	0000                	unimp
+   13a04:	0000                	unimp
+   13a06:	0000                	unimp
+   13a08:	0000                	unimp
+   13a0a:	0000                	unimp
+   13a0c:	0000                	unimp
+   13a0e:	0000                	unimp
+   13a10:	0000                	unimp
+   13a12:	0000                	unimp
+   13a14:	0000                	unimp
+   13a16:	0000                	unimp
+   13a18:	0000                	unimp
+   13a1a:	0000                	unimp
+   13a1c:	0000                	unimp
+   13a1e:	0000                	unimp
+   13a20:	0000                	unimp
+   13a22:	0000                	unimp
+   13a24:	0000                	unimp
+   13a26:	0000                	unimp
+   13a28:	0000                	unimp
+   13a2a:	0000                	unimp
+   13a2c:	0000                	unimp
+   13a2e:	0000                	unimp
+   13a30:	0000                	unimp
+   13a32:	0000                	unimp
+   13a34:	0000                	unimp
+   13a36:	0000                	unimp
+   13a38:	0000                	unimp
+   13a3a:	0000                	unimp
+   13a3c:	0000                	unimp
+   13a3e:	0000                	unimp
+   13a40:	0000                	unimp
+   13a42:	0000                	unimp
+   13a44:	0000                	unimp
+   13a46:	0000                	unimp
+   13a48:	0000                	unimp
+   13a4a:	0000                	unimp
+   13a4c:	0000                	unimp
+   13a4e:	0000                	unimp
+   13a50:	0000                	unimp
+   13a52:	0000                	unimp
+   13a54:	0000                	unimp
+   13a56:	0000                	unimp
+   13a58:	0000                	unimp
+   13a5a:	0000                	unimp
+   13a5c:	0000                	unimp
+   13a5e:	0000                	unimp
+   13a60:	0000                	unimp
+   13a62:	0000                	unimp
+   13a64:	0000                	unimp
+   13a66:	0000                	unimp
+   13a68:	0000                	unimp
+   13a6a:	0000                	unimp
+   13a6c:	0000                	unimp
+   13a6e:	0000                	unimp
+   13a70:	0000                	unimp
+   13a72:	0000                	unimp
+   13a74:	0000                	unimp
+   13a76:	0000                	unimp
+   13a78:	0000                	unimp
+   13a7a:	0000                	unimp
+   13a7c:	0000                	unimp
+   13a7e:	0000                	unimp
+   13a80:	0000                	unimp
+   13a82:	0000                	unimp
+   13a84:	0000                	unimp
+   13a86:	0000                	unimp
+   13a88:	0000                	unimp
+   13a8a:	0000                	unimp
+   13a8c:	0000                	unimp
+   13a8e:	0000                	unimp
+   13a90:	0000                	unimp
+   13a92:	0000                	unimp
+   13a94:	0000                	unimp
+   13a96:	0000                	unimp
+   13a98:	0000                	unimp
+   13a9a:	0000                	unimp
+   13a9c:	0000                	unimp
+   13a9e:	0000                	unimp
+   13aa0:	0000                	unimp
+   13aa2:	0000                	unimp
+   13aa4:	0000                	unimp
+   13aa6:	0000                	unimp
+   13aa8:	0000                	unimp
+   13aaa:	0000                	unimp
+   13aac:	0000                	unimp
+   13aae:	0000                	unimp
+   13ab0:	0000                	unimp
+   13ab2:	0000                	unimp
+   13ab4:	0000                	unimp
+   13ab6:	0000                	unimp
+   13ab8:	0000                	unimp
+   13aba:	0000                	unimp
+   13abc:	0000                	unimp
+   13abe:	0000                	unimp
+   13ac0:	0000                	unimp
+   13ac2:	0000                	unimp
+   13ac4:	0000                	unimp
+   13ac6:	0000                	unimp
+   13ac8:	0000                	unimp
+   13aca:	0000                	unimp
+   13acc:	0000                	unimp
+   13ace:	0000                	unimp
+   13ad0:	0000                	unimp
+   13ad2:	0000                	unimp
+   13ad4:	0000                	unimp
+   13ad6:	0000                	unimp
+   13ad8:	0000                	unimp
+   13ada:	0000                	unimp
+   13adc:	0000                	unimp
+   13ade:	0000                	unimp
+   13ae0:	0000                	unimp
+   13ae2:	0000                	unimp
+   13ae4:	0000                	unimp
+   13ae6:	0000                	unimp
+   13ae8:	0000                	unimp
+   13aea:	0000                	unimp
+   13aec:	0000                	unimp
+   13aee:	0000                	unimp
+   13af0:	0000                	unimp
+   13af2:	0000                	unimp
+   13af4:	0000                	unimp
+   13af6:	0000                	unimp
+   13af8:	0000                	unimp
+   13afa:	0000                	unimp
+   13afc:	0000                	unimp
+   13afe:	0000                	unimp
+   13b00:	0000                	unimp
+   13b02:	0000                	unimp
+   13b04:	0000                	unimp
+   13b06:	0000                	unimp
+   13b08:	0000                	unimp
+   13b0a:	0000                	unimp
+   13b0c:	0000                	unimp
+   13b0e:	0000                	unimp
+   13b10:	0000                	unimp
+   13b12:	0000                	unimp
+   13b14:	0000                	unimp
+   13b16:	0000                	unimp
+   13b18:	0000                	unimp
+   13b1a:	0000                	unimp
+   13b1c:	0000                	unimp
+   13b1e:	0000                	unimp
+   13b20:	0000                	unimp
+   13b22:	0000                	unimp
+   13b24:	0000                	unimp
+   13b26:	0000                	unimp
+   13b28:	0000                	unimp
+   13b2a:	0000                	unimp
+   13b2c:	0000                	unimp
+   13b2e:	0000                	unimp
+   13b30:	0000                	unimp
+   13b32:	0000                	unimp
+   13b34:	0000                	unimp
+   13b36:	0000                	unimp
+   13b38:	0000                	unimp
+   13b3a:	0000                	unimp
+   13b3c:	0000                	unimp
+   13b3e:	0000                	unimp
+   13b40:	0000                	unimp
+   13b42:	0000                	unimp
+   13b44:	0000                	unimp
+   13b46:	0000                	unimp
+   13b48:	0000                	unimp
+   13b4a:	0000                	unimp
+   13b4c:	0000                	unimp
+   13b4e:	0000                	unimp
+
+Disassembly of section .bss:
+
+00013b5c <completed.1>:
+   13b5c:	0000                	unimp
+   13b5e:	0000                	unimp
+
+00013b60 <object.0>:
+   13b60:	0000                	unimp
+   13b62:	0000                	unimp
+   13b64:	0000                	unimp
+   13b66:	0000                	unimp
+   13b68:	0000                	unimp
+   13b6a:	0000                	unimp
+   13b6c:	0000                	unimp
+   13b6e:	0000                	unimp
+   13b70:	0000                	unimp
+   13b72:	0000                	unimp
+   13b74:	0000                	unimp
+   13b76:	0000                	unimp
