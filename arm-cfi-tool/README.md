@@ -1,3 +1,16 @@
+# Compiling the benchmarks
+Benchmarks were taken from `embench-iot` repository here https://github.com/embench/embench-iot.
+Execute the following commands for producing the benchmarks and placing it under the `risc-v cfi tool` folder:
+```
+$ git clone https://github.com/embench/embench-iot.git
+$ cd embench-iot
+$ chmod +x buid_all.py
+$ ./build_all.py --clean --builddir <path to firmware-instrumentation>/arm-benchmarks --arch arm --chip cortex-m4 --board stm32f4-discovery  --cflags="-c -O0  -ffunction-sections -MMD -MP -mthumb --specs=nosys.specs -mcpu=cortex-m4" --ldflags="-Wl,-gc-sections --specs=nosys.specs -mcpu=cortex-m4 -mthumb" --user-libs="-lm"
+
+```
+The last command will output the benchmarks directly under the folder `arm-benchmarks`. This will allow you to automatically run the tool on them using the script ` run-on-benchmarks.sh`. Go to the proper section later in the current README.md for further information on how to run the script.
+
+
 # CFI tool
 
 The CFI tool supports the hybrid solution presented in *“A FPGA-based Control-Flow Integrity Solution for Securing Bare-Metal Embedded Systems”*, a paper of the last year authored by Prof. Paolo Prinetto and his PhD team here in Politecnico di Torino.
@@ -134,3 +147,38 @@ $ cat out.json | jq .
 ]
 $
 ```
+
+### Running the script on all benchmarks
+Execute the script run-on-benchmarks.sh in order to perform instrumentation on all benchmarks. Use the variable `arm_toolchain_path` to set path to binaries inside your arm-toolchain. `objdump` will be used in order to disassemble .text and .data .rodata .bss sections. `gcc` and `ld` will be used in order recompile the instrumented modded assembly.
+You can set the variable `recompile` to `0` in order to stop to the instrumentation step and not recompile the modded assembly files.
+The tool for each benchmarks at the path `./arm-benchmarks/src/<benchmark-name>/` will produce the instrumented assembly file with name `<benchmark-name>_mod.s` 
+
+In any case all the results will be logged to console as can be seen from this screenshot:
+![image](https://user-images.githubusercontent.com/74059030/181766183-d95c2a93-b15f-47bc-b1df-c3b76f65a16e.png)
+
+To suppress errors execute the script with the following command:
+```
+./run-on-benchmarks.sh 2>/dev/null
+```
+
+ ### Changing label generation strategy
+ There are two functions performing label generation that are `createLabelMap` and `createLabelMap2`.  `createLabelMap` produces labels completely randomly while `createLabelMap2` second one produces labels according to an optimized strategy.
+ In order to change the generation strategy it is enough to change `line 236` in `Cfi.py`. In case of using `createLabelMap2` it is enough to write:
+  ```
+  labelMap = createLabelMap2(edgesMap)
+  ```
+  `CreateLabelMap2` is implemented inside `Utils.py`. It is a wrapper around `generate_labels`. You can change the number passed to generate_labels by modifying the call at line 116:
+  ```
+  def createLabelMap2(edgesMap):
+    l = []
+    labelMap = {}
+    for k,v in edgesMap.items():
+        l.extend(v.getEdges())
+    srcs, dsts, config_mem_words = label_generator.generate_labels(l,20)  #here replace 20 with something else in case needed
+
+    for k,v in srcs.items():
+        labelMap[int(k,16)] = v
+...
+  ...
+  ```
+
