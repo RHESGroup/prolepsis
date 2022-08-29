@@ -4,6 +4,5 @@ edn
 matmult-int
 nettle-aes
 nettle-sha256
-nishcneu
 slre
 statemate
