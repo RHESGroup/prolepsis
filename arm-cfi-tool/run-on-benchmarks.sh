@@ -8,7 +8,7 @@ instrument() {
  $arm_toolchain_path/arm-none-eabi-objdump -z -D -j .rodata -j .data -j .bss ./arm-benchmarks/src/$1/$1 > ./arm-benchmarks/src/$1/$1-data.list
  $arm_toolchain_path/arm-none-eabi-objdump -z -d -j .text -j .fini -j .init ./arm-benchmarks/src/$1/$1 > ./arm-benchmarks/src/$1/$1.list
 
-  python3 ./tool-cfi/main.py -disassembly ./arm-benchmarks/src/$1/$1.list -disassemblyfull ./arm-benchmarks/src/$1/$1-data.list -binary ./arm-benchmarks/src/$1/$1 -outputfileassembly ./arm-benchmarks/src/$1/$1_mod -outputfile ./arm-benchmarks/src/$1/$1-instr -typesfile ./type_demo_prova.json
+  python3 ./main.py -disassembly ./arm-benchmarks/src/$1/$1.list -disassemblyfull ./arm-benchmarks/src/$1/$1-data.list -binary ./arm-benchmarks/src/$1/$1 -outputfileassembly ./arm-benchmarks/src/$1/$1_mod -outputfile ./arm-benchmarks/src/$1/$1-instr -typesfile ./type_demo_prova.json
   
   if [[ $recompile -eq 1 ]]
   then
