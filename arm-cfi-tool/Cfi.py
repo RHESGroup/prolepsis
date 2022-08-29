@@ -228,7 +228,11 @@ class Cfi:
                     for cr in callerAndRets:
                         addBackwardEdge(edgesMap, ret_site_addr.offset, cr["ret"], cr["caller"])
 
-        labelMap = createLabelMap2(edgesMap)
+        labelMap, config_mem_words = createLabelMap2(edgesMap)
+        config_mem_words = list(map(lambda x: str(x)+"\n",config_mem_words))
+        file = open(f"{filename}_config_mem_words.txt","w")
+        file.writelines(config_mem_words)
+        print(f"configuration words written to {filename}_config_mem_words.txt")
         #
         # print(labelMap)
         # printEdgesMap(edgesMap)
