@@ -108,7 +108,7 @@ def printEdgesMap(edgesMap):
     for v in list(edgesMap.values()):
         print(v.toString())
 
-def createLabelMap2(edgesMap):
+def createLabelMap_PLA(edgesMap):
     l = []
     labelMap = {}
     for k,v in edgesMap.items():
@@ -122,7 +122,7 @@ def createLabelMap2(edgesMap):
         labelMap[int(k,16)] = v
     return labelMap, config_mem_words
 
-def createLabelMap(edgesMap):
+def createLabelMap_random(edgesMap):
     l = []
     for k,v in edgesMap.items():
         l.append(k)

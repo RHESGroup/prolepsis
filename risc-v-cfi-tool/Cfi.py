@@ -232,8 +232,16 @@ class Cfi:
                 for ret_site_addr in return_site_addresses:
                     for cr in callerAndRets:
                         addBackwardEdge(edgesMap, ret_site_addr.offset, cr["ret"], cr["caller"])
-
-        labelMap, config_mem_words = createLabelMap2(edgesMap)
+        labelMap = ""
+        config_mem_words = ""
+        try:
+            labelMap, config_mem_words = createLabelMap_PLA(edgesMap)
+        except Exception as e:
+            print(f"[-] failed in generating labels with createLabelMap_PLA strategy. Error {e}")
+            print("[*] defaulting to createLabelMap_random")
+            labelMap = createLabelMap_random(edgesMap)
+            config_mem_words = [0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0]
+            
         config_mem_words = list(map(lambda x: str(x)+"\n",config_mem_words))
         file = open(f"{filename}_config_mem_words.txt","w")
         file.writelines(config_mem_words)
