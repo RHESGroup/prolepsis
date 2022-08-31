@@ -112,14 +112,14 @@ def createLabelMap2(edgesMap):
     labelMap = {}
     for k,v in edgesMap.items():
         l.extend(v.getEdges())
-    srcs, dsts, config_mem_words = label_generator.generate_labels(l,20)
+    srcs, dsts, config_mem_words = label_generator.generate_labels(l,13)
 
     for k,v in srcs.items():
         labelMap[int(k,16)] = v
 
     for k,v in dsts.items():
         labelMap[int(k,16)] = v
-    return labelMap
+    return labelMap, config_mem_words
 
 def createLabelMap(edgesMap):
     l = []

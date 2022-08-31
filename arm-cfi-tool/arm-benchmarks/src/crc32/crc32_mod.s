@@ -28,7 +28,7 @@ lab0: 	mov	r0, r4
 	nop
 	.ltorg
 register_fini:	push {r1, r2}
-	ldr r1, =0x04c8b
+	ldr r1, =0x0c56
 	mov.w r2, #1610612736 
 	strh r1, [r2, #2]
 	pop {r1, r2}
@@ -40,7 +40,7 @@ register_fini:	push {r1, r2}
 lab1: 	bx	lr
 	.ltorg
 __do_global_dtors_aux:	push {r1, r2}
-	ldr r1, =0x51298
+	ldr r1, =0x18fd
 	mov.w r2, #1610612736 
 	strh r1, [r2, #2]
 	pop {r1, r2}
@@ -57,7 +57,7 @@ lab3: 	movs	r3, #1
 	strb	r3, [r4, #0]
 lab2:	cpsid f
 	push {r1, r2}
-	ldr r1, =0x7e742
+	ldr r1, =0x14dd
 	mov.w r2, #1610612736 
 	strh r1, [r2, #0]
 	pop {r1, r2}
@@ -91,7 +91,7 @@ _mainCRTStartup:
 	subs	r2, r2, r0
 	bl	memset
 	push {r1, r2}
-	ldr r1, =0x6245a
+	ldr r1, =0x06f3
 	mov.w r2, #1610612736 
 	strh r1, [r2, #2]
 	pop {r1, r2}
@@ -113,20 +113,20 @@ lab6: 	movs	r0, #0
 	beq	lab7
 	ldr	r0, =0x0000848d	
 push {r1, r2}
-	ldr r1, =0x64a11
+	ldr r1, =0x02f7
 	mov.w r2, #1610612736 
 	strh r1, [r2,#4]
 	pop {r1, r2}
 	bl	atexit
 lab7:	push {r1, r2}
-	ldr r1, =0x64a11
+	ldr r1, =0x02f7
 	mov.w r2, #1610612736 
 	strh r1, [r2, #2]
 	pop {r1, r2}
 	cpsie f
  	bl	__libc_init_array
 	push {r1, r2}
-	ldr r1, =0x4f4b1
+	ldr r1, =0x0c66
 	mov.w r2, #1610612736 
 	strh r1, [r2, #2]
 	pop {r1, r2}
@@ -135,7 +135,7 @@ lab7:	push {r1, r2}
 	movs	r1, r5
 	bl	main
 	push {r1, r2}
-	ldr r1, =0x9a58c
+	ldr r1, =0x1136
 	mov.w r2, #1610612736 
 	strh r1, [r2, #2]
 	pop {r1, r2}
@@ -171,7 +171,7 @@ lab8: 	ldr	r3, [r7, #4]
 	mov	sp, r7
 	cpsid f
 	push {r1, r2}
-	ldr r1, =0x18965
+	ldr r1, =0x15bf
 	mov.w r2, #1610612736 
 	strh r1, [r2, #0]
 	pop {r1, r2}
@@ -191,13 +191,13 @@ warm_caches:
 	str	r0, [r7, #4]
 	ldr	r0, [r7, #4]
 push {r1, r2}
-	ldr r1, =0x228ae
+	ldr r1, =0x04f9
 	mov.w r2, #1610612736 
 	strh r1, [r2,#4]
 	pop {r1, r2}
 	bl	benchmark_body
 	push {r1, r2}
-	ldr r1, =0x228ae
+	ldr r1, =0x04f9
 	mov.w r2, #1610612736 
 	strh r1, [r2, #2]
 	pop {r1, r2}
@@ -208,7 +208,7 @@ push {r1, r2}
 	mov	sp, r7
 	cpsid f
 	push {r1, r2}
-	ldr r1, =0x211a1
+	ldr r1, =0x095c
 	mov.w r2, #1610612736 
 	strh r1, [r2, #0]
 	pop {r1, r2}
@@ -218,13 +218,13 @@ benchmark:
 	add	r7, sp, #0
 	movs	r0, #170	
 push {r1, r2}
-	ldr r1, =0xa28ae
+	ldr r1, =0x14f9
 	mov.w r2, #1610612736 
 	strh r1, [r2,#4]
 	pop {r1, r2}
 	bl	benchmark_body
 	push {r1, r2}
-	ldr r1, =0xa28ae
+	ldr r1, =0x14f9
 	mov.w r2, #1610612736 
 	strh r1, [r2, #2]
 	pop {r1, r2}
@@ -233,7 +233,7 @@ push {r1, r2}
 	mov	r0, r3
 	cpsid f
 	push {r1, r2}
-	ldr r1, =0x98455
+	ldr r1, =0x0c42
 	mov.w r2, #1610612736 
 	strh r1, [r2, #0]
 	pop {r1, r2}
@@ -249,7 +249,7 @@ benchmark_body:
 lab11: 	bl	srand_beebs
 	bl	crc32pseudo
 	push {r1, r2}
-	ldr r1, =0xd9afb
+	ldr r1, =0x0669
 	mov.w r2, #1610612736 
 	strh r1, [r2, #2]
 	pop {r1, r2}
@@ -269,7 +269,7 @@ lab10: 	ldr	r2, [r7, #12]
 	mov	sp, r7
 	cpsid f
 	push {r1, r2}
-	ldr r1, =0x4ef28
+	ldr r1, =0x097d
 	mov.w r2, #1610612736 
 	strh r1, [r2, #0]
 	pop {r1, r2}
@@ -349,7 +349,7 @@ main:
 	movs	r0, #1
 	bl	warm_caches
 	push {r1, r2}
-	ldr r1, =0x512bf
+	ldr r1, =0x02cc
 	mov.w r2, #1610612736 
 	strh r1, [r2, #2]
 	pop {r1, r2}
@@ -357,7 +357,7 @@ main:
 	bl	start_trigger
 	bl	benchmark
 	push {r1, r2}
-	ldr r1, =0x6180d
+	ldr r1, =0x10a8
 	mov.w r2, #1610612736 
 	strh r1, [r2, #2]
 	pop {r1, r2}
@@ -380,7 +380,7 @@ main:
 	mov	sp, r7
 	cpsid f
 	push {r1, r2}
-	ldr r1, =0x4a715
+	ldr r1, =0x0e3b
 	mov.w r2, #1610612736 
 	strh r1, [r2, #0]
 	pop {r1, r2}
@@ -432,14 +432,14 @@ __libc_init_array:
 lab13: 	adds	r4, #1
 	cpsid f
 	push {r1, r2}
-	ldr r1, =0x60c62
+	ldr r1, =0x0037
 	mov.w r2, #1610612736 
 	strh r1, [r2, #0]
 	pop {r1, r2}
 	blx	r3
 	cmp	r6, r4
 	push {r1, r2}
-	ldr r1, =0xe4a11
+	ldr r1, =0x12f7
 	mov.w r2, #1610612736 
 	strh r1, [r2, #2]
 	pop {r1, r2}
@@ -455,14 +455,14 @@ lab12: 	ldr	r6, =0x00018974
 lab15: 	adds	r4, #1
 	cpsid f
 	push {r1, r2}
-	ldr r1, =0xe0c62
+	ldr r1, =0x1037
 	mov.w r2, #1610612736 
 	strh r1, [r2, #0]
 	pop {r1, r2}
 	blx	r3
 	cmp	r6, r4
 	push {r1, r2}
-	ldr r1, =0x72a48
+	ldr r1, =0x1fee
 	mov.w r2, #1610612736 
 	strh r1, [r2, #2]
 	pop {r1, r2}
@@ -470,7 +470,7 @@ lab15: 	adds	r4, #1
 	bne	lab15
 lab14:	cpsid f
 	push {r1, r2}
-	ldr r1, =0x208f3
+	ldr r1, =0x0096
 	mov.w r2, #1610612736 
 	strh r1, [r2, #0]
 	pop {r1, r2}
@@ -523,7 +523,7 @@ lab25: 	cmp	r4, r3
 	bne	lab25
 lab17:	cpsid f
 	push {r1, r2}
-	ldr r1, =0x02847
+	ldr r1, =0x087e
 	mov.w r2, #1610612736 
 	strh r1, [r2, #0]
 	pop {r1, r2}
@@ -627,14 +627,14 @@ __libc_fini_array:
 lab40: 	ldr	r3, [r5], #-4
 	cpsid f
 	push {r1, r2}
-	ldr r1, =0x9eb0c
+	ldr r1, =0x03ff
 	mov.w r2, #1610612736 
 	strh r1, [r2, #0]
 	pop {r1, r2}
 	blx	r3
 	cmp	r4, #0
 	push {r1, r2}
-	ldr r1, =0x77f25
+	ldr r1, =0x05a2
 	mov.w r2, #1610612736 
 	strh r1, [r2, #2]
 	pop {r1, r2}
@@ -673,7 +673,7 @@ lab44: 	adds	r5, #2
 	movs	r0, #0
 lab46:	cpsid f
 	push {r1, r2}
-	ldr r1, =0x0721a
+	ldr r1, =0x0cfc
 	mov.w r2, #1610612736 
 	strh r1, [r2, #0]
 	pop {r1, r2}
