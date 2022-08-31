@@ -17,25 +17,25 @@ instrument() {
   fi
 }
 
-instrument aha-mont64
-instrument crc32
-#instrument cubic
-instrument edn
-#instrument huffbench
-instrument matmult-int
-#instrument md5sum
-#instrument minver
-#instrument nbody
-instrument nettle-aes
-instrument nettle-sha256
-instrument nsichneu
-instrument picojpeg
-#instrument primecount
-#instrument qrduino
-#instrument sglib-combined
-instrument slre
-#instrument st
-instrument statemate
-#instrument tarfind
+#instrument aha-mont64
+#instrument crc32
+instrument cubic
+#instrument edn
+instrument huffbench
+#instrument matmult-int
+instrument md5sum
+instrument minver
+instrument nbody
+#instrument nettle-aes
+#instrument nettle-sha256
+#instrument nsichneu
+#instrument picojpeg
+instrument primecount
+instrument qrduino
+instrument sglib-combined
+#instrument slre
+instrument st
+#instrument statemate
+instrument tarfind
 instrument ud
-#instrument wikisort
+instrument wikisort

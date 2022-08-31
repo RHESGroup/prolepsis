@@ -1,0 +1,25 @@
+[2K[2KAUTOMATIC BINARY ANALYSIS AND INSTRUMENTATION PROCESS
+Version 0.1
+[+] Convert ./arm-benchmarks/src/cubic/cubic.list into assembly file
+
+0.05833934500151372
+Traceback (most recent call last):
+  File "/home/ale/prolepsis/arm-cfi-tool/./main.py", line 37, in <module>
+    cfi.start(datafilename,filename,types,options.outputfile,options.outputfileassembly)
+  File "/home/ale/prolepsis/arm-cfi-tool/Cfi.py", line 216, in start
+    callerAndRets = getCallersAndRets(f)
+  File "/home/ale/prolepsis/arm-cfi-tool/Cfi.py", line 141, in getCallersAndRets
+    getCallersRecursive(getFunctionFromAddr(j.addr),callersAndrets)
+  File "/home/ale/prolepsis/arm-cfi-tool/Cfi.py", line 115, in getCallersRecursive
+    getCallersRecursive(getFunctionFromAddr(j.addr), callersAndrets)
+  File "/home/ale/prolepsis/arm-cfi-tool/Cfi.py", line 115, in getCallersRecursive
+    getCallersRecursive(getFunctionFromAddr(j.addr), callersAndrets)
+  File "/home/ale/prolepsis/arm-cfi-tool/Cfi.py", line 99, in getFunctionFromAddr
+    out = r2.cmdJ("pdfj @ %s"%addr)
+  File "/home/ale/.local/lib/python3.9/site-packages/r2pipe/open_base.py", line 279, in cmdJ
+    result = self.cmd(cmd, **kwargs)
+  File "/home/ale/.local/lib/python3.9/site-packages/r2pipe/open_base.py", line 250, in cmd
+    res = self._cmd(cmd, **kwargs)
+  File "/home/ale/.local/lib/python3.9/site-packages/r2pipe/open_sync.py", line 152, in _cmd_process
+    time.sleep(0.001)
+KeyboardInterrupt

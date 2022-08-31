@@ -162,11 +162,11 @@ class Cfi:
         self.sections = {}
         self.code = dict() #chiave primaria indirizzo istruzione, valore è l'istruzione in se
         self.all_jump = ['b', 'bl', 'beq', 'bne', 'b.w', 'bls', 'blt', 'b.n', 'bmi', 'bx', 'bpl', 'bcc', 'bhi', 'ble',
-                         'bge', 'bgt', 'bcs', 'bvc', 'blx']
+                         'bge', 'bgt', 'bcs', 'bvc', 'blx','bleq']
         self.cond_jmp = ['cbnz', 'cbz']
         self.indirect = ['blx', 'bx', 'tbb', 'tbh']
 
-        self.direct_jmp = ['bl', 'b', 'b.w', 'b.n']
+        self.direct_jmp = ['bl', 'b', 'b.w', 'b.n','bleq']
         self.operation = ['add', 'adds', 'adds.w', 'add.w', 'adc', 'adcs', 'sub', 'sub.w', 'subs', 'subs.w', 'sbc',
                           'rsb', 'mul', 'muls', 'div', 'udiv', 'lsl', 'lsl.w', 'lsls', 'lsr', 'lsrs', 'ror', 'rrx']
         self.logic_instr = ['and', 'and.w', 'ands.w', 'bic', 'bic.w', 'orr', 'orrs', 'orr.w', 'eor', 'eor.w', 'orn',
@@ -333,6 +333,7 @@ class Cfi:
                 try:
                     target_addr = int(re.findall("([0-9a-z]{1,8}) <",instr)[0],16)
                     data_addr = int(re.findall(r"(0x[a-fA-F0-9]{1,8})",self.code[target_addr])[0],16)
+                    self.code[target_addr] = "####LTORG####"
                     if data_addr not in self.data.keys():
                         const = re.findall(r"(0x[a-fA-F0-9]{1,8})", self.code[target_addr])[0]
                         to_replace = re.findall(r"\[pc, #[0-9]{1,8}]", instr)[0]
@@ -340,6 +341,8 @@ class Cfi:
                         code.append(instr)
                     else:
                         data_lab = re.findall(r"(.*):",self.data[data_addr])[0]
+                        if "-0x" in data_lab:
+                            data_lab = data_lab.replace("-0x","_0x")
                         to_replace = re.findall(r"\[pc, #[0-9]{1,8}]",instr)[0]
                         instr = instr.replace(to_replace,f"={data_lab}")
                         code.append(instr)
@@ -351,13 +354,13 @@ class Cfi:
         #lines = list(filter(lambda x: ".word" not in x,lines))
         modify = 1
         for i in range(len(lines)):
-            if ".word" in lines[i] and modify:
+            if "####LTORG####" in lines[i] and modify:
                 lines[i] = "\t.ltorg\n"
                 modify = 0
 
-            elif ".word" in lines[i] and not modify:
+            elif "####LTORG####" in lines[i] and not modify:
                 lines[i] = ""
-            elif ".word" not in lines[i]:
+            elif "####LTORG####" not in lines[i]:
                 modify = 1
 
         lines[0] = f"\t.cpu cortex-m4\n\t.text\n\t.thumb\n\t.syntax unified\n\n_start:\n{config_init}b {init_function_name}\n\n" + lines[0]
@@ -430,8 +433,11 @@ class Cfi:
                 continue
             elif re.match(r"^([0-9a-z]{8}) <(.*)>:", l):
                 m = re.match(r"^([0-9a-z]{8}) <(.*)>:", l)
-                self.sections[current_section].append(m.groups()[1]+":\n")
-                self.data[int(m.groups()[0],16)] = f"{m.groups()[1]}:\n"
+                data_lab = m.groups()[1]
+                if "-0x" in data_lab:
+                    data_lab = data_lab.replace("-0x","_0x")
+                self.sections[current_section].append(data_lab+":\n")
+                self.data[int(m.groups()[0],16)] = f"{data_lab}:\n"
             elif re.match(r"^([0-9a-z]{1,8}):\s+([0-9a-z]{1}[0-9a-z ]{1,7}[0-9a-z]{1})\s+(.*)",l):
                 m = re.match(r"^([0-9a-z]{1,8}):\s+([0-9a-z]{1}[0-9a-z ]{1,7}[0-9a-z]{1})\s+(.*)",l)
                 word = m.groups()[1]

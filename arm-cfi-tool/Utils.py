@@ -2,11 +2,11 @@ import enum
 import random
 import label_generator
 all_jump = ['b', 'bl', 'beq', 'bne', 'b.w', 'bls', 'blt', 'b.n', 'bmi', 'bx', 'bpl', 'bcc', 'bhi', 'ble',
-                         'bge', 'bgt', 'bcs', 'bvc', 'blx']
+                         'bge', 'bgt', 'bcs', 'bvc', 'blx','bleq']
 cond_jmp = ['cbnz', 'cbz']
 indirect = ['blx', 'bx', 'tbb', 'tbh']
 
-direct_jmp = ['bl', 'b', 'b.w', 'b.n']
+direct_jmp = ['bl', 'b', 'b.w', 'b.n','bleq']
 operation = ['add', 'adds', 'adds.w', 'add.w', 'adc', 'adcs', 'sub', 'sub.w', 'subs', 'subs.w', 'sbc',
                           'rsb', 'mul', 'muls', 'div', 'udiv', 'lsl', 'lsl.w', 'lsls', 'lsr', 'lsrs', 'ror', 'rrx']
 logic_instr = ['and', 'and.w', 'ands.w', 'bic', 'bic.w', 'orr', 'orrs', 'orr.w', 'eor', 'eor.w', 'orn',
