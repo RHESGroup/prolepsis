@@ -32,7 +32,7 @@ Execute the following commands for producing the benchmarks and placing it under
 $ git clone https://github.com/embench/embench-iot.git
 $ cd embench-iot
 $ chmod +x buid_all.py
-$ ./build_all.py --arch riscv32 --chip generic --clean --board ri5cyverilator --cc <path-to-riscv-toolchain>/riscv32-unknown-elf-gcc --cflags="-c -O0 -ffunction-sections -march=rv32im -mabi=ilp32" --ldflags="-Wl,-gc-sections" --user-libs="-lm" --builddir <path-to-prolepsis>/risc-v-cfi-tools/riscv32-benchmarks-customtoolchain
+$ ./build_all.py --arch riscv32 --chip generic --clean --board ri5cyverilator --cc <path-to-riscv-toolchain>/riscv32-unknown-elf-gcc --cflags="-c -O0 -ffunction-sections -march=rv32im -mabi=ilp32" --ldflags="-Wl,-gc-sections" --user-libs="-lm" --builddir <path-to-prolepsis>/risc-v-cfi-tool/riscv32-benchmarks-customtoolchain
 ```
 The last command will output the benchmarks directly under the folder `riscv32-benchmarks-customtoolchain`. This will allow you to automatically run the tool on them using the script ` run-on-benchmarks.sh`. Go to the proper section later in the current `README.md` for further information on how to run the script.
 
@@ -41,14 +41,15 @@ The last command will output the benchmarks directly under the folder `riscv32-b
 It is a Python engine that deals with the binary instrumentation process during the offline phase.
 The script activity enjoys the support of the external module **r2pipe**, that handles the communication with the reverse-engineering framework `Radare2` through pipes.
 
-### Radare2
+### Radare2 and r2pipe
 
-The application requires the installation of `Radare2` on the system on which the Python code runs. The guidelines for downloading and installing `Radare2` are available below.
+The application requires the installation of `Radare2` and `r2pipe` on the system on which the Python code runs. The guidelines for downloading and installing `Radare2` are available below.
 
-- [Downloading radare2](https://radare.gitbooks.io/radare2book/content/first_steps/getting_radare.html)
 - [Guide to install Radare2](https://github.com/radareorg/radare2)
 - [Compilation on Windows](https://radare.gitbooks.io/radare2book/content/first_steps/windows_compilation.html)
 
+For installing `r2pipe` run the following command:
+`$ pip3 install r2pipe`
 ### Using the tool
 
 The Python script accepts as inputs:

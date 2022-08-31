@@ -5,7 +5,7 @@ Execute the following commands for producing the benchmarks and placing it under
 $ git clone https://github.com/embench/embench-iot.git
 $ cd embench-iot
 $ chmod +x buid_all.py
-$ ./build_all.py --clean --builddir <path-to-prolepsis>/arm-cfi-tools/arm-benchmarks --arch arm --chip cortex-m4 --board stm32f4-discovery --cc <path-to-binaries-arm-toolchain>/arm-none-eabi-gcc  --cflags="-c -O0  -ffunction-sections -MMD -MP -mthumb --specs=nosys.specs -mcpu=cortex-m4" --ldflags="-Wl,-gc-sections --specs=nosys.specs -mcpu=cortex-m4 -mthumb" --user-libs="-lm"
+$ ./build_all.py --clean --builddir <path-to-prolepsis>/arm-cfi-tool/arm-benchmarks --arch arm --chip cortex-m4 --board stm32f4-discovery --cc <path-to-binaries-arm-toolchain>/arm-none-eabi-gcc  --cflags="-c -O0  -ffunction-sections -MMD -MP -mthumb --specs=nosys.specs -mcpu=cortex-m4" --ldflags="-Wl,-gc-sections --specs=nosys.specs -mcpu=cortex-m4 -mthumb" --user-libs="-lm"
 
 ```
 The last command will output the benchmarks directly under the folder `arm-benchmarks`. This will allow you to automatically run the tool on them using the script ` run-on-benchmarks.sh`. Go to the proper section later in the current `README.md` for further information on how to run the script.
@@ -16,17 +16,15 @@ The last command will output the benchmarks directly under the folder `arm-bench
 It is a Python engine that deals with the binary instrumentation process during the offline phase.
 The script activity enjoys the support of the external module `r2pipe`, that handles the communication with the reverse-engineering framework `Radare2` through pipes and the API provided by the angr` python library 
 
-## Radare2 and angr
+## Radare2 and r2pipe
 
-The application requires the installation of `Radare2` and `angr` on the system on which the Python code runs. The guidelines for downloading and installing `Radare2` are available below.
+The application requires the installation of `Radare2` and `r2pipe` on the system on which the Python code runs. The guidelines for downloading and installing `Radare2` are available below.
 
-- [Downloading radare2](https://radare.gitbooks.io/radare2book/content/first_steps/getting_radare.html)
 - [Guide to install Radare2](https://github.com/radareorg/radare2)
 - [Compilation on Windows](https://radare.gitbooks.io/radare2book/content/first_steps/windows_compilation.html)
 
-Angr library can be installed with one of the following commands:
-- `pip install angr`
-- `pip3 install angr`
+For installing `r2pipe` run the following command:
+`$ pip3 install r2pipe`
 
 ## Using the tool
 
