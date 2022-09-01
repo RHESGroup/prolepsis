@@ -1,2 +1,5 @@
 arm-cfi-tool/arm-benchmarks/*
+arm-cfi-tool/__pycache__/*
+arm-cfi-tool/.idea/*
 risc-v-cfi-tool/riscv32-benchmarks-customtoolchain/*
+risc-v-cfi-tool/__pycache__/*
