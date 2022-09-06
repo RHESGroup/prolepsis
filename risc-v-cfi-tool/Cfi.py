@@ -339,7 +339,8 @@ class Cfi:
         print("IRQHandlers instrumented successfully.")
 
         lines = list(self.code.values())
-        lines[0] = f"\t.text\n\nentrypoint:\n{config_init}j {init_function_name}\n\n" + lines[0]
+        #lines[0] = f"\t.text\n\nentrypoint:\n{config_init}j {init_function_name}\n\n" + lines[0]
+        lines[0] = "\t.text\n\t.globl  main\n\t.type  main, @function\n\n" + lines[0]
         for l in self.sections.values():
             if ".rodata" in l[0]:
                 l[0] = l[0].replace(".rodata", ".section .rodata")
