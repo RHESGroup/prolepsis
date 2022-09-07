@@ -546,7 +546,7 @@ class Cfi:
                             self.code[int(target_addr, 16)] = f"lab{lab_number}: "
                             lab_maps[target_addr] = lab_number
                             lab_number += 1
-                elif ".word" not in op_old:
+                elif (".word" not in op_old) and (".byte" not in op_old) and (".short" not in op_old):
                     instr = instr.replace(op_old,op_new)
                     #if instr.find(";") != -1:
                     #    instr = instr[0:instr.find(";")]
