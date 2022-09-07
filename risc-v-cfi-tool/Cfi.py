@@ -286,40 +286,43 @@ class Cfi:
 
         for backwardEdges in [e for e in edgesMap.values() if type(e) == MultipleBackwardEdges]:
 
-            if len(backwardEdges.callerAndRet_addrs) > 1:
-                source_addr = backwardEdges.source_addr
-                # source_pos = getPosFromAddress(temp, self.code, source_addr)
-                type_1(self.code, source_addr, Location.source, labelMap[backwardEdges.source_addr])
+            try:
+                if len(backwardEdges.callerAndRet_addrs) > 1:
+                    source_addr = backwardEdges.source_addr
+                    # source_pos = getPosFromAddress(temp, self.code, source_addr)
+                    type_1(self.code, source_addr, Location.source, labelMap[backwardEdges.source_addr])
 
-                for callerAndRet in backwardEdges.callerAndRet_addrs:
-                    dest_addr = callerAndRet["dest_addr"]
-                    caller_addr = callerAndRet["caller_addr"]
-                    # dest_pos = getPosFromAddress(temp, self.code, dest_addr)
-                    # caller_pos = getPosFromAddress(temp, self.code, caller_addr)
+                    for callerAndRet in backwardEdges.callerAndRet_addrs:
+                        dest_addr = callerAndRet["dest_addr"]
+                        caller_addr = callerAndRet["caller_addr"]
+                        # dest_pos = getPosFromAddress(temp, self.code, dest_addr)
+                        # caller_pos = getPosFromAddress(temp, self.code, caller_addr)
 
-                    type_1(self.code, dest_addr, Location.dest, labelMap[callerAndRet["dest_addr"]])
+                        type_1(self.code, dest_addr, Location.dest, labelMap[callerAndRet["dest_addr"]])
 
-                    if isIndirectCall(callerAndRet["caller_addr"]):
-                        replaceWithType7(self.code, caller_addr, labelMap[callerAndRet["dest_addr"]])
-                    else:
-                        type_5(self.code, caller_addr, labelMap[callerAndRet["dest_addr"]])
+                        if isIndirectCall(callerAndRet["caller_addr"]):
+                            replaceWithType7(self.code, caller_addr, labelMap[callerAndRet["dest_addr"]])
+                        else:
+                            type_5(self.code, caller_addr, labelMap[callerAndRet["dest_addr"]])
 
-            elif len(backwardEdges.callerAndRet_addrs) == 1:
-                source_addr = backwardEdges.source_addr
-                dest_addr = backwardEdges.callerAndRet_addrs[0]["dest_addr"]
-                caller_addr = backwardEdges.callerAndRet_addrs[0]["caller_addr"]
+                elif len(backwardEdges.callerAndRet_addrs) == 1:
+                    source_addr = backwardEdges.source_addr
+                    dest_addr = backwardEdges.callerAndRet_addrs[0]["dest_addr"]
+                    caller_addr = backwardEdges.callerAndRet_addrs[0]["caller_addr"]
 
-                # source_pos = getPosFromAddress(temp,self.code,source_addr)
-                # dest_pos = getPosFromAddress(temp,self.code,dest_addr)
-                # caller_pos = getPosFromAddress(temp,self.code,caller_addr)
+                    # source_pos = getPosFromAddress(temp,self.code,source_addr)
+                    # dest_pos = getPosFromAddress(temp,self.code,dest_addr)
+                    # caller_pos = getPosFromAddress(temp,self.code,caller_addr)
 
-                type_1(self.code, source_addr, Location.source, labelMap[backwardEdges.source_addr])
-                type_1(self.code, dest_addr, Location.dest,
-                       labelMap[backwardEdges.callerAndRet_addrs[0]["dest_addr"]])
+                    type_1(self.code, source_addr, Location.source, labelMap[backwardEdges.source_addr])
+                    type_1(self.code, dest_addr, Location.dest,
+                           labelMap[backwardEdges.callerAndRet_addrs[0]["dest_addr"]])
 
-                if isIndirectCall(backwardEdges.callerAndRet_addrs[0]["caller_addr"]):
-                    replaceWithType7(self.code, caller_addr,
-                                     labelMap[backwardEdges.callerAndRet_addrs[0]["dest_addr"]])
+                    if isIndirectCall(backwardEdges.callerAndRet_addrs[0]["caller_addr"]):
+                        replaceWithType7(self.code, caller_addr,
+                                         labelMap[backwardEdges.callerAndRet_addrs[0]["dest_addr"]])
+            except:
+                continue
         print("backward edges instrumented successfully.")
         print("instrumenting IRQHandlers...")
 
