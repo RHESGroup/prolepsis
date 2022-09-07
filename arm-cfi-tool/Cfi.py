@@ -93,6 +93,18 @@ def sanitize2(l):
         l_new = l_new.replace("CPSR","APSR")
     if "CPSR_c" in l_new:
         l_new = l_new.replace("CPSR_c","CONTROL")
+    if "cbz" in l_new:
+        to_replace = re.findall(r"cbz\s+.*\n",l_new)[0]
+        reg = re.findall(r"cbz\s+([^,]+)", to_replace)[0]
+        lab = re.findall(r"lab[0-9]+",to_replace)[0]
+        new_instructions = f"cmp {reg}, #0\n\tbeq {lab}\n"
+        l_new = l_new.replace(to_replace,new_instructions)
+    if "cbnz" in l_new:
+        to_replace = re.findall(r"cbnz\s+.*\n", l_new)[0]
+        reg = re.findall(r"cbnz\s+([^,]+)", to_replace)[0]
+        lab = re.findall(r"lab[0-9]+", to_replace)[0]
+        new_instructions = f"cmp {reg}, #0\n\tbne {lab}\n"
+        l_new = l_new.replace(to_replace, new_instructions)
     return l_new
 
 def getFunctionFromAddr(addr):
