@@ -322,6 +322,7 @@ class Cfi:
                         replaceWithType7(self.code, caller_addr,
                                          labelMap[backwardEdges.callerAndRet_addrs[0]["dest_addr"]])
             except:
+                a=1
                 continue
         print("backward edges instrumented successfully.")
         print("instrumenting IRQHandlers...")
