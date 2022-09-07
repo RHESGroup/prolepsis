@@ -258,25 +258,28 @@ class Cfi:
         #start instrumentation process for forward edges
         for forwardEdges in [e for e in edgesMap.values() if type(e) == MultipleForwardEdges]:
 
-            if len(forwardEdges.dest_addrs) > 1:
-                source_addr = forwardEdges.source_addr
-                # source_pos = getPosFromAddress(temp, self.code, source_addr)
-                type_1(self.code, source_addr, Location.source, labelMap[forwardEdges.source_addr])
+            try:
+                if len(forwardEdges.dest_addrs) > 1:
+                    source_addr = forwardEdges.source_addr
+                    # source_pos = getPosFromAddress(temp, self.code, source_addr)
+                    type_1(self.code, source_addr, Location.source, labelMap[forwardEdges.source_addr])
 
-                for dest_addr in forwardEdges.dest_addrs:
-                    # dest_pos = getPosFromAddress(temp, self.code, dest_addr)
+                    for dest_addr in forwardEdges.dest_addrs:
+                        # dest_pos = getPosFromAddress(temp, self.code, dest_addr)
 
+                        type_1(self.code, dest_addr, Location.dest, labelMap[dest_addr])
+
+                elif len(forwardEdges.dest_addrs) == 1:
+                    dest_addr = forwardEdges.dest_addrs[0]
+                    source_addr = forwardEdges.source_addr
+
+                    # source_pos = getPosFromAddress(temp,self.code,source_addr)
+                    # dest_pos = getPosFromAddress(temp,self.code,dest_addr)
+
+                    type_1(self.code, source_addr, Location.source, labelMap[forwardEdges.source_addr])
                     type_1(self.code, dest_addr, Location.dest, labelMap[dest_addr])
-
-            elif len(forwardEdges.dest_addrs) == 1:
-                dest_addr = forwardEdges.dest_addrs[0]
-                source_addr = forwardEdges.source_addr
-
-                # source_pos = getPosFromAddress(temp,self.code,source_addr)
-                # dest_pos = getPosFromAddress(temp,self.code,dest_addr)
-
-                type_1(self.code, source_addr, Location.source, labelMap[forwardEdges.source_addr])
-                type_1(self.code, dest_addr, Location.dest, labelMap[dest_addr])
+            except:
+                continue
         print("forward edges instrumented successfully.")
         # start instrumentation process for backward edges
         print("instrumenting backward edges...")
