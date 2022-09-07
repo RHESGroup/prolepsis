@@ -278,7 +278,7 @@ class Cfi:
 
                     type_1(self.code, source_addr, Location.source, labelMap[forwardEdges.source_addr])
                     type_1(self.code, dest_addr, Location.dest, labelMap[dest_addr])
-            except:
+            except Exception as e:
                 continue
         print("forward edges instrumented successfully.")
         # start instrumentation process for backward edges
@@ -321,8 +321,7 @@ class Cfi:
                     if isIndirectCall(backwardEdges.callerAndRet_addrs[0]["caller_addr"]):
                         replaceWithType7(self.code, caller_addr,
                                          labelMap[backwardEdges.callerAndRet_addrs[0]["dest_addr"]])
-            except:
-                a=1
+            except Exception as e:
                 continue
         print("backward edges instrumented successfully.")
         print("instrumenting IRQHandlers...")
