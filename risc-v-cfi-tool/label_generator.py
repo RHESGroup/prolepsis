@@ -31,7 +31,7 @@ def rec_change_dst_label(literal, labels, signature, new_dst_label, srcs, dsts):
 # n : bit length of the signatures to be generated
 def generate_labels(edges, n, jsonfile=""):
 
-    sys.setrecursionlimit(20000)
+    sys.setrecursionlimit(10000)
 
     if(jsonfile != ""):
         edge_table_json = open(jsonfile)

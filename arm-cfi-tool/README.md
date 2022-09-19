@@ -5,7 +5,7 @@ Execute the following commands for producing the benchmarks and placing it under
 $ git clone https://github.com/embench/embench-iot.git
 $ cd embench-iot
 $ chmod +x buid_all.py
-$ ./build_all.py --clean --builddir <path-to-prolepsis>/arm-cfi-tool/arm-benchmarks --arch arm --chip cortex-m4 --board stm32f4-discovery --cc <path-to-binaries-arm-toolchain>/arm-none-eabi-gcc  --cflags="-c -O0  -ffunction-sections -MMD -MP -mthumb --specs=nosys.specs -mcpu=cortex-m4" --ldflags="-Wl,-gc-sections --specs=nosys.specs -mcpu=cortex-m4 -mthumb" --user-libs="-lm"
+$ ./build_all.py --clean --builddir <path-to-prolepsis>/arm-cfi-tool/arm-benchmarks --arch arm --chip cortex-m4 --board stm32f4-discovery --cc arm-none-eabi-gcc --cflags="-c -g3 -O3 -fno-function-sections -fno-data-sections -MMD -MP -mthumb --specs=nosys.specs -mcpu=cortex-m4" --ldflags="-Wl,-gc-sections --specs=nosys.specs -mcpu=cortex-m4 -mthumb" --user-libs="-lm"
 
 ```
 The last command will output the benchmarks directly under the folder `arm-benchmarks`. This will allow you to automatically run the tool on them using the script ` run-on-benchmarks.sh`. Go to the proper section later in the current `README.md` for further information on how to run the script.

@@ -1,10 +1,10 @@
 {
-	"type1":{"before":"\tcpsid f\n\tpush {r1, r2}\n\tldr r1, =<REPLACEWITHLABEL>\n\tmov.w r2, #1610612736 ; 0x60000000\n\tstrh r1, [r2, #0]\n\tpop {r1, r2}\n","after":"\tpush{r1, r2}\n\tldr r1, =<REPLACEWITHLABEL>\n\tmov.w r2, #1610612736 ; 0x60000000\n\tstrh r1, [r2, #2]\n\tpop {r1, r2}\n\tcpsie f\n"},
-	"type2":{"before":"\tcpsid f\n\tpush {r1, r2}\n\tldr r1, =<REPLACEWITHLABEL>\n\tmov.w r2, #1610612736 ; 0x60000000\n\tstrh r1, [r2,#6]\n\tpop {r1, r2}\n","after":"\tpush {r1, r2}\n\tmov.w r1, =<REPLACEWITHLABEL>\n\tmov.w r2, #1610612736 ; 0x60000000\n\tstrh r1, [r2, #2]\n\tpop {r1, r2}\n\tcpsie f\n"},
+	"type1":{"before":"\tnop\n\tpush {r1, r2}\n\tldr r1, =<REPLACEWITHLABEL>\n\tmov.w r2, #1610612736 ; 0x60000000\n\tstrh r1, [r2, #0]\n\tpop {r1, r2}\n","after":"\tpush{r1, r2}\n\tldr r1, =<REPLACEWITHLABEL>\n\tmov.w r2, #1610612736 ; 0x6000000\n\tstrh r1, [r2, #2]\n\tpop {r1, r2}\n\tnop\n"},
+	"type2":{"before":"\tnop\n\tpush {r1, r2}\n\tldr r1, =<REPLACEWITHLABEL>\n\tmov.w r2, #1610612736 ; 0x60000000\n\tstrh r1, [r2,#6]\n\tpop {r1, r2}\n","after":"\tpush {r1, r2}\n\tmov.w r1, =<REPLACEWITHLABEL>\n\tmov.w r2, #1610612736 ; 0x60000000\n\tstrh r1, [r2, #2]\n\tpop {r1, r2}\n\tnop\n"},
 	"type5":"push {r1, r2}\n\tldr r1, =<REPLACEWITHLABEL>\n\tmov.w r2, #1610612736 ; 0x60000000\n\tstrh r1, [r2,#4]\n\tpop {r1, r2}\n",
 	"type7":"\t\n\tpush {r1, r2}\n\tmov.w r1, =<REPLACEWITHLABEL>\n\tmov.w r2, #1610612736 ; 0x60000000\n\tstrh r1, [r2,#8]\n\tPOP {r1, r2}\n",
 	"type8":"\tinstr8_1\n\tinstr8_2\n\tinstr8_3\n\tinstr8_4",
 	"type9":"\tinstr9_1\n\tinstr9_2\n\tinstr9_3\n\tinstr9_4",
 	"config_init": "",
-	"init_function_name": "_mainCRTStartup"
+	"init_function_name": ""
 }

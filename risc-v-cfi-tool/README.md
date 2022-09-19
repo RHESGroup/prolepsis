@@ -32,7 +32,7 @@ Execute the following commands for producing the benchmarks and placing it under
 $ git clone https://github.com/embench/embench-iot.git
 $ cd embench-iot
 $ chmod +x buid_all.py
-$ ./build_all.py --arch riscv32 --chip generic --clean --board ri5cyverilator --cc <path-to-riscv-toolchain>/riscv32-unknown-elf-gcc --cflags="-c -O0 -ffunction-sections -march=rv32im -mabi=ilp32" --ldflags="-Wl,-gc-sections" --user-libs="-lm" --builddir <path-to-prolepsis>/risc-v-cfi-tool/riscv32-benchmarks-customtoolchain
+$ ./build_all.py --arch riscv32 --chip generic --clean --board ri5cyverilator --cc riscv32-unknown-elf-gcc --cflags="-c -g3 -O3 -ffunction-sections -march=rv32im -mabi=ilp32" --ldflags="-Wl,-gc-sections" --user-libs="-lm" --builddir <path-to-prolepsis>/risc-v-cfi-tool/riscv32-benchmarks-customtoolchain
 ```
 The last command will output the benchmarks directly under the folder `riscv32-benchmarks-customtoolchain`. This will allow you to automatically run the tool on them using the script ` run-on-benchmarks.sh`. Go to the proper section later in the current `README.md` for further information on how to run the script.
 

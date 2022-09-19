@@ -383,7 +383,8 @@ class Cfi:
             elif "####LTORG####" not in lines[i]:
                 modify = 1
 
-        lines[0] = f"\t.cpu cortex-m4\n\t.text\n\t.thumb\n\t.syntax unified\n\n_start:\n{config_init}b {init_function_name}\n\n" + lines[0]
+        # lines[0] = f"\t.cpu cortex-m4\n\t.text\n\t.thumb\n\t.syntax unified\n\n_start:\n{config_init}b {init_function_name}\n\n" + lines[0]
+        lines[0] = f"\t.cpu cortex-m4\n\t.text\n\t.thumb\n\t.syntax unified\n\t.global main\n\t.type main, %function\n\n" + lines[0]
         for l in self.sections.values():
             if ".rodata" in l[0]:
                 l[0] = l[0].replace(".rodata",".section .rodata")

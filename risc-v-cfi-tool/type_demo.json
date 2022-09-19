@@ -2,9 +2,9 @@
 	"type1":{"before":"\tcfes <REPLACEWITHLABEL>\n","after":"\tcfed <REPLACEWITHLABEL>\n"},
 	"type2":{"before":"\tcfes <REPLACEWITHLABEL>\n","after":"\tcfed <REPLACEWITHLABEL>\n"},
 	"type5":"",
-	"type7":"\tcfes <REPLACEWITHLABEL>\n",
+	"type7":"",
 	"type8":"",
 	"type9":"",
-	"config_init":"\tcflc0 30(a3)\n\tcflc1 30(a1)\n\tcflc2 30(a1)\n\tcflc3 30(a1)\n\tcflc4 30(a1)\n\tcflc5 30(a1)\n\tcflc6 30(a1)\n\tcflc7 30(a1)\n\tcflc8 30(a1)\n\tcflc9 30(a1)\n\t",
+	"config_init":"",
 	"init_function_name":"_start"
 }
