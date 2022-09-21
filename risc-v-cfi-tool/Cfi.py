@@ -512,7 +512,11 @@ class Cfi:
                                 self.code[int(addr,16)] = "\t"+instr+"\n"
                             else:
                                 self.code[int(addr,16)] += "\t"+instr+"\n"
-                            self.code[int(target_addr,16)] = f"lab{lab_number}: "
+                            # self.code[int(target_addr,16)] = f"lab{lab_number}: "
+                            if int(target_addr, 16) not in self.code.keys():
+                                self.code[int(target_addr, 16)] = f"lab{lab_number}: "
+                            else:
+                                self.code[int(target_addr, 16)] = f"lab{lab_number}: " + self.code[int(target_addr, 16)]
                             lab_maps[target_addr] = lab_number
                             lab_number += 1
                 else:

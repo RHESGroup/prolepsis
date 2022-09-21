@@ -29,11 +29,14 @@ TestingMostlyDescending:
 	mov	r6, r0
 	bl	rand_beebs
 	bl	__aeabi_i2d
-	add	r3, pc, #52	; (adr r3, 8000228 <TestingMostlyDescending+0x44>)
-	ldrd	r2, r3, [r3]
-	bl	__aeabi_ddiv
-	ldr	r3, [pc, #48]	; (8000230 <TestingMostlyDescending+0x4c>)
 	movs	r2, #0
+	movw	r3, #65535	; 0xffff
+	movt	r2, #65472	; 0xffc0
+	movt	r3, #16863	; 0x41df
+	bl	__aeabi_ddiv
+	movs	r3, #0
+	movs	r2, #0
+	movt	r3, #16404	; 0x4014
 	bl	__aeabi_dmul
 	mov	r4, r0
 	subs	r0, r7, r6
@@ -44,25 +47,25 @@ TestingMostlyDescending:
 	mov	r0, r4
 	mov	r1, r5
 	bl	__aeabi_dadd
-	ldr	r3, [pc, #24]	; (8000234 <TestingMostlyDescending+0x50>)
+	movs	r3, #0
 	movs	r2, #0
+	movt	r3, #16388	; 0x4004
 	bl	__aeabi_dsub
 	bl	__aeabi_d2iz
 	pop	{r3, r4, r5, r6, r7, pc}
-	.word	0xffc00000
-	.word	0x41dfffff
-	.word	0x40140000
-	.word	0x40040000
 TestingMostlyAscending:
 	push	{r4, r5, r6, lr}
 	mov	r6, r0
 	bl	rand_beebs
 	bl	__aeabi_i2d
-	add	r3, pc, #56	; (adr r3, 8000280 <TestingMostlyAscending+0x48>)
-	ldrd	r2, r3, [r3]
-	bl	__aeabi_ddiv
-	ldr	r3, [pc, #56]	; (8000288 <TestingMostlyAscending+0x50>)
 	movs	r2, #0
+	movw	r3, #65535	; 0xffff
+	movt	r2, #65472	; 0xffc0
+	movt	r3, #16863	; 0x41df
+	bl	__aeabi_ddiv
+	movs	r3, #0
+	movs	r2, #0
+	movt	r3, #16404	; 0x4014
 	bl	__aeabi_dmul
 	mov	r4, r0
 	mov	r0, r6
@@ -73,36 +76,33 @@ TestingMostlyAscending:
 	mov	r0, r4
 	mov	r1, r5
 	bl	__aeabi_dadd
-	ldr	r3, [pc, #28]	; (800028c <TestingMostlyAscending+0x54>)
+	movs	r3, #0
 	movs	r2, #0
+	movt	r3, #16388	; 0x4004
 	bl	__aeabi_dsub
 	bl	__aeabi_d2iz
 	pop	{r4, r5, r6, pc}
 	nop
-	nop
-	.word	0xffc00000
-	.word	0x41dfffff
-	.word	0x40140000
-	.word	0x40040000
 TestingJittered:
 	push	{r4, lr}
 	mov	r4, r0
 	bl	rand_beebs
 	bl	__aeabi_i2d
-	add	r3, pc, #24	; (adr r3, 80002b8 <TestingJittered+0x28>)
-	ldrd	r2, r3, [r3]
+	movs	r2, #0
+	movw	r3, #65535	; 0xffff
+	movt	r2, #65472	; 0xffc0
+	movt	r3, #16863	; 0x41df
 	bl	__aeabi_ddiv
-	add	r3, pc, #24	; (adr r3, 80002c0 <TestingJittered+0x30>)
-	ldrd	r2, r3, [r3]
+	movw	r2, #52429	; 0xcccd
+	movw	r3, #52428	; 0xcccc
+	movt	r2, #52428	; 0xcccc
+	movt	r3, #16364	; 0x3fec
 	bl	__aeabi_dcmple
 	cbnz	r0, lab0
 	subs	r4, #2
 lab0: 	mov	r0, r4
 	pop	{r4, pc}
-	.word	0xffc00000
-	.word	0x41dfffff
-	.word	0xcccccccd
-	.word	0x3feccccc
+	nop
 TestingMostlyEqual:
 	push	{r3, lr}
 	bl	rand_beebs
@@ -160,11 +160,13 @@ WikiMerge.constprop.1.isra.0:
 	add	r5, r3, #8
 	mov	r4, ip
 	b	lab5
-lab6: 	adds	r6, #8
+lab6: 	ldmia	r6, {r0, r1}
+	adds	r6, #8
 	cmp	sl, r6
 	stmdb	r5, {r0, r1}
 	beq	lab4
-lab7: lab5: 	ldmia	r6, {r2, r3}
+lab7: 	adds	r5, #8
+lab5: 	ldmia	r6, {r2, r3}
 	ldmia	r7, {r0, r1}
 	blx	r4
 	mov	r3, r5
@@ -196,7 +198,8 @@ lab3: 	subs	r3, r2, r0
 	mov	sl, fp
 	mov	r8, r0
 	b	lab9
-lab11: 	ldmia	r6, {r0, r1}
+lab11: 	mov	r3, r7
+	ldmia	r6, {r0, r1}
 	ldr	r2, [r3], #-4
 	ldr	r5, [r7, #-4]
 	stmia	r3, {r0, r1}
@@ -208,7 +211,8 @@ lab11: 	ldmia	r6, {r0, r1}
 	ble	lab10
 	ldr	r3, [sp, #12]
 	add	r9, sl, r3
-lab13: 	adds	r3, #1
+lab13: 	ldr	r3, [sp, #4]
+	adds	r3, #1
 	str	r3, [sp, #4]
 	adds	r7, #8
 lab9: 	add	r5, r4, r8, lsl #3
@@ -235,7 +239,8 @@ lab9: 	add	r5, r4, r8, lsl #3
 	b	lab13
 lab12: 	ldr	r8, [sp, #28]
 	str	r9, [sp, #12]
-lab16: 	ldr	r2, [sp, #4]
+lab16: 	ldr	r3, [sp, #20]
+	ldr	r2, [sp, #4]
 	sub	r8, r8, sl
 	add	r3, r2
 	cmp	r8, #0
@@ -248,7 +253,8 @@ lab8: 	ldr	r3, [sp, #12]
 	add	lr, r2, #4
 	add	ip, r4, #4
 	movs	r3, #0
-lab15: 	ldmia	r1, {r0, r1}
+lab15: 	add	r1, r4, r3, lsl #3
+	ldmia	r1, {r0, r1}
 	ldr	r7, [r2, r3, lsl #3]
 	ldr	r6, [lr, r3, lsl #3]
 	add	r5, r2, r3, lsl #3
@@ -274,31 +280,34 @@ WikiMerge.constprop.0.isra.0:
 	add	r4, sp, #32
 	cmp	ip, #512	; 0x200
 	stmdb	r4, {r1, r2}
-	str	r3, [sp, #76]	; 0x4c
 	str	r0, [sp, #4]
-	str	r3, [sp, #8]
-	mov	r0, r3
 	ldr	r4, [sp, #84]	; 0x54
-	ldr	r3, [sp, #80]	; 0x50
+	ldr	r7, [sp, #80]	; 0x50
 	str	r1, [sp, #12]
+	str	r3, [sp, #76]	; 0x4c
+	mov	r0, r3
+	str	r3, [sp, #8]
 	bgt	lab17
-	ldr	r7, [pc, #352]	; (8000620 <WikiMerge.constprop.0.isra.0+0x188>)
-	add	r6, r7, r1, lsl #3
-	subs	r1, r3, r0
+	movw	r3, #4
+	movt	r3, #8192	; 0x2000
+	add	r6, r3, r1, lsl #3
+	subs	r1, r7, r0
 	cmp	r1, #0
 	add	r2, r4, ip, lsl #3
 	ble	lab18
 	cmp	ip, #0
 	ble	lab18
-	add	r5, r7, r0, lsl #3
-	add	r7, r7, r3, lsl #3
+	add	r5, r3, r0, lsl #3
+	add	r7, r3, r7, lsl #3
 	add	r3, r6, #8
 	b	lab19
-lab20: 	adds	r4, #8
+lab20: 	ldmia	r4, {r0, r1}
+	adds	r4, #8
 	cmp	r2, r4
 	stmdb	r3, {r0, r1}
 	beq	lab18
-lab21: lab19: 	ldr	r0, [r4, #0]
+lab21: 	adds	r3, #8
+lab19: 	ldr	r0, [r4, #0]
 	ldr	r1, [r5, #0]
 	cmp	r0, r1
 	mov	r6, r3
@@ -315,25 +324,27 @@ lab18: 	subs	r2, r2, r4
 	ldmia	sp!, {r4, r5, r6, r7, r8, r9, sl, fp, lr}
 	add	sp, #8
 	b	memcpy
-lab17: 	subs	r3, r3, r0
+lab17: 	subs	r3, r7, r3
 	cmp	r3, #0
 	str	r3, [sp, #16]
 	ble	lab22
-	ldr	r3, [pc, #248]	; (8000620 <WikiMerge.constprop.0.isra.0+0x188>)
-	ldr	lr, [sp, #4]
-	str	ip, [sp, #20]
 	lsls	r1, r1, #3
+	movw	r3, #4
+	movt	r3, #8192	; 0x2000
 	adds	r2, r1, #4
 	subs	r1, #4
 	adds	r1, r3, r1
 	mov	fp, #0
+	ldr	lr, [sp, #4]
+	str	ip, [sp, #20]
 	mov	r5, r0
 	add	r2, r3
 	movs	r4, #1
 	mov	sl, fp
 	mov	r9, r1
 	b	lab23
-lab25: 	ldr	ip, [r7, #-4]!
+lab25: 	ldmia	r8, {r0, r1}
+	ldr	ip, [r7, #-4]!
 	ldr	r6, [r9, r4, lsl #3]
 	stmia	r7, {r0, r1}
 	ldr	r1, [sp, #20]
@@ -344,7 +355,8 @@ lab25: 	ldr	ip, [r7, #-4]!
 	ble	lab24
 	ldr	r1, [sp, #4]
 	add	lr, sl, r1
-lab27: 	adds	r2, #8
+lab27: 	adds	r4, #1
+	adds	r2, #8
 lab23: 	ldr	r0, [r3, lr, lsl #3]
 	ldr	r1, [r3, r5, lsl #3]
 	cmp	r0, r1
@@ -366,14 +378,17 @@ lab23: 	ldr	r0, [r3, lr, lsl #3]
 	ldr	r1, [sp, #8]
 	add	r5, r1, fp
 	b	lab27
-lab22: 	ldr	r3, [pc, #104]	; (8000620 <WikiMerge.constprop.0.isra.0+0x188>)
-lab29: 	add	r4, r3, r2, lsl #3
+lab22: 	movw	r3, #4
+	movt	r3, #8192	; 0x2000
+lab29: 	ldr	r2, [sp, #4]
+	add	r4, r3, r2, lsl #3
 	ldr	r2, [sp, #12]
 	add	r3, r3, r2, lsl #3
 	add	r8, r4, #4
 	add	lr, r3, #4
 	movs	r2, #0
-lab28: 	ldmia	r1, {r0, r1}
+lab28: 	add	r1, r3, r2, lsl #3
+	ldmia	r1, {r0, r1}
 	ldr	r7, [r4, r2, lsl #3]
 	ldr	r6, [r8, r2, lsl #3]
 	add	r5, r4, r2, lsl #3
@@ -383,12 +398,14 @@ lab28: 	ldmia	r1, {r0, r1}
 	adds	r2, #1
 	cmp	ip, r2
 	bgt	lab28
-lab30: 	ldmia	sp!, {r4, r5, r6, r7, r8, r9, sl, fp, lr}
+lab30: 	add	sp, #36	; 0x24
+	ldmia	sp!, {r4, r5, r6, r7, r8, r9, sl, fp, lr}
 	add	sp, #8
 	bx	lr
 lab26: 	ldr	ip, [sp, #20]
 	str	lr, [sp, #4]
-lab31: 	sub	ip, ip, sl
+lab31: 	ldr	r2, [sp, #12]
+	sub	ip, ip, sl
 	add	r2, r4
 	cmp	ip, #0
 	str	r2, [sp, #12]
@@ -399,8 +416,6 @@ lab24: 	ldr	r2, [sp, #4]
 	mov	ip, r1
 	str	r2, [sp, #4]
 	b	lab31
-	nop
-	.word	0x20000004
 Rotate.constprop.0:
 	stmdb	sp!, {r4, r5, r6, r7, r8, r9, sl, lr}
 	mov	r6, r2
@@ -424,18 +439,21 @@ Rotate.constprop.0:
 	bge	lab33
 	cmp	r7, r2
 	ble	lab34
-lab40: 	cmp	r8, #1
+lab40: 	add	r3, r8, r8, lsr #31
+	cmp	r8, #1
 	mov	r3, r3, asr #1
 	ble	lab35
-	ldr	r1, [pc, #284]	; (8000784 <Rotate.constprop.0+0x160>)
+	movw	r8, #4
+	movt	r8, #8192	; 0x2000
 	subs	r2, r5, r3
-	add	r2, r1, r2, lsl #3
 	add	r3, r4
-	add	r8, r1, #4
-	add	r3, r1, r3, lsl #3
+	add	r2, r8, r2, lsl #3
+	add	r3, r8, r3, lsl #3
+	add	r8, r8, #4
 	adds	r2, #4
 	add	r8, r8, r5, lsl #3
-lab36: 	ldmia	r1, {r0, r1}
+lab36: 	subs	r1, r2, #4
+	ldmia	r1, {r0, r1}
 	ldrd	lr, ip, [r3, #-8]
 	subs	r3, #8
 	stmia	r3, {r0, r1}
@@ -447,15 +465,17 @@ lab35: 	add	r2, r7, r7, lsr #31
 	cmp	r7, #1
 	mov	r2, r2, asr #1
 	ble	lab37
-	ldr	r1, [pc, #220]	; (8000784 <Rotate.constprop.0+0x160>)
+	movw	ip, #4
+	movt	ip, #8192	; 0x2000
 	adds	r3, r5, r2
 	subs	r2, r6, r2
-	add	r2, r1, r2, lsl #3
-	add	ip, r1, #4
-	add	r3, r1, r3, lsl #3
+	add	r2, ip, r2, lsl #3
+	add	r3, ip, r3, lsl #3
+	add	ip, ip, #4
 	adds	r2, #4
 	add	ip, ip, r6, lsl #3
-lab38: 	ldmia	r1, {r0, r1}
+lab38: 	subs	r1, r2, #4
+	ldmia	r1, {r0, r1}
 	ldrd	r7, r5, [r3, #-8]
 	subs	r3, #8
 	stmia	r3, {r0, r1}
@@ -468,7 +488,8 @@ lab37: 	subs	r2, r6, r4
 	cmp	r2, #1
 	mov	r3, r3, asr #1
 	ble	lab32
-	ldr	r1, [pc, #156]	; (8000784 <Rotate.constprop.0+0x160>)
+	movw	r1, #4
+	movt	r1, #8192	; 0x2000
 	subs	r2, r6, r3
 	add	r3, r4
 	add	r2, r1, r2, lsl #3
@@ -476,7 +497,8 @@ lab37: 	subs	r2, r6, r4
 	adds	r1, #4
 	add	r6, r1, r6, lsl #3
 	adds	r2, #4
-lab39: 	ldmia	r1, {r0, r1}
+lab39: 	subs	r1, r2, #4
+	ldmia	r1, {r0, r1}
 	ldrd	r5, r4, [r3, #-8]
 	subs	r3, #8
 	stmia	r3, {r0, r1}
@@ -488,7 +510,8 @@ lab32: 	add	sp, #8
 	ldmia	sp!, {r4, r5, r6, r7, r8, r9, sl, pc}
 lab33: 	cmp	r2, r8
 	blt	lab40
-	ldr	r6, [pc, #100]	; (8000784 <Rotate.constprop.0+0x160>)
+	movw	r6, #4
+	movt	r6, #8192	; 0x2000
 	mov	r8, r8, lsl #3
 	add	sl, r6, r1, lsl #3
 	mov	r2, r8
@@ -503,12 +526,14 @@ lab33: 	cmp	r2, r8
 	mov	r2, r8
 	mov	r1, r9
 	add	r0, r6, r0, lsl #3
-lab41: 	ldmia	sp!, {r4, r5, r6, r7, r8, r9, sl, lr}
+lab41: 	add	sp, #8
+	ldmia	sp!, {r4, r5, r6, r7, r8, r9, sl, lr}
 	b	memcpy
 lab34: 	mov	sl, r7, lsl #3
-	ldr	r7, [pc, #44]	; (8000784 <Rotate.constprop.0+0x160>)
-	mov	r2, sl
+	movw	r7, #4
+	movt	r7, #8192	; 0x2000
 	add	r1, r7, r5, lsl #3
+	mov	r2, sl
 	mov	r0, r3
 	bl	memcpy
 	add	r4, r7, r4, lsl #3
@@ -522,17 +547,18 @@ lab34: 	mov	sl, r7, lsl #3
 	mov	r0, r4
 	b	lab41
 	nop
-	.word	0x20000004
 WikiSort.constprop.0:
 	stmdb	sp!, {r4, r5, r6, r7, r8, r9, sl, fp, lr}
-	movs	r5, #0
+	movw	fp, #4
 	sub	sp, sp, #4320	; 0x10e0
-	ldr	fp, [pc, #48]	; 80007c4 <WikiSort.constprop.0+0x3c>
+	movs	r5, #0
 	sub	sp, #28
+	movt	fp, #8192	; 0x2000
 	mov	ip, #2
 	mov	lr, #1
 	mov	r7, r5
-lab47: 	add	r7, r7, #25
+lab47: 	cmp	lr, r5
+	add	r7, r7, #25
 	mov	r6, lr
 	bgt	lab42
 	cmp	r7, ip
@@ -543,8 +569,8 @@ lab42: 	add	r3, fp, r6, lsl #3
 	ldr	r8, [r3, #4]
 	mov	r2, r6
 	b	lab44
-	.word	0x20000004
-lab46: 	cmp	r5, r2
+lab46: 	ldmdb	r3, {r0, r1}
+	cmp	r5, r2
 	stmia	r3, {r0, r1}
 	bge	lab45
 lab44: 	add	r3, fp, r2, lsl #3
@@ -556,7 +582,8 @@ lab44: 	add	r3, fp, r2, lsl #3
 	cmp	r7, r6
 	strd	r4, r8, [r3]
 	bgt	lab42
-lab76: 	add	r5, r5, #25
+lab76: 	cmp	r7, #400	; 0x190
+	add	r5, r5, #25
 	add	lr, lr, #25
 	add	ip, ip, #25
 	bne	lab47
@@ -566,7 +593,9 @@ lab76: 	add	r5, r5, #25
 	str	r3, [sp, #72]	; 0x48
 	add	r3, sp, #224	; 0xe0
 	str	r3, [sp, #148]	; 0x94
-lab79: 	mov	r0, r4
+	mov	r9, fp
+lab79: 	ldr	r4, [sp, #72]	; 0x48
+	mov	r0, r4
 	bl	__aeabi_i2d
 	bl	sqrt
 	bl	__aeabi_d2iz
@@ -580,7 +609,7 @@ lab79: 	mov	r0, r4
 	lsls	r3, r6, #3
 	str	r3, [sp, #76]	; 0x4c
 	sub	r3, r2, #8
-	add	r3, fp
+	add	r3, r9
 	mov	r1, r4
 	str	r3, [sp, #56]	; 0x38
 	subs	r3, r0, #2
@@ -601,14 +630,15 @@ lab79: 	mov	r0, r4
 	str	r4, [sp, #96]	; 0x60
 	str	r5, [sp, #132]	; 0x84
 	str	r1, [sp, #100]	; 0x64
-	str	fp, [sp, #52]	; 0x34
+	str	r9, [sp, #52]	; 0x34
 	str	r3, [sp, #68]	; 0x44
 	str	r5, [sp, #128]	; 0x80
 	str	r5, [sp, #120]	; 0x78
 	str	r5, [sp, #80]	; 0x50
 	str	r5, [sp, #60]	; 0x3c
-	mov	sl, r6
-lab77: 	ldr	r3, [sp, #88]	; 0x58
+	mov	fp, r6
+lab77: 	ldr	r0, [sp, #52]	; 0x34
+	ldr	r3, [sp, #88]	; 0x58
 	ldr	r6, [sp, #60]	; 0x3c
 	ldr	r2, [r0, #0]
 	ldr	r3, [r0, r3]
@@ -638,9 +668,10 @@ lab77: 	ldr	r3, [sp, #88]	; 0x58
 	ble	lab51
 	ldr	r7, [sp, #100]	; 0x64
 	str	r1, [sp, #84]	; 0x54
-	mov	r9, r7
+	mov	sl, r7
 	mov	r3, r6
-lab96: 	mls	lr, sl, lr, r7
+lab96: 	sdiv	lr, r7, fp
+	mls	lr, fp, lr, r7
 	add	r8, r3, lr
 	ldr	r3, [sp, #36]	; 0x24
 	add	r6, r8, #1
@@ -649,16 +680,17 @@ lab96: 	mls	lr, sl, lr, r7
 	ble	lab52
 	ldr	r3, [sp, #48]	; 0x30
 	ldr	ip, [sp, #76]	; 0x4c
-	add	r4, fp, r3, lsl #3
+	add	r4, r9, r3, lsl #3
 	strd	lr, r8, [sp, #16]
 	ldr	lr, [sp, #36]	; 0x24
 	adds	r4, #4
-	add	r3, fp, r8, lsl #3
-lab53: 	add	r1, r3, #8
+	add	r3, r9, r8, lsl #3
+lab53: 	mov	r2, r4
+	add	r1, r3, #8
 	ldmia	r1, {r0, r1}
 	ldr	r7, [r4, #-4]
 	ldr	r5, [r2], #-4
-	add	r6, sl
+	add	r6, fp
 	cmp	lr, r6
 	stmia	r2, {r0, r1}
 	add	r4, r4, #8
@@ -667,38 +699,43 @@ lab53: 	add	r1, r3, #8
 	bgt	lab53
 	ldrd	lr, r5, [sp, #16]
 lab52: 	ldr	r3, [sp, #36]	; 0x24
-	cmp	sl, r9
+	cmp	fp, sl
 	ite	le
-	addle	r3, sl
-	addgt	r3, r9
+	addle	r3, fp
+	addgt	r3, sl
 	cmp	lr, #512	; 0x200
-	ldr	r9, [fp, r8, lsl #3]
+	ldr	sl, [r9, r8, lsl #3]
 	str	r3, [sp, #16]
 	bgt	lab54
 	ldr	r1, [sp, #8]
 	mov	r2, lr, lsl #3
 	add	r0, sp, #248	; 0xf8
 	bl	memcpy
-lab98: 	str	r3, [sp, #20]
+lab98: 	ldr	r3, [sp, #36]	; 0x24
+	str	r3, [sp, #20]
 	movs	r6, #0
-	add	r3, fp, #4
+	add	r3, r9, #4
 	str	r8, [sp, #24]
 	str	r8, [sp, #8]
 	mov	r4, r6
 	str	r6, [sp, #40]	; 0x28
 	str	r3, [sp, #32]
-lab71: 	cmp	r3, #0
+lab71: 	subs	r3, r6, r4
+	cmp	r3, #0
 	ble	lab55
-lab68: 	subs	r3, #1
-	ldr	r3, [fp, r3, lsl #3]
-	cmp	r3, r9
+lab68: 	add	r3, r6, #536870912	; 0x20000000
+	subs	r3, #1
+	ldr	r3, [r9, r3, lsl #3]
+	cmp	r3, sl
 	blt	lab55
-lab69: 	cmp	r4, r7
+lab69: 	subs	r7, r6, #1
+	cmp	r4, r7
 	bge	lab56
-	ldr	r0, [fp, r5, lsl #3]
+	ldr	r0, [r9, r5, lsl #3]
 	mov	r2, r7
-lab58: 	add	r3, r4, r3, asr #1
-	ldr	r1, [fp, r3, lsl #3]
+lab58: 	subs	r3, r2, r4
+	add	r3, r4, r3, asr #1
+	ldr	r1, [r9, r3, lsl #3]
 	cmp	r1, r0
 	bge	lab57
 	adds	r4, r3, #1
@@ -706,25 +743,26 @@ lab58: 	add	r3, r4, r3, asr #1
 	bgt	lab58
 lab56: 	cmp	r7, r4
 	bne	lab59
-	ldr	r2, [fp, r4, lsl #3]
-	ldr	r3, [fp, r5, lsl #3]
+	ldr	r2, [r9, r4, lsl #3]
+	ldr	r3, [r9, r5, lsl #3]
 	cmp	r2, r3
 	it	lt
 	addlt	r4, #1
-lab59: 	cmp	sl, #0
+lab59: 	cmp	fp, #0
 	ldr	r3, [sp, #8]
 	sub	r6, r6, r4
 	ble	lab60
 	subs	r5, r5, r3
-	add	r2, fp, r3, lsl #3
-	add	r7, sl, r3
+	add	r2, r9, r3, lsl #3
+	add	r7, fp, r3
 	ldr	r3, [sp, #32]
 	adds	r2, #4
-	add	r9, r3, r7, lsl #3
+	add	sl, r3, r7, lsl #3
 	mov	r8, r5, lsl #3
 	mov	ip, r6
 	mov	lr, r4
-lab61: 	ldr	r6, [r2, #-4]
+lab61: 	mov	r3, r2
+	ldr	r6, [r2, #-4]
 	ldr	r4, [r3], #-4
 	add	r1, r3, r8
 	ldmia	r1, {r0, r1}
@@ -732,11 +770,12 @@ lab61: 	ldr	r6, [r2, #-4]
 	str	r6, [r3, r5, lsl #3]
 	str	r4, [r2, r5, lsl #3]
 	adds	r2, #8
-	cmp	r2, r9
+	cmp	r2, sl
 	bne	lab61
 	mov	r6, ip
 	mov	r4, lr
-lab81: 	strd	r4, r2, [sp]
+lab81: 	add	r2, sp, #248	; 0xf8
+	strd	r4, r2, [sp]
 	ldr	r1, [sp, #48]	; 0x30
 	ldr	r2, [sp, #40]	; 0x28
 	ldr	r3, [sp, #28]
@@ -748,38 +787,40 @@ lab81: 	strd	r4, r2, [sp]
 	ldr	r3, [sp, #24]
 	str	r3, [sp, #156]	; 0x9c
 	adds	r5, r2, #1
-	add	ip, fp, r8, lsl #3
+	add	ip, r9, r8, lsl #3
 	ldmia	ip, {r0, r1}
-	add	lr, fp, r5, lsl #3
-	ldr	r9, [fp, r5, lsl #3]
+	add	lr, r9, r5, lsl #3
+	ldr	sl, [r9, r5, lsl #3]
 	ldr	r2, [lr, #4]
 	stmia	lr, {r0, r1}
-	str	r9, [fp, r8, lsl #3]
+	str	sl, [r9, r8, lsl #3]
 	str	r2, [ip, #4]
 	add	r2, sp, #152	; 0x98
 	ldmia	r2, {r1, r2}
 	ldr	r0, [sp, #44]	; 0x2c
 	strd	r3, r4, [sp, #208]	; 0xd0
 	bl	WikiMerge.constprop.0.isra.0
-	cmp	sl, #512	; 0x200
+	cmp	fp, #512	; 0x200
 	mov	r5, r5, lsl #3
 	bgt	lab62
 	sub	r1, r5, #8
 	ldr	r2, [sp, #76]	; 0x4c
-	add	r1, fp
+	add	r1, r9
 	add	r0, sp, #248	; 0xf8
 	bl	memcpy
-lab73: 	sub	r5, r7, r6
+lab73: 	cmp	r6, #0
+	sub	r5, r7, r6
 	ble	lab63
 	ldr	r3, [sp, #32]
 	subs	r5, r5, r4
-	add	r2, fp, r4, lsl #3
+	add	r2, r9, r4, lsl #3
 	add	r4, r6
 	adds	r2, #4
 	add	lr, r3, r4, lsl #3
 	mov	r8, r5, lsl #3
 	mov	ip, r6
-lab64: 	ldr	r6, [r2, #-4]
+lab64: 	mov	r3, r2
+	ldr	r6, [r2, #-4]
 	ldr	r4, [r3], #-4
 	add	r1, r3, r8
 	ldmia	r1, {r0, r1}
@@ -793,7 +834,7 @@ lab64: 	ldr	r6, [r2, #-4]
 lab63: 	ldr	r3, [sp, #8]
 	subs	r3, r3, r6
 	str	r3, [sp, #28]
-	add	r3, sl
+	add	r3, fp
 	str	r3, [sp, #24]
 	add	r6, r3
 	ldr	r3, [sp, #12]
@@ -801,20 +842,22 @@ lab63: 	ldr	r3, [sp, #8]
 	beq	lab65
 	adds	r5, r7, #1
 	mov	r0, r3
-	add	r3, sl, r5
+	add	r3, fp, r5
 	cmp	r0, r3
 	ble	lab66
-	ldr	r1, [fp, r5, lsl #3]
-lab67: 	cmp	r1, r2
+	ldr	r1, [r9, r5, lsl #3]
+lab67: 	ldr	r2, [r9, r3, lsl #3]
+	cmp	r1, r2
 	it	gt
 	movgt	r5, r3
-	add	r3, sl
+	add	r3, fp
 	it	gt
 	movgt	r1, r2
 	cmp	r3, r0
 	blt	lab67
 	subs	r5, #1
-lab82: 	ldr	r9, [fp, r5, lsl #3]
+lab82: 	ldr	r4, [sp, #24]
+	ldr	sl, [r9, r5, lsl #3]
 	str	r7, [sp, #8]
 	subs	r3, r6, r4
 	cmp	r3, #0
@@ -823,7 +866,7 @@ lab55: 	ldrd	r3, r2, [sp, #16]
 	cmp	r3, r2
 	beq	lab69
 	subs	r6, r3, r2
-	cmp	sl, r6
+	cmp	fp, r6
 	ble	lab70
 	ldr	r4, [sp, #8]
 	subs	r0, r2, r3
@@ -852,12 +895,13 @@ lab62: 	ldr	r3, [sp, #44]	; 0x2c
 	subs	r2, r5, #4
 	subs	r5, r3, r1
 	ldr	r3, [sp, #32]
-	add	r2, fp
-	add	r9, r3, r7, lsl #3
+	add	r2, r9
+	add	sl, r3, r7, lsl #3
 	mov	r8, r5, lsl #3
 	mov	ip, r6
 	mov	lr, r4
-lab72: 	ldr	r6, [r2, #-4]
+lab72: 	mov	r3, r2
+	ldr	r6, [r2, #-4]
 	ldr	r4, [r3], #-4
 	add	r1, r3, r8
 	ldmia	r1, {r0, r1}
@@ -865,24 +909,25 @@ lab72: 	ldr	r6, [r2, #-4]
 	str	r6, [r3, r5, lsl #3]
 	str	r4, [r2, r5, lsl #3]
 	adds	r2, #8
-	cmp	r2, r9
+	cmp	r2, sl
 	bne	lab72
 	mov	r6, ip
 	mov	r4, lr
 	b	lab73
-lab70: 	cmp	sl, #0
+lab70: 	cmp	fp, #0
 	ble	lab74
 	ldr	r1, [sp, #8]
 	mov	r3, r2
 	subs	r4, r3, r1
 	ldr	r3, [sp, #32]
-	add	r2, fp, r1, lsl #3
-	add	r7, sl, r1
+	add	r2, r9, r1, lsl #3
+	add	r7, fp, r1
 	adds	r2, #4
 	add	r8, r3, r7, lsl #3
 	mov	lr, r4, lsl #3
 	mov	ip, r5
-lab75: 	ldr	r5, [r2, #-4]
+lab75: 	mov	r3, r2
+	ldr	r5, [r2, #-4]
 	ldr	r6, [r3], #-4
 	add	r1, r3, lr
 	ldmia	r1, {r0, r1}
@@ -893,18 +938,19 @@ lab75: 	ldr	r5, [r2, #-4]
 	cmp	r8, r2
 	bne	lab75
 	mov	r5, ip
-lab99: 	cmp	r5, r1
+lab99: 	ldrd	r1, r2, [sp, #8]
+	cmp	r5, r1
 	it	eq
 	moveq	r5, r2
-	add	r2, sl
+	add	r2, fp
 	str	r2, [sp, #12]
 	ldr	r2, [sp, #20]
 	ldr	r3, [sp, #16]
 	str	r7, [sp, #8]
-	add	r2, sl
+	add	r2, fp
 	str	r2, [sp, #20]
 	ldr	r2, [sp, #84]	; 0x54
-	add	r3, sl
+	add	r3, fp
 	cmp	r3, r2
 	it	ge
 	movge	r3, r2
@@ -939,7 +985,8 @@ lab49: 	ldr	r3, [sp, #80]	; 0x50
 	ldr	r2, [sp, #48]	; 0x30
 	subs	r3, r3, r2
 	str	r3, [sp, #92]	; 0x5c
-lab80: 	ldr	r2, [sp, #96]	; 0x60
+lab80: 	ldr	r3, [sp, #52]	; 0x34
+	ldr	r2, [sp, #96]	; 0x60
 	ldr	r1, [sp, #72]	; 0x48
 	add	r3, r2
 	str	r3, [sp, #52]	; 0x34
@@ -958,7 +1005,8 @@ lab80: 	ldr	r2, [sp, #96]	; 0x60
 	ldr	r3, [sp, #92]	; 0x5c
 	cmp	r3, #0
 	bgt	lab78
-lab146: 	subs	r3, #1
+lab146: 	ldr	r3, [sp, #124]	; 0x7c
+	subs	r3, #1
 	str	r3, [sp, #124]	; 0x7c
 	bne	lab79
 	add	sp, sp, #4320	; 0x10e0
@@ -977,7 +1025,7 @@ lab48: 	str	r1, [sp, #244]	; 0xf4
 	ldrd	r1, r2, [r3, #-8]
 	bl	Rotate.constprop.0
 	b	lab80
-lab60: 	add	r7, sl, r3
+lab60: 	add	r7, fp, r3
 	b	lab81
 lab65: 	ldr	r3, [sp, #28]
 	str	r3, [sp, #152]	; 0x98
@@ -999,7 +1047,8 @@ lab51: 	mov	r0, r4
 	ldr	r7, [sp, #116]	; 0x74
 	ldr	r4, [sp, #68]	; 0x44
 	movs	r5, #1
-lab86: 	ldr	r2, [fp, r4, lsl #3]
+lab86: 	add	r3, r9, r4, lsl #3
+	ldr	r2, [r9, r4, lsl #3]
 	ldr	r3, [r3, #-8]
 	cmp	r2, r3
 	add	r1, r5, #1
@@ -1017,28 +1066,31 @@ lab85: 	ldr	r3, [sp, #112]	; 0x70
 	cmp	r3, r5
 	bne	lab88
 	ldr	r2, [sp, #28]
-	ldr	r9, [sp, #64]	; 0x40
+	ldr	sl, [sp, #64]	; 0x40
 	str	r2, [sp, #120]	; 0x78
 	add	r3, r2
-	strd	r9, r3, [sp, #104]	; 0x68
+	strd	sl, r3, [sp, #104]	; 0x68
 	str	r3, [sp, #80]	; 0x50
 	movs	r3, #0
 	str	r2, [sp, #44]	; 0x2c
 	str	r3, [sp, #16]
-lab164: 	mov	r2, r4
-lab155: 	ldr	r7, [sp, #148]	; 0x94
-	str	sl, [sp, #8]
+lab164: 	str	r5, [sp, #92]	; 0x5c
+	mov	r2, r4
+lab155: 	ldr	r3, [sp, #68]	; 0x44
+	ldr	r7, [sp, #148]	; 0x94
+	str	fp, [sp, #8]
 	movs	r6, #0
 	add	r8, r3, #4294967295	; 0xffffffff
-lab91: 	add	sl, fp, r4, lsl #3
+lab91: 	cmp	r4, r8
+	add	fp, r9, r4, lsl #3
 	add	lr, r2, #1
 	add	r1, r4, #1
 	rsb	r0, r6, #0
 	add	r3, sp, #248	; 0xf8
 	beq	lab89
-	ldr	sl, [sl, #-8]
-	ldr	ip, [fp, r4, lsl #3]
-	cmp	sl, ip
+	ldr	fp, [fp, #-8]
+	ldr	ip, [r9, r4, lsl #3]
+	cmp	fp, ip
 	blt	lab89
 	ble	lab90
 lab89: 	strd	r1, lr, [sp, #224]	; 0xe0
@@ -1053,28 +1105,30 @@ lab90: 	cmp	r6, r5
 	blt	lab91
 	ldr	r3, [sp, #108]	; 0x6c
 	ldr	r2, [sp, #36]	; 0x24
-	ldr	sl, [sp, #8]
+	ldr	fp, [sp, #8]
 	subs	r7, r2, r3
-	add	r3, fp, r3, lsl #3
+	add	r3, r9, r3, lsl #3
 	str	r3, [sp, #8]
 	ldr	r3, [sp, #28]
 	str	r3, [sp, #48]	; 0x30
-lab157: 	cmp	r3, #0
+lab157: 	ldr	r3, [sp, #16]
+	cmp	r3, #0
 	ble	lab92
 	ldr	r3, [sp, #64]	; 0x40
-	str	sl, [sp, #20]
+	str	fp, [sp, #20]
 	subs	r6, r3, #1
-	mov	r4, r9
-	mov	sl, r6
-	mov	r6, r9
-	ldr	r9, [sp, #16]
+	mov	r4, sl
+	mov	fp, r6
+	mov	r6, sl
+	ldr	sl, [sp, #16]
 	movs	r5, #0
 	add	r8, sp, #216	; 0xd8
-lab95: 	add	r2, fp, r4, lsl #3
+lab95: 	cmp	r4, fp
+	add	r2, r9, r4, lsl #3
 	mov	r0, r5
 	add	r3, sp, #248	; 0xf8
 	beq	lab93
-	ldr	r1, [fp, r4, lsl #3]
+	ldr	r1, [r9, r4, lsl #3]
 	ldr	r2, [r2, #8]
 	cmp	r1, r2
 	blt	lab93
@@ -1086,16 +1140,16 @@ lab93: 	strd	r6, r4, [sp, #216]	; 0xd8
 	bl	Rotate.constprop.0
 	subs	r6, r4, r5
 	adds	r5, #1
-lab94: 	cmp	r5, r9
+lab94: 	cmp	r5, sl
 	add	r4, r4, #1
 	blt	lab95
-	ldr	sl, [sp, #20]
+	ldr	fp, [sp, #20]
 lab92: 	ldr	r3, [sp, #28]
 	ldr	r2, [sp, #36]	; 0x24
 	str	r3, [sp, #128]	; 0x80
 	ldr	r3, [sp, #104]	; 0x68
 	str	r3, [sp, #84]	; 0x54
-	sub	r9, r3, r2
+	sub	sl, r3, r2
 	ldr	r3, [sp, #64]	; 0x40
 	str	r3, [sp, #132]	; 0x84
 	ldr	r3, [sp, #108]	; 0x6c
@@ -1107,13 +1161,14 @@ lab43: 	adds	r5, #25
 	b	lab47
 lab54: 	ldr	r1, [sp, #28]
 	ldr	r3, [sp, #44]	; 0x2c
-	add	r2, fp, r1, lsl #3
-	add	ip, fp, #4
+	add	r2, r9, r1, lsl #3
+	add	ip, r9, #4
 	subs	r4, r3, r1
 	adds	r2, #4
 	add	ip, ip, r8, lsl #3
 	mov	lr, r4, lsl #3
-lab97: 	ldr	r7, [r2, #-4]
+lab97: 	mov	r3, r2
+	ldr	r7, [r2, #-4]
 	ldr	r6, [r3], #-4
 	add	r1, r3, lr
 	ldmia	r1, {r0, r1}
@@ -1125,7 +1180,7 @@ lab97: 	ldr	r7, [r2, #-4]
 	bne	lab97
 	b	lab98
 lab74: 	ldr	r3, [sp, #8]
-	add	r7, sl, r3
+	add	r7, fp, r3
 	b	lab99
 lab88: 	ldr	r3, [sp, #64]	; 0x40
 	ldr	r2, [sp, #36]	; 0x24
@@ -1135,7 +1190,8 @@ lab88: 	ldr	r3, [sp, #64]	; 0x40
 	ldr	r6, [sp, #116]	; 0x74
 	movs	r0, #1
 	subs	r4, r2, #1
-lab104: 	ldr	r1, [fp, r3, lsl #3]
+lab104: 	add	r2, r9, r3, lsl #3
+	ldr	r1, [r9, r3, lsl #3]
 	ldr	r2, [r2, #8]
 	cmp	r2, r1
 	add	r5, r0, #1
@@ -1146,40 +1202,46 @@ lab101: 	cmp	r6, r0
 	mov	r0, r5
 lab102: 	subs	r3, #1
 	cmp	r3, r4
-	mov	r9, r4
+	mov	sl, r4
 	bne	lab104
-lab166: 	cmp	r2, r0
-	add	r3, r0, r9
+lab166: 	ldr	r2, [sp, #112]	; 0x70
+	cmp	r2, r0
+	add	r3, r0, sl
 	beq	lab105
-lab156: lab131: 	str	sl, [sp, #16]
+lab156: 	ble	lab106
+lab131: 	ldr	r3, [sp, #64]	; 0x40
+	str	fp, [sp, #16]
 	subs	r6, r3, #1
-	mov	r9, r6
+	mov	sl, r6
 	ldr	r6, [sp, #12]
 	ldr	r5, [sp, #28]
 	add	r8, sp, #232	; 0xe8
-	mov	sl, r3
-	cmp	r6, r9
-	strd	r6, sl, [sp, #168]	; 0xa8
+	mov	fp, r3
+	cmp	r6, sl
+	strd	r6, fp, [sp, #168]	; 0xa8
 	mov	r7, #512	; 0x200
 	str	r8, [sp, #8]
 	bge	lab107
-lab116: 	mov	r4, r6
-	mov	r2, r9
-lab109: 	add	r3, r4, r3, asr #1
-	ldr	r1, [fp, r3, lsl #3]
+lab116: 	ldr	r0, [r9, r5, lsl #3]
+	mov	r4, r6
+	mov	r2, sl
+lab109: 	subs	r3, r2, r4
+	add	r3, r4, r3, asr #1
+	ldr	r1, [r9, r3, lsl #3]
 	cmp	r1, r0
 	bge	lab108
 	adds	r4, r3, #1
 	cmp	r4, r2
 	blt	lab109
-lab117: 	bne	lab110
+lab117: 	cmp	r4, sl
+	bne	lab110
 	ldr	r3, [sp, #52]	; 0x34
 	ldr	r2, [sp, #88]	; 0x58
 	ldr	r2, [r3, r2]
-	ldr	r3, [fp, r5, lsl #3]
+	ldr	r3, [r9, r5, lsl #3]
 	cmp	r2, r3
 	it	lt
-	movlt	r4, sl
+	movlt	r4, fp
 lab110: 	strd	r5, r4, [sp, #232]	; 0xe8
 	ldr	r2, [sp, #8]
 	str	r7, [sp, #0]
@@ -1193,10 +1255,11 @@ lab110: 	strd	r5, r4, [sp, #232]	; 0xe8
 	strd	r5, r6, [sp, #160]	; 0xa0
 	add	lr, r8, r5
 	bge	lab111
-	ldr	r0, [fp, lr, lsl #3]
+	ldr	r0, [r9, lr, lsl #3]
 	mov	r2, ip
-lab113: 	add	r3, r5, r3, asr #1
-	ldr	r1, [fp, r3, lsl #3]
+lab113: 	subs	r3, r2, r5
+	add	r3, r5, r3, asr #1
+	ldr	r1, [r9, r3, lsl #3]
 	cmp	r1, r0
 	bgt	lab112
 	adds	r5, r3, #1
@@ -1204,13 +1267,15 @@ lab113: 	add	r3, r5, r3, asr #1
 	blt	lab113
 lab111: 	cmp	r5, ip
 	beq	lab114
-lab118: 	cmp	r8, #0
+lab118: 	sub	r8, r4, r5
+	cmp	r8, #0
 	ble	lab115
-lab119: 	cmp	r3, #0
+lab119: 	sub	r3, fp, r4
+	cmp	r3, #0
 	ble	lab115
 	mov	r6, r4
-	cmp	r6, r9
-	strd	r6, sl, [sp, #168]	; 0xa8
+	cmp	r6, sl
+	strd	r6, fp, [sp, #168]	; 0xa8
 	blt	lab116
 lab107: 	mov	r4, r6
 	b	lab117
@@ -1222,14 +1287,14 @@ lab108: 	cmp	r3, r4
 	ble	lab117
 	mov	r2, r3
 	b	lab109
-lab114: 	ldr	r2, [fp, lr, lsl #3]
-	ldr	r3, [fp, r5, lsl #3]
+lab114: 	ldr	r2, [r9, lr, lsl #3]
+	ldr	r3, [r9, r5, lsl #3]
 	cmp	r2, r3
 	blt	lab118
 	cmp	r8, #0
 	mov	r5, r6
 	bgt	lab119
-lab115: 	ldr	sl, [sp, #16]
+lab115: 	ldr	fp, [sp, #16]
 	b	lab80
 lab87: 	ldr	ip, [sp, #36]	; 0x24
 	adds	r2, r4, #1
@@ -1237,7 +1302,8 @@ lab87: 	ldr	ip, [sp, #36]	; 0x24
 	ble	lab120
 	ldr	lr, [sp, #116]	; 0x74
 	movs	r0, #0
-lab124: 	ldr	r1, [fp, r2, lsl #3]
+lab124: 	add	r3, r9, r2, lsl #3
+	ldr	r1, [r9, r2, lsl #3]
 	ldr	r3, [r3, #-8]
 	cmp	r1, r3
 	add	r7, r0, #1
@@ -1263,7 +1329,8 @@ lab120: 	ldr	r3, [sp, #112]	; 0x70
 	ldr	r6, [sp, #116]	; 0x74
 	movs	r0, #1
 	subs	r4, r3, #1
-lab130: 	ldr	r1, [fp, r2, lsl #3]
+lab130: 	add	r3, r9, r2, lsl #3
+	ldr	r1, [r9, r2, lsl #3]
 	ldr	r3, [r3, #8]
 	cmp	r3, r1
 	add	r5, r0, #1
@@ -1276,13 +1343,15 @@ lab129: 	subs	r2, #1
 	cmp	r2, r4
 	mov	r3, r4
 	bne	lab130
-lab159: 	subs	r3, #1
+lab159: 	ldr	r2, [sp, #36]	; 0x24
+	subs	r3, #1
 	cmp	r2, r3
 	bgt	lab131
 	ldr	r6, [sp, #116]	; 0x74
 	movs	r0, #0
 	subs	r4, r2, #1
-lab135: 	ldr	r1, [fp, r3, lsl #3]
+lab135: 	add	r2, r9, r3, lsl #3
+	ldr	r1, [r9, r3, lsl #3]
 	ldr	r2, [r2, #8]
 	cmp	r2, r1
 	add	r5, r0, #1
@@ -1293,12 +1362,13 @@ lab132: 	cmp	r6, r0
 	mov	r0, r5
 lab133: 	subs	r3, #1
 	cmp	r3, r4
-	mov	r9, r4
+	mov	sl, r4
 	bne	lab135
 	ldr	r3, [sp, #112]	; 0x70
 	cmp	r3, r0
 	bne	lab131
-lab158: 	ldr	r3, [sp, #116]	; 0x74
+lab158: 	mov	r0, r3
+	ldr	r3, [sp, #116]	; 0x74
 	ldr	r2, [sp, #64]	; 0x40
 	ldr	r1, [sp, #36]	; 0x24
 	mvns	r3, r3
@@ -1310,7 +1380,7 @@ lab158: 	ldr	r3, [sp, #116]	; 0x74
 	str	r3, [sp, #44]	; 0x2c
 	ldr	r3, [sp, #140]	; 0x8c
 	str	r2, [sp, #120]	; 0x78
-	add	r3, r9
+	add	r3, sl
 	b	lab136
 lab78: 	ldr	r3, [sp, #44]	; 0x2c
 	adds	r5, r3, #1
@@ -1319,14 +1389,16 @@ lab78: 	ldr	r3, [sp, #44]	; 0x2c
 	ble	lab137
 	ldr	r6, [sp, #44]	; 0x2c
 	mov	ip, r3
-lab141: 	ldr	r4, [fp, r5, lsl #3]
+lab141: 	add	r3, r9, r5, lsl #3
+	ldr	r4, [r9, r5, lsl #3]
 	ldr	r7, [r3, #4]
 	mov	r2, r5
 	b	lab138
-lab140: 	cmp	r6, r2
+lab140: 	ldmdb	r3, {r0, r1}
+	cmp	r6, r2
 	stmia	r3, {r0, r1}
 	bge	lab139
-lab138: 	add	r3, fp, r2, lsl #3
+lab138: 	add	r3, r9, r2, lsl #3
 	subs	r2, #1
 	ldr	r1, [r3, #-8]
 	cmp	r1, r4
@@ -1345,9 +1417,11 @@ lab137: 	ldr	r3, [sp, #108]	; 0x6c
 	mov	r4, ip
 	mov	r8, #512	; 0x200
 	add	r7, sp, #184	; 0xb8
-lab145: 	cmp	r3, r4
+lab145: 	ldr	r3, [sp, #104]	; 0x68
+	cmp	r3, r4
 	beq	lab143
-lab151: 	ldr	r2, [fp, r4, lsl #3]
+lab151: 	ldr	r1, [r9, r6, lsl #3]
+	ldr	r2, [r9, r4, lsl #3]
 	cmp	r1, r2
 	sub	r5, r4, ip
 	sub	r0, ip, r4
@@ -1362,14 +1436,16 @@ lab142: 	ldr	r3, [sp, #132]	; 0x84
 	subs	r3, r3, r2
 	cmp	r3, #0
 	ble	lab146
-	ldrd	r9, r7, [sp, #128]	; 0x80
+	ldrd	sl, r7, [sp, #128]	; 0x80
 	mov	r6, r2
 	mvn	r4, #3758096384	; 0xe0000000
 	add	r5, sp, #176	; 0xb0
-lab153: 	add	r0, r6, r4
+lab153: 	cmp	sl, r6
+	add	r0, r6, r4
 	add	r1, r7, r4
 	beq	lab147
-lab149: 	ldr	r1, [fp, r1, lsl #3]
+lab149: 	ldr	r0, [r9, r0, lsl #3]
+	ldr	r1, [r9, r1, lsl #3]
 	cmp	r0, r1
 	sub	r8, r2, r6
 	mov	ip, #512	; 0x200
@@ -1379,7 +1455,7 @@ lab149: 	ldr	r1, [fp, r1, lsl #3]
 	cmp	lr, #0
 	add	r6, r6, #4294967295	; 0xffffffff
 	ble	lab146
-	cmp	r9, r6
+	cmp	sl, r6
 	add	r0, r6, r4
 	add	r1, r7, r4
 	bne	lab149
@@ -1400,7 +1476,8 @@ lab147: 	mov	r8, r7
 	subs	r3, r6, r7
 	cmp	r3, #0
 	ble	lab146
-lab150: 	add	r3, sp, #248	; 0xf8
+lab150: 	strd	r7, r6, [sp, #176]	; 0xb0
+	add	r3, sp, #248	; 0xf8
 	ldmia	r4, {r1, r2}
 	movs	r0, #0
 	str	r5, [sp, #0]
@@ -1411,7 +1488,7 @@ lab150: 	add	r3, sp, #248	; 0xf8
 	bgt	lab150
 	b	lab146
 lab139: 	adds	r5, #1
-	add	r3, fp, r2, lsl #3
+	add	r3, r9, r2, lsl #3
 	cmp	ip, r5
 	strd	r4, r7, [r3]
 	bgt	lab141
@@ -1446,7 +1523,8 @@ lab143: 	strd	r6, r3, [sp, #184]	; 0xb8
 	subs	r3, r3, r6
 	cmp	r3, #0
 	ble	lab142
-lab152: 	str	r8, [sp]
+lab152: 	strd	r6, r4, [sp, #184]	; 0xb8
+	str	r8, [sp]
 	add	r3, sp, #248	; 0xf8
 	ldmia	r7, {r1, r2}
 	adds	r6, #1
@@ -1483,18 +1561,18 @@ lab125: 	ldr	r3, [sp, #140]	; 0x8c
 	ldr	r3, [sp, #112]	; 0x70
 	str	r3, [sp, #92]	; 0x5c
 	ldr	r3, [sp, #80]	; 0x50
-	ldr	r9, [sp, #64]	; 0x40
+	ldr	sl, [sp, #64]	; 0x40
 	str	r3, [sp, #44]	; 0x2c
 	movs	r3, #0
-	str	r9, [sp, #104]	; 0x68
+	str	sl, [sp, #104]	; 0x68
 	mov	r4, r2
 	str	r3, [sp, #16]
 	b	lab155
 lab103: 	ldr	r2, [sp, #112]	; 0x70
 	mov	r0, r5
-	mov	r9, r3
+	mov	sl, r3
 	cmp	r2, r0
-	add	r3, r0, r9
+	add	r3, r0, sl
 	bne	lab156
 lab105: 	mov	r1, r2
 	ldr	r2, [sp, #64]	; 0x40
@@ -1505,7 +1583,8 @@ lab105: 	mov	r1, r2
 	str	r2, [sp, #44]	; 0x2c
 lab136: 	ldr	r2, [sp, #64]	; 0x40
 	str	r2, [sp, #80]	; 0x50
-lab167: 	ldr	r3, [sp, #64]	; 0x40
+lab167: 	sub	r2, r3, sl
+	ldr	r3, [sp, #64]	; 0x40
 	ldr	r7, [sp, #100]	; 0x64
 	str	r2, [sp, #16]
 	subs	r3, r3, r2
@@ -1514,7 +1593,7 @@ lab167: 	ldr	r3, [sp, #64]	; 0x40
 	str	r0, [sp, #92]	; 0x5c
 	str	r3, [sp, #108]	; 0x6c
 	b	lab157
-lab134: 	mov	r9, r3
+lab134: 	mov	sl, r3
 	ldr	r3, [sp, #112]	; 0x70
 	mov	r0, r5
 	cmp	r3, r0
@@ -1529,7 +1608,8 @@ lab126: 	ldr	r2, [sp, #36]	; 0x24
 	ldr	ip, [sp, #116]	; 0x74
 	movs	r0, #1
 	subs	r6, r2, #1
-lab163: 	ldr	r1, [fp, r3, lsl #3]
+lab163: 	add	r2, r9, r3, lsl #3
+	ldr	r1, [r9, r3, lsl #3]
 	ldr	r7, [r2, #8]
 	cmp	r7, r1
 	add	r2, r0, #1
@@ -1540,11 +1620,12 @@ lab160: 	cmp	ip, r0
 	mov	r0, r2
 lab161: 	subs	r3, #1
 	cmp	r3, r6
-	mov	r9, r6
+	mov	sl, r6
 	bne	lab163
 	cmp	r5, r0
 	bne	lab131
-lab165: 	ldr	r3, [sp, #28]
+lab165: 	ldr	r1, [sp, #64]	; 0x40
+	ldr	r3, [sp, #28]
 	str	r5, [sp, #16]
 	adds	r3, r5, r3
 	subs	r2, r1, r5
@@ -1556,16 +1637,16 @@ lab165: 	ldr	r3, [sp, #28]
 	b	lab164
 lab162: 	mov	r0, r2
 	cmp	r5, r0
-	mov	r9, r3
+	mov	sl, r3
 	bne	lab131
 	b	lab165
-lab100: 	mov	r9, r3
+lab100: 	mov	sl, r3
 	movs	r0, #1
 	b	lab166
 lab154: 	ldr	r3, [sp, #120]	; 0x78
 	ldr	r2, [sp, #36]	; 0x24
 	subs	r7, r2, r3
-	add	r2, fp, r3, lsl #3
+	add	r2, r9, r3, lsl #3
 	str	r2, [sp, #8]
 	ldr	r2, [sp, #112]	; 0x70
 	str	r2, [sp, #92]	; 0x5c
@@ -1580,26 +1661,32 @@ lab106: 	ldr	r2, [sp, #28]
 	str	r3, [sp, #80]	; 0x50
 	str	r2, [sp, #44]	; 0x2c
 	str	r2, [sp, #120]	; 0x78
-	str	r9, [sp, #48]	; 0x30
+	str	sl, [sp, #48]	; 0x30
 	b	lab167
+	nop
 benchmark_body.constprop.0:
 	stmdb	sp!, {r4, r5, r6, r7, r8, r9, lr}
-	ldr	r5, [pc, #84]	; (8001344 <benchmark_body.constprop.0+0x5c>)
-	ldmia	r5!, {r0, r1, r2, r3}
+	movw	r4, #11864	; 0x2e58
+	movt	r4, #2048	; 0x800
+	ldmia	r4!, {r0, r1, r2, r3}
 	sub	sp, #44	; 0x2c
-	add	r4, sp, #4
-	stmia	r4!, {r0, r1, r2, r3}
-	ldmia	r5!, {r0, r1, r2, r3}
-	stmia	r4!, {r0, r1, r2, r3}
-	ldr	r3, [r5, #0]
-	ldr	r5, [pc, #72]	; (8001348 <benchmark_body.constprop.0+0x60>)
-	str	r3, [r4, #0]
+	add	r6, sp, #4
+	stmia	r6!, {r0, r1, r2, r3}
+	ldmia	r4!, {r0, r1, r2, r3}
+	stmia	r6!, {r0, r1, r2, r3}
+	movw	r5, #4
+	ldr	r3, [r4, #0]
+	str	r3, [r6, #0]
 	mov	r8, #168	; 0xa8
-	mov	r9, r4
-lab170: 	bl	srand_beebs
+	mov	r9, r6
+	movt	r5, #8192	; 0x2000
+lab170: 	movs	r0, #0
+	bl	srand_beebs
 	mov	r7, sp
-lab169: 	movs	r4, #0
-lab168: 	mov	r1, #400	; 0x190
+lab169: 	ldr	r6, [r7, #4]!
+	movs	r4, #0
+lab168: 	mov	r0, r4
+	mov	r1, #400	; 0x190
 	blx	r6
 	add	r3, r5, r4, lsl #3
 	str	r0, [r5, r4, lsl #3]
@@ -1615,29 +1702,32 @@ lab168: 	mov	r1, #400	; 0x190
 	mov	r0, r8
 	add	sp, #44	; 0x2c
 	ldmia	sp!, {r4, r5, r6, r7, r8, r9, pc}
-	.word	0x08002de4
-	.word	0x20000004
 benchmark_body.isra.0:
 	stmdb	sp!, {r4, r5, r6, r7, r8, r9, sl, lr}
-	ldr	r5, [pc, #92]	; (80013b0 <benchmark_body.isra.0+0x64>)
+	movw	r4, #11864	; 0x2e58
+	movt	r4, #2048	; 0x800
 	mov	r9, r0
-	ldmia	r5!, {r0, r1, r2, r3}
+	ldmia	r4!, {r0, r1, r2, r3}
 	sub	sp, #40	; 0x28
-	add	r4, sp, #4
-	stmia	r4!, {r0, r1, r2, r3}
-	ldmia	r5!, {r0, r1, r2, r3}
-	stmia	r4!, {r0, r1, r2, r3}
+	add	r5, sp, #4
+	stmia	r5!, {r0, r1, r2, r3}
+	ldmia	r4!, {r0, r1, r2, r3}
+	stmia	r5!, {r0, r1, r2, r3}
 	cmp	r9, #0
-	ldr	r3, [r5, #0]
-	str	r3, [r4, #0]
+	ldr	r3, [r4, #0]
+	str	r3, [r5, #0]
 	ble	lab171
-	ldr	r5, [pc, #72]	; (80013b4 <benchmark_body.isra.0+0x68>)
+	movw	r5, #4
 	mov	sl, #0
-	mov	r8, r4
-lab174: 	bl	srand_beebs
+	add	r8, sp, #36	; 0x24
+	movt	r5, #8192	; 0x2000
+lab174: 	movs	r0, #0
+	bl	srand_beebs
 	mov	r7, sp
-lab173: 	movs	r4, #0
-lab172: 	mov	r1, #400	; 0x190
+lab173: 	ldr	r6, [r7, #4]!
+	movs	r4, #0
+lab172: 	mov	r0, r4
+	mov	r1, #400	; 0x190
 	blx	r6
 	add	r3, r5, r4, lsl #3
 	str	r0, [r5, r4, lsl #3]
@@ -1653,8 +1743,7 @@ lab172: 	mov	r1, #400	; 0x190
 	bne	lab174
 lab171: 	add	sp, #40	; 0x28
 	ldmia	sp!, {r4, r5, r6, r7, r8, r9, sl, pc}
-	.word	0x08002de4
-	.word	0x20000004
+	nop
 Rotate.constprop.1:
 	stmdb	sp!, {r4, r5, r6, r7, r8, r9, sl, lr}
 	sub	sp, #8
@@ -1678,7 +1767,8 @@ Rotate.constprop.1:
 	bge	lab176
 	cmp	r8, #512	; 0x200
 	ble	lab177
-lab183: 	cmp	r9, #1
+lab183: 	add	r2, r9, r9, lsr #31
+	cmp	r9, #1
 	mov	r2, r2, asr #1
 	ble	lab178
 	subs	r3, r5, r2
@@ -1688,7 +1778,8 @@ lab183: 	cmp	r9, #1
 	add	r2, r4, r2, lsl #3
 	adds	r3, #4
 	add	r9, r9, r5, lsl #3
-lab179: 	ldmia	r1, {r0, r1}
+lab179: 	subs	r1, r3, #4
+	ldmia	r1, {r0, r1}
 	ldrd	lr, ip, [r2, #-8]
 	subs	r2, #8
 	stmia	r2, {r0, r1}
@@ -1707,7 +1798,8 @@ lab178: 	add	r3, r8, r8, lsr #31
 	add	r2, r4, r2, lsl #3
 	adds	r5, #4
 	add	lr, lr, #4
-lab181: 	ldmia	r3, {r0, r1}
+lab181: 	subs	r3, r5, #4
+	ldmia	r3, {r0, r1}
 	ldrd	ip, r3, [r2, #-8]
 	subs	r2, #8
 	stmia	r2, {r0, r1}
@@ -1727,7 +1819,8 @@ lab180: 	subs	r2, r6, r7
 	add	r3, r4, r3, lsl #3
 	adds	r2, #4
 	adds	r6, #4
-lab182: 	ldmia	r1, {r0, r1}
+lab182: 	subs	r1, r2, #4
+	ldmia	r1, {r0, r1}
 	ldrd	r5, r4, [r3, #-8]
 	subs	r3, #8
 	stmia	r3, {r0, r1}
@@ -1753,7 +1846,8 @@ lab176: 	cmp	r9, #512	; 0x200
 	mov	r2, r9
 	mov	r1, sl
 	add	r0, r4, r0, lsl #3
-lab184: 	ldmia	sp!, {r4, r5, r6, r7, r8, r9, sl, lr}
+lab184: 	add	sp, #8
+	ldmia	sp!, {r4, r5, r6, r7, r8, r9, sl, lr}
 	b	memcpy
 lab177: 	mov	r8, r8, lsl #3
 	add	r7, r0, r2, lsl #3
@@ -1816,7 +1910,8 @@ BinaryFirst:
 	bge	lab185
 	add	r6, r0, r1, lsl #3
 	mov	r7, sl
-lab187: 	add	r4, r5, r4, asr #1
+lab187: 	subs	r4, r7, r5
+	add	r4, r5, r4, asr #1
 	add	r1, r8, r4, lsl #3
 	ldmia	r6, {r2, r3}
 	ldmia	r1, {r0, r1}
@@ -1827,7 +1922,8 @@ lab187: 	add	r4, r5, r4, asr #1
 	blt	lab187
 lab185: 	cmp	sl, r5
 	beq	lab188
-lab189: 	add	sp, #12
+lab189: 	mov	r0, r5
+	add	sp, #12
 	ldmia	sp!, {r4, r5, r6, r7, r8, r9, sl, fp, pc}
 lab186: 	cmp	r4, r5
 	ble	lab185
@@ -1859,7 +1955,8 @@ BinaryLast:
 	bge	lab190
 	add	r6, r0, r1, lsl #3
 	mov	r7, sl
-lab192: 	add	r4, r5, r4, asr #1
+lab192: 	subs	r4, r7, r5
+	add	r4, r5, r4, asr #1
 	add	r3, r8, r4, lsl #3
 	ldmia	r3, {r2, r3}
 	ldmia	r6, {r0, r1}
@@ -1870,7 +1967,8 @@ lab192: 	add	r4, r5, r4, asr #1
 	blt	lab192
 lab190: 	cmp	sl, r5
 	beq	lab193
-lab194: 	add	sp, #12
+lab194: 	mov	r0, r5
+	add	sp, #12
 	ldmia	sp!, {r4, r5, r6, r7, r8, r9, sl, fp, pc}
 lab191: 	cmp	r4, r5
 	ble	lab190
@@ -1901,11 +1999,13 @@ InsertionSort:
 	mov	r7, r3
 	add	r4, r0, r1, lsl #3
 	add	r6, sp, #16
-lab199: 	ldmia	sl, {r0, r1}
+lab199: 	add	sl, r4, #8
+	ldmia	sl, {r0, r1}
 	mov	r5, r9
 	stmia	r6, {r0, r1}
 	b	lab196
-lab198: 	subs	r5, #1
+lab198: 	ldmia	r4, {r0, r1}
+	subs	r5, #1
 	cmp	r8, r5
 	stmia	r3, {r0, r1}
 	sub	r4, r4, #8
@@ -1945,7 +2045,8 @@ Reverse:
 	add	r3, r0, r3, lsl #3
 	adds	r2, #4
 	add	ip, ip, #4
-lab201: 	ldmia	r1, {r0, r1}
+lab201: 	subs	r1, r2, #4
+	ldmia	r1, {r0, r1}
 	ldrd	r5, r4, [r3, #-8]
 	subs	r3, #8
 	stmia	r3, {r0, r1}
@@ -1965,7 +2066,8 @@ BlockSwap:
 	add	r8, r3, #4
 	add	r7, lr, #4
 	movs	r2, #0
-lab203: 	ldmia	r1, {r0, r1}
+lab203: 	add	r1, lr, r2, lsl #3
+	ldmia	r1, {r0, r1}
 	ldr	r5, [r3, r2, lsl #3]
 	ldr	r4, [r8, r2, lsl #3]
 	add	ip, r3, r2, lsl #3
@@ -2000,7 +2102,8 @@ Rotate:
 	bge	lab205
 	cmp	r3, r8
 	bge	lab206
-lab212: 	cmp	r9, #1
+lab212: 	add	r2, r9, r9, lsr #31
+	cmp	r9, #1
 	mov	r2, r2, asr #1
 	ble	lab207
 	subs	r3, r5, r2
@@ -2010,7 +2113,8 @@ lab212: 	cmp	r9, #1
 	add	r2, r4, r2, lsl #3
 	adds	r3, #4
 	add	r9, r9, r5, lsl #3
-lab208: 	ldmia	r1, {r0, r1}
+lab208: 	subs	r1, r3, #4
+	ldmia	r1, {r0, r1}
 	ldrd	lr, ip, [r2, #-8]
 	subs	r2, #8
 	stmia	r2, {r0, r1}
@@ -2029,7 +2133,8 @@ lab207: 	add	r3, r8, r8, lsr #31
 	add	r2, r4, r2, lsl #3
 	adds	r5, #4
 	add	lr, lr, #4
-lab210: 	ldmia	r3, {r0, r1}
+lab210: 	subs	r3, r5, #4
+	ldmia	r3, {r0, r1}
 	ldrd	ip, r3, [r2, #-8]
 	subs	r2, #8
 	stmia	r2, {r0, r1}
@@ -2049,7 +2154,8 @@ lab209: 	subs	r2, r6, r7
 	add	r3, r4, r3, lsl #3
 	adds	r2, #4
 	adds	r6, #4
-lab211: 	ldmia	r1, {r0, r1}
+lab211: 	subs	r1, r2, #4
+	ldmia	r1, {r0, r1}
 	ldrd	r5, r4, [r3, #-8]
 	subs	r3, #8
 	stmia	r3, {r0, r1}
@@ -2075,7 +2181,8 @@ lab205: 	cmp	r3, r9
 	mov	r2, r9
 	mov	r1, sl
 	add	r0, r4, r0, lsl #3
-lab213: 	ldmia	sp!, {r4, r5, r6, r7, r8, r9, sl, lr}
+lab213: 	add	sp, #8
+	ldmia	sp!, {r4, r5, r6, r7, r8, r9, sl, lr}
 	b	memcpy
 lab206: 	mov	r8, r8, lsl #3
 	add	r7, r0, r2, lsl #3
@@ -2127,11 +2234,13 @@ WikiMerge:
 	add	r5, r3, #8
 	mov	r4, ip
 	b	lab216
-lab217: 	adds	r6, #8
+lab217: 	ldmia	r6, {r0, r1}
+	adds	r6, #8
 	cmp	sl, r6
 	stmdb	r5, {r0, r1}
 	beq	lab215
-lab218: lab216: 	ldmia	r6, {r2, r3}
+lab218: 	adds	r5, #8
+lab216: 	ldmia	r6, {r2, r3}
 	ldmia	r7, {r0, r1}
 	blx	r4
 	mov	r3, r5
@@ -2167,7 +2276,8 @@ lab214: 	subs	r3, r2, r0
 	mov	sl, fp
 	mov	r8, r0
 	b	lab221
-lab223: 	ldmia	r6, {r0, r1}
+lab223: 	mov	r3, r7
+	ldmia	r6, {r0, r1}
 	ldr	r2, [r3], #-4
 	ldr	r5, [r7, #-4]
 	stmia	r3, {r0, r1}
@@ -2179,7 +2289,8 @@ lab223: 	ldmia	r6, {r0, r1}
 	bge	lab222
 	ldr	r3, [sp, #16]
 	add	r9, sl, r3
-lab225: 	adds	r3, #1
+lab225: 	ldr	r3, [sp, #4]
+	adds	r3, #1
 	str	r3, [sp, #4]
 	adds	r7, #8
 lab221: 	add	r5, r4, r8, lsl #3
@@ -2219,7 +2330,8 @@ lab219: 	cmp	r8, #0
 	add	lr, r5, #4
 	add	ip, r4, #4
 	movs	r2, #0
-lab226: 	ldmia	r3, {r0, r1}
+lab226: 	add	r3, r4, r2, lsl #3
+	ldmia	r3, {r0, r1}
 	ldr	r7, [r5, r2, lsl #3]
 	ldr	r6, [lr, r2, lsl #3]
 	add	r3, r5, r2, lsl #3
@@ -2281,7 +2393,8 @@ WikiSort:
 	mov	r3, sl
 	add	r4, r7, r2
 	bgt	lab228
-lab230: 	strd	r2, r4, [sp, #208]	; 0xd0
+lab230: 	adds	r4, #1
+	strd	r2, r4, [sp, #208]	; 0xd0
 	mov	r0, r6
 	ldmia	r8, {r1, r2}
 	bl	InsertionSort
@@ -2289,7 +2402,8 @@ lab230: 	strd	r2, r4, [sp, #208]	; 0xd0
 	cmp	r3, r4
 	sub	r5, r5, r9
 	ble	lab229
-lab231: 	mov	r2, r4
+lab231: 	add	r5, fp
+	mov	r2, r4
 	cmp	r9, r5
 	mov	r3, sl
 	add	r4, r7, r2
@@ -2307,7 +2421,8 @@ lab229: 	ldr	r3, [sp, #152]	; 0x98
 	movs	r3, #16
 	str	r3, [sp, #136]	; 0x88
 	mov	r7, r6
-lab275: 	mov	r0, r4
+lab275: 	ldr	r4, [sp, #68]	; 0x44
+	mov	r0, r4
 	bl	__aeabi_i2d
 	bl	sqrt
 	bl	__aeabi_d2iz
@@ -2332,7 +2447,8 @@ lab275: 	mov	r0, r4
 	str	r2, [sp, #144]	; 0x90
 	mov	r9, r0
 	mov	r1, r2
-lab269: 	ldr	r2, [sp, #80]	; 0x50
+lab269: 	ldr	r3, [sp, #64]	; 0x40
+	ldr	r2, [sp, #80]	; 0x50
 	add	r3, r2
 	ldr	r2, [sp, #68]	; 0x44
 	add	fp, r2, r1
@@ -2389,7 +2505,8 @@ lab233: 	ldr	r3, [sp, #48]	; 0x30
 	ble	lab237
 	ldr	r3, [sp, #48]	; 0x30
 	str	r3, [sp, #88]	; 0x58
-lab293: 	sdiv	r3, r2, r9
+lab293: 	ldr	r2, [sp, #20]
+	sdiv	r3, r2, r9
 	mls	lr, r9, r3, r2
 	ldr	r3, [sp, #36]	; 0x24
 	add	sl, lr, r3
@@ -2400,7 +2517,8 @@ lab293: 	sdiv	r3, r2, r9
 	add	r4, r7, r2, lsl #3
 	adds	r4, #4
 	add	ip, r7, #4
-lab239: 	add	r1, r7, r3, lsl #3
+lab239: 	mov	r2, r4
+	add	r1, r7, r3, lsl #3
 	ldmia	r1, {r0, r1}
 	ldr	r5, [r2], #-4
 	ldr	r6, [r4, #-4]
@@ -2431,7 +2549,8 @@ lab238: 	add	r3, r7, sl, lsl #3
 	ldr	r3, [sp, #60]	; 0x3c
 	lsls	r3, r3, #3
 	str	r3, [sp, #20]
-lab295: 	str	sl, [sp, #44]	; 0x2c
+lab295: 	ldr	r3, [sp, #20]
+	str	sl, [sp, #44]	; 0x2c
 	add	r3, r7
 	str	r3, [sp, #108]	; 0x6c
 	adds	r3, #4
@@ -2446,9 +2565,11 @@ lab295: 	str	sl, [sp, #44]	; 0x2c
 	str	r5, [sp, #52]	; 0x34
 	str	r3, [sp, #76]	; 0x4c
 	str	fp, [sp, #40]	; 0x28
-lab263: 	cmp	r3, #0
+lab263: 	subs	r3, r5, r4
+	cmp	r3, #0
 	ble	lab241
-lab250: 	subs	r3, #1
+lab250: 	add	r3, r5, #536870912	; 0x20000000
+	subs	r3, #1
 	add	r3, r7, r3, lsl #3
 	ldmia	r3, {r0, r1}
 	add	r3, sp, #184	; 0xb8
@@ -2457,7 +2578,8 @@ lab250: 	subs	r3, #1
 	blx	r6
 	cmp	r0, #0
 	bne	lab241
-lab251: 	ldr	r3, [sp, #24]
+lab251: 	strd	r4, r5, [sp, #176]	; 0xb0
+	ldr	r3, [sp, #24]
 	str	r3, [sp, #0]
 	ldr	r3, [sp, #72]	; 0x48
 	mov	r1, sl
@@ -2476,7 +2598,8 @@ lab251: 	ldr	r3, [sp, #24]
 	movs	r3, #0
 	mov	ip, r0
 	mov	lr, r5
-lab243: 	ldmia	r2, {r0, r1}
+lab243: 	add	r2, sl, r3, lsl #3
+	ldmia	r2, {r0, r1}
 	ldr	r5, [r6, r3, lsl #3]
 	ldr	r4, [fp, r3, lsl #3]
 	add	r2, r6, r3, lsl #3
@@ -2528,7 +2651,8 @@ lab242: 	ldr	r3, [sp, #36]	; 0x24
 	add	r1, r7
 	add	r0, sp, #280	; 0x118
 	bl	memcpy
-lab265: 	cmp	r5, #0
+lab265: 	ldr	r3, [sp, #20]
+	cmp	r5, #0
 	add	r6, r9, r3
 	sub	ip, r6, r5
 	ble	lab245
@@ -2539,7 +2663,8 @@ lab265: 	cmp	r5, #0
 	movs	r3, #0
 	mov	r8, r6
 	mov	lr, r5
-lab246: 	ldmia	r2, {r0, r1}
+lab246: 	add	r2, ip, r3, lsl #3
+	ldmia	r2, {r0, r1}
 	ldr	r6, [r4, r3, lsl #3]
 	ldr	r5, [fp, r3, lsl #3]
 	add	r2, r4, r3, lsl #3
@@ -2567,7 +2692,8 @@ lab245: 	ldr	r3, [sp, #20]
 	bge	lab248
 	mov	fp, r5
 	ldr	r5, [sp, #24]
-lab249: 	add	r1, r7, r4, lsl #3
+lab249: 	add	r3, r7, sl, lsl #3
+	add	r1, r7, r4, lsl #3
 	ldmia	r3, {r2, r3}
 	ldmia	r1, {r0, r1}
 	blx	r5
@@ -2579,7 +2705,8 @@ lab249: 	add	r1, r7, r4, lsl #3
 	blt	lab249
 	mov	r5, fp
 	add	sl, sl, #4294967295	; 0xffffffff
-lab277: 	ldmia	r3, {r0, r1}
+lab277: 	add	r3, r7, sl, lsl #3
+	ldmia	r3, {r0, r1}
 	ldr	r4, [sp, #44]	; 0x2c
 	str	r6, [sp, #20]
 	add	r3, sp, #184	; 0xb8
@@ -2623,7 +2750,8 @@ lab255: 	add	r3, r4, r4, lsr #31
 	adds	r4, #4
 	mov	lr, r2
 	mov	ip, r5
-lab258: 	ldmia	r1, {r0, r1}
+lab258: 	subs	r1, r4, #4
+	ldmia	r1, {r0, r1}
 	ldrd	r2, r5, [r3, #-8]
 	subs	r3, #8
 	stmia	r3, {r0, r1}
@@ -2645,7 +2773,8 @@ lab257: 	add	r3, r8, r8, lsr #31
 	add	r2, r7, r2, lsl #3
 	adds	r3, #4
 	mov	ip, r5
-lab260: 	ldmia	r1, {r0, r1}
+lab260: 	subs	r1, r3, #4
+	ldmia	r1, {r0, r1}
 	ldrd	r5, r4, [r2, #-8]
 	subs	r2, #8
 	stmia	r2, {r0, r1}
@@ -2670,7 +2799,8 @@ lab259: 	ldr	r3, [sp, #28]
 	add	r3, r7, r3, lsl #3
 	adds	r2, #4
 	mov	ip, r5
-lab262: 	ldmia	r1, {r0, r1}
+lab262: 	subs	r1, r2, #4
+	ldmia	r1, {r0, r1}
 	ldrd	r5, r4, [r3, #-8]
 	subs	r3, #8
 	stmia	r3, {r0, r1}
@@ -2681,7 +2811,8 @@ lab262: 	ldmia	r1, {r0, r1}
 lab261: 	ldr	r3, [sp, #20]
 	adds	r5, r3, r6
 	mov	r4, r3
-lab271: 	str	r5, [sp, #20]
+lab271: 	ldr	r3, [sp, #40]	; 0x28
+	str	r5, [sp, #20]
 	add	r3, r6
 	str	r3, [sp, #40]	; 0x28
 	ldr	r3, [sp, #32]
@@ -2695,7 +2826,8 @@ lab244: 	sub	r2, r6, #8
 	movs	r3, #0
 	mov	sl, r4
 	mov	fp, r5
-lab264: 	ldmia	r1, {r0, r1}
+lab264: 	add	r1, ip, r3, lsl #3
+	ldmia	r1, {r0, r1}
 	ldr	r5, [r2, r3, lsl #3]
 	ldr	r4, [r8, r3, lsl #3]
 	add	r6, r2, r3, lsl #3
@@ -2718,7 +2850,8 @@ lab252: 	cmp	r9, #0
 	add	lr, r4, #4
 	movs	r3, #0
 	mov	ip, r7
-lab267: 	ldmia	r2, {r0, r1}
+lab267: 	add	r2, r4, r3, lsl #3
+	ldmia	r2, {r0, r1}
 	ldr	r7, [r5, r3, lsl #3]
 	ldr	r6, [r8, r3, lsl #3]
 	add	r2, r5, r3, lsl #3
@@ -2775,10 +2908,12 @@ lab235: 	ldr	r3, [sp, #96]	; 0x60
 	ldr	r2, [sp, #56]	; 0x38
 	subs	r3, r3, r2
 	str	r3, [sp, #100]	; 0x64
-lab276: 	ldr	r2, [sp, #104]	; 0x68
+lab276: 	ldr	r3, [sp, #48]	; 0x30
+	ldr	r2, [sp, #104]	; 0x68
 	cmp	r3, r2
 	bge	lab268
-lab272: 	mov	r1, r3
+lab272: 	str	r3, [sp, #36]	; 0x24
+	mov	r1, r3
 	b	lab269
 lab254: 	ldr	r2, [sp, #32]
 	subs	r4, r2, r3
@@ -2829,7 +2964,8 @@ lab234: 	ldr	r3, [sp, #36]	; 0x24
 lab268: 	ldr	r3, [sp, #100]	; 0x64
 	cmp	r3, #0
 	bgt	lab273
-lab329: 	ldr	r3, [sp, #80]	; 0x50
+lab329: 	ldr	r2, [sp, #68]	; 0x44
+	ldr	r3, [sp, #80]	; 0x50
 	lsls	r2, r2, #1
 	str	r2, [sp, #68]	; 0x44
 	ldr	r2, [sp, #84]	; 0x54
@@ -2909,7 +3045,8 @@ lab237: 	ldr	r3, [sp, #36]	; 0x24
 	mov	r9, r7
 	ldr	r7, [sp, #24]
 	movs	r4, #1
-lab283: 	adds	r5, #8
+lab283: 	mov	r6, r5
+	adds	r5, #8
 	ldmia	r5, {r2, r3}
 	ldmia	r6, {r0, r1}
 	blx	r7
@@ -2928,9 +3065,11 @@ lab281: 	add	sl, sl, #1
 	mov	r7, r9
 	ldr	r8, [sp, #28]
 	ldr	r9, [sp, #32]
-lab347: 	cmp	r3, #512	; 0x200
+lab347: 	ldr	r3, [sp, #120]	; 0x78
+	cmp	r3, #512	; 0x200
 	bgt	lab284
-lab296: 	bne	lab285
+lab296: 	cmp	r4, r3
+	bne	lab285
 	ldr	r2, [sp, #36]	; 0x24
 	ldr	r1, [sp, #48]	; 0x30
 	str	r1, [sp, #116]	; 0x74
@@ -2942,8 +3081,10 @@ lab296: 	bne	lab285
 	str	r2, [sp, #60]	; 0x3c
 	str	r1, [sp, #28]
 	str	r3, [sp, #32]
-lab346: 	mov	r1, r3
-lab337: 	add	r5, r7, sl, lsl #3
+lab346: 	ldr	r3, [sp, #120]	; 0x78
+	mov	r1, r3
+lab337: 	strd	r9, fp, [sp, #40]	; 0x28
+	add	r5, r7, sl, lsl #3
 	add	r3, sp, #232	; 0xe8
 	mov	fp, r7
 	ldr	r7, [sp, #24]
@@ -2951,7 +3092,8 @@ lab337: 	add	r5, r7, sl, lsl #3
 	mov	r4, sl
 	mov	r8, #0
 	mov	r9, r1
-lab288: 	cmp	r4, r3
+lab288: 	ldr	r3, [sp, #36]	; 0x24
+	cmp	r4, r3
 	sub	r6, r5, #8
 	beq	lab286
 	ldmia	r5, {r2, r3}
@@ -2989,7 +3131,8 @@ lab287: 	cmp	r8, r9
 	ldr	r3, [sp, #36]	; 0x24
 	str	r2, [sp, #20]
 	str	r3, [sp, #56]	; 0x38
-lab314: 	cmp	r3, #0
+lab314: 	ldr	r3, [sp, #32]
+	cmp	r3, #0
 	ble	lab289
 	ldr	r3, [sp, #28]
 	ldr	r2, [sp, #48]	; 0x30
@@ -3005,7 +3148,8 @@ lab314: 	cmp	r3, #0
 	movs	r6, #0
 	str	r2, [sp, #28]
 	mov	r7, r3
-lab292: 	sub	r8, r4, #8
+lab292: 	cmp	r5, sl
+	sub	r8, r4, #8
 	beq	lab290
 	ldmia	r4, {r2, r3}
 	ldmia	r8, {r0, r1}
@@ -3055,7 +3199,8 @@ lab240: 	ldr	r3, [sp, #36]	; 0x24
 	movs	r3, #0
 	mov	ip, r2
 	mov	sl, r7
-lab294: 	ldmia	r2, {r0, r1}
+lab294: 	add	r2, r4, r3, lsl #3
+	ldmia	r2, {r0, r1}
 	ldr	r7, [r5, r3, lsl #3]
 	ldr	r6, [r8, r3, lsl #3]
 	add	r2, r5, r3, lsl #3
@@ -3089,7 +3234,8 @@ lab284: 	add	r6, sl, #1
 	ldr	r7, [sp, #24]
 	str	r4, [sp, #40]	; 0x28
 	mov	r8, r3
-lab301: 	adds	r5, #8
+lab301: 	mov	r4, r5
+	adds	r5, #8
 	ldmia	r5, {r2, r3}
 	ldmia	r4, {r0, r1}
 	blx	r7
@@ -3111,7 +3257,8 @@ lab299: 	adds	r6, #1
 	ldr	r8, [sp, #32]
 	ldr	r9, [sp, #44]	; 0x2c
 	ldr	sl, [sp, #28]
-lab340: 	cmp	r3, r2
+lab340: 	ldr	r2, [sp, #120]	; 0x78
+	cmp	r3, r2
 	beq	lab302
 lab297: 	ldr	r3, [sp, #120]	; 0x78
 	cmp	r4, r3
@@ -3126,7 +3273,8 @@ lab297: 	ldr	r3, [sp, #120]	; 0x78
 	ldr	r8, [sp, #128]	; 0x80
 	ldr	r7, [sp, #24]
 	movs	r6, #1
-lab308: 	ldmia	r4, {r0, r1}
+lab308: 	add	r5, r4, #8
+	ldmia	r4, {r0, r1}
 	ldmia	r5, {r2, r3}
 	blx	r7
 	cbnz	r0, lab305
@@ -3153,7 +3301,8 @@ lab304: 	add	r3, sl, #4294967295	; 0xffffffff
 	ldr	r7, [sp, #24]
 	movs	r6, #0
 	mov	r8, r3
-lab313: 	ldmia	r4, {r0, r1}
+lab313: 	add	r5, r4, #8
+	ldmia	r4, {r0, r1}
 	ldmia	r5, {r2, r3}
 	blx	r7
 	cbnz	r0, lab310
@@ -3173,7 +3322,8 @@ lab311: 	add	r8, r8, #4294967295	; 0xffffffff
 	str	r8, [sp, #28]
 	ldr	r8, [sp, #32]
 	mov	r7, sl
-lab341: 	cmp	r6, r3
+lab341: 	ldr	r3, [sp, #120]	; 0x78
+	cmp	r6, r3
 	bne	lab309
 	ldr	r2, [sp, #48]	; 0x30
 	ldr	r0, [sp, #148]	; 0x94
@@ -3190,7 +3340,8 @@ lab341: 	cmp	r6, r3
 	sub	r2, r2, r1, lsl #1
 	str	r2, [sp, #60]	; 0x3c
 	str	r3, [sp, #96]	; 0x60
-lab339: 	ldr	r3, [sp, #156]	; 0x9c
+lab339: 	ldr	r2, [sp, #28]
+	ldr	r3, [sp, #156]	; 0x9c
 	subs	r3, r3, r2
 	ldr	r2, [sp, #48]	; 0x30
 	str	r3, [sp, #32]
@@ -3211,7 +3362,8 @@ lab285: 	ldr	r3, [sp, #48]	; 0x30
 	ldr	r7, [sp, #24]
 	movs	r6, #1
 	mov	r8, r3
-lab319: 	ldmia	r4, {r0, r1}
+lab319: 	add	r5, r4, #8
+	ldmia	r4, {r0, r1}
 	ldmia	r5, {r2, r3}
 	blx	r7
 	cbnz	r0, lab316
@@ -3231,9 +3383,11 @@ lab317: 	add	r8, r8, #4294967295	; 0xffffffff
 	str	r8, [sp, #28]
 	ldr	r8, [sp, #32]
 	mov	r7, sl
-lab349: 	cmp	r6, r3
+lab349: 	ldr	r3, [sp, #120]	; 0x78
+	cmp	r6, r3
 	beq	lab320
-lab338: 	add	r3, r6
+lab338: 	ldr	r3, [sp, #28]
+	add	r3, r6
 	bge	lab321
 lab309: 	ldr	r2, [sp, #48]	; 0x30
 	sub	r3, r2, fp
@@ -3251,7 +3405,8 @@ lab309: 	ldr	r2, [sp, #48]	; 0x30
 	mov	r9, r2
 	mov	fp, r5
 	b	lab322
-lab324: 	ble	lab323
+lab324: 	cmp	r2, #0
+	ble	lab323
 lab322: 	strd	r6, r9, [sp, #200]	; 0xc8
 	ldr	r3, [sp, #20]
 	mov	r1, r4
@@ -3300,11 +3455,13 @@ lab273: 	ldr	r3, [sp, #60]	; 0x3c
 	mov	r6, r2
 	mov	r4, r5
 	add	r8, sp, #264	; 0x108
-lab328: 	cmp	r2, r4
+lab328: 	ldr	r2, [sp, #116]	; 0x74
+	cmp	r2, r4
 	add	r3, r7, r6, lsl #3
 	add	r1, r7, r4, lsl #3
 	beq	lab326
-lab333: 	ldmia	r1, {r0, r1}
+lab333: 	ldmia	r3, {r2, r3}
+	ldmia	r1, {r0, r1}
 	ldr	ip, [sp, #24]
 	blx	ip
 	sub	r9, r4, r5
@@ -3324,7 +3481,8 @@ lab325: 	ldr	r3, [sp, #144]	; 0x90
 	mov	r4, r2
 	mvn	r6, #3758096384	; 0xe0000000
 	add	r8, sp, #272	; 0x110
-lab332: 	add	r1, r9, r6
+lab332: 	adds	r3, r5, r6
+	add	r1, r9, r6
 	cmp	fp, r5
 	add	r3, r7, r3, lsl #3
 	add	r1, r7, r1, lsl #3
@@ -3379,7 +3537,8 @@ lab326: 	mov	r3, r2
 	cmp	r3, #0
 	ble	lab325
 	mov	r5, r8
-lab334: 	add	r3, sp, #280	; 0x118
+lab334: 	strd	r6, r4, [sp, #264]	; 0x108
+	add	r3, sp, #280	; 0x118
 	str	r3, [sp, #0]
 	ldmia	r5, {r2, r3}
 	adds	r6, #1
@@ -3418,7 +3577,8 @@ lab330: 	strd	r5, r9, [sp, #272]	; 0x110
 	subs	r3, r4, r6
 	cmp	r3, #0
 	ble	lab329
-lab335: 	add	r3, sp, #280	; 0x118
+lab335: 	strd	r6, r4, [sp, #272]	; 0x110
+	add	r3, sp, #280	; 0x118
 	str	r3, [sp, #0]
 	ldmia	r5, {r2, r3}
 	subs	r4, #1
@@ -3490,7 +3650,8 @@ lab303: 	subs	r3, #2
 	mov	r8, r3
 	add	r5, r7, r3, lsl #3
 	movs	r6, #1
-lab345: 	ldmia	r5, {r0, r1}
+lab345: 	add	r4, r5, #8
+	ldmia	r5, {r0, r1}
 	ldmia	r4, {r2, r3}
 	ldr	ip, [sp, #24]
 	blx	ip
@@ -3510,7 +3671,8 @@ lab343: 	add	r8, r8, #4294967295	; 0xffffffff
 	sub	r5, r5, #8
 	bge	lab345
 	str	r8, [sp, #28]
-lab348: 	cmp	r6, r3
+lab348: 	ldr	r3, [sp, #120]	; 0x78
+	cmp	r6, r3
 	bne	lab309
 	ldr	r0, [sp, #48]	; 0x30
 	ldr	r2, [sp, #36]	; 0x24
@@ -3563,23 +3725,23 @@ lab336: 	ldr	r3, [sp, #132]	; 0x84
 	b	lab289
 verify_benchmark:
 	push	{r4, lr}
-	mov	r4, #3200	; 0xc80
 	sub	sp, sp, #3200	; 0xc80
+	mov	r4, #3200	; 0xc80
+	movw	r1, #11900	; 0x2e7c
 	mov	r2, r4
-	ldr	r1, [pc, #28]	; (80028d0 <verify_benchmark+0x2c>)
+	movt	r1, #2048	; 0x800
 	mov	r0, sp
 	bl	memcpy
+	movw	r0, #4
 	mov	r2, r4
 	mov	r1, sp
-	ldr	r0, [pc, #20]	; (80028d4 <verify_benchmark+0x30>)
+	movt	r0, #8192	; 0x2000
 	bl	memcmp
 	clz	r0, r0
 	lsrs	r0, r0, #5
 	add	sp, sp, #3200	; 0xc80
 	pop	{r4, pc}
 	nop
-	.word	0x08002e08
-	.word	0x20000004
 initialise_benchmark:
 	bx	lr
 	nop
@@ -3588,16 +3750,18 @@ warm_caches:
 benchmark:
 	b	benchmark_body.constprop.0
 SystemInit:
-	ldr	r3, [pc, #40]	; (8002910 <SystemInit+0x2c>)
-	ldr	r0, [pc, #44]	; (8002914 <SystemInit+0x30>)
-	ldr	r2, [r3, #0]
+	mov	r3, #14336	; 0x3800
+	movt	r3, #16386	; 0x4002
 	movs	r1, #0
+	ldr	r2, [r3, #0]
 	orr	r2, r2, #1
 	str	r2, [r3, #0]
 	str	r1, [r3, #8]
 	ldr	r2, [r3, #0]
+	movw	r0, #12304	; 0x3010
 	bic	r2, r2, #17301504	; 0x1080000
 	bic	r2, r2, #65536	; 0x10000
+	movt	r0, #9216	; 0x2400
 	str	r2, [r3, #0]
 	str	r0, [r3, #4]
 	ldr	r2, [r3, #0]
@@ -3606,61 +3770,64 @@ SystemInit:
 	str	r1, [r3, #12]
 	bx	lr
 	nop
-	.word	0x40023800
-	.word	0x24003010
 set_sysclk_to_168:
-	ldr	r3, [pc, #112]	; (800298c <set_sysclk_to_168+0x74>)
+	mov	r3, #14336	; 0x3800
+	movt	r3, #16386	; 0x4002
 	ldr	r2, [r3, #0]
 	orr	r2, r2, #65536	; 0x10000
 	str	r2, [r3, #0]
-lab350: 	lsls	r0, r2, #14
+lab350: 	ldr	r2, [r3, #0]
+	lsls	r0, r2, #14
 	bpl	lab350
-	ldr	r2, [r3, #64]	; 0x40
-	ldr	r1, [pc, #100]	; (8002990 <set_sysclk_to_168+0x78>)
-	ldr	r0, [pc, #100]	; (8002994 <set_sysclk_to_168+0x7c>)
-	orr	r2, r2, #268435456	; 0x10000000
-	str	r2, [r3, #64]	; 0x40
-	ldr	r2, [r1, #0]
-	orr	r2, r2, #16384	; 0x4000
-	str	r2, [r1, #0]
+	ldr	r1, [r3, #64]	; 0x40
+	mov	r2, #28672	; 0x7000
+	movt	r2, #16384	; 0x4000
+	orr	r1, r1, #268435456	; 0x10000000
+	str	r1, [r3, #64]	; 0x40
+	ldr	r1, [r2, #0]
+	orr	r1, r1, #16384	; 0x4000
+	str	r1, [r2, #0]
 	ldr	r2, [r3, #8]
 	str	r2, [r3, #8]
+	ldr	r2, [r3, #8]
+	orr	r2, r2, #5120	; 0x1400
+	str	r2, [r3, #8]
 	ldr	r1, [r3, #8]
-	ldr	r2, [pc, #72]	; (800298c <set_sysclk_to_168+0x74>)
-	orr	r1, r1, #5120	; 0x1400
-	str	r1, [r3, #8]
-	ldr	r1, [r3, #8]
+	movw	r0, #23048	; 0x5a08
 	orr	r1, r1, #32768	; 0x8000
+	movt	r0, #1856	; 0x740
 	str	r1, [r3, #8]
 	str	r0, [r3, #4]
 	ldr	r1, [r3, #0]
+	mov	r2, #14336	; 0x3800
 	orr	r1, r1, #16777216	; 0x1000000
+	movt	r2, #16386	; 0x4002
 	str	r1, [r3, #0]
-lab351: 	lsls	r1, r3, #6
+lab351: 	ldr	r3, [r2, #0]
+	lsls	r1, r3, #6
 	bpl	lab351
-	ldr	r3, [pc, #52]	; (8002998 <set_sysclk_to_168+0x80>)
+	mov	r3, #15360	; 0x3c00
+	movt	r3, #16386	; 0x4002
 	movw	r1, #1797	; 0x705
 	str	r1, [r3, #0]
 	ldr	r3, [r2, #8]
-	ldr	r1, [pc, #28]	; (800298c <set_sysclk_to_168+0x74>)
 	bic	r3, r3, #3
 	str	r3, [r2, #8]
 	ldr	r3, [r2, #8]
+	mov	r1, #14336	; 0x3800
 	orr	r3, r3, #2
+	movt	r1, #16386	; 0x4002
 	str	r3, [r2, #8]
-lab352: 	lsls	r3, r3, #28
+lab352: 	ldr	r3, [r1, #8]
+	lsls	r3, r3, #28
 	bpl	lab352
-	ldr	r3, [pc, #24]	; (800299c <set_sysclk_to_168+0x84>)
-	ldr	r2, [pc, #24]	; (80029a0 <set_sysclk_to_168+0x88>)
+	movw	r3, #0
+	movt	r3, #8192	; 0x2000
+	mov	r2, #31232	; 0x7a00
+	movt	r2, #2563	; 0xa03
 	str	r2, [r3, #0]
 	bx	lr
 	nop
-	.word	0x40023800
-	.word	0x40007000
-	.word	0x07405a08
-	.word	0x40023c00
-	.word	0x20000000
-	.word	0x0a037a00
 main:
 	push	{lr}
 	sub	sp, #12
@@ -4018,69 +4185,72 @@ __aeabi_memmove:
 	bx	lr
 	nop
 initialise_board:
-	mov	r2, #3758153728	; 0xe000e000
-	ldr	r1, [pc, #16]	; (8002bd8 <initialise_board+0x18>)
-	ldr	r3, [r2, #3580]	; 0xdfc
-	movs	r0, #0
+	mov	r1, #3758153728	; 0xe000e000
+	mov	r2, #4096	; 0x1000
+	ldr	r3, [r1, #3580]	; 0xdfc
+	movt	r2, #57344	; 0xe000
 	orr	r3, r3, #16777216	; 0x1000000
-	str	r3, [r2, #3580]	; 0xdfc
-	str	r0, [r1, #4]
+	movs	r0, #0
+	str	r3, [r1, #3580]	; 0xdfc
+	str	r0, [r2, #4]
 	bx	lr
-	.word	0xe0001000
+	nop
 start_trigger:
-	ldr	r2, [pc, #8]	; (8002be8 <start_trigger+0xc>)
-	ldr	r3, [r2, #0]
-	orr	r3, r3, #1
-	str	r3, [r2, #0]
+	mov	r3, #4096	; 0x1000
+	movt	r3, #57344	; 0xe000
+	ldr	r2, [r3, #0]
+	orr	r2, r2, #1
+	str	r2, [r3, #0]
 	bx	lr
-	.word	0xe0001000
+	nop
 stop_trigger:
-	ldr	r3, [pc, #12]	; (8002bfc <stop_trigger+0x10>)
+	mov	r3, #4096	; 0x1000
+	movt	r3, #57344	; 0xe000
 	movs	r2, #0
 	str	r2, [r3, #4]
 	ldr	r2, [r3, #0]
 	bic	r2, r2, #1
 	str	r2, [r3, #0]
 	bx	lr
-	.word	0xe0001000
+	nop
 rand_beebs:
-	ldr	r3, [pc, #20]	; (8002c18 <rand_beebs+0x18>)
-	ldr	r1, [pc, #24]	; (8002c1c <rand_beebs+0x1c>)
-	ldr	r2, [r3, #0]
+	movw	r3, #3204	; 0xc84
+	movt	r3, #8192	; 0x2000
+	movw	r2, #20077	; 0x4e6d
+	ldr	r1, [r3, #0]
+	movt	r2, #16838	; 0x41c6
 	movw	r0, #12345	; 0x3039
-	mla	r0, r1, r2, r0
+	mla	r0, r2, r1, r0
 	bic	r0, r0, #2147483648	; 0x80000000
 	str	r0, [r3, #0]
 	lsrs	r0, r0, #16
 	bx	lr
-	.word	0x20000c84
-	.word	0x41c64e6d
 srand_beebs:
-	ldr	r3, [pc, #4]	; (8002c28 <srand_beebs+0x8>)
+	movw	r3, #3204	; 0xc84
+	movt	r3, #8192	; 0x2000
 	str	r0, [r3, #0]
 	bx	lr
-	nop
-	.word	0x20000c84
 init_heap_beebs:
 	ands	r2, r1, #3
 	push	{r3, lr}
 	bne	lab353
-	ldr	r3, [pc, #20]	; (8002c4c <init_heap_beebs+0x20>)
+	movw	r3, #3204	; 0xc84
+	movt	r3, #8192	; 0x2000
 	add	r1, r0
 	strd	r0, r1, [r3, #4]
 	str	r2, [r3, #12]
 	pop	{r3, pc}
-lab353: 	ldr	r3, [pc, #12]	; (8002c50 <init_heap_beebs+0x24>)
-	ldr	r2, [pc, #16]	; (8002c54 <init_heap_beebs+0x28>)
-	ldr	r0, [pc, #16]	; (8002c58 <init_heap_beebs+0x2c>)
+lab353: 	movw	r3, #15104	; 0x3b00
+	movw	r2, #15184	; 0x3b50
+	movw	r0, #15136	; 0x3b20
+	movt	r3, #2048	; 0x800
+	movt	r2, #2048	; 0x800
 	movs	r1, #65	; 0x41
+	movt	r0, #2048	; 0x800
 	bl	__assert_func
-	.word	0x20000c84
-	.word	0x08003a8c
-	.word	0x08003adc
-	.word	0x08003aac
 check_heap_beebs:
-	ldr	r3, [pc, #16]	; (8002c70 <check_heap_beebs+0x14>)
+	movw	r3, #3204	; 0xc84
+	movt	r3, #8192	; 0x2000
 	ldrd	r3, r2, [r3, #8]
 	add	r0, r2
 	cmp	r3, r0
@@ -4088,12 +4258,11 @@ check_heap_beebs:
 	movcc	r0, #0
 	movcs	r0, #1
 	bx	lr
-	nop
-	.word	0x20000c84
 malloc_beebs:
 	mov	r3, r0
 	cbz	r0, lab354
-	ldr	r2, [pc, #40]	; (8002ca4 <malloc_beebs+0x30>)
+	movw	r2, #3204	; 0xc84
+	movt	r2, #8192	; 0x2000
 	ldr	r0, [r2, #4]
 	ldr	ip, [r2, #12]
 	adds	r1, r0, r3
@@ -4112,12 +4281,13 @@ malloc_beebs:
 	bx	lr
 lab354: 	movs	r0, #0
 	bx	lr
-	.word	0x20000c84
+	nop
 calloc_beebs:
 	mul	r2, r1, r0
 	push	{r4, lr}
 	cbz	r2, lab355
-	ldr	r3, [pc, #52]	; (8002ce8 <calloc_beebs+0x40>)
+	movw	r3, #3204	; 0xc84
+	movt	r3, #8192	; 0x2000
 	ldr	r4, [r3, #4]
 	ldr	r0, [r3, #12]
 	adds	r1, r4, r2
@@ -4142,13 +4312,14 @@ lab356: 	mov	r0, r4
 lab355: 	movs	r4, #0
 	mov	r0, r4
 	pop	{r4, pc}
-	.word	0x20000c84
+	nop
 realloc_beebs:
 	cmp	r0, #0
 	beq	lab357
 	cmp	r1, #0
 	beq	lab357
-	ldr	r3, [pc, #140]	; (8002d84 <realloc_beebs+0x98>)
+	movw	r3, #3204	; 0xc84
+	movt	r3, #8192	; 0x2000
 	mov	r2, r0
 	ldr	r0, [r3, #4]
 	push	{r4, r5, lr}
@@ -4178,7 +4349,8 @@ realloc_beebs:
 	mov	r3, r2
 	mov	ip, r0
 	add	r4, r2
-lab360: 	str	lr, [ip], #4
+lab360: 	ldr	lr, [r3], #4
+	str	lr, [ip], #4
 	cmp	r3, r4
 	bne	lab360
 	lsls	r4, r1, #30
@@ -4202,22 +4374,21 @@ lab358: 	movs	r0, #0
 lab359: 	subs	r3, r2, #1
 	subs	r1, r0, #1
 	add	r2, r4
-lab362: 	strb	r4, [r1, #1]!
+lab362: 	ldrb	r4, [r3, #1]!
+	strb	r4, [r1, #1]!
 	cmp	r3, r2
 	bne	lab362
 	pop	{r4, r5, pc}
 lab357: 	movs	r0, #0
 	bx	lr
-	nop
-	.word	0x20000c84
 free_beebs:
 	bx	lr
 	nop
 Reset_Handler:
-	ldr	sp, [pc, #48]	; 8002dc0 <LoopFillZerobss+0xe>
-	ldr	r0, [pc, #48]	; (8002dc4 <LoopFillZerobss+0x12>)
-	ldr	r1, [pc, #52]	; (8002dc8 <LoopFillZerobss+0x16>)
-	ldr	r2, [pc, #52]	; (8002dcc <LoopFillZerobss+0x1a>)
+	ldr	sp, [pc, #48]	; 8002e34 <LoopFillZerobss+0xe>
+	ldr	r0, [pc, #48]	; (8002e38 <LoopFillZerobss+0x12>)
+	ldr	r1, [pc, #52]	; (8002e3c <LoopFillZerobss+0x16>)
+	ldr	r2, [pc, #52]	; (8002e40 <LoopFillZerobss+0x1a>)
 	movs	r3, #0
 	b	LoopCopyDataInit
 CopyDataInit:
@@ -4228,8 +4399,8 @@ LoopCopyDataInit:
 	adds	r4, r0, r3
 	cmp	r4, r1
 	bcc	CopyDataInit
-	ldr	r2, [pc, #40]	; (8002dd0 <LoopFillZerobss+0x1e>)
-	ldr	r4, [pc, #40]	; (8002dd4 <LoopFillZerobss+0x22>)
+	ldr	r2, [pc, #40]	; (8002e44 <LoopFillZerobss+0x1e>)
+	ldr	r4, [pc, #40]	; (8002e48 <LoopFillZerobss+0x22>)
 	movs	r3, #0
 	b	LoopFillZerobss
 FillZerobss:
@@ -4244,7 +4415,7 @@ LoopFillZerobss:
 	.word	0x20020000
 	.word	0x20000000
 	.word	0x20000004
-	.word	0x08003aec
+	.word	0x08003b60
 	.word	0x20000004
 	.word	0x20000c94
 ADC_IRQHandler:

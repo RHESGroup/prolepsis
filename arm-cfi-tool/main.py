@@ -11,7 +11,7 @@ print("Version " + SCRIPT_VERSION)
 parser = argparse.ArgumentParser(description='Applies CFI to given firmware')
 parser.add_argument('-disassembly', action='store', metavar="file.list",help='disassembly file obtained with objdump -d -j .text')
 parser.add_argument('-binary', action='store', metavar="file.elf", help='binary file')
-parser.add_argument('-report', action='store_true', help='turn ON generatation of report')
+parser.add_argument('-report', action='store_true', help='turn ON generation of report')
 parser.add_argument('-outputfile', action='store',
                         help='Output filename to write info related to edges and labels in JSON format')
 parser.add_argument('-outputfileassembly',action='store',help='Output filename of instrumented .text section of the assembly')

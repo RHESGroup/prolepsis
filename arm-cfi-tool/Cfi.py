@@ -111,6 +111,8 @@ def sanitize2(l):
             l_new = l_new.replace(to_replace, new_instructions)
         except Exception as e:
             pass
+    if ".rodata:" in l_new:
+        l_new = l_new.replace(".rodata:", "start_rodata")
     return l_new
 
 def getFunctionFromAddr(addr):
@@ -353,9 +355,10 @@ class Cfi:
                 try:
                     target_addr = int(re.findall("([0-9a-z]{1,8}) <",instr)[0],16)
                     data_addr = int(re.findall(r"(0x[a-fA-F0-9]{1,8})",self.code[target_addr])[0],16)
-                    self.code[target_addr] = "####LTORG####"
+                    # self.code[target_addr] = "####LTORG####"
                     if data_addr not in self.data.keys():
-                        const = re.findall(r"(0x[a-fA-F0-9]{1,8})", self.code[target_addr])[0]
+                        # const = re.findall(r"(0x[a-fA-F0-9]{1,8})", self.code[target_addr])[0]
+                        const = hex(data_addr)
                         to_replace = re.findall(r"\[pc, #[0-9]{1,8}]", instr)[0]
                         instr = instr.replace(to_replace, f"={const}")
                         code.append(instr)
@@ -370,26 +373,52 @@ class Cfi:
                     code.append(instr)
             else:
                 code.append(instr)
+
+
         lines = list(map(lambda x: sanitize2(x), code))
         #lines = list(filter(lambda x: ".word" not in x,lines))
         modify = 1
+
+        # for i in range(len(lines)):
+        #     if "####LTORG####" in lines[i] and modify:
+        #         lines[i] = "\t.ltorg\n"
+        #         modify = 0
+        #     elif "####LTORG####" in lines[i] and not modify:
+        #         lines[i] = ""
+        #     elif "####LTORG####" not in lines[i]:
+        #         modify = 1
+
         for i in range(len(lines)):
-            if "####LTORG####" in lines[i] and modify:
+            if ".word" in lines[i] and modify:
                 lines[i] = "\t.ltorg\n"
                 modify = 0
-
-            elif "####LTORG####" in lines[i] and not modify:
+            elif ".word" in lines[i] and not modify:
                 lines[i] = ""
-            elif "####LTORG####" not in lines[i]:
+            elif ".word" not in lines[i]:
                 modify = 1
 
         # lines[0] = f"\t.cpu cortex-m4\n\t.text\n\t.thumb\n\t.syntax unified\n\n_start:\n{config_init}b {init_function_name}\n\n" + lines[0]
-        lines[0] = f"\t.cpu cortex-m4\n\t.text\n\t.thumb\n\t.syntax unified\n\t.global main\n\t.type main, %function\n\n" + lines[0]
+        lines[0] = f"\t.cpu cortex-m4\n\t.text\n\t.thumb\n\t.syntax unified\n\t\
+.global main\n\t.type main, %function\n\n\
+    .global SystemInit\n\t.type SystemInit, %function\n\n\
+    .global set_sysclk_to_168\n\t.type set_sysclk_to_168, %function\n\n\
+    .global Reset_Handler\n\t.type Reset_Handler, %function\n\n\
+    .global CopyDataInit\n\t.type CopyDataInit, %function\n\n\
+    .global LoopCopyDataInit\n\t.type LoopCopyDataInit, %function\n\n\
+    .global FillZerobss\n\t.type FillZerobss, %function\n\n\
+    .global LoopFillZerobss\n\t.type LoopFillZerobss, %function\n\n\
+    .global ADC_IRQHandler\n\t.type ADC_IRQHandler, %function\n\n" + lines[0]
         for l in self.sections.values():
             if ".rodata" in l[0]:
                 l[0] = l[0].replace(".rodata",".section .rodata")
-
+                if ".rodata" in l[1]:
+                    l[1] = l[1].replace(".rodata","start_rodata")
+            if ".bss" in l[0]:
+                for i in range(len(l)):
+                    if "0xandeq" in l[i]:
+                        l[i] = l[i].replace("0xandeq","0x00000000")
             lines.extend(l)
+
         f2 = open("%s.s"%outputfileassembly, 'w')
         f2.writelines(lines)
         f2.close()
@@ -527,7 +556,11 @@ class Cfi:
                                 self.code[int(addr, 16)] = "\t" + instr + "\n"
                             else:
                                 self.code[int(addr, 16)] += "\t" + instr + "\n"
-                            self.code[int(target_addr, 16)] = f"lab{lab_number}: "
+                            # self.code[int(target_addr, 16)] = f"lab{lab_number}: "
+                            if int(target_addr, 16) not in self.code.keys():
+                                self.code[int(target_addr, 16)] = f"lab{lab_number}: "
+                            else:
+                                self.code[int(target_addr, 16)] = f"lab{lab_number}: " + self.code[int(target_addr, 16)]
                             lab_maps[target_addr] = lab_number
                             lab_number += 1
                 elif re.match("<(.*)>",instr) and op.split(".")[0] == "blx":
@@ -562,7 +595,11 @@ class Cfi:
                                 self.code[int(addr, 16)] = "\t" + instr + "\n"
                             else:
                                 self.code[int(addr, 16)] += "\t" + instr + "\n"
-                            self.code[int(target_addr, 16)] = f"lab{lab_number}: "
+                            # self.code[int(target_addr, 16)] = f"lab{lab_number}: "
+                            if int(target_addr, 16) not in self.code.keys():
+                                self.code[int(target_addr, 16)] = f"lab{lab_number}: "
+                            else:
+                                self.code[int(target_addr, 16)] = f"lab{lab_number}: " + self.code[int(target_addr, 16)]
                             lab_maps[target_addr] = lab_number
                             lab_number += 1
                 elif (".word" not in op_old) and (".byte" not in op_old) and (".short" not in op_old):
