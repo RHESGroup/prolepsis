@@ -288,7 +288,7 @@ WikiMerge.constprop.0.isra.0:
 	mov	r0, r3
 	str	r3, [sp, #8]
 	bgt	lab17
-	movw	r3, #4
+	movw	r3, #3340	; 0xd0c
 	movt	r3, #8192	; 0x2000
 	add	r6, r3, r1, lsl #3
 	subs	r1, r7, r0
@@ -329,7 +329,7 @@ lab17: 	subs	r3, r7, r3
 	str	r3, [sp, #16]
 	ble	lab22
 	lsls	r1, r1, #3
-	movw	r3, #4
+	movw	r3, #3340	; 0xd0c
 	movt	r3, #8192	; 0x2000
 	adds	r2, r1, #4
 	subs	r1, #4
@@ -378,7 +378,7 @@ lab23: 	ldr	r0, [r3, lr, lsl #3]
 	ldr	r1, [sp, #8]
 	add	r5, r1, fp
 	b	lab27
-lab22: 	movw	r3, #4
+lab22: 	movw	r3, #3340	; 0xd0c
 	movt	r3, #8192	; 0x2000
 lab29: 	ldr	r2, [sp, #4]
 	add	r4, r3, r2, lsl #3
@@ -443,7 +443,7 @@ lab40: 	add	r3, r8, r8, lsr #31
 	cmp	r8, #1
 	mov	r3, r3, asr #1
 	ble	lab35
-	movw	r8, #4
+	movw	r8, #3340	; 0xd0c
 	movt	r8, #8192	; 0x2000
 	subs	r2, r5, r3
 	add	r3, r4
@@ -465,7 +465,7 @@ lab35: 	add	r2, r7, r7, lsr #31
 	cmp	r7, #1
 	mov	r2, r2, asr #1
 	ble	lab37
-	movw	ip, #4
+	movw	ip, #3340	; 0xd0c
 	movt	ip, #8192	; 0x2000
 	adds	r3, r5, r2
 	subs	r2, r6, r2
@@ -488,7 +488,7 @@ lab37: 	subs	r2, r6, r4
 	cmp	r2, #1
 	mov	r3, r3, asr #1
 	ble	lab32
-	movw	r1, #4
+	movw	r1, #3340	; 0xd0c
 	movt	r1, #8192	; 0x2000
 	subs	r2, r6, r3
 	add	r3, r4
@@ -510,7 +510,7 @@ lab32: 	add	sp, #8
 	ldmia	sp!, {r4, r5, r6, r7, r8, r9, sl, pc}
 lab33: 	cmp	r2, r8
 	blt	lab40
-	movw	r6, #4
+	movw	r6, #3340	; 0xd0c
 	movt	r6, #8192	; 0x2000
 	mov	r8, r8, lsl #3
 	add	sl, r6, r1, lsl #3
@@ -530,7 +530,7 @@ lab41: 	add	sp, #8
 	ldmia	sp!, {r4, r5, r6, r7, r8, r9, sl, lr}
 	b	memcpy
 lab34: 	mov	sl, r7, lsl #3
-	movw	r7, #4
+	movw	r7, #3340	; 0xd0c
 	movt	r7, #8192	; 0x2000
 	add	r1, r7, r5, lsl #3
 	mov	r2, sl
@@ -549,7 +549,7 @@ lab34: 	mov	sl, r7, lsl #3
 	nop
 WikiSort.constprop.0:
 	stmdb	sp!, {r4, r5, r6, r7, r8, r9, sl, fp, lr}
-	movw	fp, #4
+	movw	fp, #3340	; 0xd0c
 	sub	sp, sp, #4320	; 0x10e0
 	movs	r5, #0
 	sub	sp, #28
@@ -1666,15 +1666,15 @@ lab106: 	ldr	r2, [sp, #28]
 	nop
 benchmark_body.constprop.0:
 	stmdb	sp!, {r4, r5, r6, r7, r8, r9, lr}
-	movw	r4, #11864	; 0x2e58
-	movt	r4, #2048	; 0x800
+	movw	r4, #0
+	movt	r4, #8192	; 0x2000
 	ldmia	r4!, {r0, r1, r2, r3}
 	sub	sp, #44	; 0x2c
 	add	r6, sp, #4
 	stmia	r6!, {r0, r1, r2, r3}
 	ldmia	r4!, {r0, r1, r2, r3}
 	stmia	r6!, {r0, r1, r2, r3}
-	movw	r5, #4
+	movw	r5, #3340	; 0xd0c
 	ldr	r3, [r4, #0]
 	str	r3, [r6, #0]
 	mov	r8, #168	; 0xa8
@@ -1704,8 +1704,8 @@ lab168: 	mov	r0, r4
 	ldmia	sp!, {r4, r5, r6, r7, r8, r9, pc}
 benchmark_body.isra.0:
 	stmdb	sp!, {r4, r5, r6, r7, r8, r9, sl, lr}
-	movw	r4, #11864	; 0x2e58
-	movt	r4, #2048	; 0x800
+	movw	r4, #0
+	movt	r4, #8192	; 0x2000
 	mov	r9, r0
 	ldmia	r4!, {r0, r1, r2, r3}
 	sub	sp, #40	; 0x28
@@ -1717,7 +1717,7 @@ benchmark_body.isra.0:
 	ldr	r3, [r4, #0]
 	str	r3, [r5, #0]
 	ble	lab171
-	movw	r5, #4
+	movw	r5, #3340	; 0xd0c
 	mov	sl, #0
 	add	r8, sp, #36	; 0x24
 	movt	r5, #8192	; 0x2000
@@ -3727,12 +3727,12 @@ verify_benchmark:
 	push	{r4, lr}
 	sub	sp, sp, #3200	; 0xc80
 	mov	r4, #3200	; 0xc80
-	movw	r1, #11900	; 0x2e7c
+	movw	r1, #36	; 0x24
 	mov	r2, r4
-	movt	r1, #2048	; 0x800
+	movt	r1, #8192	; 0x2000
 	mov	r0, sp
 	bl	memcpy
-	movw	r0, #4
+	movw	r0, #3340	; 0xd0c
 	mov	r2, r4
 	mov	r1, sp
 	movt	r0, #8192	; 0x2000
@@ -3749,6 +3749,11 @@ warm_caches:
 	b	benchmark_body.isra.0
 benchmark:
 	b	benchmark_body.constprop.0
+	.word	0x08002e64
+	.word	0x20000d08
+	.word	0x20000d0c
+	.word	0x20000d0c
+	.word	0x200019b0
 SystemInit:
 	mov	r3, #14336	; 0x3800
 	movt	r3, #16386	; 0x4002
@@ -3821,7 +3826,7 @@ lab351: 	ldr	r3, [r2, #0]
 lab352: 	ldr	r3, [r1, #8]
 	lsls	r3, r3, #28
 	bpl	lab352
-	movw	r3, #0
+	movw	r3, #3336	; 0xd08
 	movt	r3, #8192	; 0x2000
 	mov	r2, #31232	; 0x7a00
 	movt	r2, #2563	; 0xa03
@@ -4214,7 +4219,7 @@ stop_trigger:
 	bx	lr
 	nop
 rand_beebs:
-	movw	r3, #3204	; 0xc84
+	movw	r3, #6560	; 0x19a0
 	movt	r3, #8192	; 0x2000
 	movw	r2, #20077	; 0x4e6d
 	ldr	r1, [r3, #0]
@@ -4226,7 +4231,7 @@ rand_beebs:
 	lsrs	r0, r0, #16
 	bx	lr
 srand_beebs:
-	movw	r3, #3204	; 0xc84
+	movw	r3, #6560	; 0x19a0
 	movt	r3, #8192	; 0x2000
 	str	r0, [r3, #0]
 	bx	lr
@@ -4234,22 +4239,22 @@ init_heap_beebs:
 	ands	r2, r1, #3
 	push	{r3, lr}
 	bne	lab353
-	movw	r3, #3204	; 0xc84
+	movw	r3, #6560	; 0x19a0
 	movt	r3, #8192	; 0x2000
 	add	r1, r0
 	strd	r0, r1, [r3, #4]
 	str	r2, [r3, #12]
 	pop	{r3, pc}
-lab353: 	movw	r3, #15104	; 0x3b00
-	movw	r2, #15184	; 0x3b50
-	movw	r0, #15136	; 0x3b20
-	movt	r3, #2048	; 0x800
-	movt	r2, #2048	; 0x800
+lab353: 	movw	r3, #3240	; 0xca8
+	movw	r2, #3320	; 0xcf8
+	movw	r0, #3272	; 0xcc8
+	movt	r3, #8192	; 0x2000
+	movt	r2, #8192	; 0x2000
 	movs	r1, #65	; 0x41
-	movt	r0, #2048	; 0x800
+	movt	r0, #8192	; 0x2000
 	bl	__assert_func
 check_heap_beebs:
-	movw	r3, #3204	; 0xc84
+	movw	r3, #6560	; 0x19a0
 	movt	r3, #8192	; 0x2000
 	ldrd	r3, r2, [r3, #8]
 	add	r0, r2
@@ -4261,7 +4266,7 @@ check_heap_beebs:
 malloc_beebs:
 	mov	r3, r0
 	cbz	r0, lab354
-	movw	r2, #3204	; 0xc84
+	movw	r2, #6560	; 0x19a0
 	movt	r2, #8192	; 0x2000
 	ldr	r0, [r2, #4]
 	ldr	ip, [r2, #12]
@@ -4286,7 +4291,7 @@ calloc_beebs:
 	mul	r2, r1, r0
 	push	{r4, lr}
 	cbz	r2, lab355
-	movw	r3, #3204	; 0xc84
+	movw	r3, #6560	; 0x19a0
 	movt	r3, #8192	; 0x2000
 	ldr	r4, [r3, #4]
 	ldr	r0, [r3, #12]
@@ -4318,7 +4323,7 @@ realloc_beebs:
 	beq	lab357
 	cmp	r1, #0
 	beq	lab357
-	movw	r3, #3204	; 0xc84
+	movw	r3, #6560	; 0x19a0
 	movt	r3, #8192	; 0x2000
 	mov	r2, r0
 	ldr	r0, [r3, #4]
@@ -4385,10 +4390,10 @@ free_beebs:
 	bx	lr
 	nop
 Reset_Handler:
-	ldr	sp, [pc, #48]	; 8002e34 <LoopFillZerobss+0xe>
-	ldr	r0, [pc, #48]	; (8002e38 <LoopFillZerobss+0x12>)
-	ldr	r1, [pc, #52]	; (8002e3c <LoopFillZerobss+0x16>)
-	ldr	r2, [pc, #52]	; (8002e40 <LoopFillZerobss+0x1a>)
+	ldr	sp, [pc, #48]	; 8002e48 <LoopFillZerobss+0xe>
+	ldr	r0, [pc, #48]	; (8002e4c <LoopFillZerobss+0x12>)
+	ldr	r1, [pc, #52]	; (8002e50 <LoopFillZerobss+0x16>)
+	ldr	r2, [pc, #52]	; (8002e54 <LoopFillZerobss+0x1a>)
 	movs	r3, #0
 	b	LoopCopyDataInit
 CopyDataInit:
@@ -4399,8 +4404,8 @@ LoopCopyDataInit:
 	adds	r4, r0, r3
 	cmp	r4, r1
 	bcc	CopyDataInit
-	ldr	r2, [pc, #40]	; (8002e44 <LoopFillZerobss+0x1e>)
-	ldr	r4, [pc, #40]	; (8002e48 <LoopFillZerobss+0x22>)
+	ldr	r2, [pc, #40]	; (8002e58 <LoopFillZerobss+0x1e>)
+	ldr	r4, [pc, #40]	; (8002e5c <LoopFillZerobss+0x22>)
 	movs	r3, #0
 	b	LoopFillZerobss
 FillZerobss:
@@ -4413,11 +4418,12 @@ LoopFillZerobss:
 	bl	main
 	bx	lr
 	.word	0x20020000
-	.word	0x20000000
-	.word	0x20000004
-	.word	0x08003b60
-	.word	0x20000004
-	.word	0x20000c94
+	.word	0x20000d08
+	.word	0x20000d0c
+	.word	0x08002e64
+	.word	0x20000d0c
+	.word	0x200019b0
 ADC_IRQHandler:
 	b	ADC_IRQHandler
-	movs	r0, r0
+abort:
+	b	abort

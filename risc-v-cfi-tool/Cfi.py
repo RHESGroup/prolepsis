@@ -439,7 +439,12 @@ class Cfi:
                 addr = int(m.groups()[0],16)
                 remaining = m.groups()[2]
                 if not re.match(r"\.[0-9]{0,8}byte.*",remaining):
-                    self.sections[current_section].append(f"\t.4byte\t0x{opcode}\n")
+                    # self.sections[current_section].append(f"\t.4byte\t0x{opcode}\n")
+                    bytelength = int(len(opcode)/2)
+                    if bytelength == 1:
+                        self.sections[current_section].append(f"\t.byte\t0x{opcode}\n")
+                    else:
+                        self.sections[current_section].append(f"\t.{bytelength}byte\t0x{opcode}\n")
                     if addr not in self.data.keys():
                         self.data[addr] = f"\t.4byte\t0x{opcode}\n"
                     else:

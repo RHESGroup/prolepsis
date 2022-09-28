@@ -23,13 +23,13 @@ TestingMostlyDescending:
 	mv	s2,a1
 	jal	ra,rand_beebs
 	jal	ra,__floatsidf
-	lui	a5,0x102
-	lw	a2,-1592(a5) # 1019c8 <__func__.0+0x6c>
-	lw	a3,-1588(a5)
+	lui	a5,0x101
+	lw	a2,-752(a5) # 100d10 <__func__.0+0x6c>
+	lw	a3,-748(a5)
 	jal	ra,__divdf3
-	lui	a5,0x102
-	lw	a2,-1584(a5) # 1019d0 <__func__.0+0x74>
-	lw	a3,-1580(a5)
+	lui	a5,0x101
+	lw	a2,-744(a5) # 100d18 <__func__.0+0x74>
+	lw	a3,-740(a5)
 	jal	ra,__muldf3
 	mv	s1,a0
 	sub	a0,s2,s0
@@ -40,9 +40,9 @@ TestingMostlyDescending:
 	mv	a0,s1
 	mv	a1,s0
 	jal	ra,__adddf3
-	lui	a5,0x102
-	lw	a2,-1576(a5) # 1019d8 <__func__.0+0x7c>
-	lw	a3,-1572(a5)
+	lui	a5,0x101
+	lw	a2,-736(a5) # 100d20 <__func__.0+0x7c>
+	lw	a3,-732(a5)
 	jal	ra,__subdf3
 	jal	ra,__fixdfsi
 	lw	ra,12(sp)
@@ -59,13 +59,13 @@ TestingMostlyAscending:
 	mv	s0,a0
 	jal	ra,rand_beebs
 	jal	ra,__floatsidf
-	lui	a5,0x102
-	lw	a2,-1592(a5) # 1019c8 <__func__.0+0x6c>
-	lw	a3,-1588(a5)
+	lui	a5,0x101
+	lw	a2,-752(a5) # 100d10 <__func__.0+0x6c>
+	lw	a3,-748(a5)
 	jal	ra,__divdf3
-	lui	a5,0x102
-	lw	a2,-1584(a5) # 1019d0 <__func__.0+0x74>
-	lw	a3,-1580(a5)
+	lui	a5,0x101
+	lw	a2,-744(a5) # 100d18 <__func__.0+0x74>
+	lw	a3,-740(a5)
 	jal	ra,__muldf3
 	mv	s1,a0
 	mv	a0,s0
@@ -76,9 +76,9 @@ TestingMostlyAscending:
 	mv	a0,s1
 	mv	a1,s0
 	jal	ra,__adddf3
-	lui	a5,0x102
-	lw	a2,-1576(a5) # 1019d8 <__func__.0+0x7c>
-	lw	a3,-1572(a5)
+	lui	a5,0x101
+	lw	a2,-736(a5) # 100d20 <__func__.0+0x7c>
+	lw	a3,-732(a5)
 	jal	ra,__subdf3
 	jal	ra,__fixdfsi
 	lw	ra,12(sp)
@@ -93,13 +93,13 @@ TestingJittered:
 	mv	s0,a0
 	jal	ra,rand_beebs
 	jal	ra,__floatsidf
-	lui	a5,0x102
-	lw	a2,-1592(a5) # 1019c8 <__func__.0+0x6c>
-	lw	a3,-1588(a5)
+	lui	a5,0x101
+	lw	a2,-752(a5) # 100d10 <__func__.0+0x6c>
+	lw	a3,-748(a5)
 	jal	ra,__divdf3
-	lui	a5,0x102
-	lw	a2,-1568(a5) # 1019e0 <__func__.0+0x84>
-	lw	a3,-1564(a5)
+	lui	a5,0x101
+	lw	a2,-728(a5) # 100d28 <__func__.0+0x84>
+	lw	a3,-724(a5)
 	jal	ra,__ledf2
 	blez	a0,lab0
 	addi	s0,s0,-2
@@ -314,8 +314,8 @@ WikiMerge.constprop.0:
 	sub	s1,a6,a5
 	blt	a2,a4,lab15
 	slli	a0,a3,0x3
-	lui	a3,0x100
-	mv	a3,a3
+	lui	a3,0x101
+	addi	a3,a3,-716 # 100d34 <array1>
 	slli	a2,a4,0x3
 	add	a0,a0,a3
 	add	a2,a7,a2
@@ -343,9 +343,9 @@ lab16: 	lw	s0,44(sp)
 	j	memcpy
 lab15: 	mv	a0,a1
 	blez	s1,lab19
-	lui	a2,0x100
+	lui	a2,0x101
 	slli	a7,a3,0x3
-	mv	a2,a2
+	addi	a2,a2,-716 # 100d34 <array1>
 	add	a7,a2,a7
 	li	t5,0
 	li	t6,0
@@ -372,14 +372,14 @@ lab22: 	slli	a1,s2,0x3
 	bge	t4,a4,lab21
 lab24: 	addi	a7,a7,8
 	j	lab22
-lab19: 	lui	a2,0x100
-	mv	a2,a2
+lab19: 	lui	a2,0x101
+	addi	a2,a2,-716 # 100d34 <array1>
 lab25: 	slli	a1,a0,0x3
 	slli	a3,a3,0x3
 	add	a1,a2,a1
 	add	a3,a2,a3
 	li	a5,0
-lab23: 	lw	a6,0(a3) # 100000 <array1>
+lab23: 	lw	a6,0(a3)
 	lw	a0,0(a1)
 	lw	a2,4(a1)
 	sw	a6,0(a1)
@@ -439,9 +439,9 @@ lab37: 	srli	a4,s3,0x1f
 	srai	a4,a4,0x1
 	bge	a5,s3,lab31
 	add	a5,a4,s1
-	lui	a3,0x100
+	lui	a3,0x101
 	sub	a4,s2,a4
-	mv	a3,a3
+	addi	a3,a3,-716 # 100d34 <array1>
 	slli	a5,a5,0x3
 	slli	a4,a4,0x3
 	slli	a0,s1,0x3
@@ -465,9 +465,9 @@ lab31: 	srli	a4,s4,0x1f
 	srai	a4,a4,0x1
 	bge	a5,s4,lab33
 	add	a5,s2,a4
-	lui	a2,0x100
+	lui	a2,0x101
 	sub	a4,s0,a4
-	mv	a2,a2
+	addi	a2,a2,-716 # 100d34 <array1>
 	slli	a5,a5,0x3
 	slli	a4,a4,0x3
 	slli	a3,s2,0x3
@@ -493,15 +493,15 @@ lab33: 	sub	a5,s0,s1
 	bge	a3,a5,lab35
 	add	a5,a4,s1
 	sub	a3,s0,a4
-	lui	a4,0x100
-	mv	a4,a4
+	lui	a4,0x101
+	addi	a4,a4,-716 # 100d34 <array1>
 	slli	a5,a5,0x3
 	slli	a3,a3,0x3
 	slli	s1,s1,0x3
 	add	a5,a5,a4
 	add	a3,a3,a4
 	add	s1,s1,a4
-lab36: 	lw	a1,0(a3) # 100000 <array1>
+lab36: 	lw	a1,0(a3)
 	lw	a2,-8(a5)
 	lw	a4,-4(a5)
 	sw	a1,-8(a5)
@@ -522,8 +522,8 @@ lab35: 	lw	ra,44(sp)
 	addi	sp,sp,48
 	ret
 lab29: 	blt	a5,s3,lab37
-	lui	s0,0x100
-	mv	s0,s0
+	lui	s0,0x101
+	addi	s0,s0,-716 # 100d34 <array1>
 	slli	s5,s1,0x3
 	add	s5,s5,s0
 	slli	s3,s3,0x3
@@ -558,8 +558,8 @@ lab28: 	add	s2,a1,a3
 	blt	s4,s3,lab38
 	j	lab29
 lab27: 	ret
-lab30: 	lui	s5,0x100
-	mv	s5,s5
+lab30: 	lui	s5,0x101
+	addi	s5,s5,-716 # 100d34 <array1>
 	slli	s4,s4,0x3
 	slli	a1,s2,0x3
 	mv	a0,a4
@@ -583,7 +583,7 @@ lab30: 	lui	s5,0x100
 WikiSort.constprop.0:
 	addi	sp,sp,-320
 	lui	t0,0xfffff
-	lui	a5,0x100
+	lui	a5,0x101
 	sw	s10,272(sp)
 	sw	ra,316(sp)
 	sw	s0,312(sp)
@@ -602,7 +602,7 @@ WikiSort.constprop.0:
 	li	t6,1
 	li	a6,0
 	li	t3,0
-	mv	s10,a5
+	addi	s10,a5,-716 # 100d34 <array1>
 	li	t0,400
 lab45: 	addi	t3,t3,25
 	mv	t1,t6
@@ -614,16 +614,16 @@ lab44: 	lw	a0,0(a7)
 	mv	a5,a7
 	mv	a4,t1
 	j	lab41
-lab43: 	lw	a1,-4(a5) # ffffc <__DTOR_END__+0xfb800>
+lab43: 	lw	a1,-4(a5)
 	sw	a3,0(a5)
 	addi	a5,a5,-8
 	sw	a1,12(a5)
 	bge	a6,a4,lab42
 lab41: 	lw	a3,-8(a5)
-	addi	a4,a4,-1 # fffff <__DTOR_END__+0xfb803>
+	addi	a4,a4,-1
 	mv	a2,a5
 	blt	a0,a3,lab43
-	sw	a0,0(a2) # 100000 <array1>
+	sw	a0,0(a2)
 	sw	t5,4(a2)
 	addi	t1,t1,1
 	addi	a7,a7,8
@@ -637,7 +637,7 @@ lab82: 	addi	a6,a6,25
 	lui	a4,0x1
 	li	a5,25
 	sw	a5,88(sp)
-	addi	a4,a4,128 # 1080 <WikiSort.constprop.0+0x4a0>
+	addi	a4,a4,128 # 1080 <WikiSort.constprop.0+0x4d0>
 	lui	a5,0xfffff
 	add	a4,a4,a5
 	addi	a5,sp,128
@@ -820,7 +820,7 @@ lab60: 	lw	a2,0(s1)
 	sw	a4,-4(s1)
 	bne	a1,a5,lab60
 lab59: 	lw	a5,36(sp)
-	addi	s1,s5,1 # 100001 <array1+0x1>
+	addi	s1,s5,1
 	slli	s1,s1,0x3
 	add	t1,a5,s6
 	slli	t1,t1,0x3
@@ -837,13 +837,13 @@ lab59: 	lw	a5,36(sp)
 	lw	a2,68(sp)
 	sw	a4,4(a5)
 	sw	s9,0(sp)
-	lui	a0,0x100
-	li	a7,764
+	lui	a0,0x101
+	li	a7,716
 	mv	a5,t3
 	mv	a6,s0
 	mv	a3,t5
 	mv	a4,t3
-	mv	a0,a0
+	addi	a0,a0,-716 # 100d34 <array1>
 	sw	t2,0(t1)
 	sw	t0,4(t1)
 	sw	t3,-48(s9)
@@ -878,7 +878,7 @@ lab77: 	sub	a5,s11,s4
 	add	a5,s10,a5
 	add	s2,s10,s2
 lab63: 	lw	a2,0(a5)
-	lw	a3,0(s0) # 100000 <array1>
+	lw	a3,0(s0)
 	lw	a4,4(s0)
 	sw	a2,0(s0)
 	lw	a2,4(a5)
@@ -917,13 +917,13 @@ lab83: 	slli	a5,s1,0x3
 lab54: 	beq	t4,t6,lab69
 	sub	s11,t4,t6
 	bge	s11,s8,lab70
-	lui	a0,0x100
+	lui	a0,0x101
 	sub	a1,t6,t4
 	mv	a2,s5
 	mv	a3,t4
 	li	a5,0
 	mv	a4,s9
-	mv	a0,a0
+	addi	a0,a0,-716 # 100d34 <array1>
 	sw	t5,76(sp)
 	sw	t3,32(sp)
 	sw	t6,28(sp)
@@ -945,11 +945,11 @@ lab56: 	bge	s0,a5,lab55
 	j	lab57
 lab46: 	lw	a3,52(sp)
 	lw	a1,96(sp)
-	lui	a0,0x100
+	lui	a0,0x101
 	li	a5,512
 	mv	a4,s9
 	mv	a2,s11
-	mv	a0,a0
+	addi	a0,a0,-716 # 100d34 <array1>
 	sw	s11,-8(s9)
 	sw	a3,-4(s9)
 	jal	ra,Rotate.constprop.0
@@ -1067,12 +1067,12 @@ lab64: 	lw	a6,52(sp)
 	li	a5,512
 	sw	a5,4(sp)
 	sw	s9,0(sp)
-	lui	a0,0x100
-	li	a7,764
+	lui	a0,0x101
+	li	a7,716
 	mv	a3,t5
 	mv	a5,t3
 	mv	a4,t3
-	mv	a0,a0
+	addi	a0,a0,-716 # 100d34 <array1>
 	sw	t3,-64(s9)
 	sw	a6,-60(s9)
 	sw	t5,-104(s9)
@@ -1123,13 +1123,13 @@ lab154: 	slli	s6,a6,0x3
 	li	s4,0
 lab92: 	addi	t1,a6,1
 	addi	a7,s2,1
-	lui	a0,0x100
+	lui	a0,0x101
 	neg	a1,s4
 	li	a5,512
 	mv	a4,s9
 	mv	a2,a7
 	mv	a3,t1
-	mv	a0,a0
+	addi	a0,a0,-716 # 100d34 <array1>
 	beq	s11,s2,lab90
 	lw	t4,-8(s6)
 	lw	t3,0(s6)
@@ -1150,13 +1150,13 @@ lab156: 	blez	s0,lab93
 	add	s4,s10,s4
 	mv	s1,s5
 	li	s2,0
-lab96: 	lui	a0,0x100
+lab96: 	lui	a0,0x101
 	mv	a2,s5
 	mv	a1,s2
 	li	a5,512
 	mv	a4,s9
 	mv	a3,s1
-	mv	a0,a0
+	addi	a0,a0,-716 # 100d34 <array1>
 	beq	s6,s1,lab94
 	lw	a7,0(s4)
 	lw	a6,8(s4)
@@ -1204,14 +1204,14 @@ lab48: 	lw	a2,132(sp)
 	lw	a6,52(sp)
 	sw	s0,4(sp)
 	sw	s9,0(sp)
-	lui	a0,0x100
-	li	a7,764
+	lui	a0,0x101
+	li	a7,716
 	mv	a3,s11
 	mv	a5,t1
 	mv	a4,t1
 	li	a1,0
 	li	a2,0
-	mv	a0,a0
+	addi	a0,a0,-716 # 100d34 <array1>
 	sw	zero,-16(s9)
 	sw	zero,-12(s9)
 	sw	s11,-96(s9)
@@ -1354,13 +1354,13 @@ lab134: 	bne	s0,s2,lab128
 	lw	a5,0(a5)
 	slt	a5,a4,a5
 	add	s0,s0,a5
-lab128: 	lui	a0,0x100
+lab128: 	lui	a0,0x101
 	sub	a1,s3,s0
 	li	a5,512
 	mv	a4,s9
 	mv	a2,s4
 	mv	a3,s0
-	mv	a0,a0
+	addi	a0,a0,-716 # 100d34 <array1>
 	sub	s5,s0,s3
 	sw	s4,-24(s9)
 	sw	s0,-20(s9)
@@ -1449,14 +1449,14 @@ lab144: 	lw	a3,104(sp)
 	beq	a3,s0,lab142
 lab151: 	lw	t1,0(a4)
 	lw	a7,0(a5)
-	lui	a0,0x100
+	lui	a0,0x101
 	sub	s1,s0,a6
 	mv	a2,s2
 	sub	a1,a6,s0
 	li	a5,512
 	mv	a4,s9
 	mv	a3,s0
-	mv	a0,a0
+	addi	a0,a0,-716 # 100d34 <array1>
 	bge	a7,t1,lab143
 	addi	s0,s0,1
 	blt	s2,a6,lab144
@@ -1478,13 +1478,13 @@ lab150: 	lw	a5,64(sp)
 lab148: 	lw	t1,0(a4)
 	lw	a7,0(a5)
 	sub	s3,a6,s0
-	lui	a0,0x100
+	lui	a0,0x101
 	mv	a3,s1
 	li	a5,512
 	mv	a4,s9
 	mv	a2,s0
 	mv	a1,s3
-	mv	a0,a0
+	addi	a0,a0,-716 # 100d34 <array1>
 	bge	a7,t1,lab147
 	addi	s0,s0,-1
 	bge	a6,s1,lab145
@@ -1501,12 +1501,12 @@ lab146: 	mv	a2,s0
 	sub	s0,a6,s0
 	mv	s2,s1
 	mv	a1,s0
-	lui	a0,0x100
+	lui	a0,0x101
 	addi	s0,s0,1
 	mv	a3,s1
 	li	a5,512
 	mv	a4,s9
-	mv	a0,a0
+	addi	a0,a0,-716 # 100d34 <array1>
 	mv	s1,a2
 	sub	s0,s2,s0
 	sw	a2,-80(s9)
@@ -1514,7 +1514,7 @@ lab146: 	mv	a2,s0
 	jal	ra,Rotate.constprop.0
 	bge	s1,s0,lab145
 	lw	s1,104(sp)
-lab149: 	lui	a0,0x100
+lab149: 	lui	a0,0x101
 	sw	s0,-76(s9)
 	mv	a3,s0
 	li	a5,512
@@ -1522,7 +1522,7 @@ lab149: 	lui	a0,0x100
 	mv	a4,s9
 	mv	a2,s1
 	li	a1,0
-	mv	a0,a0
+	addi	a0,a0,-716 # 100d34 <array1>
 	sw	s1,-80(s9)
 	jal	ra,Rotate.constprop.0
 	blt	s1,s0,lab149
@@ -1557,20 +1557,20 @@ lab143: 	addi	s1,s1,1
 	add	a5,s10,a5
 	bne	a3,s0,lab151
 lab142: 	sub	s1,a3,a6
-	lui	a0,0x100
+	lui	a0,0x101
 	addi	s1,s1,1
 	mv	s3,a3
 	li	a5,512
 	mv	a4,s9
 	mv	a2,s2
 	sub	a1,a6,a3
-	mv	a0,a0
+	addi	a0,a0,-716 # 100d34 <array1>
 	add	s1,s1,s2
 	sw	s2,-72(s9)
 	sw	a3,-68(s9)
 	jal	ra,Rotate.constprop.0
 	bge	s1,s3,lab141
-lab152: 	lui	a0,0x100
+lab152: 	lui	a0,0x101
 	sw	s1,-72(s9)
 	mv	a2,s1
 	li	a5,512
@@ -1578,7 +1578,7 @@ lab152: 	lui	a0,0x100
 	mv	a4,s9
 	mv	a3,s0
 	li	a1,0
-	mv	a0,a0
+	addi	a0,a0,-716 # 100d34 <array1>
 	sw	s0,-68(s9)
 	jal	ra,Rotate.constprop.0
 	blt	s1,s0,lab152
@@ -1644,7 +1644,7 @@ lab108: 	mv	a5,a3
 lab107: 	lw	a0,24(sp)
 	lw	a2,48(sp)
 	li	a5,1
-	addi	a1,a0,-1 # fffff <__DTOR_END__+0xfb803>
+	addi	a1,a0,-1
 	blt	a3,a0,lab112
 	lw	t1,112(sp)
 lab163: 	mv	a0,a4
@@ -1695,9 +1695,9 @@ lab124: 	lw	a5,52(sp)
 	sw	s5,36(sp)
 	j	lab167
 benchmark_body.constprop.0:
-	lui	a5,0x101
-	addi	a5,a5,-880 # 100c90 <_bss_end>
-	lw	t3,0(a5)
+	lui	a5,0x100
+	mv	a5,a5
+	lw	t3,0(a5) # 100000 <__DTOR_END__+0xfb834>
 	lw	t1,4(a5)
 	lw	a7,8(a5)
 	lw	a6,12(a5)
@@ -1709,7 +1709,7 @@ benchmark_body.constprop.0:
 	addi	sp,sp,-80
 	sw	s4,56(sp)
 	li	a0,0
-	lui	s4,0x100
+	lui	s4,0x101
 	sw	s3,60(sp)
 	sw	s5,52(sp)
 	sw	s6,48(sp)
@@ -1728,7 +1728,7 @@ benchmark_body.constprop.0:
 	sw	a5,44(sp)
 	addi	s3,sp,12
 	jal	ra,srand_beebs
-	mv	s6,s4
+	addi	s6,s4,-716 # 100d34 <array1>
 lab169: 	lw	s2,0(s3)
 	mv	s1,s6
 	li	s0,0
@@ -1741,9 +1741,9 @@ lab168: 	mv	a0,s0
 	addi	s0,s0,1
 	addi	s1,s1,8
 	bne	s0,a5,lab168
-	li	a2,764
+	li	a2,716
 	li	a1,400
-	mv	a0,s4
+	addi	a0,s4,-716
 	jal	ra,WikiSort.constprop.0
 	addi	s3,s3,4
 	addi	a5,sp,48
@@ -1760,9 +1760,9 @@ lab168: 	mv	a0,s0
 	addi	sp,sp,80
 	ret
 benchmark_body.isra.0:
-	lui	a5,0x101
-	addi	a5,a5,-880 # 100c90 <_bss_end>
-	lw	t3,0(a5)
+	lui	a5,0x100
+	mv	a5,a5
+	lw	t3,0(a5) # 100000 <__DTOR_END__+0xfb834>
 	lw	t1,4(a5)
 	lw	a7,8(a5)
 	lw	a6,12(a5)
@@ -1793,10 +1793,10 @@ benchmark_body.isra.0:
 	sw	a4,40(sp)
 	sw	a5,44(sp)
 	blez	a0,lab170
-	lui	s4,0x100
+	lui	s4,0x101
 	mv	s8,a0
 	li	s9,0
-	mv	s6,s4
+	addi	s6,s4,-716 # 100d34 <array1>
 	addi	s5,sp,48
 lab173: 	li	a0,0
 	jal	ra,srand_beebs
@@ -1814,9 +1814,9 @@ lab171: 	mv	a0,s0
 	addi	s1,s1,8
 	bne	s0,a5,lab171
 	addi	s3,s3,4
-	li	a2,764
+	li	a2,716
 	li	a1,400
-	mv	a0,s4
+	addi	a0,s4,-716
 	jal	ra,WikiSort.constprop.0
 	bne	s3,s5,lab172
 	addi	s9,s9,1
@@ -2053,7 +2053,7 @@ lab190: 	sub	s0,s7,s1
 	lw	a3,4(s2)
 	lw	a0,0(a5)
 	lw	a1,4(a5)
-	jalr	s4 # 100000 <array1>
+	jalr	s4
 	beqz	a0,lab189
 	addi	s1,s0,1
 	blt	s1,s7,lab190
@@ -2646,7 +2646,7 @@ lab228: 	srai	a5,a1,0x1
 	li	a5,0
 	lui	s2,0xfffff
 	li	s1,0
-	addi	a2,a2,160 # 10a0 <WikiSort.constprop.0+0x4c0>
+	addi	a2,a2,160 # 10a0 <WikiSort.constprop.0+0x4f0>
 	add	a2,a2,s2
 	addi	a1,sp,128
 	mv	s10,a0
@@ -2691,7 +2691,7 @@ lab231: 	lw	a4,132(sp)
 	addi	a5,a5,-1 # 1fffffff <_stack+0x1fef7fff>
 	lui	a4,0x1
 	sw	a5,48(sp)
-	addi	a4,a4,160 # 10a0 <WikiSort.constprop.0+0x4c0>
+	addi	a4,a4,160 # 10a0 <WikiSort.constprop.0+0x4f0>
 	lui	a5,0xfffff
 	add	a4,a4,a5
 	addi	a5,sp,128
@@ -3838,7 +3838,7 @@ lab282: 	li	s1,1
 	j	lab350
 lab229: 	lui	a4,0x1
 	lui	a5,0xfffff
-	addi	a4,a4,160 # 10a0 <WikiSort.constprop.0+0x4c0>
+	addi	a4,a4,160 # 10a0 <WikiSort.constprop.0+0x4f0>
 	add	a4,a4,a5
 	addi	a5,sp,128
 	add	a5,a4,a5
@@ -3892,15 +3892,15 @@ verify_benchmark:
 	lui	a3,0x1
 	lui	a4,0xfffff
 	sw	ra,2028(sp)
-	addi	a3,a3,-896 # c80 <WikiSort.constprop.0+0xa0>
+	addi	a3,a3,-896 # c80 <WikiSort.constprop.0+0xd0>
 	addi	sp,sp,-1200
 	add	a3,a3,a4
 	addi	a4,sp,16
 	add	a4,a3,a4
-	lui	a5,0x101
+	lui	a5,0x100
 	lui	a3,0x1
-	addi	a5,a5,-844 # 100cb4 <_bss_end+0x24>
-	addi	a3,a3,-896 # c80 <WikiSort.constprop.0+0xa0>
+	addi	a5,a5,36 # 100024 <__DTOR_END__+0xfb858>
+	addi	a3,a3,-896 # c80 <WikiSort.constprop.0+0xd0>
 	sw	a4,12(sp)
 	add	a3,a5,a3
 	addi	a4,a4,896 # fffff380 <_stack+0xffef7380>
@@ -3917,13 +3917,13 @@ lab354: 	lw	a6,0(a5)
 	bne	a5,a3,lab354
 	lui	a2,0x1
 	lui	a1,0xfffff
-	addi	a2,a2,-896 # c80 <WikiSort.constprop.0+0xa0>
+	addi	a2,a2,-896 # c80 <WikiSort.constprop.0+0xd0>
 	addi	a1,a1,896 # fffff380 <_stack+0xffef7380>
 	addi	a4,sp,16
 	add	a5,a2,a1
-	lui	a0,0x100
+	lui	a0,0x101
 	add	a1,a5,a4
-	mv	a0,a0
+	addi	a0,a0,-716 # 100d34 <array1>
 	jal	ra,memcmp
 	addi	sp,sp,1200
 	lw	ra,2028(sp)
@@ -3954,49 +3954,49 @@ main:
 	addi	sp,sp,32
 	ret
 rand_beebs:
-	lui	a4,0x101
-	lw	a0,-884(a4) # 100c8c <seed>
+	lui	a4,0x102
+	lw	a0,-1600(a4) # 1019c0 <seed>
 	lui	a5,0x41c65
 	addi	a5,a5,-403 # 41c64e6d <_stack+0x41b5ce6d>
 	mul	a0,a0,a5
 	lui	a5,0x3
-	addi	a5,a5,57 # 3039 <WikiSort+0x505>
+	addi	a5,a5,57 # 3039 <WikiSort+0x535>
 	add	a0,a0,a5
 	slli	a0,a0,0x1
 	srli	a0,a0,0x1
-	sw	a0,-884(a4)
+	sw	a0,-1600(a4)
 	srli	a0,a0,0x10
 	ret
 srand_beebs:
-	lui	a5,0x101
-	sw	a0,-884(a5) # 100c8c <seed>
+	lui	a5,0x102
+	sw	a0,-1600(a5) # 1019c0 <seed>
 	ret
 init_heap_beebs:
 	andi	a5,a1,3
 	bnez	a5,lab355
-	lui	a5,0x101
+	lui	a5,0x102
 	add	a1,a0,a1
-	sw	a0,-888(a5) # 100c88 <heap_ptr>
-	lui	a5,0x101
-	sw	a1,-892(a5) # 100c84 <heap_end>
-	lui	a5,0x101
-	sw	zero,-896(a5) # 100c80 <heap_requested>
+	sw	a0,-1604(a5) # 1019bc <heap_ptr>
+	lui	a5,0x102
+	sw	a1,-1608(a5) # 1019b8 <heap_end>
+	lui	a5,0x102
+	sw	zero,-1612(a5) # 1019b4 <heap_requested>
 	ret
-lab355: 	lui	a3,0x102
-	lui	a2,0x102
-	lui	a0,0x102
+lab355: 	lui	a3,0x101
+	lui	a2,0x101
+	lui	a0,0x101
 	addi	sp,sp,-16
-	addi	a3,a3,-1684 # 10196c <__func__.0+0x10>
-	addi	a2,a2,-1700 # 10195c <__func__.0>
+	addi	a3,a3,-844 # 100cb4 <__func__.0+0x10>
+	addi	a2,a2,-860 # 100ca4 <__func__.0>
 	li	a1,65
-	addi	a0,a0,-1652 # 10198c <__func__.0+0x30>
+	addi	a0,a0,-812 # 100cd4 <__func__.0+0x30>
 	sw	ra,12(sp)
 	jal	ra,__assert_func
 check_heap_beebs:
-	lui	a5,0x101
-	lw	a4,-896(a5) # 100c80 <heap_requested>
-	lui	a5,0x101
-	lw	a5,-892(a5) # 100c84 <heap_end>
+	lui	a5,0x102
+	lw	a4,-1612(a5) # 1019b4 <heap_requested>
+	lui	a5,0x102
+	lw	a5,-1608(a5) # 1019b8 <heap_end>
 	add	a0,a0,a4
 	sltu	a0,a5,a0
 	xori	a0,a0,1
@@ -4004,26 +4004,26 @@ check_heap_beebs:
 malloc_beebs:
 	mv	a5,a0
 	beqz	a0,lab356
-	lui	a2,0x101
-	lw	a0,-888(a2) # 100c88 <heap_ptr>
-	lui	a3,0x101
-	lw	a1,-896(a3) # 100c80 <heap_requested>
+	lui	a2,0x102
+	lw	a0,-1604(a2) # 1019bc <heap_ptr>
+	lui	a3,0x102
+	lw	a1,-1612(a3) # 1019b4 <heap_requested>
 	add	a4,a0,a5
 	andi	a6,a4,3
 	add	a5,a5,a1
 	bnez	a6,lab357
-	sw	a5,-896(a3)
-	lui	a5,0x101
-	lw	a5,-892(a5) # 100c84 <heap_end>
+	sw	a5,-1612(a3)
+	lui	a5,0x102
+	lw	a5,-1608(a5) # 1019b8 <heap_end>
 	bltu	a5,a4,lab356
-lab358: 	sw	a4,-888(a2)
+lab358: 	sw	a4,-1604(a2)
 	ret
 lab357: 	li	a1,4
 	sub	a1,a1,a6
 	add	a5,a5,a1
-	sw	a5,-896(a3)
-	lui	a5,0x101
-	lw	a5,-892(a5) # 100c84 <heap_end>
+	sw	a5,-1612(a3)
+	lui	a5,0x102
+	lw	a5,-1608(a5) # 1019b8 <heap_end>
 	add	a4,a4,a1
 	bgeu	a5,a4,lab358
 lab356: 	li	a0,0
@@ -4031,19 +4031,19 @@ lab356: 	li	a0,0
 calloc_beebs:
 	mul	a2,a0,a1
 	beqz	a2,lab359
-	lui	a0,0x101
-	lw	a5,-888(a0) # 100c88 <heap_ptr>
-	lui	a1,0x101
-	lw	a4,-896(a1) # 100c80 <heap_requested>
+	lui	a0,0x102
+	lw	a5,-1604(a0) # 1019bc <heap_ptr>
+	lui	a1,0x102
+	lw	a4,-1612(a1) # 1019b4 <heap_requested>
 	add	a3,a5,a2
 	andi	a7,a3,3
 	add	a4,a2,a4
 	bnez	a7,lab360
-	sw	a4,-896(a1)
-	lui	a4,0x101
-	lw	a4,-892(a4) # 100c84 <heap_end>
+	sw	a4,-1612(a1)
+	lui	a4,0x102
+	lw	a4,-1608(a4) # 1019b8 <heap_end>
 	bltu	a4,a3,lab359
-lab362: 	sw	a3,-888(a0)
+lab362: 	sw	a3,-1604(a0)
 	beqz	a5,lab361
 	addi	sp,sp,-16
 	li	a1,0
@@ -4056,9 +4056,9 @@ lab362: 	sw	a3,-888(a0)
 lab360: 	li	a6,4
 	sub	a6,a6,a7
 	add	a4,a4,a6
-	sw	a4,-896(a1)
-	lui	a4,0x101
-	lw	a4,-892(a4) # 100c84 <heap_end>
+	sw	a4,-1612(a1)
+	lui	a4,0x102
+	lw	a4,-1608(a4) # 1019b8 <heap_end>
 	add	a3,a3,a6
 	bgeu	a4,a3,lab362
 lab359: 	li	a5,0
@@ -4068,19 +4068,19 @@ realloc_beebs:
 	mv	a5,a0
 	beqz	a0,lab363
 	beqz	a1,lab363
-	lui	a6,0x101
-	lw	a0,-888(a6) # 100c88 <heap_ptr>
-	lui	a2,0x101
-	lw	a4,-896(a2) # 100c80 <heap_requested>
+	lui	a6,0x102
+	lw	a0,-1604(a6) # 1019bc <heap_ptr>
+	lui	a2,0x102
+	lw	a4,-1612(a2) # 1019b4 <heap_requested>
 	add	a3,a0,a1
 	andi	a7,a3,3
 	add	a4,a1,a4
 	bnez	a7,lab364
-	sw	a4,-896(a2)
-	lui	a4,0x101
-	lw	a4,-892(a4) # 100c84 <heap_end>
+	sw	a4,-1612(a2)
+	lui	a4,0x102
+	lw	a4,-1608(a4) # 1019b8 <heap_end>
 	bltu	a4,a3,lab363
-lab368: 	sw	a3,-888(a6)
+lab368: 	sw	a3,-1604(a6)
 	beqz	a0,lab363
 	addi	a4,a5,1
 	sub	a4,a0,a4
@@ -4125,9 +4125,9 @@ lab366: 	lw	a2,0(a4)
 lab364: 	li	t1,4
 	sub	a7,t1,a7
 	add	a4,a4,a7
-	sw	a4,-896(a2)
-	lui	a4,0x101
-	lw	a4,-892(a4) # 100c84 <heap_end>
+	sw	a4,-1612(a2)
+	lui	a4,0x102
+	lw	a4,-1608(a4) # 1019b8 <heap_end>
 	add	a3,a3,a7
 	bgeu	a4,a3,lab368
 lab363: 	li	a0,0
