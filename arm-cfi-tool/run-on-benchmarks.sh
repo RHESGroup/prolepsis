@@ -3,8 +3,10 @@
 recompile=0
 
 instrument() {
- arm-none-eabi-objdump -z -D -j .rodata -j .data -j .bss ./arm-benchmarks/src/$1/$1 > ./arm-benchmarks/src/$1/$1-data.list
  arm-none-eabi-objdump -z -d -j .text ./arm-benchmarks/src/$1/$1 > ./arm-benchmarks/src/$1/$1.list
+ # arm-none-eabi-objdump -z -D -j .rodata -j .data -j .bss ./arm-benchmarks/src/$1/$1 > ./arm-benchmarks/src/$1/$1-data.list
+ arm-none-eabi-objdump -z -D --start-address=0x20000000 --stop-address=0x20020000 ./arm-benchmarks/src/$1/$1 > ./arm-benchmarks/src/$1/$1-data.list
+
 
   python3 ./main.py -disassembly ./arm-benchmarks/src/$1/$1.list -disassemblyfull ./arm-benchmarks/src/$1/$1-data.list -binary ./arm-benchmarks/src/$1/$1 -outputfileassembly ./arm-benchmarks/src/$1/$1_mod -outputfile ./arm-benchmarks/src/$1/$1-instr -typesfile ./type_demo_prova.json
   

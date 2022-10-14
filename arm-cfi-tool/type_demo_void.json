@@ -1,0 +1,10 @@
+{
+	"type1":{"before":"","after":""},
+	"type2":{"before":"","after":""},
+	"type5":"",
+	"type7":"",
+	"type8":"\tinstr8_1\n\tinstr8_2\n\tinstr8_3\n\tinstr8_4",
+	"type9":"\tinstr9_1\n\tinstr9_2\n\tinstr9_3\n\tinstr9_4",
+	"config_init": "",
+	"init_function_name": ""
+}
